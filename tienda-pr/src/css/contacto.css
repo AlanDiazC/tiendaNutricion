@@ -1,0 +1,27 @@
+.Contacto {
+  background-color: black;
+  padding: 15px 0;
+  color: white;
+}
+.contactoTitulo {
+  color: #bf9000;
+  margin: 0;
+  text-align: center;
+}
+.datosContact {
+  display: inline-block;
+  width: 85%;
+  font-size: 20px;
+}
+.datosRedes {
+  display: inline-block;
+  width: 15%;
+  font-size: 20px;
+}
+.contactoDatos {
+  padding-left: 10%;
+  margin: 10px 0;
+}
+.contactoRedes {
+  margin: 10px 0;
+}
