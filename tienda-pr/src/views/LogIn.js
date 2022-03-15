@@ -3,19 +3,20 @@ import React, { Component, useState, useRef } from "react";
 // import useToken from "../useToken";
 // import LogAd from "./LogUser";
 import { Redirect } from "react-router-dom";
-// import {
-//   createUserWithEmailAndPassword,
-//   onAuthStateChanged,
-//   signInWithEmailAndPassword,
-//   signOut,
-//   GoogleAuthProvider,
-//   signInWithPopup,
-//   FacebookAuthProvider,
-// } from "@firebase/auth";
-// import { auth, db } from "../config/fbinit";
-// import { collection, addDoc, query, getDocs, where } from "@firebase/firestore";
+import {
+   createUserWithEmailAndPassword,
+   onAuthStateChanged,
+   signInWithEmailAndPassword,
+   signOut,
+   GoogleAuthProvider,
+   signInWithPopup,
+   FacebookAuthProvider,
+ } from "@firebase/auth";
+ import { auth, db } from "../config/fbinit";
+ import { collection, addDoc, query, getDocs, where } from "@firebase/firestore";
 import Swal from "sweetalert2";
 import "../css/logIn.css";
+import useToken from "../useToken";
 import { BsGoogle } from "react-icons/bs";
 
 // Funciones
@@ -35,144 +36,143 @@ const LogIn = () => {
     });
   }, [signUpButtonRef, signInButton, container]);
 
-  //   const { token, setToken } = useToken();
+     const { token, setToken } = useToken();
 
   //   const url = "/adminUsers";
-  //   const [registerEmail, setRegisterEmail] = useState("");
-  //   const [registerPassword, setregisterPassword] = useState("");
-  //   const [loginEmail, setloginEmail] = useState("");
-  //   const [loginPassword, setLoginPassword] = useState("");
+     const [registerEmail, setRegisterEmail] = useState("");
+     const [registerPassword, setregisterPassword] = useState("");
+     const [loginEmail, setloginEmail] = useState("");
+     const [loginPassword, setLoginPassword] = useState("");
 
-  //   const [user, setUser] = useState({});
+     const [user, setUser] = useState({});
 
-  //   const usersCollectionReference = collection(db, "usersRegistry");
+    const usersCollectionReference = collection(db, "usersRegistry");
 
-  //   onAuthStateChanged(auth, (currentUser) => {
-  //     setUser(currentUser);
-  //   });
-
-  //   const creatingReferencetoUID = async (UID, email) => {
-  //     const searchQuery = query(
-  //       usersCollectionReference,
-  //       where("UID", "==", UID)
-  //     );
-  //     const snapShot = await getDocs(searchQuery);
-  //     if (snapShot.empty) {
-  //       await addDoc(usersCollectionReference, {
-  //         UID: UID,
+     onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+     });
+//Esta siguiente función crea una base de datos con info de la nueva cuenta para que no dependamos solo del normalito UID system.
+     const creatingReferencetoUID = async (UID, email) => {
+       const searchQuery = query(
+         usersCollectionReference,
+         where("UID", "==", UID)
+       );
+       const snapShot = await getDocs(searchQuery);
+       if (snapShot.empty) {
+         await addDoc(usersCollectionReference, {
+           UID: UID,
   //         nivelCuenta: 1,
-  //         email: email,
-  //       });
-  //     } else {
-  //       console.log("Exito");
-  //     }
-  //   };
+           email: email,
+         });
+       } else {
+         console.log("Exito");
+       }
+     };
 
-  //   const registeringData = async (e) => {
-  //     e.preventDefault();
-  //     try {
-  //       const user = await createUserWithEmailAndPassword(
-  //         auth,
-  //         registerEmail,
-  //         registerPassword
-  //       );
-  //       const result = await creatingReferencetoUID(
-  //         auth.currentUser.uid,
-  //         auth.currentUser.email
-  //       );
-  //     } catch (erro) {
-  //       switch (erro.code) {
-  //         case "auth/email-already-in-use":
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Correo existente",
-  //             text: "Esa cuenta ya existe, por favor utilice otro correo",
-  //           });
-  //           break;
-  //         case "auth/invalid-email":
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Correo invalido",
-  //             text: "Por favor utilice un correo completo",
-  //           });
-  //           break;
-  //         case "auth/weak-password":
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Contraseña invalida",
-  //             text: "La contraseña debe tener mínimo 6 digitos",
-  //           });
-  //           break;
-  //         default:
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Error al crear la cuenta",
-  //             text: "Favor de revisar que se introdujeron correctamente los datos",
-  //           });
-  //           break;
-  //       }
-  //     }
-  //   };
+   const registeringData = async (e) => {
+       e.preventDefault();
+     try {
+         const user = await createUserWithEmailAndPassword(
+           auth,
+           registerEmail,
+           registerPassword
+         );
+         const result = await creatingReferencetoUID(
+           auth.currentUser.uid,
+         auth.currentUser.email
+         );
+       } catch (erro) {
+         switch (erro.code) {
+           case "auth/email-already-in-use":
+             Swal.fire({
+               icon: "error",
+               title: "Correo existente",
+               text: "Esa cuenta ya existe, por favor utilice otro correo",
+             });
+             break;
+           case "auth/invalid-email":
+             Swal.fire({
+               icon: "error",
+               title: "Correo invalido",
+               text: "Por favor utilice un correo completo",
+             });
+             break;
+           case "auth/weak-password":
+             Swal.fire({
+               icon: "error",
+             title: "Contraseña invalida",
+             text: "La contraseña debe tener mínimo 6 digitos",
+           });
+           break;
+         default:
+           Swal.fire({
+             icon: "error",
+             title: "Error al crear la cuenta",
+             text: "Favor de revisar que se introdujeron correctamente los datos",
+           });
+           break;
+         }
+       }
+     };
 
-  //   const providerGoogle = new GoogleAuthProvider();
+    const providerGoogle = new GoogleAuthProvider();
 
-  //   const registeringGoogle = () => {
-  //     signInWithPopup(auth, providerGoogle)
-  //       .then((e) => {
-  //         const result = creatingReferencetoUID(
-  //           auth.currentUser.uid,
-  //           auth.currentUser.email
-  //         );
-  //       })
-  //       .catch((error) => {
-  //         switch (error.code) {
-  //           case "auth/popup-closed-by-user":
-  //             Swal.fire({
-  //               icon: "info",
-  //               title: "Seleccione una opción",
-  //               text: "Por favor elija una opción para iniciar sesión",
-  //             });
-  //             break;
-  //           default:
-  //             Swal.fire({
-  //               icon: "error",
-  //               title: "Error al iniciar sesión",
-  //               text: "Hubo un error en el inició de sesión con Google",
-  //             });
-  //             break;
-  //         }
-  //       });
-  //   };
+    const registeringGoogle = () => {
+      signInWithPopup(auth, providerGoogle)
+        .then((e) => {
+          const result = creatingReferencetoUID(
+            auth.currentUser.uid,
+            auth.currentUser.email
+          );
+        })
+        .catch((error) => {
+          switch (error.code) {
+            case "auth/popup-closed-by-user":
+              Swal.fire({
+                icon: "info",
+                title: "Seleccione una opción",
+                text: "Por favor elija una opción para iniciar sesión",
+              });
+              break;
+             default:
+              Swal.fire({
+                 icon: "error",
+                 title: "Error al iniciar sesión",
+                 text: "Hubo un error en el inició de sesión con Google",
+               });
+               break;
+           }
+         });
+     };
+   const loginGoogle = () => {
+       signInWithPopup(auth, providerGoogle)
+         .then((e) => {
+           const result = creatingReferencetoUID(
+             auth.currentUser.uid,
+             auth.currentUser.email
+           );
+         })
+         .catch((error) => {
+           switch (error.code) {
+             case "auth/popup-closed-by-user":
+               Swal.fire({
+                 icon: "info",
+                 title: "Seleccione una opción",
+                 text: "Por favor elija una opción para iniciar sesión",
+               });
+               break;
+             default:
+               Swal.fire({
+                 icon: "error",
+                 title: "Error al iniciar sesión",
+                 text: "Hubo un error en el inició de sesión con Google",
+               });
+               break;
+           }
+         });
+     };
 
-  //   const loginGoogle = () => {
-  //     signInWithPopup(auth, providerGoogle)
-  //       .then((e) => {
-  //         const result = creatingReferencetoUID(
-  //           auth.currentUser.uid,
-  //           auth.currentUser.email
-  //         );
-  //       })
-  //       .catch((error) => {
-  //         switch (error.code) {
-  //           case "auth/popup-closed-by-user":
-  //             Swal.fire({
-  //               icon: "info",
-  //               title: "Seleccione una opción",
-  //               text: "Por favor elija una opción para iniciar sesión",
-  //             });
-  //             break;
-  //           default:
-  //             Swal.fire({
-  //               icon: "error",
-  //               title: "Error al iniciar sesión",
-  //               text: "Hubo un error en el inició de sesión con Google",
-  //             });
-  //             break;
-  //         }
-  //       });
-  //   };
-
-  // const providerFacebook = new FacebookAuthProvider();
+   //const providerFacebook = new FacebookAuthProvider();
 
   // const registeringFacebook = () => {
   //   signInWithPopup(auth, providerFacebook)
@@ -201,72 +201,67 @@ const LogIn = () => {
   //   });
   // };
 
-  //   const loginData = async (e) => {
-  //     e.preventDefault();
-  //     try {
-  //       const user = await signInWithEmailAndPassword(
-  //         auth,
-  //         loginEmail,
-  //         loginPassword
-  //       );
-  //       // console.log("user");
-  //     } catch (erro) {
-  //       switch (erro.code) {
-  //         case "auth/user-not-found":
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Cuenta no encontrada",
-  //             text: "Ese correo no esta registrado con ninguna cuenta",
-  //           });
-  //           break;
-  //         case "auth/invalid-email":
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Correo invalido",
-  //             text: "Por favor utilice un correo completo",
-  //           });
-  //           break;
-  //         case "auth/wrong-password":
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Constraseña invalida",
-  //             text: "Contraseña equivocada",
-  //           });
-  //           break;
-  //         default:
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Error al iniciar sesión",
-  //             text: "Favor de revisar que se introdujeron correctamente los datos",
-  //           });
-  //           break;
-  //       }
-  //     }
-  //   };
+     const loginData = async (e) => {
+       e.preventDefault();
+       try {
+         const user = await signInWithEmailAndPassword(
+           auth,
+           loginEmail,
+           loginPassword
+         );
+         // console.log("user");
+       } catch (erro) {
+         switch (erro.code) {
+           case "auth/user-not-found":
+             Swal.fire({
+               icon: "error",
+               title: "Cuenta no encontrada",
+               text: "Ese correo no esta registrado con ninguna cuenta",
+             });
+             break;
+           case "auth/invalid-email":
+             Swal.fire({
+               icon: "error",
+               title: "Correo invalido",
+               text: "Por favor utilice un correo completo",
+             });
+             break;
+           case "auth/wrong-password":
+             Swal.fire({
+               icon: "error",
+               title: "Constraseña invalida",
+               text: "Contraseña equivocada",
+             });
+             break;
+           default:
+             Swal.fire({
+               icon: "error",
+               title: "Error al iniciar sesión",
+               text: "Favor de revisar que se introdujeron correctamente los datos",
+             });
+             break;
+         }
+       }
+     };
+    const logoutData = async (data) => {
+       await signOut(auth);
+     };
+    const onChangeRegisterMail = (e) => {
+       setRegisterEmail(e.target.value);
+     };
+    const onChangeRegisterPassword = (e) => {
+       setregisterPassword(e.target.value);
+     };
+    const onChangeLoginMail = (e) => {
+       setloginEmail(e.target.value);
+     };
+    const onChangeLoginPassword = (e) => {
+       setLoginPassword(e.target.value);
+     };
 
-  //   const logoutData = async (data) => {
-  //     await signOut(auth);
-  //   };
-
-  //   const onChangeRegisterMail = (e) => {
-  //     setRegisterEmail(e.target.value);
-  //   };
-
-  //   const onChangeRegisterPassword = (e) => {
-  //     setregisterPassword(e.target.value);
-  //   };
-
-  //   const onChangeLoginMail = (e) => {
-  //     setloginEmail(e.target.value);
-  //   };
-
-  //   const onChangeLoginPassword = (e) => {
-  //     setLoginPassword(e.target.value);
-  //   };
-
-  // const onChangeLogout = (e) => {
-  //   setlogout(e.target.value);
-  // }
+   //const onChangeLogout = (e) => {
+    // setlogout(e.target.value);
+   //}
 
   // if (!token) {
   //   return <LogAd setToken={setToken} />;
