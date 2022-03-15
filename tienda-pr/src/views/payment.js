@@ -8,7 +8,7 @@ const Pagos = () => {
     <div>
       <div className="">
           Pagos
-          </div>
+      </div>
     </div>
   );
 };
