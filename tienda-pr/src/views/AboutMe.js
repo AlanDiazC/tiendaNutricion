@@ -1,14 +1,10 @@
 import React, { useState, useRef } from "react";
-import "../css/homepage.css";
-
+import "../css/aboutMe.css";
 
 const AboutMe = () => {
-
   return (
     <div>
-      <div className="">
-          AboutMe
-          </div>
+      <div className="Nosotros">AboutMe</div>
     </div>
   );
 };
