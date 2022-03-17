@@ -1,0 +1,49 @@
+.Producto {
+  background-color: black;
+  width: 80%;
+  text-align: center;
+  padding-left: 10%;
+  color: white;
+}
+.imgProdInd {
+  width: 80%;
+}
+.tituloProdInd {
+  color: #bf9000;
+  margin: 0;
+  text-align: center;
+  font-size: 35px;
+  padding-top: 2% 5%;
+}
+.precioProdInd {
+  font-size: 28px;
+  margin: 10px 0;
+}
+.cuerpoTextoHome {
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: justify;
+}
+.cantidadProdInd {
+  font-size: 25px;
+  padding-top: 10px;
+}
+.cantAgregar {
+  background-color: white;
+  color: black;
+  padding: 0 10px;
+  margin: 0 10px;
+  font-weight: bold;
+}
+.btnCantProdInd {
+  cursor: pointer;
+  font-size: 30px;
+}
+.agregarCarro {
+  background-color: #dcba2c;
+  border: none;
+  /* border-radius: 10%; */
+  font-size: 30px;
+  padding: 10px 15px;
+  margin-top: 25px;
+}

@@ -17,6 +17,8 @@
 .imgDest {
   width: 45%;
   display: inline-block;
+  padding: 10px;
+  padding-right: 0;
 }
 .datosDest {
   padding-left: 5%;
@@ -41,7 +43,7 @@
 .tituloTextoHome {
   color: #bf9000;
   margin: 5px 0;
-  border-bottom: solid 2px #767171;
+  text-decoration: underline #767171;
 }
 .imgTextoHome {
   width: 80%;
