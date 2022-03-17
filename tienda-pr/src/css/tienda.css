@@ -37,6 +37,14 @@
 .precioProd {
   font-size: 25px;
 }
+.verMasProd {
+  font-size: 20px;
+  border: 2px solid #dcba2c;
+  color: #dcba2c;
+  padding: 5px 10px;
+  border-radius: 15%;
+  text-decoration: none;
+}
 .prodCarro {
   font-size: 40px;
 }

@@ -11,6 +11,24 @@ const Navbar = () => {
   const subMenu = () => setIsActive(!isActive);
   const dropdownRef = useRef(null);
 
+  const [user, setUser] = useState(false);
+
+  // const Login = () => {
+  //   if (user) {
+  //     return (
+  //       <a className="opcion" href="/MiCuenta">
+  //         Mi Cuenta
+  //       </a>
+  //     );
+  //   } else {
+  //     return (
+  //       <a className="opcion" href="/SignUp">
+  //         Login
+  //       </a>
+  //     );
+  //   }
+  // };
+
   return (
     <div>
       <div className="navCel nav">
@@ -38,7 +56,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* <div
+        <div
           ref={dropdownRef}
           className={`subMenu ${isActive ? "active" : "inactive"}`}
         >
@@ -67,8 +85,15 @@ const Navbar = () => {
           </p>
 
           <p>
-            <a className="opcion" href="/LogIn">
+            {/* <Login /> */}
+            <a className="opcion" href="/SignUp">
               Login
+            </a>
+          </p>
+          <p>
+            {/*Borrar tras la revisión al publico*/}
+            <a className="opcion" href="/MiCuenta">
+              Mi Cuenta
             </a>
           </p>
 
@@ -77,7 +102,7 @@ const Navbar = () => {
               Mi carrito
             </a>
           </p>
-        </div> */}
+        </div>
       </div>
     </div>
   );

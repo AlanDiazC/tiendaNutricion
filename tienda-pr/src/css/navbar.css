@@ -55,6 +55,7 @@
 }
 .subMenu.inactive {
   animation: SideBar2 0.4s linear;
+  display: none;
 }
 .subMenu {
   position: absolute;
@@ -64,6 +65,7 @@
   border-radius: 15% 0 0 15%;
   border: solid 2px #767171;
   border-right: none;
+  z-index: 10;
 }
 .listaNav::marker {
   width: 0px !important;

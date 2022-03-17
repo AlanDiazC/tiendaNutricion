@@ -25,3 +25,38 @@
 .contactoRedes {
   margin: 10px 0;
 }
+.formContacto {
+  width: 80%;
+  padding-left: 10%;
+  color: #dcba2c;
+  padding-top: 10px;
+}
+.formContacto label {
+  font-size: 25px;
+}
+.formContacto input,
+.formContacto textarea {
+  width: 100%;
+  font-size: 25px;
+  border: 2px solid #dcba2c;
+  /* border-radius: 10%; */
+  background: none;
+  color: #dcba2c;
+  margin: 15px 0;
+}
+.formContacto input::placeholder {
+  color: #dcba2c;
+}
+.divBtnCon {
+  text-align: center;
+  margin-top: 20px;
+}
+.divBtnCon button {
+  font-size: 25px;
+  background-color: #dcba2c;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20%;
+  font-weight: bold;
+}

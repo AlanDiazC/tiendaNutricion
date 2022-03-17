@@ -1,0 +1,31 @@
+.nosTitulo {
+  color: #bf9000;
+  margin: 0;
+  text-align: center;
+}
+.nosotrosCateg {
+  width: 50%;
+  padding-left: 7%;
+  display: inline-block;
+}
+.nosImg {
+  width: 30%;
+  padding-left: 7%;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 60px;
+}
+.nosImg img {
+  width: 100%;
+}
+.nosotrosCateg p {
+  color: white;
+  /* text-align: justify; */
+  font-size: 15px;
+}
+.nosCatTitulo {
+  color: #bf9000;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline #767171;
+}

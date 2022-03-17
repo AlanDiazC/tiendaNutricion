@@ -23,6 +23,19 @@ const Contacto = () => {
             </p>
           </div>
         </div>
+        <form className="formContacto">
+          <label>Nombre *</label>
+          <input type="text" required={true} name="corNombre" />
+          <label>Correo *</label>
+          <input type="text" required={true} name="corCorreo" />
+          <label>Telefono</label>
+          <input type="text" name="corCel" />
+          <label>Mensaje *</label>
+          <textarea type="text" required={true} name="corMensaje" />
+          <div className="divBtnCon">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
       </div>
     </div>
   );
