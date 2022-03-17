@@ -12,7 +12,7 @@ import {
    signInWithPopup,
    FacebookAuthProvider,
  } from "@firebase/auth";
- import { auth, db } from "../config/fbinit";
+ import { auth, db } from "../config/fbconfig";
  import { collection, addDoc, query, getDocs, where } from "@firebase/firestore";
 import Swal from "sweetalert2";
 import "../css/logIn.css";
@@ -271,7 +271,7 @@ const LogIn = () => {
       {/*Falta onChange*/}
       <div className="container" ref={container} id="container">
         <div className="form-container sign-up-container">
-          <form>
+          <form onSubmit={registeringData}>
             {" "}
             {/*Falta onSubmit*/}
             <div>
@@ -279,7 +279,7 @@ const LogIn = () => {
               {/* <input placeholder="Nombre de Usuario" /> */}
             </div>
             <div className="social-container">
-              <a href="#" className="social">
+              <a  onClick={registeringGoogle} className="social">
                 {/*Falta onClick*/}
                 <BsGoogle />
               </a>
@@ -288,9 +288,10 @@ const LogIn = () => {
               </a> */}
               {/* <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a> */}
             </div>
-            <input placeholder="Correo asociado a la cuenta" />
+            <input placeholder="Correo asociado a la cuenta" onChange={onChangeRegisterMail}/>
             {/*Falta onChange*/}
-            <input placeholder="Contraseña" type="password" />
+            <input placeholder="Contraseña" onChange={onChangeRegisterPassword}
+              type="password" />
             {/*Falta onChange*/}
             <button style={{ cursor: "pointer" }}>Sign me up !</button>
           </form>
@@ -299,7 +300,7 @@ const LogIn = () => {
           <form action="#">
             <h1>Log In</h1>
             <div className="social-container">
-              <a href="#" className="social">
+              <a href="#" className="social" onClick={loginGoogle}>
                 {/*Falta onClick*/}
 
                 <BsGoogle />
@@ -309,9 +310,9 @@ const LogIn = () => {
               </a> */}
               {/*<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a> */}
             </div>
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" onChange={onChangeLoginMail}/>
             {/*Falta onChange*/}
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password"  onChange={onChangeLoginPassword}/>
             {/*Falta onChange*/}
             <a href="/recuperarContraseña">Olvidaste tu Contraseña????</a>
             <button style={{ cursor: "pointer" }}>

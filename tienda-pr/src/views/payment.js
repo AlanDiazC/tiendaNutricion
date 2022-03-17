@@ -1,13 +1,10 @@
 import React, { useState, useRef } from "react";
 import "../css/homepage.css";
-import { auth, db } from "../config/fbinit";
-import Policia from "./views/policia";
+ import { auth, db } from "../config/fbconfig";
+import Policia from "./policia";
 import { collection, addDoc, getDocs, query, where } from "@firebase/firestore";
 
 const Pagos = () => {
-
-  
-
 const [poli, setPoli] = useState(false);
 const realizarPago = async() =>{
   
@@ -23,12 +20,12 @@ const realizarPago = async() =>{
   });
 }
 const revision = async() =>{
-if(poli==true){
+if(poli===true){
 
     return (
       <div>
         <div className="">
-            Pagos
+            <button onClick={realizarPago}>Pagar</button>;
         </div>
       </div>
     );
@@ -43,7 +40,7 @@ if(poli==true){
     <div>
       
       <Policia poli={poli} setPoli={setPoli} />
-      <div>{revision()}</div>
+      <div>{revision}</div>
 
     </div>
   );

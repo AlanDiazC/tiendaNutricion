@@ -5,10 +5,9 @@ import React, {
   useEffect,
   useLayoutEffect,
 } from "react";
-import { Redirect } from "react-router-dom";
-import SignUp from "./signUp";
-import { auth, db } from "../config/fbinit";
-import Calenadario from "./Reto30Dias";
+import { useNavigate } from "react-router-dom";
+import SignUp from "./LogIn";
+import { auth, db } from "../config/fbconfig";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -23,6 +22,7 @@ const Policia = ({ poli, setPoli }) => {
   const [user, setUser] = useState({});
   const [level, setLevel] = useState(0);
   const [amigo, setAmigito] = useState(0);
+  const navigate = useNavigate();
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -64,7 +64,8 @@ const Policia = ({ poli, setPoli }) => {
 
   switch (amigo) {
     case 1:
-      return <Redirect to={"/signUp"} />;
+      
+      return navigate("/signUp")
       break;
     case 3:
       switch (level) {
@@ -95,7 +96,7 @@ const Policia = ({ poli, setPoli }) => {
             title: "oh no...",
             text: "Este es contenido premium... Si quieres acceder a el porfavor contacta a tabs a traves de instagram o whatsapp",
           });
-          return <Redirect to={"/reto30Dias"} />;
+          return navigate("/")
           break;
       }
     case 4:
@@ -105,7 +106,7 @@ const Policia = ({ poli, setPoli }) => {
         text: "Parece ser que tu cuenta tiene algun error.. No te preocupes!, notifica a Tabata y lo solucionaremos :)",
       });
 
-      return <Redirect to={"/signUp"} />;
+      return navigate("/signUp");
       break;
     default:
       return (
