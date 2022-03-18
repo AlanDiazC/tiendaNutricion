@@ -23,12 +23,15 @@ const Policia = ({ poli, setPoli }) => {
   const [level, setLevel] = useState(0);
   const [amigo, setAmigito] = useState(0);
   const navigate = useNavigate();
-
-  onAuthStateChanged(auth, (currentUser) => {
+   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
 
+
+ 
   useLayoutEffect(() => {
+
+  
     const getLevel = async () => {
       try {
         const usersCollectionReference = collection(db, "usersRegistry");
@@ -68,37 +71,9 @@ const Policia = ({ poli, setPoli }) => {
       return <div>{navigate("/signUp")}</div>
       break;
     case 3:
-      switch (level) {
-        case 2:
-          setPoli(true);
-          return null;
-          break;
-        case 5:
-          setPoli(true);
-          return null;
-          break;
-        case 6:
-          setPoli(true);
-          return null;
-          break;
-        case 8:
-          setPoli(true);
-          return null;
-          break;
-        case 0:
-          setPoli(true);
-          return null;
-          break;
-        default:
-          setPoli(false);
-          Swal.fire({
-            icon: "info",
-            title: "oh no...",
-            text: "Para acceder a pagar primero necesitas loguearte a tu cuenta para que podamos atenderte mejor :) ",
-          });
-          return <div>{navigate("/signUp")}</div>
-          break;
-      }
+      setPoli(true);
+      return null;
+      break;
     case 4:  //Esto es si hay un Error
       Swal.fire({
         icon: "error",
@@ -118,38 +93,7 @@ const Policia = ({ poli, setPoli }) => {
       break;
   }
 
-   //switch (amigo) {
-  //   case 1:
-  //     return <Redirect to={"/signUp"} />;
-  //     break;
-  //   case 3:
-  //     switch (level) {
-  //       case 2:
-  //         return null;
-  //         break;
-  //       default:
-  //         Swal.fire({
-  //           icon: "info",
-  //           title: "diantres",
-  //           text: "Este es contenido premium... Si quieres acceder a el porfavor contacta a tabs a traves de instagram o whatsapp",
-  //         }).then(() => {
-  //           return <Redirect to={"/signUp"} />;
-  //         });
-
-  //         return <Redirect to={"/signUp"} />;
-
-  //         break;
-  //     }
-  //     break;
-  //   default:
-  //     return (
-  //       <div>
-  //         <PoliInmigrantes />
-  //         Loading
-  //       </div>
-  //     );
-  //     break;
-  // }
+  
 };
 
 export default Policia;

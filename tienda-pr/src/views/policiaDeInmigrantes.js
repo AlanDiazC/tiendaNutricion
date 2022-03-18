@@ -20,9 +20,13 @@ import Swal from "sweetalert2";
 const Policia = () => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
-  onAuthStateChanged(auth, (currentUser) => {
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
+  }, []);
+  
 
   // useLayoutEffect(() => {
 
@@ -64,7 +68,7 @@ const Policia = () => {
   // },[user, level]);
 
   if (user == null) {
-    return navigate("/signUp");
+    return  <div>{navigate("/signUp")}</div>
   } else {
     return null;
   }

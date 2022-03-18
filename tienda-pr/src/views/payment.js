@@ -2,29 +2,39 @@ import React, { useState, useRef } from "react";
 import "../css/homepage.css";
  import { auth, db } from "../config/fbconfig";
 import Policia from "./policia";
-import { collection, addDoc, getDocs, query, where } from "@firebase/firestore";
+import { collection, addDoc, getDocs, query, where,onSnapshot } from "@firebase/firestore";
 
 const Pagos = () => {
 const [poli, setPoli] = useState(false);
 const realizarPago = async() =>{
   
-  const docRef = await db
-  .collection('clientes')
-  .doc(auth.currentUser)
-  .collection("checkout_sessions")
-  .add({
-    mode: "payment",
-    price: "price_1GqIC8HYgolSBA35zoTTN2Zl", // One-time price created in Stripe
-    success_url: window.location.origin,
-    cancel_url: window.location.origin,
-  });
-}
-const revision = async() =>{
-if(poli===true){
+  const docRef = await addDoc(collection(db, `clientes/${auth.currentUser.uid}/checkout_sessions`), {
+          mode:"payment",
+          price: 'price_1KbfV0AUDqNuV9Cvd2nwMHEM',
+          success_url: window.location.origin,
+          cancel_url: window.location.origin,
+        });
 
+  onSnapshot(docRef, (snap) => {
+    const { error, url } = snap.data();
+        if (error) {
+          // Show an error to your customer and
+          // inspect your Cloud Function logs in the Firebase console.
+          alert(`An error occured: ${error.message}`);
+        }
+        if (url) {
+          // We have a Stripe Checkout URL, let's redirect.
+          window.location.assign(url);
+        }})      
+        
+
+}
+const revision = () =>{
+if(poli==true){
     return (
       <div>
         <div className="">
+          
             <button onClick={realizarPago}>Pagar</button>;
         </div>
       </div>
@@ -40,7 +50,7 @@ if(poli===true){
     <div>
       
       <Policia poli={poli} setPoli={setPoli} />
-      <div>{revision}</div>
+      <div>{revision()}</div>
 
     </div>
   );
