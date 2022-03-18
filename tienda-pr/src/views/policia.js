@@ -65,7 +65,7 @@ const Policia = ({ poli, setPoli }) => {
   switch (amigo) {
     case 1:
       
-      return navigate("/signUp")
+      return <div>{navigate("/signUp")}</div>
       break;
     case 3:
       switch (level) {
@@ -94,19 +94,19 @@ const Policia = ({ poli, setPoli }) => {
           Swal.fire({
             icon: "info",
             title: "oh no...",
-            text: "Este es contenido premium... Si quieres acceder a el porfavor contacta a tabs a traves de instagram o whatsapp",
+            text: "Para acceder a pagar primero necesitas loguearte a tu cuenta para que podamos atenderte mejor :) ",
           });
-          return navigate("/")
+          return <div>{navigate("/signUp")}</div>
           break;
       }
-    case 4:
+    case 4:  //Esto es si hay un Error
       Swal.fire({
         icon: "error",
         title: "oh no...",
-        text: "Parece ser que tu cuenta tiene algun error.. No te preocupes!, notifica a Tabata y lo solucionaremos :)",
+        text: "Parece ser que tu cuenta tiene algun error.. No te preocupes!, notifica a PR Nutrition y lo solucionaremos :)",
       });
 
-      return navigate("/signUp");
+      return  <div>{navigate("/signUp")}</div>
       break;
     default:
       return (
@@ -118,7 +118,7 @@ const Policia = ({ poli, setPoli }) => {
       break;
   }
 
-  // switch (amigo) {
+   //switch (amigo) {
   //   case 1:
   //     return <Redirect to={"/signUp"} />;
   //     break;
