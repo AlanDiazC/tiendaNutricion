@@ -7,11 +7,14 @@ import Homepage from "./views/Homepage";
 import AboutMe from "./views/AboutMe";
 import Tienda from "./views/Tienda";
 import SignUP from "./views/LogIn";
-const App = () => {
+import Carrito from "./views/Carrito";
+import LogIn from "./views/LogIn";
+import MiCuenta from "./views/MiCuenta";
+import Producto from "./views/Producto";
 
+const App = () => {
   return (
     <div>
-      
       <header>
         <Navbar />
       </header>
@@ -23,6 +26,10 @@ const App = () => {
           <Route path="/SobreNosotros" element={<AboutMe />} />
           <Route path="/payments" element={<Payment />} />
           <Route path="/Tienda" element={<Tienda />} />
+          <Route path="/MiCarrito" element={<Carrito />} />
+          <Route path="LogIn" element={<LogIn />} />
+          <Route path="/MiCuenta" element={<MiCuenta />} />
+          <Route path="/Producto" element={<Producto />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
       </Router>

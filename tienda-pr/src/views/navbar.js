@@ -4,6 +4,14 @@ import "../css/navbar.css";
 import { FiSearch } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { FiMenu } from "react-icons/fi";
+
+import { FiHome } from "react-icons/fi";
+import { FiShoppingBag } from "react-icons/fi";
+import { FiInfo } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
+import { FiUser } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fi";
+
 import logo from "../multimedia/Logo.png";
 
 const Navbar = () => {
@@ -54,6 +62,54 @@ const Navbar = () => {
           >
             <FiX />
           </a>
+        </div>
+
+        <div
+          ref={dropdownRef}
+          className={`subMenuLogos ${isActive ? "active" : "inactive"}`}
+        >
+          <p>
+            <a className="opcionLogos" href="/">
+              <FiHome />
+            </a>
+          </p>
+
+          <p>
+            <a className="opcionLogos" href="/Tienda">
+              <FiShoppingBag />
+            </a>
+          </p>
+
+          <p>
+            <a className="opcionLogos" href="/SobreNosotros">
+              <FiInfo />
+            </a>
+          </p>
+
+          <p>
+            <a className="opcionLogos" href="/Contacto">
+              <FiMail />
+            </a>
+          </p>
+
+          <p>
+            {/* <Login /> */}
+            <a className="opcionLogos" href="/SignUp">
+              <FiUser />
+            </a>
+          </p>
+          <p>
+            {/*Borrar tras la revisión al publico*/}
+            <a className="opcionLogos" href="/MiCuenta">
+              <FiUser />
+            </a>
+          </p>
+
+          <p>
+            <a className="opcionLogos" href="/MiCarrito">
+              <FiShoppingCart />
+            </a>
+          </p>
         </div>
 
         <div
