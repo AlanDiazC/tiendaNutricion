@@ -1,0 +1,41 @@
+.footer {
+  border-top: 5px solid #dcba2c;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footerLogos {
+  display: flex;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footerLogo {
+  width: 80%;
+}
+.footerOpcionLogos {
+  color: white;
+  padding: 0 5px;
+  text-decoration: none;
+  font-size: 35px;
+  width: 20vw;
+}
+.footerLogos p {
+  margin: 10px;
+}
+.footerDatos {
+  display: inline-flex;
+  color: white;
+}
+.footerDatos a {
+  width: 50vw;
+  text-align: center;
+}
+.footerDatos div {
+  text-align: center;
+  width: 25vw;
+}
+.footerContacto {
+  font-size: 50px;
+  margin: 60px 0 !important;
+}

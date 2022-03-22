@@ -11,6 +11,7 @@ import Carrito from "./views/Carrito";
 import LogIn from "./views/LogIn";
 import MiCuenta from "./views/MiCuenta";
 import Producto from "./views/Producto";
+import Footer from "./views/Footer";
 
 const App = () => {
   return (
@@ -33,6 +34,8 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
         </Routes>
       </Router>
+
+      <Footer />
     </div>
   );
 };
