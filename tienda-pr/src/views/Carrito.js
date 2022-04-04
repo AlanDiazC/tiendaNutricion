@@ -7,18 +7,18 @@ import { BsFillPlusCircleFill } from "react-icons/bs";
 import { BsFillDashCircleFill } from "react-icons/bs";
 import { BiCurrentLocation } from "react-icons/bi";
 
-import ObtenerProductos from "./ObtenerProductos";
+import ObtenerProductos from "./ObtenerCarrito";
 
 const Tienda = () => {
   const navigate = useNavigate();
   const [cantidad, setCantidad] = useState(1);
   const [cantidad2, setCantidad2] = useState(1);
-  const [subTotal, setSubtotal] = useState(200);
-  const [envio, setEnvio] = useState(30);
-  const [total, setTotal] = useState(subTotal + envio);
+  const [subTotal, setSubtotal] = useState(0);
+  const [envio, setEnvio] = useState(0);
+  const [total, setTotal] = useState(0);
 
-  const [data, setData] = useState({
-    producto0: {
+  const [data, setData] = useState([
+    {
       id: "",
       nombre: "",
       imagen: "",
@@ -26,7 +26,7 @@ const Tienda = () => {
       precio: 0,
       precioId: "",
     },
-  });
+  ]);
   const [flag, setFlag] = useState(false);
   const Aumentar = (cant, setCant) => {
     setCant(cant + 1);
@@ -39,12 +39,13 @@ const Tienda = () => {
 
   const mostrar = () => {
     if (flag) {
+      console.log(subTotal);
       return (
         <div>
           <div className="prodCarro">
-            <img className="imgCarro" src={data.producto2.imagen} />
+            <img className="imgCarro" src={data[2].imagen} />
             <div className="datosCarro">
-              <span className="nombreProdCarro">{data.producto2.nombre}</span>
+              <span className="nombreProdCarro">{data[2].nombre}</span>
               <a
                 className="btnCantCarro"
                 onClick={() => Disminuir(cantidad, setCantidad)}
@@ -63,7 +64,7 @@ const Tienda = () => {
               <p className="xCarro">
                 <FiX />
               </p>
-              <span className="precioCarro">$ {data.producto2.precio}</span>
+              <span className="precioCarro">$ {data[2].precio}</span>
             </div>
           </div>
           {/* <div className="prodCarro">
@@ -99,14 +100,21 @@ const Tienda = () => {
 
   const pagar = () => {
     if (flag) {
-      navigate("/payments/" + data.producto2.precioId);
+      navigate("/payments/" + data[2].precioId);
     }
   };
 
   return (
     <div className="Carro">
       <h1 className="carroTitulo">Mi Carrito</h1>
-      <ObtenerProductos setData={setData} data={data} setFlag={setFlag} />
+      <ObtenerProductos
+        setData={setData}
+        data={data}
+        setFlag={setFlag}
+        setSubtotal={setSubtotal}
+        setEnvio={setEnvio}
+        setTotal={setTotal}
+      />
       {mostrar()}
       <div className="direcCarro">
         <h2>Dirección de envio</h2>
