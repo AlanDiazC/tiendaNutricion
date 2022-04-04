@@ -55,6 +55,9 @@
 .precioEnv {
   text-align: right;
 }
+.precioEnv span {
+  padding-right: 10%;
+}
 .totalPrecio {
   text-align: center;
   font-size: 22px;

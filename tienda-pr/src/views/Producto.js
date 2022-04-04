@@ -6,9 +6,24 @@ import prod1 from "../multimedia/prod1.png";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { BsFillDashCircleFill } from "react-icons/bs";
 
-const Contacto = () => {
-  const [cantidad, setCantidad] = useState(1);
+import { useParams } from "react-router-dom";
 
+import ObtenerProd from "./ObtenerProdEspecifico";
+
+const Producto = () => {
+  const { idProd } = useParams();
+  const [data, setData] = useState({
+    producto0: {
+      nombre: "",
+      imagen: "",
+      descripcion: "",
+      precio: 0,
+      precioId: "",
+    },
+  });
+  const [flag, setFlag] = useState(false);
+
+  const [cantidad, setCantidad] = useState(1);
   const Aumentar = () => {
     setCantidad(cantidad + 1);
   };
@@ -21,14 +36,16 @@ const Contacto = () => {
   return (
     <div>
       <div className="Producto">
-        <img className="imgProdInd" src={prod1} />
-        <h1 className="tituloProdInd">Nombre</h1>
-        <h2 className="precioProdInd">$ 000.00</h2>
-        <p className="cuerpoTextoHome">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
-        </p>
+        <ObtenerProd
+          setData={setData}
+          data={data}
+          setFlag={setFlag}
+          id={idProd}
+        />
+        <img className="imgProdInd" src={data.producto0.imagen} />
+        <h1 className="tituloProdInd">{data.producto0.nombre}</h1>
+        <h2 className="precioProdInd">$ {data.producto0.precio}</h2>
+        <p className="cuerpoTextoHome">{data.producto0.descripcion}</p>
         <div className="cantidadProdInd">
           <span className="cantProdInd">Cantidad: </span>
           <a className="btnCantProdInd" onClick={() => Disminuir()}>
@@ -46,4 +63,4 @@ const Contacto = () => {
   );
 };
 
-export default Contacto;
+export default Producto;

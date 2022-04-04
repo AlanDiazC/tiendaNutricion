@@ -1,13 +1,35 @@
 import React, { useState, useRef } from "react";
 import "../css/miCuenta.css";
 import { BiCurrentLocation } from "react-icons/bi";
+import { onAuthStateChanged, signOut } from "@firebase/auth";
+import { auth } from "../config/fbconfig";
+import { useNavigate } from "react-router-dom";
 
 const MiCuenta = () => {
+  const [user, setUser] = useState({});
+  const navigate = useNavigate();
+  const logoutData = async (data) => {
+    await signOut(auth);
+    navigate("/signUp");
+  };
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const revisar = () => {
+    if (user != null) {
+      return <h3 className="correoCuenta">Email: {user.email}</h3>;
+    } else {
+      navigate("/signUp");
+    }
+  };
+
   return (
     <div>
       <div className="Cuenta">
         <h1 className="cuentaTitulo">Mi Cuenta</h1>
-        <h3 className="correoCuenta">Email: correo@ejemplo.com</h3>
+        {revisar()}
         <div className="direcCuenta">
           <h2>Dirección de envio</h2>
           <button>
@@ -23,7 +45,7 @@ const MiCuenta = () => {
           </a>
         </div>
         <div className="LogOut">
-          <button>Cerrar sesión</button>
+          <button onClick={logoutData}>Cerrar sesión</button>
         </div>
       </div>
     </div>
