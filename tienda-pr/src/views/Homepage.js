@@ -25,7 +25,7 @@ const Homepage = () => {
       const productos = [];
       for (let i = 0; i < data.length; i++) {
         productos.push(
-          <div className="producto">
+          <div className="producto" key={i}>
             <h1 className="nombreProd">{data[i].nombre}</h1>
             <img className="imgProd" src={data[i].imagen} />
             <div className="datosProd">

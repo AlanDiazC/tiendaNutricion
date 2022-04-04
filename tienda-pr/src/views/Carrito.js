@@ -39,7 +39,6 @@ const Tienda = () => {
 
   const mostrar = () => {
     if (flag) {
-      console.log(subTotal);
       return (
         <div>
           <div className="prodCarro">
