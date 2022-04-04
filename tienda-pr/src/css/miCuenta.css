@@ -3,7 +3,7 @@
   padding-left: 5%;
 }
 .cuentaTitulo {
-  color: #bf9000;
+  color: #f2f37b;
   margin: 0;
   text-align: center;
 }
@@ -14,7 +14,7 @@
 .direcCuenta h2 {
   width: 83%;
   font-size: 28px;
-  background-color: #3b3838;
+  background-color: #777777;
   display: inline-block;
   color: white;
   padding-left: 5px;
@@ -37,7 +37,7 @@
   margin: 15px 0;
 }
 .pedidos button {
-  background-color: #767171;
+  background-color: #777777;
   border: none;
   border-radius: 15%;
   font-size: 25px;

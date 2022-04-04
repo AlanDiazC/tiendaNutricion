@@ -4,7 +4,8 @@
   color: white;
 }
 .carroTitulo {
-  color: #bf9000;
+  color: #f2f37b;
+  /* #bf9000; */
   margin: 0;
   text-align: center;
 }
@@ -25,7 +26,7 @@
   margin-top: -15px;
 }
 .nombreProdCarro {
-  display: f;
+  display: flex;
   font-size: 30px;
 }
 .btnCantCarro {
@@ -69,7 +70,8 @@
 .direcCarro h2 {
   width: 83%;
   font-size: 28px;
-  background-color: #3b3838;
+  background-color: #777777;
+  /* #3b3838; */
   display: inline-block;
   padding-left: 5px;
 }

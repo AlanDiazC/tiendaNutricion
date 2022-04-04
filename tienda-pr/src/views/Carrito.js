@@ -45,7 +45,6 @@ const Tienda = () => {
             <img className="imgCarro" src={data.producto2.imagen} />
             <div className="datosCarro">
               <span className="nombreProdCarro">{data.producto2.nombre}</span>
-              <br />
               <a
                 className="btnCantCarro"
                 onClick={() => Disminuir(cantidad, setCantidad)}
