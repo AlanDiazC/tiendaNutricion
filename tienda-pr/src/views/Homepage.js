@@ -25,14 +25,13 @@ const Homepage = () => {
       const productos = [];
       for (let i = 0; i < data.length; i++) {
         productos.push(
-          <div className="producto" key={i}>
-            <h1 className="nombreProd">{data[i].nombre}</h1>
-            <img className="imgProd" src={data[i].imagen} />
-            <div className="datosProd">
-              <h2 className="precioProd">$ {data[i].precio}</h2>
-              <a className="verMasProd" href={"/Producto/" + data[i].id}>
-                Ver más
-              </a>
+          <div className="prodDest" key={i}>
+            <img className="imgDest" src={data[i].imagen} />
+            <div className="datosDest">
+              <h1 className="nombreProd">{data[i].nombre}</h1>
+              <h3>
+                <FaShoppingCart className="destCarro" />
+              </h3>
             </div>
           </div>
         );
