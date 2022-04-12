@@ -28,7 +28,7 @@ const Homepage = () => {
           <div className="prodDest" key={i}>
             <img className="imgDest" src={data[i].imagen} />
             <div className="datosDest">
-              <h1 className="nombreProd">{data[i].nombre}</h1>
+              <h1 className="nombreDest">{data[i].nombre}</h1>
               <h3>
                 <FaShoppingCart className="destCarro" />
               </h3>
