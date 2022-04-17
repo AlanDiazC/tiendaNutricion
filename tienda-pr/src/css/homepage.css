@@ -136,33 +136,28 @@
     text-align: center;
     font-size: 40px;
   }
-
   .prodDest {
-    width: 70%;
-    margin: 20px 0;
-    margin-left: 15%;
+    width: 25%;
+    height: 25vw;
     border: solid 5px #777777;
     padding-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5.6%;
+    text-align: center;
   }
   .imgDest {
-    width: 45%;
-    display: inline-block;
+    height: 45%;
     padding: 3%;
-    padding-right: 0;
   }
   .datosDest {
-    padding-left: 5%;
-    display: inline-block;
     color: white;
-    width: 45%;
-    text-align: center;
-    vertical-align: top;
   }
   .nombreDest {
     font-size: 35px;
     color: #f2f37b;
-    text-align: center;
     padding-bottom: 10px;
+    margin: 0 !important;
   }
   .destCarro {
     font-size: 50px;
@@ -177,18 +172,76 @@
     color: #f2f37b;
     margin: 5px 0;
     text-decoration: underline #767171;
-    font-size: 40px;
+    font-size: 35px;
   }
   .imgTextoHome {
-    width: 60%;
+    width: 40%;
     padding: 0 auto;
   }
   .cuerpoTextoHome {
-    font-size: 30px;
+    font-size: 25px;
     margin: 15px 0;
     text-align: justify;
   }
 }
 
 @media only screen and (min-width: 1596px) {
+  .Homepage {
+    background-color: black;
+    padding: 15px 0;
+  }
+  .destTitulo {
+    color: #f2f37b;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+  }
+  .prodDest {
+    width: 25%;
+    height: 20vw;
+    border: solid 5px #777777;
+    padding-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5.6%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .imgDest {
+    height: 50%;
+    padding: 3%;
+  }
+  .datosDest {
+    color: white;
+  }
+  .nombreDest {
+    font-size: 35px;
+    color: #f2f37b;
+    padding-bottom: 10px;
+    margin: 0 !important;
+  }
+  .destCarro {
+    font-size: 50px;
+  }
+  .textoHome {
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    color: white;
+  }
+  .tituloTextoHome {
+    color: #f2f37b;
+    margin: 5px 0;
+    text-decoration: underline #767171;
+    font-size: 35px;
+  }
+  .imgTextoHome {
+    width: 40%;
+    padding: 0 auto;
+  }
+  .cuerpoTextoHome {
+    font-size: 25px;
+    margin: 15px 0;
+    text-align: justify;
+  }
 }

@@ -107,34 +107,33 @@
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
   .Producto {
     background-color: black;
-    width: 80%;
+    width: 60%;
     text-align: center;
-    padding-left: 10%;
+    padding-left: 20%;
     color: white;
   }
   .imgProdInd {
-    width: 70%;
+    width: 40%;
   }
   .tituloProdInd {
     color: #bf9000;
     margin: 0;
     text-align: center;
-    font-size: 45px;
-    padding-top: 3%;
+    font-size: 40px;
   }
   .precioProdInd {
-    font-size: 38px;
-    margin: 20px 0;
+    font-size: 33px;
+    margin: 10px 0;
   }
   .cuerpoTexto {
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px 0;
     text-align: justify;
     width: 80%;
     padding-left: 10%;
   }
   .cantidadProdInd {
-    font-size: 35px;
+    font-size: 30px;
     padding-top: 20px;
   }
   .cantAgregar {
@@ -146,15 +145,16 @@
   }
   .btnCantProdInd {
     cursor: pointer;
-    font-size: 40px;
+    font-size: 35px;
   }
   .agregarCarro {
     background-color: #dcba2c;
     border: none;
     /* border-radius: 10%; */
-    font-size: 40px;
+    font-size: 35px;
     padding: 10px 15px;
     margin-top: 25px;
+    margin-bottom: 15px;
   }
 }
 

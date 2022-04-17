@@ -215,8 +215,8 @@
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
   .Carro {
-    width: 90%;
-    padding-left: 5%;
+    width: 60%;
+    padding-left: 20%;
     color: white;
   }
   .carroTitulo {
@@ -224,12 +224,14 @@
     /* #bf9000; */
     margin: 0;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 50px;
   }
   .prodCarro {
     border-bottom: 2px solid #dcba2c;
     margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
   }
   .imgCarro {
     display: inline-block;
@@ -241,33 +243,34 @@
     width: 30%;
     text-align: center;
     vertical-align: top;
+    padding-top: 40px;
     margin-top: -15px;
   }
   .nombreProdCarro {
     display: flex;
-    font-size: 35px;
+    font-size: 30px;
   }
   .btnCantCarro {
-    font-size: 32px;
+    font-size: 27px;
   }
   .cantCarro {
-    font-size: 32px;
+    font-size: 27px;
     color: black;
     background-color: white;
     padding: 0 5px;
     margin: 0 7px;
   }
   .xCarro {
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 0;
     margin-top: 15px;
     text-align: right;
   }
   .precioCarro {
-    font-size: 35px;
+    font-size: 30px;
   }
   .calcPrecio {
-    font-size: 30px;
+    font-size: 25px;
     display: inline-block;
     width: 50%;
   }
@@ -279,7 +282,7 @@
   }
   .totalPrecio {
     text-align: center;
-    font-size: 32px;
+    font-size: 27px;
     padding-top: 10px;
   }
   .direcCarro {
@@ -287,7 +290,7 @@
   }
   .direcCarro h2 {
     width: 83%;
-    font-size: 38px;
+    font-size: 33px;
     background-color: #777777;
     /* #3b3838; */
     display: inline-block;
@@ -309,17 +312,125 @@
   .btnCarro {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20%;
+    margin-bottom: 8%;
   }
   .btnCarro button {
     background-color: #dcba2c;
     border: none;
     border-radius: 10%;
-    font-size: 38px;
+    font-size: 33px;
     padding: 5px 10px;
     cursor: pointer;
   }
 }
 
 @media only screen and (min-width: 1596px) {
+  .Carro {
+    width: 60%;
+    padding-left: 20%;
+    color: white;
+  }
+  .carroTitulo {
+    color: #f2f37b;
+    /* #bf9000; */
+    margin: 0;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+  .prodCarro {
+    border-bottom: 2px solid #dcba2c;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .imgCarro {
+    display: inline-block;
+    width: 30%;
+  }
+  .datosCarro {
+    display: inline-block;
+    padding-left: 5%;
+    width: 30%;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 40px;
+    margin-top: -15px;
+  }
+  .nombreProdCarro {
+    display: flex;
+    font-size: 30px;
+  }
+  .btnCantCarro {
+    font-size: 27px;
+  }
+  .cantCarro {
+    font-size: 27px;
+    color: black;
+    background-color: white;
+    padding: 0 5px;
+    margin: 0 7px;
+  }
+  .xCarro {
+    font-size: 35px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    text-align: right;
+  }
+  .precioCarro {
+    font-size: 30px;
+  }
+  .calcPrecio {
+    font-size: 25px;
+    display: inline-block;
+    width: 50%;
+  }
+  .precioEnv {
+    text-align: right;
+  }
+  .precioEnv span {
+    padding-right: 10%;
+  }
+  .totalPrecio {
+    text-align: center;
+    font-size: 27px;
+    padding-top: 10px;
+  }
+  .direcCarro {
+    padding-top: 20px;
+  }
+  .direcCarro h2 {
+    width: 83%;
+    font-size: 33px;
+    background-color: #777777;
+    /* #3b3838; */
+    display: inline-block;
+    padding-left: 5px;
+  }
+  .direcCarro button {
+    display: inline-block;
+    padding: 0;
+    font-size: 65px;
+    background: none;
+    border: none;
+    color: #dcba2c;
+    padding-left: 0.5%;
+    cursor: pointer;
+  }
+  .direcCarro button svg {
+    vertical-align: middle;
+  }
+  .btnCarro {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 5%;
+  }
+  .btnCarro button {
+    background-color: #dcba2c;
+    border: none;
+    border-radius: 10%;
+    font-size: 33px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
 }

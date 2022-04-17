@@ -160,16 +160,16 @@
     color: #f2f37b;
     margin: 0;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
   }
   .correoCuenta {
     color: white;
     margin-bottom: 10px;
-    font-size: 35px;
+    font-size: 30px;
   }
   .direcCuenta h2 {
     width: 83%;
-    font-size: 38px;
+    font-size: 30px;
     background-color: #777777;
     display: inline-block;
     color: white;
@@ -178,7 +178,7 @@
   .direcCuenta button {
     display: inline-block;
     padding: 0;
-    font-size: 65px;
+    font-size: 60px;
     background: none;
     border: none;
     color: #dcba2c;
@@ -196,7 +196,7 @@
     background-color: #777777;
     border: none;
     border-radius: 15%;
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
     padding: 10px 15px;
@@ -209,20 +209,20 @@
     background-color: #bf9000;
     border: none;
     border-radius: 15%;
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
     padding: 10px 15px;
   }
   .LogOut {
     text-align: center;
-    margin-top: 40%;
+    margin-top: 10%;
     margin-bottom: 50px;
   }
   .LogOut button {
     background: none;
     border: 2px solid white;
     border-radius: 15%;
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
     padding: 10px 15px;
@@ -230,4 +230,79 @@
 }
 
 @media only screen and (min-width: 1596px) {
+  .Cuenta {
+    width: 50%;
+    padding-left: 25%;
+  }
+  .cuentaTitulo {
+    color: #f2f37b;
+    margin: 0;
+    text-align: center;
+    font-size: 35px;
+  }
+  .correoCuenta {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .direcCuenta h2 {
+    width: 83%;
+    font-size: 30px;
+    background-color: #777777;
+    display: inline-block;
+    color: white;
+    padding-left: 15px;
+  }
+  .direcCuenta button {
+    display: inline-block;
+    padding: 0;
+    font-size: 60px;
+    background: none;
+    border: none;
+    color: #dcba2c;
+    padding-left: 0.5%;
+    cursor: pointer;
+  }
+  .direcCuenta button svg {
+    vertical-align: middle;
+  }
+  .pedidos {
+    text-align: center;
+    margin: 15px 0;
+  }
+  .pedidos button {
+    background-color: #777777;
+    border: none;
+    border-radius: 15%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .error {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .error button {
+    background-color: #bf9000;
+    border: none;
+    border-radius: 15%;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .LogOut {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 50px;
+  }
+  .LogOut button {
+    background: none;
+    border: 2px solid white;
+    border-radius: 15%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
 }

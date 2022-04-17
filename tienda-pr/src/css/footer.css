@@ -100,7 +100,7 @@
   }
 
   .footerLogo {
-    width: 60%;
+    width: 50%;
   }
   .footerOpcionLogos {
     color: #777777;
@@ -117,7 +117,7 @@
     color: white;
   }
   .footerDatos a {
-    width: 50vw;
+    width: 48vw;
     text-align: center;
   }
   .footerDatos div {
@@ -126,9 +126,50 @@
   }
   .footerContacto {
     font-size: 70px;
-    margin: 100px 0 !important;
+    margin-top: 45% !important;
   }
 }
 
 @media only screen and (min-width: 1596px) {
+  .footer {
+    border-top: 5px solid #dcba2c;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .footerLogos {
+    display: flex;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .footerLogo {
+    width: 30%;
+  }
+  .footerOpcionLogos {
+    color: #777777;
+    padding: 0 5px;
+    text-decoration: none;
+    font-size: 60px;
+    width: 20vw;
+  }
+  .footerLogos p {
+    margin: 10px;
+  }
+  .footerDatos {
+    display: inline-flex;
+    color: white;
+  }
+  .footerDatos a {
+    width: 48vw;
+    text-align: center;
+  }
+  .footerDatos div {
+    text-align: center;
+    width: 25vw;
+  }
+  .footerContacto {
+    font-size: 80px;
+    margin-top: 30% !important;
+  }
 }
