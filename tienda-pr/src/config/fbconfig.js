@@ -15,7 +15,7 @@ const firebaseConfig = {
   storageBucket: "pr-nutrition.appspot.com",
   messagingSenderId: "90388717871",
   appId: "1:90388717871:web:6768ca83d54883474941da",
-  measurementId: "G-G0KGSXFQ59"
+  measurementId: "G-G0KGSXFQ59",
 };
 
 // Initialize Firebase
@@ -24,4 +24,4 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export {app, analytics, auth, db}
+export { app, analytics, auth, db };
