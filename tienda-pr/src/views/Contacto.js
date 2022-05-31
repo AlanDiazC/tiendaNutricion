@@ -33,7 +33,9 @@ const Contacto = () => {
           <label>Mensaje *</label>
           <textarea type="text" required={true} name="corMensaje" />
           <div className="divBtnCon">
-            <button type="submit">Enviar</button>
+            <button type="submit">
+              <span className="textoEnviarBtn">Enviar</span>
+            </button>
           </div>
         </form>
       </div>

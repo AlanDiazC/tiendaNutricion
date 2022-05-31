@@ -25,8 +25,8 @@ const Tienda = () => {
             <img className="imgProd" src={data[i].imagen} />
             <div className="datosProd">
               <h2 className="precioProd">$ {data[i].precio}</h2>
-              <a className="verMasProd" href={"/Producto/" + data[i].id}>
-                Ver más
+              <a className="verMasTop" href={"/Producto/" + data[i].id}>
+                <span className="verMasProd">Ver más</span>
               </a>
             </div>
           </div>
@@ -38,7 +38,7 @@ const Tienda = () => {
   return (
     <div className="Tienda">
       <ObtenerProductos setData={setData} data={data} setFlag={setFlag} />
-      <div>{mostrar()}</div>
+      <div className="mostrarProds">{mostrar()}</div>
     </div>
   );
 };

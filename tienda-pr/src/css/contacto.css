@@ -55,12 +55,26 @@
   }
   .divBtnCon button {
     font-size: 25px;
-    background-color: #dcba2c;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20%;
+    background-color: black;
+    border-bottom: 2px solid #dcba2c;
+    border-left: 2px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 10px 2px 5px 5px;
     font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 10px 15px 0px 10px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
   }
 }
 
@@ -123,12 +137,26 @@
   }
   .divBtnCon button {
     font-size: 35px;
-    background-color: #dcba2c;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20%;
+    background-color: black;
+    border-bottom: 3px solid #dcba2c;
+    border-left: 3px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 12px 0px 7px 7px;
     font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    padding: 12px 17px 2px 12px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
   }
 }
 
@@ -191,12 +219,26 @@
   }
   .divBtnCon button {
     font-size: 30px;
-    background-color: #dcba2c;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20%;
+    background-color: black;
+    border-bottom: 2px solid #dcba2c;
+    border-left: 2px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 10px 2px 5px 5px;
     font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 10px 15px 0px 10px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
   }
 }
 
@@ -254,15 +296,29 @@
   }
   .divBtnCon {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .divBtnCon button {
     font-size: 30px;
-    background-color: #dcba2c;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20%;
+    background-color: black;
+    border-bottom: 2px solid #dcba2c;
+    border-left: 2px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 10px 2px 5px 5px;
     font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 10px 15px 0px 10px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
   }
 }

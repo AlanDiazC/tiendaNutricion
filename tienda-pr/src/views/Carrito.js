@@ -131,7 +131,9 @@ const Tienda = () => {
         <span>Total: ${total}</span>
       </div>
       <div className="btnCarro">
-        <button onClick={pagar}>Realizar pago</button>
+        <button onClick={pagar}>
+          <span className="textoPagarBtn">Realizar pago</span>
+        </button>
       </div>
     </div>
   );

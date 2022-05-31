@@ -57,7 +57,9 @@ const Producto = () => {
             <BsFillPlusCircleFill />
           </a>
         </div>
-        <button className="agregarCarro">Agregar al carrito</button>
+        <button className="agregarCarro">
+          <span className="textoAgregarCarro">Agregar al carrito</span>
+        </button>
       </div>
     </div>
   );
