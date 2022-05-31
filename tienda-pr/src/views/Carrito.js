@@ -9,6 +9,8 @@ import { BiCurrentLocation } from "react-icons/bi";
 
 import ObtenerProductos from "./ObtenerCarrito";
 
+import prod1 from "../multimedia/prod1.JPG";
+
 const Tienda = () => {
   const navigate = useNavigate();
   const [cantidad, setCantidad] = useState(1);
@@ -42,9 +44,10 @@ const Tienda = () => {
       return (
         <div>
           <div className="prodCarro">
-            <img className="imgCarro" src={data[2].imagen} />
+            {/* <img className="imgCarro" src={data[0].imagen} /> */}
+            <img className="imgCarro" src={prod1} />
             <div className="datosCarro">
-              <span className="nombreProdCarro">{data[2].nombre}</span>
+              <span className="nombreProdCarro">{data[0].nombre}</span>
               <a
                 className="btnCantCarro"
                 onClick={() => Disminuir(cantidad, setCantidad)}
@@ -63,7 +66,7 @@ const Tienda = () => {
               <p className="xCarro">
                 <FiX />
               </p>
-              <span className="precioCarro">$ {data[2].precio}</span>
+              <span className="precioCarro">$ {data[0].precio}</span>
             </div>
           </div>
           {/* <div className="prodCarro">
@@ -99,7 +102,7 @@ const Tienda = () => {
 
   const pagar = () => {
     if (flag) {
-      navigate("/payments/" + data[2].precioId);
+      navigate("/payments/" + data[0].precioId);
     }
   };
 

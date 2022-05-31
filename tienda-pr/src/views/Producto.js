@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import "../css/producto.css";
 
-import prod1 from "../multimedia/prod1.png";
+import prod2 from "../multimedia/prod2.JPG";
+import prod1 from "../multimedia/prod1.JPG";
 
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { BsFillDashCircleFill } from "react-icons/bs";
@@ -33,6 +34,14 @@ const Producto = () => {
     }
   };
 
+  const Img = (nombre) => {
+    if (nombre == "PR Fuel") {
+      return <img className="imgProdInd" src={prod2} />;
+    } else {
+      return <img className="imgProdInd" src={prod1} />;
+    }
+  };
+
   return (
     <div>
       <div className="Producto">
@@ -42,7 +51,7 @@ const Producto = () => {
           setFlag={setFlag}
           id={idProd}
         />
-        <img className="imgProdInd" src={data.producto0.imagen} />
+        {Img(data.producto0.nombre)}
         <h1 className="tituloProdInd">{data.producto0.nombre}</h1>
         <h2 className="precioProdInd">$ {data.producto0.precio}</h2>
         <p className="cuerpoTexto">{data.producto0.descripcion}</p>

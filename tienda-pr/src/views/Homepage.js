@@ -9,6 +9,7 @@ import prod1 from "../multimedia/prod1.JPG";
 import ObtenerProductos from "./ObtenerProductos";
 
 const Homepage = () => {
+  const img = [prod1, prod2];
   const [data, setData] = useState([
     {
       id: "",
@@ -25,7 +26,7 @@ const Homepage = () => {
       for (let i = 0; i < data.length; i++) {
         productos.push(
           <div className="prodDest" key={i}>
-            <img className="imgDest" src={data[i].imagen} />
+            <img className="imgDest" src={img[i]} />
             <div className="datosDest">
               <h1 className="nombreDest">{data[i].nombre}</h1>
               <h3>

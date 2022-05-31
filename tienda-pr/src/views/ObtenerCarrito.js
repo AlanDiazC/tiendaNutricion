@@ -18,7 +18,7 @@ const ObtenerProductos = ({
         //   console.log("REFERENCIA", usersCollectionReference); `clientes/${auth.currentUser.uid}/checkout_sessions`
         const prod = await productsData.docs;
 
-        const precio0 = collection(db, `productos/${prod[2].id}/prices`);
+        const precio0 = collection(db, `productos/${prod[0].id}/prices`);
         const precio0Data = await getDocs(precio0);
         const precio0Doc = await precio0Data.docs;
 

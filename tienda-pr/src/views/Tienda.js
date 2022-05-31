@@ -1,9 +1,13 @@
 import React, { useState, useRef } from "react";
 import "../css/tienda.css";
 
+import prod2 from "../multimedia/prod2.JPG";
+import prod1 from "../multimedia/prod1.JPG";
+
 import ObtenerProductos from "./ObtenerProductos";
 
 const Tienda = () => {
+  const img = [prod1, prod2];
   const [data, setData] = useState([
     {
       id: "",
@@ -22,7 +26,7 @@ const Tienda = () => {
         productos.push(
           <div className="producto" key={i}>
             <h1 className="nombreProd">{data[i].nombre}</h1>
-            <img className="imgProd" src={data[i].imagen} />
+            <img className="imgProd" src={img[i]} />
             <div className="datosProd">
               <h2 className="precioProd">$ {data[i].precio}</h2>
               <a className="verMasTop" href={"/Producto/" + data[i].id}>
