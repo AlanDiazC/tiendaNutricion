@@ -11,13 +11,13 @@ import { getFirestore } from "@firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAaOVGOYt_CpYXTkxvn4CrYQvkTDfMkenc",
-  authDomain: "tabsfits.firebaseapp.com",
-  projectId: "tabsfits",
-  storageBucket: "tabsfits.appspot.com",
-  messagingSenderId: "764996629572",
-  appId: "1:764996629572:web:04f292a2ef63bb17af3811",
-  measurementId: "G-KL5VFRY5FD",
+  apiKey: "AIzaSyAJnzDwDnRjhP-5WYFMcggEYICQHc9MheA",
+  authDomain: "pr-nutrition.firebaseapp.com",
+  projectId: "pr-nutrition",
+  storageBucket: "pr-nutrition.appspot.com",
+  messagingSenderId: "90388717871",
+  appId: "1:90388717871:web:6768ca83d54883474941da",
+  measurementId: "G-G0KGSXFQ59",
 };
 
 // const digitalOceanConfig = new AWS.S3({
