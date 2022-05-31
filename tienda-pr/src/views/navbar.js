@@ -14,6 +14,9 @@ import { FiShoppingCart } from "react-icons/fi";
 
 import logo from "../multimedia/Logo.png";
 
+import { onAuthStateChanged, signOut } from "@firebase/auth";
+import { auth } from "../config/fbconfig";
+
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const subMenu = () => setIsActive(!isActive);
@@ -21,21 +24,73 @@ const Navbar = () => {
 
   const [user, setUser] = useState(false);
 
-  // const Login = () => {
-  //   if (user) {
-  //     return (
-  //       <a className="opcion" href="/MiCuenta">
-  //         Mi Cuenta
-  //       </a>
-  //     );
-  //   } else {
-  //     return (
-  //       <a className="opcion" href="/SignUp">
-  //         Login
-  //       </a>
-  //     );
-  //   }
-  // };
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const revisarCuentaPC = () => {
+    if (user != null) {
+      return (
+        <div className="op">
+          <a className="opcion" href="/MiCuenta">
+            Mi Cuenta
+          </a>
+          <a className="opcionLogos" href="/MiCuenta">
+            <FiUser />
+          </a>
+        </div>
+      );
+    } else {
+      return (
+        <div className="op">
+          <a className="opcion" href="/SignUp">
+            Login
+          </a>
+          <a className="opcionLogos" href="/SignUp">
+            <FiUser />
+          </a>
+        </div>
+      );
+    }
+  };
+  const revisarCuentaCel1 = () => {
+    if (user != null) {
+      return (
+        <p>
+          <a className="opcionLogos" href="/MiCuenta">
+            <FiUser />
+          </a>
+        </p>
+      );
+    } else {
+      return (
+        <p>
+          <a className="opcionLogos" href="/SignUp">
+            <FiUser />
+          </a>
+        </p>
+      );
+    }
+  };
+  const revisarCuentaCel2 = () => {
+    if (user != null) {
+      return (
+        <p>
+          <a className="opcion" href="/MiCuenta">
+            Mi Cuenta
+          </a>
+        </p>
+      );
+    } else {
+      return (
+        <p>
+          <a className="opcion" href="/SignUp">
+            Login
+          </a>
+        </p>
+      );
+    }
+  };
 
   return (
     <div>
@@ -43,10 +98,10 @@ const Navbar = () => {
         <a href="/">
           <img className="navLogo" src={logo} />
         </a>
-        <input type="text" className="searchInput" placeholder="Buscar" />
+        {/* <input type="text" className="searchInput" placeholder="Buscar" />
         <a className="lupa">
           <FiSearch />
-        </a>
+        </a> */}
         <div className="navSub">
           <a
             ref={dropdownRef}
@@ -92,18 +147,7 @@ const Navbar = () => {
             </a>
           </p>
 
-          <p>
-            {/* <Login /> */}
-            <a className="opcionLogos" href="/SignUp">
-              <FiUser />
-            </a>
-          </p>
-          <p>
-            {/*Borrar tras la revisión al publico*/}
-            <a className="opcionLogos" href="/MiCuenta">
-              <FiUser />
-            </a>
-          </p>
+          {revisarCuentaCel1()}
 
           <p>
             <a className="opcionLogos" href="/MiCarrito">
@@ -140,18 +184,7 @@ const Navbar = () => {
             </a>
           </p>
 
-          <p>
-            {/* <Login /> */}
-            <a className="opcion" href="/SignUp">
-              Login
-            </a>
-          </p>
-          <p>
-            {/*Borrar tras la revisión al publico*/}
-            <a className="opcion" href="/MiCuenta">
-              Mi Cuenta
-            </a>
-          </p>
+          {revisarCuentaCel2()}
 
           <p>
             <a className="opcion" href="/MiCarrito">
@@ -164,10 +197,10 @@ const Navbar = () => {
         <a href="/">
           <img className="navLogo" src={logo} />
         </a>
-        <input type="text" className="searchInput" placeholder="Buscar" />
+        {/* <input type="text" className="searchInput" placeholder="Buscar" />
         <a className="lupa">
           <FiSearch />
-        </a>
+        </a> */}
         <div className="navSub">
           <a
             ref={dropdownRef}
@@ -226,26 +259,8 @@ const Navbar = () => {
               <FiMail />
             </a>
           </div>
-          <div className="op">
-            {/* <Login /> */}
-            <a className="opcion" href="/SignUp">
-              Login
-            </a>
-            {/* <Login /> */}
-            <a className="opcionLogos" href="/SignUp">
-              <FiUser />
-            </a>
-          </div>
-          <div className="op">
-            {/*Borrar tras la revisión al publico*/}
-            <a className="opcion" href="/MiCuenta">
-              Mi Cuenta
-            </a>
-            {/*Borrar tras la revisión al publico*/}
-            <a className="opcionLogos" href="/MiCuenta">
-              <FiUser />
-            </a>
-          </div>
+          {revisarCuentaPC()}
+
           <div className="op">
             <a className="opcion" href="/MiCarrito">
               Mi carrito

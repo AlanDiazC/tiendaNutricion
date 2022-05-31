@@ -17,36 +17,28 @@ const MiCuenta = () => {
     setUser(currentUser);
   });
 
-  const revisar = () => {
-    if (user != null) {
-      return <h3 className="correoCuenta">Email: {user.email}</h3>;
-    } else {
-      navigate("/signUp");
-    }
-  };
-
   return (
     <div>
       <div className="Cuenta">
+        <div className="LogOut">
+          <button onClick={logoutData}>Cerrar sesión</button>
+        </div>
         <h1 className="cuentaTitulo">Mi Cuenta</h1>
-        {revisar()}
+        <h3 className="correoCuenta">Email: {user.email}</h3>
         <div className="direcCuenta">
           <h2>Dirección de envio</h2>
           <button>
             <BiCurrentLocation />
           </button>
         </div>
-        <div className="pedidos">
-          <button>Mis pedidos</button>
-        </div>
-        <div className="error">
-          <a href="/Contacto">
-            <button>Algún error? Contáctanos</button>
-          </a>
-        </div>
-        <div className="LogOut">
-          <button onClick={logoutData}>Cerrar sesión</button>
-        </div>
+        {/* <div className="pedidos">
+<button>Mis pedidos</button>
+</div>
+<div className="error">
+<a href="/Contacto">
+<button>Algún error? Contáctanos</button>
+</a>
+</div> */}
       </div>
     </div>
   );

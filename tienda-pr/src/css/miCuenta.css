@@ -5,7 +5,7 @@
   }
   .cuentaTitulo {
     color: #f2f37b;
-    margin: 0;
+    margin: 0 0 0 35%;
     text-align: center;
   }
   .correoCuenta {
@@ -60,16 +60,16 @@
   }
   .LogOut {
     text-align: center;
-    margin-top: 60%;
+    position: absolute;
   }
   .LogOut button {
     background: none;
-    border: 2px solid white;
+    border: 2px solid rgb(194, 8, 8);
     border-radius: 15%;
-    font-size: 25px;
-    color: white;
+    font-size: 20px;
+    color: rgb(194, 8, 8);
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 7px 10px;
   }
 }
 
@@ -80,7 +80,6 @@
   }
   .cuentaTitulo {
     color: #f2f37b;
-    margin: 0;
     text-align: center;
     font-size: 40px;
   }
@@ -137,15 +136,14 @@
   }
   .LogOut {
     text-align: center;
-    margin-top: 40%;
-    margin-bottom: 50px;
+    position: absolute;
   }
   .LogOut button {
     background: none;
-    border: 2px solid white;
+    border: 2px solid rgb(194, 8, 8);
     border-radius: 15%;
-    font-size: 35px;
-    color: white;
+    font-size: 30px;
+    color: rgb(194, 8, 8);
     cursor: pointer;
     padding: 10px 15px;
   }
@@ -153,12 +151,11 @@
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
   .Cuenta {
-    width: 90%;
-    padding-left: 5%;
+    width: 60%;
+    padding-left: 20%;
   }
   .cuentaTitulo {
     color: #f2f37b;
-    margin: 0;
     text-align: center;
     font-size: 35px;
   }
@@ -215,15 +212,14 @@
   }
   .LogOut {
     text-align: center;
-    margin-top: 10%;
-    margin-bottom: 50px;
+    position: absolute;
   }
   .LogOut button {
     background: none;
-    border: 2px solid white;
+    border: 2px solid rgb(194, 8, 8);
     border-radius: 15%;
     font-size: 30px;
-    color: white;
+    color: rgb(194, 8, 8);
     cursor: pointer;
     padding: 10px 15px;
   }
@@ -236,7 +232,6 @@
   }
   .cuentaTitulo {
     color: #f2f37b;
-    margin: 0;
     text-align: center;
     font-size: 35px;
   }
@@ -293,15 +288,14 @@
   }
   .LogOut {
     text-align: center;
-    margin-top: 10%;
-    margin-bottom: 50px;
+    position: absolute;
   }
   .LogOut button {
     background: none;
-    border: 2px solid white;
+    border: 2px solid rgb(194, 8, 8);
     border-radius: 15%;
     font-size: 30px;
-    color: white;
+    color: rgb(194, 8, 8);
     cursor: pointer;
     padding: 10px 15px;
   }

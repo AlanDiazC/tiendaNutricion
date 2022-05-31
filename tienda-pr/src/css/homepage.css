@@ -101,6 +101,7 @@
   }
   .destCarro {
     font-size: 50px;
+    cursor: pointer;
   }
   .textoHome {
     width: 80%;
@@ -136,14 +137,18 @@
     text-align: center;
     font-size: 40px;
   }
+  .prodDestacados {
+    text-align: center;
+    margin-bottom: 20px;
+  }
   .prodDest {
-    width: 25%;
+    width: 32%;
     height: 25vw;
     border: solid 5px #777777;
     padding-top: 10px;
     display: inline-block;
     vertical-align: top;
-    margin-left: 5.6%;
+    margin: 0 3.5%;
     text-align: center;
   }
   .imgDest {
@@ -161,10 +166,11 @@
   }
   .destCarro {
     font-size: 50px;
+    cursor: pointer;
   }
   .textoHome {
-    width: 80%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 20%;
     text-align: center;
     color: white;
   }
@@ -196,14 +202,17 @@
     text-align: center;
     font-size: 40px;
   }
+  .prodDestacados {
+    text-align: center;
+  }
   .prodDest {
-    width: 25%;
-    height: 20vw;
+    width: 30%;
+    height: 22vw;
     border: solid 5px #777777;
     padding-top: 10px;
     display: inline-block;
     vertical-align: top;
-    margin-left: 5.6%;
+    margin: 0 3.5%;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -222,6 +231,7 @@
   }
   .destCarro {
     font-size: 50px;
+    cursor: pointer;
   }
   .textoHome {
     width: 60%;

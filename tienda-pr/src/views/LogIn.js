@@ -2,7 +2,6 @@ import React, { Component, useState, useRef } from "react";
 // import { useForm } from "react-hook-form";
 // import useToken from "../useToken";
 // import LogAd from "./LogUser";
-import { Redirect } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -296,99 +295,101 @@ const LogIn = () => {
   // if (!token) {
   //   return <LogAd setToken={setToken} />;
   // }
+
   return (
-    <div className="supersingup">
-      {/*Falta onChange*/}
-      <div className="container" ref={container} id="container">
-        <div className="form-container sign-up-container">
-          <form onSubmit={registeringData}>
-            <div>
-              <h1>Sign Up</h1>
-              {/* <input placeholder="Nombre de Usuario" /> */}
-            </div>
-            <div className="social-container">
-              <a onClick={registeringGoogle} className="social">
-                <BsGoogle />
-              </a>
-              <a onClick={registeringFacebook} className="social">
-                <FaFacebookF />
-              </a>
-              {/* <a href="#" className="social" onClick={registeringFacebook}>
-                <i className="fab fa-facebook-f"></i>
-              </a> */}
-              {/* <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a> */}
-            </div>
-            <input
-              placeholder="Correo asociado a la cuenta"
-              onChange={onChangeRegisterMail}
-            />
-            <input
-              placeholder="Contraseña"
-              onChange={onChangeRegisterPassword}
-              type="password"
-            />
-            <button style={{ cursor: "pointer" }}>Sign me up!</button>
-          </form>
-        </div>
-        <div className="form-container sign-in-container">
-          <form action="#">
-            <h1>Log In</h1>
-            <div className="social-container">
-              <a className="social" onClick={loginGoogle}>
-                <BsGoogle />
-              </a>
-              <a className="social" onClick={loginFacebook}>
-                <FaFacebookF />
-              </a>
-              {/* <a href="#" className="social" onClick={loginFacebook}>
-                <i className="fab fa-facebook-f"></i>
-              </a> */}
-              {/*<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a> */}
-            </div>
-            <input
-              type="email"
-              placeholder="Email"
-              onChange={onChangeLoginMail}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={onChangeLoginPassword}
-            />
-            <a href="/recuperarContraseña">Olvidaste tu Contraseña????</a>
-            <button style={{ cursor: "pointer" }}>
-              {/*Falta onClick*/}
-              Log In
-            </button>
-          </form>
-        </div>
-        <div className="overlay-container">
-          <div className="overlay">
-            <div className="overlay-panel overlay-left">
-              <h1>Bienvenido!</h1>
-              <p>Si no cuentas con una cuenta, registra tus datos</p>
-              <p>Si ya tienes una cuetan, por favor inicia sesión</p>
-              <button
-                style={{ cursor: "pointer" }}
-                className="ghost"
-                ref={signInButton}
-                id="signIn"
-              >
-                Sign In
+    <div>
+      <div className="supersingup">
+        {/*Falta onChange*/}
+        <div className="container" ref={container} id="container">
+          <div className="form-container sign-up-container">
+            <form onSubmit={registeringData}>
+              <div>
+                <h1>Sign Up</h1>
+                {/* <input placeholder="Nombre de Usuario" /> */}
+              </div>
+              <div className="social-container">
+                <a onClick={registeringGoogle} className="social">
+                  <BsGoogle />
+                </a>
+                <a onClick={registeringFacebook} className="social">
+                  <FaFacebookF />
+                </a>
+                {/* <a href="#" className="social" onClick={registeringFacebook}>
+        <i className="fab fa-facebook-f"></i>
+      </a> */}
+                {/* <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a> */}
+              </div>
+              <input
+                placeholder="Correo asociado a la cuenta"
+                onChange={onChangeRegisterMail}
+              />
+              <input
+                placeholder="Contraseña"
+                onChange={onChangeRegisterPassword}
+                type="password"
+              />
+              <button style={{ cursor: "pointer" }}>Sign me up!</button>
+            </form>
+          </div>
+          <div className="form-container sign-in-container">
+            <form action="#">
+              <h1>Log In</h1>
+              <div className="social-container">
+                <a className="social" onClick={loginGoogle}>
+                  <BsGoogle />
+                </a>
+                <a className="social" onClick={loginFacebook}>
+                  <FaFacebookF />
+                </a>
+                {/* <a href="#" className="social" onClick={loginFacebook}>
+        <i className="fab fa-facebook-f"></i>
+      </a> */}
+                {/*<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a> */}
+              </div>
+              <input
+                type="email"
+                placeholder="Email"
+                onChange={onChangeLoginMail}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={onChangeLoginPassword}
+              />
+              <a href="/recuperarContraseña">Olvidaste tu Contraseña????</a>
+              <button style={{ cursor: "pointer" }} onClick={loginData}>
+                Log In
               </button>
-            </div>
-            <div className="overlay-panel overlay-right">
-              <h1>Hola de nuevo!</h1>
-              <p>Si ya tienes una cuenta, ingresa tus datos</p>
-              <p>Si no tienes una cuenta, te invitamos a crear una</p>
-              <button
-                style={{ cursor: "pointer" }}
-                className="ghost"
-                ref={signUpButtonRef}
-                id="signUp"
-              >
-                Sign Up
-              </button>
+            </form>
+          </div>
+          <div className="overlay-container">
+            <div className="overlay">
+              <div className="overlay-panel overlay-left">
+                <h1>Bienvenido!</h1>
+                <p>Si no cuentas con una cuenta, registra tus datos</p>
+                <p>Si ya tienes una cuetan, por favor inicia sesión</p>
+                <button
+                  style={{ cursor: "pointer" }}
+                  className="ghost"
+                  ref={signInButton}
+                  id="signIn"
+                >
+                  Sign In
+                </button>
+              </div>
+              <div className="overlay-panel overlay-right">
+                <h1>Hola de nuevo!</h1>
+                <p>Si ya tienes una cuenta, ingresa tus datos</p>
+                <p>Si no tienes una cuenta, te invitamos a crear una</p>
+                <button
+                  style={{ cursor: "pointer" }}
+                  className="ghost"
+                  ref={signUpButtonRef}
+                  id="signUp"
+                >
+                  Sign Up
+                </button>
+              </div>
             </div>
           </div>
         </div>
