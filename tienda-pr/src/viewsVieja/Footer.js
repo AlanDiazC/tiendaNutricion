@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/footer.css";
+import "../css/footer.css";
 
 import { FiSearch } from "react-icons/fi";
 import { FiX } from "react-icons/fi";

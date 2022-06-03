@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/aboutMe.css";
+import "../css/aboutMe.css";
 import logo from "../multimedia/Logo.png";
 const AboutMe = () => {
   return (

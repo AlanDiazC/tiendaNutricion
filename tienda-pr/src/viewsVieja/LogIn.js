@@ -14,7 +14,7 @@ import {
 import { auth, db } from "../config/fbconfig";
 import { collection, addDoc, query, getDocs, where } from "@firebase/firestore";
 import Swal from "sweetalert2";
-import "../cssVieja/logIn.css";
+import "../css/logIn.css";
 import useToken from "../useToken";
 import { BsGoogle } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";

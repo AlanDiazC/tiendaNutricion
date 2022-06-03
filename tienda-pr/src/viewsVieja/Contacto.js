@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/contacto.css";
+import "../css/contacto.css";
 
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";

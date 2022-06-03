@@ -1,0 +1,324 @@
+@media only screen and (max-width: 600px) {
+  .Contacto {
+    background-color: black;
+    padding: 15px 0;
+    color: white;
+  }
+  .contactoTitulo {
+    color: #f2f37b;
+    /* #bf9000; */
+    margin: 0;
+    text-align: center;
+  }
+  .datosContact {
+    display: inline-block;
+    width: 85%;
+    font-size: 20px;
+  }
+  .datosRedes {
+    display: inline-block;
+    width: 15%;
+    font-size: 20px;
+  }
+  .contactoDatos {
+    padding-left: 10%;
+    margin: 10px 0;
+  }
+  .contactoRedes {
+    margin: 10px 0;
+  }
+  .formContacto {
+    width: 80%;
+    padding-left: 10%;
+    color: #dcba2c;
+    padding-top: 10px;
+  }
+  .formContacto label {
+    font-size: 25px;
+  }
+  .formContacto input,
+  .formContacto textarea {
+    width: 100%;
+    font-size: 25px;
+    border: 2px solid #f2f37b;
+    /* border-radius: 10%; */
+    background: none;
+    color: #dcba2c;
+    margin: 15px 0;
+  }
+  .formContacto input::placeholder {
+    color: #dcba2c;
+  }
+  .divBtnCon {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .divBtnCon button {
+    font-size: 25px;
+    background-color: black;
+    border-bottom: 2px solid #dcba2c;
+    border-left: 2px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 10px 2px 5px 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 10px 15px 0px 10px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .Contacto {
+    background-color: black;
+    padding: 15px 0;
+    color: white;
+  }
+  .contactoTitulo {
+    color: #f2f37b;
+    /* #bf9000; */
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+  .datosContact {
+    display: inline-block;
+    width: 85%;
+    font-size: 30px;
+  }
+  .datosRedes {
+    display: inline-block;
+    width: 15%;
+    font-size: 30px;
+  }
+  .contactoDatos {
+    padding-left: 10%;
+    margin: 10px 0;
+  }
+  .contactoRedes {
+    margin: 10px 0;
+  }
+  .formContacto {
+    width: 80%;
+    padding-left: 10%;
+    color: #dcba2c;
+    padding-top: 10px;
+  }
+  .formContacto label {
+    font-size: 35px;
+  }
+  .formContacto input,
+  .formContacto textarea {
+    width: 100%;
+    font-size: 35px;
+    border: 2px solid #f2f37b;
+    /* border-radius: 10%; */
+    background: none;
+    color: #dcba2c;
+    margin: 15px 0;
+  }
+  .formContacto input::placeholder {
+    color: #dcba2c;
+  }
+  .divBtnCon {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .divBtnCon button {
+    font-size: 35px;
+    background-color: black;
+    border-bottom: 3px solid #dcba2c;
+    border-left: 3px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 12px 0px 7px 7px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    padding: 12px 17px 2px 12px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .Contacto {
+    background-color: black;
+    padding: 15px 0;
+    color: white;
+  }
+  .contactoTitulo {
+    color: #f2f37b;
+    /* #bf9000; */
+    margin: 0;
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+  .datosContact {
+    display: inline-block;
+    width: 85%;
+    font-size: 25px;
+  }
+  .datosRedes {
+    display: inline-block;
+    width: 15%;
+    font-size: 25px;
+  }
+  .contactoDatos {
+    padding-left: 10%;
+    margin: 10px 0;
+  }
+  .contactoRedes {
+    margin: 10px 0;
+  }
+  .formContacto {
+    width: 80%;
+    padding-left: 10%;
+    color: #dcba2c;
+    padding-top: 10px;
+  }
+  .formContacto label {
+    font-size: 30px;
+  }
+  .formContacto input,
+  .formContacto textarea {
+    width: 100%;
+    font-size: 30px;
+    border: 2px solid #f2f37b;
+    /* border-radius: 10%; */
+    background: none;
+    color: #dcba2c;
+    margin: 15px 0;
+  }
+  .formContacto input::placeholder {
+    color: #dcba2c;
+  }
+  .divBtnCon {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .divBtnCon button {
+    font-size: 30px;
+    background-color: black;
+    border-bottom: 2px solid #dcba2c;
+    border-left: 2px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 10px 2px 5px 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 10px 15px 0px 10px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
+  }
+}
+
+@media only screen and (min-width: 1596px) {
+  .Contacto {
+    background-color: black;
+    padding: 15px 0;
+    color: white;
+  }
+  .contactoTitulo {
+    color: #f2f37b;
+    /* #bf9000; */
+    margin: 0;
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+  .datosContact {
+    display: inline-block;
+    width: 30%;
+    margin-left: 35%;
+    font-size: 25px;
+  }
+  .datosRedes {
+    display: inline-block;
+    font-size: 25px;
+  }
+  .contactoDatos {
+    margin: 10px 0;
+  }
+  .contactoRedes {
+    margin: 10px 0;
+  }
+  .formContacto {
+    width: 50%;
+    padding-left: 25%;
+    color: #dcba2c;
+    padding-top: 10px;
+  }
+  .formContacto label {
+    font-size: 30px;
+  }
+  .formContacto input,
+  .formContacto textarea {
+    width: 100%;
+    font-size: 30px;
+    border: 2px solid #f2f37b;
+    /* border-radius: 10%; */
+    background: none;
+    color: #dcba2c;
+    margin: 15px 0;
+  }
+  .formContacto input::placeholder {
+    color: #dcba2c;
+  }
+  .divBtnCon {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .divBtnCon button {
+    font-size: 30px;
+    background-color: black;
+    border-bottom: 2px solid #dcba2c;
+    border-left: 2px solid #dcba2c;
+    border-top: none;
+    border-right: none;
+    color: #f2f37b;
+    padding: 10px 2px 5px 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .textoEnviarBtn {
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 10px 15px 0px 10px;
+  }
+  .divBtnCon button:hover {
+    padding: 12px 2px 7px 7px;
+  }
+  .divBtnCon button:hover > .textoEnviarBtn {
+    padding: 12px 18px 2px 12px;
+  }
+}

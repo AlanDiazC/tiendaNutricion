@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/tienda.css";
+import "../css/tienda.css";
 
 import prod2 from "../multimedia/prod2.JPG";
 import prod1 from "../multimedia/prod1.JPG";

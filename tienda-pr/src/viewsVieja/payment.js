@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/homepage.css";
+import "../css/homepage.css";
 import { auth, db } from "../config/fbconfig";
 import Policia from "./policia";
 import {

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/miCuenta.css";
+import "../css/miCuenta.css";
 import { BiCurrentLocation } from "react-icons/bi";
 import { onAuthStateChanged, signOut } from "@firebase/auth";
 import { auth } from "../config/fbconfig";

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/navbar.css";
+import "../css/navbar.css";
 
 import { FiSearch } from "react-icons/fi";
 import { FiX } from "react-icons/fi";

@@ -1,0 +1,302 @@
+@media only screen and (max-width: 600px) {
+  .Cuenta {
+    width: 90%;
+    padding-left: 5%;
+  }
+  .cuentaTitulo {
+    color: #f2f37b;
+    margin: 0 0 0 35%;
+    text-align: center;
+  }
+  .correoCuenta {
+    color: white;
+    margin-bottom: 0px;
+  }
+  .direcCuenta h2 {
+    width: 83%;
+    font-size: 28px;
+    background-color: #777777;
+    display: inline-block;
+    color: white;
+    padding-left: 5px;
+  }
+  .direcCuenta button {
+    display: inline-block;
+    padding: 0;
+    font-size: 50px;
+    background: none;
+    border: none;
+    color: #dcba2c;
+    padding-left: 0.5%;
+    cursor: pointer;
+  }
+  .direcCuenta button svg {
+    vertical-align: middle;
+  }
+  .pedidos {
+    text-align: center;
+    margin: 15px 0;
+  }
+  .pedidos button {
+    background-color: #777777;
+    border: none;
+    border-radius: 15%;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .error {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .error button {
+    background-color: #bf9000;
+    border: none;
+    border-radius: 15%;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .LogOut {
+    text-align: center;
+    position: absolute;
+  }
+  .LogOut button {
+    background: none;
+    border: 2px solid rgb(194, 8, 8);
+    border-radius: 15%;
+    font-size: 20px;
+    color: rgb(194, 8, 8);
+    cursor: pointer;
+    padding: 7px 10px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .Cuenta {
+    width: 90%;
+    padding-left: 5%;
+  }
+  .cuentaTitulo {
+    color: #f2f37b;
+    text-align: center;
+    font-size: 40px;
+  }
+  .correoCuenta {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
+  .direcCuenta h2 {
+    width: 83%;
+    font-size: 38px;
+    background-color: #777777;
+    display: inline-block;
+    color: white;
+    padding-left: 15px;
+  }
+  .direcCuenta button {
+    display: inline-block;
+    padding: 0;
+    font-size: 65px;
+    background: none;
+    border: none;
+    color: #dcba2c;
+    padding-left: 0.5%;
+    cursor: pointer;
+  }
+  .direcCuenta button svg {
+    vertical-align: middle;
+  }
+  .pedidos {
+    text-align: center;
+    margin: 15px 0;
+  }
+  .pedidos button {
+    background-color: #777777;
+    border: none;
+    border-radius: 15%;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .error {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .error button {
+    background-color: #bf9000;
+    border: none;
+    border-radius: 15%;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .LogOut {
+    text-align: center;
+    position: absolute;
+  }
+  .LogOut button {
+    background: none;
+    border: 2px solid rgb(194, 8, 8);
+    border-radius: 15%;
+    font-size: 30px;
+    color: rgb(194, 8, 8);
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .Cuenta {
+    width: 60%;
+    padding-left: 20%;
+  }
+  .cuentaTitulo {
+    color: #f2f37b;
+    text-align: center;
+    font-size: 35px;
+  }
+  .correoCuenta {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .direcCuenta h2 {
+    width: 83%;
+    font-size: 30px;
+    background-color: #777777;
+    display: inline-block;
+    color: white;
+    padding-left: 15px;
+  }
+  .direcCuenta button {
+    display: inline-block;
+    padding: 0;
+    font-size: 60px;
+    background: none;
+    border: none;
+    color: #dcba2c;
+    padding-left: 0.5%;
+    cursor: pointer;
+  }
+  .direcCuenta button svg {
+    vertical-align: middle;
+  }
+  .pedidos {
+    text-align: center;
+    margin: 15px 0;
+  }
+  .pedidos button {
+    background-color: #777777;
+    border: none;
+    border-radius: 15%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .error {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .error button {
+    background-color: #bf9000;
+    border: none;
+    border-radius: 15%;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .LogOut {
+    text-align: center;
+    position: absolute;
+  }
+  .LogOut button {
+    background: none;
+    border: 2px solid rgb(194, 8, 8);
+    border-radius: 15%;
+    font-size: 30px;
+    color: rgb(194, 8, 8);
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+}
+
+@media only screen and (min-width: 1596px) {
+  .Cuenta {
+    width: 50%;
+    padding-left: 25%;
+  }
+  .cuentaTitulo {
+    color: #f2f37b;
+    text-align: center;
+    font-size: 35px;
+  }
+  .correoCuenta {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .direcCuenta h2 {
+    width: 83%;
+    font-size: 30px;
+    background-color: #777777;
+    display: inline-block;
+    color: white;
+    padding-left: 15px;
+  }
+  .direcCuenta button {
+    display: inline-block;
+    padding: 0;
+    font-size: 60px;
+    background: none;
+    border: none;
+    color: #dcba2c;
+    padding-left: 0.5%;
+    cursor: pointer;
+  }
+  .direcCuenta button svg {
+    vertical-align: middle;
+  }
+  .pedidos {
+    text-align: center;
+    margin: 15px 0;
+  }
+  .pedidos button {
+    background-color: #777777;
+    border: none;
+    border-radius: 15%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .error {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .error button {
+    background-color: #bf9000;
+    border: none;
+    border-radius: 15%;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .LogOut {
+    text-align: center;
+    position: absolute;
+  }
+  .LogOut button {
+    background: none;
+    border: 2px solid rgb(194, 8, 8);
+    border-radius: 15%;
+    font-size: 30px;
+    color: rgb(194, 8, 8);
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+}
