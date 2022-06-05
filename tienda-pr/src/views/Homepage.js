@@ -97,15 +97,16 @@ const Homepage = () => {
             <div className="gridSec3Item">
               <div className="textoDivSec3">
                 <h2>
-                  You Don't Have To Settle For Less Than Your Full Potential
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry
                 </h2>
                 <div className="textoDiv">
                   <p>
-                    We understand how important your health and performance is
-                    to you. For nearly 10 years we have been helping our
-                    community of professional athletes, and people just like
-                    you, become stronger with our third-party tested products
-                    and trusted brand.
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged.
                   </p>
                 </div>
                 <a className="btnHP">Boton prueba</a>
@@ -130,7 +131,7 @@ const Homepage = () => {
                     ></img>
                   </div>
                   <div className="textoDiv">
-                    EFFECTIVE FORMULAS THAT WORK AS HARD AS YOU DO.
+                    Lorem Ipsum is simply dummy text of the printing
                   </div>
                 </div>
                 <div className="gridItem gridItemMedio">
@@ -143,7 +144,7 @@ const Homepage = () => {
                     ></img>
                   </div>
                   <div className="textoDiv">
-                    THIRD-PARTY TESTED FOR PROHIBITED SUBSTANCES.
+                    Lorem Ipsum is simply dummy text of the printing
                   </div>
                 </div>
                 <div className="gridItem gridItemDer">
@@ -156,7 +157,7 @@ const Homepage = () => {
                     ></img>
                   </div>
                   <div className="textoDiv">
-                    GET RESULTS AND REACH YOUR FULL POTENTIAL.
+                    Lorem Ipsum is simply dummy text of the printing
                   </div>
                 </div>
               </div>
@@ -170,12 +171,12 @@ const Homepage = () => {
           <div className="seccion5Padding">
             <div className="tituloSec5">
               <h2>
-                THE BARE <span>STANDARD</span>
+                Lorem <span>Ipsum</span>
               </h2>
               <div className="textoDiv">
-                The Bare Standard is our commitment to helping you feel and
-                perform at your highest level - built on quality and proven by
-                results, without compromise.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
               </div>
             </div>
             <div className="grid">
@@ -190,15 +191,15 @@ const Homepage = () => {
                     </div>
                   </div>
                   <div className="textoDiv">
-                    YOU DESERVE SUPPLEMENTS THAT HELP YOU REACH YOUR FULL
-                    POTENTIAL, AND YOU SHOULD HAVE PEACE OF MIND KNOWING THEY
-                    ARE SAFE AND EFFECTIVE.
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
                   </div>
                 </div>
               </div>
             </div>
             <div className="divBtnSec5">
-              <a className="btnHP">Learn More</a>
+              <a className="btnHP">Lorem Ipsum</a>
             </div>
           </div>
         </div>
@@ -248,8 +249,8 @@ const Homepage = () => {
             <div className="rowSec8">
               <div className="textoSec8">
                 <p>
-                  STAY UP TO DATE WITH OUR TEAM <br />
-                  SIGN UP TO JOIN OUR LIST.
+                  Neque porro quisquam est qui <br />
+                  dolorem ipsum quia dolor sit amet.
                 </p>
               </div>
               <div className="formSec8">
@@ -261,7 +262,7 @@ const Homepage = () => {
                     <input
                       type="email"
                       className="form-control"
-                      placeholder="Subscribe to our mailing list"
+                      placeholder="Manda nos un correo"
                     />
                     <input type="submit" className="formBtn" />
                   </div>

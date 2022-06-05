@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Navbar from "./views/navbar";
 // import Contacto from "./views/Contacto";
 import Homepage from "./views/Homepage";
-// import AboutMe from "./views/AboutMe";
+import AboutMe from "./views/AboutMe";
 // import Tienda from "./views/Tienda";
 // import SignUP from "./views/LogIn";
 // import Carrito from "./views/Carrito";
@@ -26,13 +26,13 @@ const App = () => {
         <Routes>
           {/* <Route path="/Contacto" element={<Contacto />} />
           <Route path="/signUp" element={<PuenteCuenta />} />
-          <Route path="/SobreNosotros" element={<AboutMe />} />
           <Route path="/payments/:idPrecio" element={<Payment />} />
           <Route path="/Tienda" element={<Tienda />} />
           <Route path="/MiCarrito" element={<PuenteCarrito />} />
           <Route path="LogIn" element={<LogIn />} />
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
           <Route path="/Producto/:idProd" element={<Producto />} /> */}
+          <Route path="/SobreNosotros" element={<AboutMe />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
       </Router>
