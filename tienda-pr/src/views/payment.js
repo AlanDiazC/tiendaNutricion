@@ -12,7 +12,7 @@ import {
 } from "@firebase/firestore";
 
 import { useParams } from "react-router-dom";
-
+//Se necesita modificar para que sea compatible con el carrito
 const Pagos = () => {
   const { idPrecio } = useParams();
   const [poli, setPoli] = useState(false);
