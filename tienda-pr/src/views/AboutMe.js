@@ -1,6 +1,10 @@
 import React, { useState, useRef } from "react";
 import "../css/aboutMe.css";
 import logo from "../multimedia/Logo.png";
+
+import imgAbout1 from "../multimedia/imgAbout1.jpg";
+import imgAbout2 from "../multimedia/imgAbout2.jpg";
+
 const AboutMe = () => {
   return (
     <div className="aboutMe">
@@ -11,7 +15,7 @@ const AboutMe = () => {
           </div>
           <div className="row">
             <div className="imgAboutMe">
-              <img src={logo} />
+              <img src={imgAbout1} />
             </div>
             <div className="contentAboutMe">
               <div className="subtituloAboutMe">
@@ -51,7 +55,7 @@ const AboutMe = () => {
               </div>
               <div className="aboutMeColDer">
                 <div className="divImgAboutMe">
-                  <img src={logo} />
+                  <img src={imgAbout2} />
                 </div>
               </div>
             </div>

@@ -6,10 +6,10 @@ import { FaShoppingCart } from "react-icons/fa";
 import prod2 from "../multimedia/prod2.JPG";
 import prod1 from "../multimedia/prod1.JPG";
 
-import p1 from "../multimediaPrueba/p1.jpg";
-import p2 from "../multimediaPrueba/p2.jpg";
-import p3 from "../multimediaPrueba/p3.jpg";
-import p4 from "../multimediaPrueba/p4.jpg";
+import imgHP1 from "../multimedia/imgHP1.JPG";
+import imgHP2 from "../multimedia/imgHP2.JPG";
+import imgHP3 from "../multimedia/imgHP3.JPG";
+import imgHP4 from "../multimedia/imgHP4.JPG";
 
 // import ObtenerProductos from "../views/ObtenerProductos";
 
@@ -50,7 +50,7 @@ const Homepage = () => {
                 <a className="seccion2Caja">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={p1} />
+                      <img className="imgSec2" src={imgHP1} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Texto prueba</h2>
@@ -60,7 +60,7 @@ const Homepage = () => {
                 <a className="seccion2Caja">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={p2} />
+                      <img className="imgSec2" src={imgHP2} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Texto prueba</h2>
@@ -70,7 +70,7 @@ const Homepage = () => {
                 <a className="seccion2Caja">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={p3} />
+                      <img className="imgSec2" src={imgHP3} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Texto prueba</h2>
@@ -80,7 +80,7 @@ const Homepage = () => {
                 <a className="seccion2Caja">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={p4} />
+                      <img className="imgSec2" src={imgHP4} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Texto prueba</h2>

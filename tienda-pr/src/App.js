@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Payment from "./views/payment";
-// import Navbar from "./views/navbar";
+import Navbar from "./views/navbar";
 // import Contacto from "./views/Contacto";
 import Homepage from "./views/Homepage";
 import AboutMe from "./views/AboutMe";
@@ -14,13 +14,14 @@ import AboutMe from "./views/AboutMe";
 // import Footer from "./views/Footer";
 // import PuenteCuenta from "./views/PuenteCuenta";
 // import PuenteCarrito from "./views/PuenteCarrito";
+import QnA from "./views/Q&A.js";
 
 const App = () => {
   return (
     <div>
-      {/* <header>
+      <header>
         <Navbar />
-      </header> */}
+      </header>
 
       <Router>
         <Routes>
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="LogIn" element={<LogIn />} />
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
           <Route path="/Producto/:idProd" element={<Producto />} /> */}
+          <Route path="/QnA" element={<QnA />} />
           <Route path="/SobreNosotros" element={<AboutMe />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
