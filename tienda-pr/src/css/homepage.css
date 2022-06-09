@@ -1,7 +1,742 @@
 @media only screen and (max-width: 600px) {
+  /*Seccion 1*/
+  .seccion1 {
+    height: 45vh;
+    color: white;
+  }
+  .seccion1 section {
+    position: relative !important;
+    z-index: 1 !important;
+    margin: 0 !important;
+    height: 100%;
+  }
+  .seccion1Div {
+    position: absolute !important;
+    z-index: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .imgFondo {
+    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/files/SFOOD_WEB_DEKTOP_BANNER_Hero_v2.jpg?v=1653314906");
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    z-index: -1 !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .datosSec1 {
+    height: 100% !important;
+    position: absolute !important;
+    top: 20% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 1360px !important;
+    width: calc(100% - 40px) !important;
+  }
+  .tituloHP {
+    position: absolute !important;
+    text-align: left !important;
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    width: 95% !important;
+    left: 0% !important;
+    translate: translate(-0%, -50%) !important;
+    top: 50% !important;
+  }
+  .tituloHP h2 {
+    margin-bottom: 0 !important;
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+  }
+  .textoDiv {
+    margin-top: 0 !important;
+  }
+  .seccion1 .textoDiv {
+    font-size: 16px;
+  }
+  .btnHP {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    line-height: 1.2;
+    transition: 0.6s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.57px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /*Seccion 2*/
+  .seccion2Padding {
+    padding: 60px 15px 15px 15px;
+  }
+  .gridItem {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .seccion2Caja {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+  }
+  .divImgSec2 {
+    width: 100%;
+    height: 263px;
+    overflow: hidden;
+  }
+  .imgSec2 {
+    width: 100%;
+    height: 263px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.75s ease-out;
+  }
+  .imgSec2:hover {
+    transform: scale(1.2);
+  }
+  .textoSec2 {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #e6dac0;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  /*Seccion 3*/
+  .seccion3Padding {
+    margin-bottom: 30px !important;
+  }
+  .gridSec3 {
+    align-items: center;
+    grid-auto-columns: 50% 50%;
+  }
+  .gridSec3Item {
+    grid-area: 1 / 2 / 1 / 2;
+    padding: 30px 48px;
+    display: flex;
+    height: 100%;
+  }
+  .textoDivSec3 {
+    align-self: center;
+    max-width: 1400px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .textoDivSec3 h2 {
+    font-size: 22px;
+    letter-spacing: normal;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  .textoDivSec3 .textoDiv {
+    line-height: 1.7;
+    margin-bottom: 0;
+    font-size: 28px !important;
+  }
+  .textoDivSec3 .textoDiv p {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+  }
+
+  /*Seccion 4*/
+  .seccion4 {
+    background: #e6dac0 !important;
+    text-align: center;
+  }
+  .seccion4Padding {
+    padding: 30px;
+  }
+  .seccion4 .grid {
+    vertical-align: top;
+    position: relative !important;
+  }
+  .seccion4 .gridItem {
+    margin: 0 auto;
+    align-items: center !important;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .divImgSec4 {
+    width: 100% !important;
+    height: 100px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  .imgSec4 {
+    height: 100%;
+    object-fit: contain !important;
+    transform: scale(1) !important;
+    width: 100%;
+    vertical-align: center;
+  }
+  .seccion4 .textoDiv {
+    font-size: 16px;
+    width: 100% !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    padding-top: 10px;
+  }
+
+  /*Seccion 5*/
+  .seccion5Padding {
+    padding: 30px;
+  }
+  .tituloSec5 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .tituloSec5 h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .tituloSec5 .textoDiv {
+    font-size: 25px !important;
+    line-height: 1.3 !important;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .seccion5 .grid {
+    text-align: center;
+    margin-bottom: -30px;
+    margin-left: -30px;
+  }
+  .seccion5 .gridItem {
+    margin-bottom: 30px;
+    vertical-align: top;
+    width: 100%;
+    padding-left: 15px;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .contenedorSec5 {
+    text-align: center !important;
+    margin: 0;
+  }
+  .divVideoSec5 {
+    width: 90% !important;
+    margin: 0 auto 15px !important;
+    text-align: center;
+  }
+  .iframeVideo {
+    width: 100%;
+    height: 49vw;
+  }
+  .contenedorSec5 .textoDiv {
+    font-size: 20px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+    margin: 0;
+  }
+  .divBtnSec5 {
+    margin-top: 30px !important;
+    text-align: center;
+  }
+
+  /*Seccion 6*/
+
+  /*Seccion 7*/
+
+  /*Seccion 8*/
+  .seccion8Padding {
+    padding: 43px 0 119px;
+  }
+  .containerSec8 {
+    max-width: 1200px;
+    /* width: 100%; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rowSec8 div {
+    display: inline-block;
+  }
+  .textoSec8 {
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+  }
+  .textoSec8 p {
+    font-size: 22px;
+    letter-spacing: 0.57px;
+    margin: 0 0 19.44px;
+    font-weight: bold;
+  }
+  .formSec8 {
+    width: 85%;
+    margin-left: 1rem;
+  }
+  .formSec8 form {
+    margin: 0;
+  }
+  .sec8Input1 {
+    outline: none;
+    box-shadow: none;
+    padding: 10px 18px;
+    border: 1px solid #cccccc;
+    background-color: #000000;
+    max-width: 100%;
+    line-height: 1.2;
+    border-radius: 2px;
+  }
+  .formSec8 .form-group {
+    flex-grow: 1;
+    position: relative;
+    height: 56px;
+    width: 100%;
+  }
+  .formSec8 .form-group .form-control {
+    padding: 8px 10px;
+    border-radius: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #a5a6a1;
+    margin-bottom: 20px;
+  }
+
+  .formSec8 .form-group input {
+    width: 363px;
+    height: 56px;
+    background-color: #efefef;
+    border-right: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  .formSec8 .form-group .formBtn {
+    padding: 8px 10px;
+    width: 106%;
+    height: 56px;
+    background-color: black;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.36px;
+    text-align: center;
+    color: white;
+  }
+  .formSec8 ul {
+    padding: 0;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  .formSec8 ul li {
+    margin: 0 12px;
+    list-style: none;
+  }
+  .formSec8 ul a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
+  /*Seccion 1*/
+  .seccion1 {
+    height: 45vh;
+    color: white;
+  }
+  .seccion1 section {
+    position: relative !important;
+    z-index: 1 !important;
+    margin: 0 !important;
+    height: 100%;
+  }
+  .seccion1Div {
+    position: absolute !important;
+    z-index: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .imgFondo {
+    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/files/SFOOD_WEB_DEKTOP_BANNER_Hero_v2.jpg?v=1653314906");
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    z-index: -1 !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .datosSec1 {
+    height: 100% !important;
+    position: absolute !important;
+    top: 20% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 1360px !important;
+    width: calc(100% - 40px) !important;
+  }
+  .tituloHP {
+    position: absolute !important;
+    text-align: left !important;
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    width: 95% !important;
+    left: 0% !important;
+    translate: translate(-0%, -50%) !important;
+    top: 50% !important;
+  }
+  .tituloHP h2 {
+    margin-bottom: 0 !important;
+    font-size: 44px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+  }
+  .textoDiv {
+    margin-top: 0 !important;
+  }
+  .seccion1 .textoDiv {
+    font-size: 24px;
+  }
+  .btnHP {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 0;
+    line-height: 1.2;
+    transition: 0.6s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.57px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /*Seccion 2*/
+  .seccion2Padding {
+    padding: 60px 15px 15px 15px;
+  }
+  .gridItem {
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    padding-left: 4%;
+  }
+  .seccion2Caja {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+  }
+  .divImgSec2 {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+  }
+  .imgSec2 {
+    width: 100%;
+    /*height: auto; */
+    height: 130px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.75s ease-out;
+  }
+  .imgSec2:hover {
+    transform: scale(1.2);
+  }
+  .textoSec2 {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #e6dac0;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  /*Seccion 3*/
+  .seccion3Padding {
+    margin-bottom: 30px !important;
+  }
+  .gridSec3 {
+    align-items: center;
+    grid-auto-columns: 50% 50%;
+  }
+  .gridSec3Item {
+    grid-area: 1 / 2 / 1 / 2;
+    padding: 30px 48px;
+    display: flex;
+    height: 100%;
+  }
+  .textoDivSec3 {
+    align-self: center;
+    max-width: 1400px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .textoDivSec3 h2 {
+    font-size: 28px;
+    letter-spacing: normal;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  .textoDivSec3 .textoDiv {
+    line-height: 1.7;
+    margin-bottom: 0;
+    font-size: 28px !important;
+  }
+  .textoDivSec3 .textoDiv p {
+    margin: 0 0 15px 0;
+  }
+
+  /*Seccion 4*/
+  .seccion4 {
+    background: #e6dac0 !important;
+    text-align: center;
+  }
+  .seccion4Padding {
+    padding: 30px 15px;
+  }
+  .seccion4 .grid {
+    vertical-align: top;
+    position: relative !important;
+  }
+  .seccion4 .gridItem {
+    margin: 0 auto;
+    align-items: center !important;
+    width: 28%;
+    padding-left: 1%;
+  }
+  .seccion4 .gridItemMedio {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0 10px;
+    margin-left: 20px;
+  }
+  .seccion4 .gridItemDer {
+    padding-left: 20px;
+  }
+  .divImgSec4 {
+    width: 33% !important;
+    height: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+  .imgSec4 {
+    height: 100%;
+    object-fit: contain !important;
+    transform: scale(1) !important;
+    width: 100%;
+    vertical-align: center;
+  }
+  .seccion4 .textoDiv {
+    font-size: 20px;
+    width: 80% !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    text-align: center;
+    margin-left: 10%;
+  }
+
+  /*Seccion 5*/
+  .seccion5Padding {
+    padding: 30px;
+  }
+  .tituloSec5 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  .tituloSec5 h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .tituloSec5 .textoDiv {
+    font-size: 25px !important;
+    line-height: 1.3 !important;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .seccion5 .grid {
+    text-align: center;
+    margin-bottom: -30px;
+    margin-left: -30px;
+    width: 100vw;
+  }
+  .seccion5 .gridItem {
+    margin-bottom: 30px;
+    vertical-align: top;
+    width: 100%;
+    padding-left: 0;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .contenedorSec5 {
+    text-align: center !important;
+    margin: 0 40px;
+  }
+  .divVideoSec5 {
+    width: 100% !important;
+    margin: 0 auto 15px !important;
+    text-align: center;
+  }
+  .iframeVideo {
+    width: 100%;
+    height: 410px;
+  }
+  .contenedorSec5 .textoDiv {
+    font-size: 28px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+    margin: 0;
+  }
+  .divBtnSec5 {
+    margin-top: 30px !important;
+    text-align: center;
+  }
+
+  /*Seccion 6*/
+
+  /*Seccion 7*/
+
+  /*Seccion 8*/
+  .seccion8Padding {
+    padding: 43px 0 119px;
+  }
+  .containerSec8 {
+    max-width: 800px;
+    width: 80%;
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rowSec8 div {
+    display: inline-block;
+  }
+  .textoSec8 {
+    width: 50%;
+    padding-right: 1rem;
+    vertical-align: top;
+  }
+  .textoSec8 p {
+    font-size: 22px;
+    letter-spacing: 0.57px;
+    margin: 0 0 19.44px;
+    font-weight: bold;
+  }
+  .formSec8 {
+    width: 80%;
+    padding-left: 1rem;
+  }
+  .formSec8 form {
+    margin: 0;
+  }
+  .sec8Input1 {
+    outline: none;
+    box-shadow: none;
+    padding: 10px 18px;
+    border: 1px solid #cccccc;
+    background-color: #000000;
+    max-width: 100%;
+    line-height: 1.2;
+    border-radius: 2px;
+  }
+  .formSec8 .form-group {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    height: 56px;
+  }
+  .formSec8 .form-group .form-control {
+    padding: 8px 10px;
+    border-radius: 0;
+    height: 40px;
+    font-size: 16px;
+    color: #a5a6a1;
+  }
+
+  .formSec8 .form-group input {
+    width: 363px;
+    height: 56px;
+    background-color: #efefef;
+    border-right: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  .formSec8 .form-group .formBtn {
+    max-width: 171px;
+    width: 100%;
+    height: 56px;
+    background-color: black;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.36px;
+    text-align: center;
+    color: white;
+  }
+  .formSec8 ul {
+    padding: 0;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    margin-top: 35px;
+  }
+  .formSec8 ul li {
+    margin-right: 24px;
+    list-style: none;
+  }
+  .formSec8 ul a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
@@ -105,6 +840,7 @@
   }
   .divImgSec2 {
     width: 100%;
+    height: 263px;
     overflow: hidden;
   }
   .imgSec2 {
@@ -124,6 +860,7 @@
     background-color: #e6dac0;
     text-transform: uppercase;
     font-weight: 400;
+    margin: 0;
   }
 
   /*Seccion 3*/
@@ -476,6 +1213,7 @@
   }
   .divImgSec2 {
     width: 100%;
+    height: 263px;
     overflow: hidden;
   }
   .imgSec2 {
@@ -495,6 +1233,7 @@
     background-color: #e6dac0;
     text-transform: uppercase;
     font-weight: 400;
+    margin: 0;
   }
 
   /*Seccion 3*/
