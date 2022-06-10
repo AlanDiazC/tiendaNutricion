@@ -104,6 +104,9 @@ const Navbar = () => {
         <a className="navProb" href="/QnA">
           <FiMail /> FaQs
         </a>
+        <a className="navProb" href="/Cuenta/LogIn">
+          <FiUser /> Log In
+        </a>
       </div>
     </div>
   );

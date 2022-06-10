@@ -6,9 +6,9 @@ import Navbar from "./views/navbar";
 import Homepage from "./views/Homepage";
 import AboutMe from "./views/AboutMe";
 // import Tienda from "./views/Tienda";
-// import SignUP from "./views/LogIn";
+import SignUp from "./views/SignUp";
 // import Carrito from "./views/Carrito";
-// import LogIn from "./views/LogIn";
+import LogIn from "./views/LogIn";
 // import MiCuenta from "./views/MiCuenta";
 // import Producto from "./views/Producto";
 // import Footer from "./views/Footer";
@@ -30,9 +30,10 @@ const App = () => {
           <Route path="/payments/:idPrecio" element={<Payment />} />
           <Route path="/Tienda" element={<Tienda />} />
           <Route path="/MiCarrito" element={<PuenteCarrito />} />
-          <Route path="LogIn" element={<LogIn />} />
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
-          <Route path="/Producto/:idProd" element={<Producto />} /> */}
+        <Route path="/Producto/:idProd" element={<Producto />} /> */}
+          <Route path="/Cuenta/SignUp" element={<SignUp />} />
+          <Route path="/Cuenta/LogIn" element={<LogIn />} />
           <Route path="/QnA" element={<QnA />} />
           <Route path="/SobreNosotros" element={<AboutMe />} />
           <Route path="/" element={<Homepage />} />
