@@ -121,6 +121,8 @@
     width: 80% !important;
     min-height: 100% !important;
     height: 100% !important;
+    position: relative;
+    z-index: 2;
   }
   .aboutMe2Col {
     margin-bottom: 80px;
@@ -363,6 +365,8 @@
     width: 60% !important;
     min-height: 100% !important;
     height: 100% !important;
+    position: relative;
+    z-index: 2;
   }
   .aboutMe2Col {
     margin-bottom: 80px;
@@ -624,6 +628,8 @@
     width: 40% !important;
     min-height: 100% !important;
     height: 100% !important;
+    position: relative;
+    z-index: 2;
   }
   .aboutMe2Col {
     margin-bottom: 80px;
@@ -903,6 +909,8 @@
     width: 45% !important;
     min-height: 100% !important;
     height: 100% !important;
+    position: relative;
+    z-index: 2;
   }
   .aboutMe2Col {
     margin-bottom: 80px;

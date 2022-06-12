@@ -38,7 +38,7 @@ const AboutMe = () => {
         <div className="container">
           <div className="vidAboutMe">
             {/* <iframe src="https://www.youtube.com/embed/Oau9xqKARc0"></iframe> */}
-            <ReactPlayer className="playerAbout" controls url={video} />
+            <ReactPlayer controls className="playerAbout" url={video} />
           </div>
         </div>
         <div className="aboutMe2Col">
