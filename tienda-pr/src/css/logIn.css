@@ -77,6 +77,10 @@
   .logInBox form div {
     text-align: center !important;
   }
+  .logInBox form div a {
+    text-decoration: none;
+    color: #000000;
+  }
   .logInBox form div p {
     color: #000000;
     margin: 0 0 20px;
@@ -242,6 +246,10 @@
   .logInBox form div {
     text-align: center !important;
   }
+  .logInBox form div a {
+    text-decoration: none;
+    color: #000000;
+  }
   .logInBox form div p {
     color: #000000;
     margin: 0 0 20px;
@@ -405,6 +413,10 @@
   .logInBox form div {
     text-align: center !important;
   }
+  .logInBox form div a {
+    text-decoration: none;
+    color: #000000;
+  }
   .logInBox form div p {
     color: #000000;
     margin: 0 0 20px;
@@ -567,6 +579,10 @@
   }
   .logInBox form div {
     text-align: center !important;
+  }
+  .logInBox form div a {
+    text-decoration: none;
+    color: #000000;
   }
   .logInBox form div p {
     color: #000000;

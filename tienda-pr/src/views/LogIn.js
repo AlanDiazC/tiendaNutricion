@@ -52,7 +52,7 @@ const LogIn = () => {
                   </p>
                   <input type="submit" className="btnForm" value="Log In" />
                   <p>
-                    <a>Crear cuenta</a>
+                    <a href="/Cuenta/SignUp">Crear cuenta</a>
                   </p>
                 </div>
               </form>

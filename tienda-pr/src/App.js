@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Payment from "./views/payment";
 import Navbar from "./views/navbar";
-// import Contacto from "./views/Contacto";
+import Contacto from "./views/Contacto";
 import Homepage from "./views/Homepage";
 import AboutMe from "./views/AboutMe";
 // import Tienda from "./views/Tienda";
@@ -25,13 +25,15 @@ const App = () => {
 
       <Router>
         <Routes>
-          {/* <Route path="/Contacto" element={<Contacto />} />
+          {/*
           <Route path="/signUp" element={<PuenteCuenta />} />
           <Route path="/payments/:idPrecio" element={<Payment />} />
           <Route path="/Tienda" element={<Tienda />} />
           <Route path="/MiCarrito" element={<PuenteCarrito />} />
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
-        <Route path="/Producto/:idProd" element={<Producto />} /> */}
+        <Route path="/Producto/:idProd" element={<Producto />} /> 
+        */}
+          <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Cuenta/SignUp" element={<SignUp />} />
           <Route path="/Cuenta/LogIn" element={<LogIn />} />
           <Route path="/QnA" element={<QnA />} />

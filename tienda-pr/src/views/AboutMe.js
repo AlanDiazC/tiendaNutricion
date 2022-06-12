@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import "../css/aboutMe.css";
-import logo from "../multimedia/Logo.png";
+import ReactPlayer from "react-player";
 
 import imgAbout1 from "../multimedia/imgAbout1.jpg";
 import imgAbout2 from "../multimedia/imgAbout2.jpg";
+
+import video from "../multimedia/reel1.MOV";
 
 const AboutMe = () => {
   return (
@@ -35,7 +37,8 @@ const AboutMe = () => {
         <span>Just Do It</span>
         <div className="container">
           <div className="vidAboutMe">
-            <iframe src="https://www.youtube.com/embed/Oau9xqKARc0"></iframe>
+            {/* <iframe src="https://www.youtube.com/embed/Oau9xqKARc0"></iframe> */}
+            <ReactPlayer className="playerAbout" controls url={video} />
           </div>
         </div>
         <div className="aboutMe2Col">

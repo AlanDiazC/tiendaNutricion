@@ -1,15 +1,15 @@
 import React, { useState, useRef } from "react";
 import "../css/homepage.css";
+import ReactPlayer from "react-player";
 
 import { FaShoppingCart } from "react-icons/fa";
-
-import prod2 from "../multimedia/prod2.JPG";
-import prod1 from "../multimedia/prod1.JPG";
 
 import imgHP1 from "../multimedia/imgHP1.JPG";
 import imgHP2 from "../multimedia/imgHP2.JPG";
 import imgHP3 from "../multimedia/imgHP3.JPG";
 import imgHP4 from "../multimedia/imgHP4.JPG";
+
+import video from "../multimedia/reel2.MOV";
 
 // import ObtenerProductos from "../views/ObtenerProductos";
 
@@ -184,10 +184,15 @@ const Homepage = () => {
                 <div className="contenedorSec5">
                   <div className="divVideoSec5">
                     <div>
-                      <iframe
+                      {/* <iframe
                         className="iframeVideo"
-                        src="https://www.youtube.com/embed/tVTM_xrnAzY?&controls=0&vq=hd720&playlist=tVTM_xrnAzY"
-                      ></iframe>
+                        src={"https://www.youtube.com/embed/tVTM_xrnAzY?&controls=0&vq=hd720&playlist=tVTM_xrnAzY"}
+                      ></iframe> */}
+                      <ReactPlayer
+                        controls
+                        className="iframeVideo"
+                        url={video}
+                      />
                     </div>
                   </div>
                   <div className="textoDiv">

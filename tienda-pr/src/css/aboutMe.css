@@ -117,9 +117,10 @@
     justify-content: center;
     position: relative;
   }
-  .aboutMeSec2 .vidAboutMe iframe {
-    width: 100%;
-    min-height: 250px;
+  .aboutMeSec2 .vidAboutMe .playerAbout {
+    width: 80% !important;
+    min-height: 100% !important;
+    height: 100% !important;
   }
   .aboutMe2Col {
     margin-bottom: 80px;
@@ -358,9 +359,10 @@
     justify-content: center;
     position: relative;
   }
-  .aboutMeSec2 .vidAboutMe iframe {
-    width: 100%;
-    min-height: 500px;
+  .aboutMeSec2 .vidAboutMe .playerAbout {
+    width: 60% !important;
+    min-height: 100% !important;
+    height: 100% !important;
   }
   .aboutMe2Col {
     margin-bottom: 80px;
@@ -618,9 +620,10 @@
     justify-content: center;
     position: relative;
   }
-  .aboutMeSec2 .vidAboutMe iframe {
-    width: 100%;
-    min-height: 437px;
+  .aboutMeSec2 .vidAboutMe .playerAbout {
+    width: 40% !important;
+    min-height: 100% !important;
+    height: 100% !important;
   }
   .aboutMe2Col {
     margin-bottom: 80px;
@@ -896,9 +899,10 @@
     justify-content: center;
     position: relative;
   }
-  .aboutMeSec2 .vidAboutMe iframe {
-    width: 100%;
-    min-height: 437px;
+  .aboutMeSec2 .vidAboutMe .playerAbout {
+    width: 45% !important;
+    min-height: 100% !important;
+    height: 100% !important;
   }
   .aboutMe2Col {
     margin-bottom: 80px;
