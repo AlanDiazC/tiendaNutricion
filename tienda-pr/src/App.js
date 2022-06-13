@@ -5,7 +5,7 @@ import Navbar from "./views/navbar";
 import Contacto from "./views/Contacto";
 import Homepage from "./views/Homepage";
 import AboutMe from "./views/AboutMe";
-// import Tienda from "./views/Tienda";
+import Tienda from "./views/Tienda";
 import SignUp from "./views/SignUp";
 // import Carrito from "./views/Carrito";
 import LogIn from "./views/LogIn";
@@ -28,11 +28,11 @@ const App = () => {
           {/*
           <Route path="/signUp" element={<PuenteCuenta />} />
           <Route path="/payments/:idPrecio" element={<Payment />} />
-          <Route path="/Tienda" element={<Tienda />} />
           <Route path="/MiCarrito" element={<PuenteCarrito />} />
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
-        <Route path="/Producto/:idProd" element={<Producto />} /> 
+          <Route path="/Producto/:idProd" element={<Producto />} /> 
         */}
+          <Route path="/Tienda" element={<Tienda />} />
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Cuenta/SignUp" element={<SignUp />} />
           <Route path="/Cuenta/LogIn" element={<LogIn />} />

@@ -47,13 +47,13 @@ const Homepage = () => {
           <div className="seccion2Padding">
             <div className="gridSec2">
               <div className="gridItem">
-                <a className="seccion2Caja">
+                <a className="seccion2Caja" href="/Tienda">
                   <div className="divImgSec2">
                     <div>
                       <img className="imgSec2" src={imgHP1} />
                     </div>
                   </div>
-                  <h2 className="textoSec2">Texto prueba</h2>
+                  <h2 className="textoSec2">Productos</h2>
                 </a>
               </div>
               <div className="gridItem">

@@ -1,11 +1,366 @@
 @media only screen and (max-width: 600px) {
+  .bannerTienda {
+    min-height: 360px;
+    align-items: center;
+    background-image: url("../multimedia/bannerTienda.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bannerTienda div {
+    max-width: 1000px;
+    padding: 0 20px;
+    padding-bottom: 70px;
+    padding-top: 35px;
+    display: block;
+    width: 100%;
+    margin: 0;
+    right: 0;
+  }
+  .bannerTienda div h1 {
+    font-size: 36px !important;
+    line-height: 1.22 !important;
+    text-align: right;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: bold !important;
+    color: white;
+  }
+
+  .mostrarProds {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .producto {
+    width: 45%;
+    margin: 0 2%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center !important;
+  }
+  .producto1 {
+    margin-top: 5px;
+  }
+  .imgProd {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .datosProd {
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .nombreProd {
+    font-size: 20px !important;
+    margin-right: 8%;
+    text-transform: uppercase;
+  }
+  .precioProd {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .verMasProd {
+    font-size: 25px;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    color: black;
+    padding: 0px 2px 5px 10px;
+    text-decoration: none;
+  }
+  .verMasTop {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 18px 10px 5px 0px;
+    text-decoration: none;
+  }
+  .verMasProd:hover {
+    padding: 3px 4px 7px 12px;
+  }
+  .verMasProd:hover > .verMasTop {
+    padding: 22px 12px 7px 2px;
+  }
+  .prodCarro {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .bannerTienda {
+    min-height: 360px;
+    align-items: center;
+    background-image: url("../multimedia/bannerTienda.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bannerTienda div {
+    max-width: 1000px;
+    padding: 0 20px;
+    padding-bottom: 70px;
+    padding-top: 35px;
+    display: block;
+    width: 100%;
+    margin: 0;
+    right: 0;
+  }
+  .bannerTienda div h1 {
+    font-size: 66px !important;
+    line-height: 1.22 !important;
+    text-align: right;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: bold !important;
+    padding-right: 5%;
+    color: white;
+  }
+
+  .mostrarProds {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .producto {
+    width: 45%;
+    margin: 0 2%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center !important;
+  }
+  .producto1 {
+    margin-top: 5px;
+  }
+  .imgProd {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .datosProd {
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .nombreProd {
+    font-size: 30px !important;
+    margin-right: 8%;
+    text-transform: uppercase;
+  }
+  .precioProd {
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .verMasProd {
+    font-size: 35px;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    color: black;
+    padding: 0px 2px 5px 10px;
+    text-decoration: none;
+  }
+  .verMasTop {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 28px 10px 5px 0px;
+    text-decoration: none;
+  }
+  .verMasProd:hover {
+    padding: 3px 4px 7px 12px;
+  }
+  .verMasProd:hover > .verMasTop {
+    padding: 22px 12px 7px 2px;
+  }
+  .prodCarro {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .bannerTienda {
+    min-height: 360px;
+    align-items: center;
+    background-image: url("../multimedia/bannerTienda.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bannerTienda div {
+    max-width: 1000px;
+    padding: 0 20px;
+    padding-bottom: 70px;
+    padding-top: 35px;
+    display: block;
+    width: 100%;
+    margin: 0;
+    right: 0;
+  }
+  .bannerTienda div h1 {
+    font-size: 66px !important;
+    line-height: 1.22 !important;
+    text-align: right;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: bold !important;
+    padding-right: 10%;
+    color: white;
+  }
+
+  .mostrarProds {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .producto {
+    width: 20%;
+    margin: 0 2%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center !important;
+  }
+  .producto1 {
+    margin-top: 5px;
+  }
+  .imgProd {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .datosProd {
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .nombreProd {
+    font-size: 20px !important;
+    margin-right: 8%;
+    text-transform: uppercase;
+  }
+  .precioProd {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .verMasProd {
+    font-size: 25px;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    color: black;
+    padding: 3px 2px 5px 10px;
+    text-decoration: none;
+  }
+  .verMasTop {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 20px 10px 5px 0px;
+    text-decoration: none;
+  }
+  .verMasProd:hover {
+    padding: 3px 4px 7px 12px;
+  }
+  .verMasProd:hover > .verMasTop {
+    padding: 22px 12px 7px 2px;
+  }
+  .prodCarro {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (min-width: 1596px) {
+  .bannerTienda {
+    min-height: 400px;
+    align-items: center;
+    background-image: url("../multimedia/bannerTienda.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bannerTienda div {
+    max-width: 1000px;
+    padding: 0 20px;
+    padding-bottom: 70px;
+    padding-top: 35px;
+    display: block;
+    width: 100%;
+    margin: 0;
+    right: 0;
+  }
+  .bannerTienda div h1 {
+    font-size: 66px !important;
+    line-height: 1.22 !important;
+    text-align: right;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: bold !important;
+    padding-right: 10%;
+    color: white;
+  }
+
+  .mostrarProds {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .producto {
+    width: 15%;
+    margin: 0 3%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center !important;
+  }
+  .producto1 {
+    margin-top: 5px;
+  }
+  .imgProd {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .datosProd {
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .nombreProd {
+    font-size: 20px !important;
+    margin-right: 8%;
+    text-transform: uppercase;
+  }
+  .precioProd {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .verMasProd {
+    font-size: 25px;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    color: black;
+    padding: 3px 2px 5px 10px;
+    text-decoration: none;
+  }
+  .verMasTop {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 20px 10px 5px 0px;
+    text-decoration: none;
+  }
+  .verMasProd:hover {
+    padding: 3px 4px 7px 12px;
+  }
+  .verMasProd:hover > .verMasTop {
+    padding: 22px 12px 7px 2px;
+  }
+  .prodCarro {
+    font-size: 40px;
+  }
 }

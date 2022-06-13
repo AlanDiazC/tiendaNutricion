@@ -9,16 +9,16 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
         const productsCollectionReference = collection(db, "productos");
         const productsData = await getDocs(productsCollectionReference);
         //   console.log("REFERENCIA", usersCollectionReference); `clientes/${auth.currentUser.uid}/checkout_sessions`
-        const prod = await productsData.docs;
+        const prod = productsData.docs;
 
         const precio0 = collection(db, `productos/${prod[0].id}/prices`);
         const precio0Data = await getDocs(precio0);
-        const precio0Doc = await precio0Data.docs;
+        const precio0Doc = precio0Data.docs;
 
         for (var i = 0; i < 2; i++) {
           const precio = collection(db, `productos/${prod[i].id}/prices`);
           const precioData = await getDocs(precio);
-          const precioDoc = await precioData.docs;
+          const precioDoc = precioData.docs;
           data[i] = {
             id: prod[i].id,
             nombre: prod[i].data().name,

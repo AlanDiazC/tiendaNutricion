@@ -113,6 +113,9 @@ const Navbar = () => {
         <a className="navProb" href="/Contacto">
           <FiMail /> Contacto
         </a>
+        <a className="navProb" href="/Tienda">
+          <FiShoppingBag /> Tienda
+        </a>
       </div>
     </div>
   );

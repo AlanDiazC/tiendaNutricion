@@ -95,6 +95,7 @@
     margin: 0 auto;
     text-align: center;
     cursor: pointer;
+    text-decoration: none !important;
   }
   .divImgSec2 {
     width: 100%;
@@ -118,6 +119,8 @@
     text-transform: uppercase;
     font-weight: 400;
     margin: 0;
+    text-decoration: none;
+    color: #000000;
   }
 
   /*Seccion 3*/
@@ -463,6 +466,7 @@
     margin: 0 auto;
     text-align: center;
     cursor: pointer;
+    text-decoration: none !important;
   }
   .divImgSec2 {
     width: 100%;
@@ -487,6 +491,8 @@
     text-transform: uppercase;
     font-weight: 400;
     margin: 0;
+    text-decoration: none;
+    color: #000000;
   }
 
   /*Seccion 3*/
@@ -837,6 +843,7 @@
     margin: 0 auto;
     text-align: center;
     cursor: pointer;
+    text-decoration: none !important;
   }
   .divImgSec2 {
     width: 100%;
@@ -861,6 +868,8 @@
     text-transform: uppercase;
     font-weight: 400;
     margin: 0;
+    text-decoration: none;
+    color: #000000;
   }
 
   /*Seccion 3*/
@@ -1210,6 +1219,7 @@
     margin: 0 auto;
     text-align: center;
     cursor: pointer;
+    text-decoration: none !important;
   }
   .divImgSec2 {
     width: 100%;
@@ -1234,6 +1244,7 @@
     text-transform: uppercase;
     font-weight: 400;
     margin: 0;
+    color: #000000;
   }
 
   /*Seccion 3*/
