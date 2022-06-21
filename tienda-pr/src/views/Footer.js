@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/footer.css";
+import "../css/footer.css";
 
 import { FiSearch } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
@@ -17,59 +17,7 @@ import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
-  return (
-    <div>
-      <div className="footerCel footer">
-        <div className="footerDatos">
-          <div>
-            <p className="footerContacto">
-              <BsFacebook />
-            </p>
-          </div>
-
-          <a href="/">
-            <img className="footerLogo" src={logo} />
-          </a>
-
-          <div>
-            <p className="footerContacto">
-              <BsInstagram />
-            </p>
-          </div>
-        </div>
-
-        <div className="footerLogos">
-          <a className="footerOpcionLogos" href="/Tienda">
-            <FiShoppingBag />
-          </a>
-
-          <a className="footerOpcionLogos" href="/SobreNosotros">
-            <FiInfo />
-          </a>
-
-          <a className="footerOpcionLogos" href="/Contacto">
-            <FiMail />
-          </a>
-
-          {/* <Login /> */}
-          <a className="footerOpcionLogos" href="/SignUp">
-            <FiUser />
-          </a>
-
-          {/* 
-            
-            <a className="footerOpcionLogos" href="/MiCuenta">
-              <FiUser />
-            </a>
-            */}
-
-          <a className="footerOpcionLogos" href="/MiCarrito">
-            <FiShoppingCart />
-          </a>
-        </div>
-      </div>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Footer;
