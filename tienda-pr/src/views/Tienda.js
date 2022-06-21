@@ -30,7 +30,8 @@ const Tienda = () => {
               <span className="nombreProd">{data[i].nombre}</span>
               <span className="precioProd">$ {data[i].precio}</span>
             </div>
-            <a className="verMasTop" href={"/Producto/" + data[i].id}>
+            {/* <a className="verMasTop" href={"/Producto/" + data[i].id}> */}
+            <a className="verMasTop" href={"/Producto"}>
               <span className="verMasProd">Ver más</span>
             </a>
           </div>
