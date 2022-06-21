@@ -7,7 +7,7 @@ import Homepage from "./views/Homepage";
 import AboutMe from "./views/AboutMe";
 import Tienda from "./views/Tienda";
 import SignUp from "./views/SignUp";
-// import Carrito from "./views/Carrito";
+import Carrito from "./views/Carrito";
 import LogIn from "./views/LogIn";
 // import MiCuenta from "./views/MiCuenta";
 // import Producto from "./views/Producto";
@@ -15,6 +15,7 @@ import LogIn from "./views/LogIn";
 // import PuenteCuenta from "./views/PuenteCuenta";
 // import PuenteCarrito from "./views/PuenteCarrito";
 import QnA from "./views/Q&A.js";
+import Envio from "./views/Envio.js";
 
 const App = () => {
   return (
@@ -28,10 +29,11 @@ const App = () => {
           {/*
           <Route path="/signUp" element={<PuenteCuenta />} />
           <Route path="/payments/:idPrecio" element={<Payment />} />
-          <Route path="/MiCarrito" element={<PuenteCarrito />} />
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
           <Route path="/Producto/:idProd" element={<Producto />} /> 
         */}
+          <Route path="/MiCarrito" element={<Carrito />} />
+          <Route path="/Envio" element={<Envio />} />
           <Route path="/Tienda" element={<Tienda />} />
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Cuenta/SignUp" element={<SignUp />} />

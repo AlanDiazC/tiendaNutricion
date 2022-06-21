@@ -116,6 +116,9 @@ const Navbar = () => {
         <a className="navProb" href="/Tienda">
           <FiShoppingBag /> Tienda
         </a>
+        <a className="navProb" href="/MiCarrito">
+          <FiShoppingCart /> Mi Carrito
+        </a>
       </div>
     </div>
   );

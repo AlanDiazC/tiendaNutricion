@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/carrito.css";
+import "../css/carrito.css";
 import { useNavigate } from "react-router-dom";
 
 import { FiX } from "react-icons/fi";
@@ -10,6 +10,10 @@ import { BiCurrentLocation } from "react-icons/bi";
 import ObtenerProductos from "./ObtenerCarrito";
 
 import prod1 from "../multimedia/prod1.JPG";
+
+import { BsFillTrashFill } from "react-icons/bs";
+import { BsPlus } from "react-icons/bs";
+import { BsDash } from "react-icons/bs";
 
 const Tienda = () => {
   const navigate = useNavigate();
@@ -40,64 +44,47 @@ const Tienda = () => {
   };
 
   const mostrar = () => {
-    if (flag) {
-      return (
-        <div>
-          <div className="prodCarro">
-            {/* <img className="imgCarro" src={data[0].imagen} /> */}
-            <img className="imgCarro" src={prod1} />
-            <div className="datosCarro">
-              <span className="nombreProdCarro">{data[0].nombre}</span>
-              <a
-                className="btnCantCarro"
-                onClick={() => Disminuir(cantidad, setCantidad)}
-              >
-                <BsFillDashCircleFill />
+    // if (flag) {
+    // }
+    return (
+      <div>
+        <div className="objetoCarrito">
+          <div className="objCarroIzq">
+            <div className="objCarroImg">
+              <a>
+                <img src={prod1} />
               </a>
-              <span className="cantCarro">{cantidad}</span>
-              <a
-                className="btnCantCarro"
-                onClick={() => Aumentar(cantidad, setCantidad)}
-              >
-                <BsFillPlusCircleFill />
-              </a>
-            </div>
-            <div className="datosCarro">
-              <p className="xCarro">
-                <FiX />
-              </p>
-              <span className="precioCarro">$ {data[0].precio}</span>
             </div>
           </div>
-          {/* <div className="prodCarro">
-            <img className="imgCarro" src={data.producto1.imagen} />
-            <div className="datosCarro">
-              <span className="nombreProdCarro">{data.producto1.nombre}</span>
-              <br />
-              <a
-                className="btnCantCarro"
-                onClick={() => Disminuir(cantidad, setCantidad)}
-              >
-                <BsFillDashCircleFill />
+          <div className="objCarroDer">
+            <div className="objCarroTitulo">
+              <a>
+                <h3>Nombre</h3>
               </a>
-              <span className="cantCarro">{cantidad}</span>
-              <a
-                className="btnCantCarro"
-                onClick={() => Aumentar(cantidad, setCantidad)}
-              >
-                <BsFillPlusCircleFill />
-              </a>
+              <button className="objCarroBorrar">
+                <BsFillTrashFill />
+              </button>
             </div>
-            <div className="datosCarro">
-              <p className="xCarro">
-                <FiX />
-              </p>
-              <span className="precioCarro">$ {data.producto1.precio}</span>
+            <div className="objCarroAbajo">
+              <div className="objCarroCantidad">
+                <div className="objCarroCantIcono">
+                  <BsDash />
+                </div>
+                <input
+                  className="objCarroCantNum"
+                  type="text"
+                  value="1"
+                ></input>
+                <div className="objCarroCantIcono">
+                  <BsPlus />
+                </div>
+              </div>
+              <span className="objCarroPreico">$ 00.00</span>
             </div>
-          </div> */}
+          </div>
         </div>
-      );
-    }
+      </div>
+    );
   };
 
   const pagar = () => {
@@ -107,8 +94,7 @@ const Tienda = () => {
   };
 
   return (
-    <div className="Carro">
-      <h1 className="carroTitulo">Mi Carrito</h1>
+    <div className="CarroContainer">
       <ObtenerProductos
         setData={setData}
         data={data}
@@ -117,26 +103,35 @@ const Tienda = () => {
         setEnvio={setEnvio}
         setTotal={setTotal}
       />
-      {mostrar()}
-      <div className="direcCarro">
-        <h2>Dirección de envio</h2>
-        <button>
-          <BiCurrentLocation />
-        </button>
-      </div>
-      <div className="calcPrecio">
-        <span>Subtotal: ${subTotal}</span>
-      </div>
-      <div className="calcPrecio precioEnv">
-        <span>Envío: ${envio}</span>
-      </div>
-      <div className="totalPrecio">
-        <span>Total: ${total}</span>
-      </div>
-      <div className="btnCarro">
-        <button onClick={pagar}>
-          <span className="textoPagarBtn">Realizar pago</span>
-        </button>
+      <div>
+        <section className="secCarrito">
+          <div className="container">
+            <div className="carrito">
+              <form>
+                <div className="columnasCarrito">
+                  <div className="columCarro">
+                    <div className="contenidoColumna">
+                      <h4>Tu Carrito</h4>
+                      {mostrar()}
+                    </div>
+                  </div>
+                  <div className="columCarro">
+                    <div className="secColMedio">
+                      <h4>Tu Orden</h4>
+                      <p>
+                        <span className="carroSubTotal">Subtotal:</span>
+                        <span className="carroSubTotalPrecio">$ 00.00</span>
+                      </p>
+                      <a href="/Envio">
+                        <button type="button">Continuar al pago</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
