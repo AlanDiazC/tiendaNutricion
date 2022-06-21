@@ -11,7 +11,7 @@ import Carrito from "./views/Carrito";
 import LogIn from "./views/LogIn";
 // import MiCuenta from "./views/MiCuenta";
 import Producto from "./views/Producto";
-// import Footer from "./views/Footer";
+import Footer from "./views/Footer";
 // import PuenteCuenta from "./views/PuenteCuenta";
 // import PuenteCarrito from "./views/PuenteCarrito";
 import QnA from "./views/Q&A.js";
@@ -45,7 +45,7 @@ const App = () => {
         </Routes>
       </Router>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
