@@ -164,17 +164,17 @@ const Producto = () => {
                   <tr>
                     <td>Calorias</td>
                     <td>120</td>
-                    <td>**</tdd>
+                    <td>**</td>
                   </tr>
                   <tr>
                     <td>Grasa total</td>
                     <td>3.5g</td>
-                    <td>4%</tdd>
+                    <td>4%</td>
                   </tr>
                   <tr>
                     <td>Grasas saturadas</td>
                     <td>2g</td>
-                    <td>10%</tdd>
+                    <td>10%</td>
                   </tr>
                 </tbody>
               </table>
