@@ -13,6 +13,7 @@ import { FiUser } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
+import { BsWhatsapp, BsPeople } from "react-icons/bs";
 
 import logo from "../multimedia/Logo.png";
 
@@ -161,12 +162,15 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="navCelSocial">
-                <a className="navCelSocialLink" href="https://www.facebook.com">
-                  <BsFacebook />
+                <a
+                  className="navCelSocialLink"
+                  href="https://wa.me/525516820762"
+                >
+                  <BsWhatsapp />
                 </a>
                 <a
                   className="navCelSocialLink"
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/pr.nutritionmx/?igshid=YmMyMTA2M2Y="
                 >
                   <BsInstagram />
                 </a>
@@ -193,6 +197,9 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a href="/QnA">Preguntas</a>
+                </li>
+                <li>
+                  <a href="MiCuenta">MiCuenta</a>
                 </li>
               </ul>
             </nav>
