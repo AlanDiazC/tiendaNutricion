@@ -149,13 +149,54 @@ const Producto = () => {
             </div>
           </div>
           <div className="tab_panel">
-
+            <div className="datos_segundo_tab">
+              <h4>Porcion por contenedor</h4>
+              <h4>Tamaño de la porcion</h4>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Cantidad por porcion</th>
+                    <th>Valor en % diario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Calorias</td>
+                    <td>120</td>
+                    <td>**</tdd>
+                  </tr>
+                  <tr>
+                    <td>Grasa total</td>
+                    <td>3.5g</td>
+                    <td>4%</tdd>
+                  </tr>
+                  <tr>
+                    <td>Grasas saturadas</td>
+                    <td>2g</td>
+                    <td>10%</tdd>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div className="tab_panel">
-
+            <div className="texto_tercer_tab">
+              <h3>Lorem ipsum dolor sit amet</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et. Nunc sed augue lacus viverra vitae congue eu. Quis viverra nibh cras pulvinar. Pretium quam vulputate dignissim suspendisse in est ante in.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et. Nunc sed augue lacus viverra vitae congue eu. Quis viverra nibh cras pulvinar. Pretium quam vulputate dignissim suspendisse in est ante in.</p>
+              <h3>Lorem ipsum dolor sit amet</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et. Nunc sed augue lacus viverra vitae congue eu. Quis viverra nibh cras pulvinar. Pretium quam vulputate dignissim suspendisse in est ante in.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et. Nunc sed augue lacus viverra vitae congue eu. Quis viverra nibh cras pulvinar. Pretium quam vulputate dignissim suspendisse in est ante in.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et. Nunc sed augue lacus viverra vitae congue eu. Quis viverra nibh cras pulvinar. Pretium quam vulputate dignissim suspendisse in est ante in.</p>
+            </div>
           </div>
           <div className="tab_panel">
-
+            <div className="instrucciones_de_uso_tab">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
           </div>
         </div>
       </div>
