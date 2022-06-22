@@ -1,5 +1,5 @@
 @media only screen and (max-width: 600px) {
-  a {
+  .navBar a {
     text-decoration: none;
     color: white;
   }
@@ -225,7 +225,7 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
-  a {
+  .navBar a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
@@ -452,7 +452,7 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
-  a {
+  .navBar a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
@@ -679,7 +679,7 @@
 }
 
 @media only screen and (min-width: 1596px) {
-  a {
+  .navBar a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;

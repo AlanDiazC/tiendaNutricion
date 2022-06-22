@@ -41,7 +41,7 @@ const App = () => {
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
         */}
           <Route path="/MiCuenta" element={<MiCuenta />} />
-          <Route path="/Producto" element={<Producto />} />
+          <Route path="/Producto/:idProd" element={<Producto />} />
           <Route path="/MiCarrito" element={<Carrito />} />
           <Route path="/Envio" element={<Envio />} />
           <Route path="/Tienda" element={<Tienda />} />

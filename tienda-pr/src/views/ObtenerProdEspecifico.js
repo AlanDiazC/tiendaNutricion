@@ -8,8 +8,8 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
       try {
         const usersCollectionReference = collection(db, "productos");
         const loggedUserData = await getDocs(usersCollectionReference);
-        //   console.log("REFERENCIA", usersCollectionReference);
         const prod = await loggedUserData.docs;
+        // console.log("REFERENCIA", id);
 
         for (var i = 0; i < prod.length; i++) {
           if (prod[i].id == id) {
