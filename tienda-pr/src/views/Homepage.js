@@ -13,8 +13,8 @@ import video from "../multimedia/reel2.MOV";
 
 // import ObtenerProductos from "../views/ObtenerProductos";
 
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Homepage = () => {
   return (
@@ -57,33 +57,33 @@ const Homepage = () => {
                 </a>
               </div>
               <div className="gridItem">
-                <a className="seccion2Caja">
+                <a className="seccion2Caja" href="/MiCarrito">
                   <div className="divImgSec2">
                     <div>
                       <img className="imgSec2" src={imgHP2} />
                     </div>
                   </div>
-                  <h2 className="textoSec2">Texto prueba</h2>
+                  <h2 className="textoSec2">Mi Carrito</h2>
                 </a>
               </div>
               <div className="gridItem">
-                <a className="seccion2Caja">
+                <a className="seccion2Caja" href="/QnA">
                   <div className="divImgSec2">
                     <div>
                       <img className="imgSec2" src={imgHP3} />
                     </div>
                   </div>
-                  <h2 className="textoSec2">Texto prueba</h2>
+                  <h2 className="textoSec2">Preguntas Frecuentes</h2>
                 </a>
               </div>
               <div className="gridItem">
-                <a className="seccion2Caja">
+                <a className="seccion2Caja" href="/SobreNosotros">
                   <div className="divImgSec2">
                     <div>
                       <img className="imgSec2" src={imgHP4} />
                     </div>
                   </div>
-                  <h2 className="textoSec2">Texto prueba</h2>
+                  <h2 className="textoSec2">Sobre Nosotros</h2>
                 </a>
               </div>
             </div>
@@ -254,8 +254,8 @@ const Homepage = () => {
             <div className="rowSec8">
               <div className="textoSec8">
                 <p>
-                  Neque porro quisquam est qui <br />
-                  dolorem ipsum quia dolor sit amet.
+                  Consultas sobre distribución y productos al por mayor <br />
+                  Envíenos un correo a pr.nutritionmx@gmail.com
                 </p>
               </div>
               <div className="formSec8">
@@ -274,13 +274,13 @@ const Homepage = () => {
                 </form>
                 <ul>
                   <li>
-                    <a>
-                      <FaFacebookF />
+                    <a href="https://wa.me/525516820762">
+                      <BsWhatsapp />
                     </a>
                   </li>
                   <li>
-                    <a>
-                      <FaInstagram />
+                    <a href="https://www.instagram.com/pr.nutritionmx/?igshid=YmMyMTA2M2Y=">
+                      <BsInstagram />
                     </a>
                   </li>
                 </ul>
