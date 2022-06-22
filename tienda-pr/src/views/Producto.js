@@ -65,13 +65,13 @@ const Producto = () => {
           <div className="parte_mitad_prod">
             <div className="slide_de_imagenes">
               <div className="anterior_prod">
-                <button>anterior</button>
+                <button className="flecha_prod">anterior</button>
               </div>
-              <div className="imagenes">
+              <div className="imagenes_prod">
                 <img src={prod1}></img>
               </div>
               <div className="siguiente_prod">
-                <button>siguiente</button>
+                <button className="flecha_prod">siguiente</button>
               </div>
             </div>
           </div>
@@ -80,17 +80,19 @@ const Producto = () => {
               <h1>Nombre del producto</h1>
               <h3>Precio</h3>
             </div>
-            <div className="seleccion_producto">
-              <div className="cantidad_de_productos">
-                <select>Cantidad</select>
+            <form>
+              <div className="seleccion_producto">
+                <div className="cantidad_de_productos">
+                  <select>Cantidad</select>
+                </div>
+                <div className="tipo_de_producto">
+                  <select>Tipo</select>
+                </div>
+                <div>
+                  <button>Agregar al carrito</button>
+                </div>
               </div>
-              <div className="tipo_de_producto">
-                <select>Tipo</select>
-              </div>
-              <div>
-                <button>Agregar al carrito</button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
