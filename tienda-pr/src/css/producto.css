@@ -9,3 +9,111 @@
 
 @media only screen and (min-width: 1596px) {
 }
+
+div{
+    display:block;
+}
+
+.container_producto{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.producto_fila{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.lado_izquierdo_prod{
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.logo_producto{
+    margin-top: 100px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.texto_del_logo{
+    margin: 42px auto 0;
+}
+
+.parte_mitad_prod{
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.slide_de_imagenes{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.anterior_prod{
+    left: 0px;
+}
+
+.imagenes_prod{
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.siguiente_prod{
+    right: 0px;
+}
+
+.anterior_prod, .siguiente_prod{
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.flecha_prod{
+    background: transparent;
+    width: 22px;
+    height: 36px;
+    border: 0;
+    /* background-color: transparent; */
+    padding: 0;
+    background-image: url(Arrow_Left.svg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lado_derecho_prod{
+    margin-top: 89px;
+    margin-bottom: 91px;
+    flex-grow: 1;
+}
+
+.lado_derecho_prod_texto{
+    display: block;
+}
