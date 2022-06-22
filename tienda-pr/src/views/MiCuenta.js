@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/miCuenta.css";
+import "../css/miCuenta.css";
 import { BiCurrentLocation } from "react-icons/bi";
 import { onAuthStateChanged, signOut } from "@firebase/auth";
 import { auth } from "../config/fbconfig";
@@ -18,27 +18,21 @@ const MiCuenta = () => {
   });
 
   return (
-    <div>
-      <div className="Cuenta">
-        <div className="LogOut">
-          <button onClick={logoutData}>Cerrar sesión</button>
+    <div className="miCuenta">
+      <div className="containerCuenta">
+        <div className="tituloCuenta">
+          <h1>Mi Cuenta</h1>
+          <a>Cerrar Sesión</a>
         </div>
-        <h1 className="cuentaTitulo">Mi Cuenta</h1>
-        <h3 className="correoCuenta">Email: {user.email}</h3>
-        <div className="direcCuenta">
-          <h2>Dirección de envio</h2>
-          <button>
-            <BiCurrentLocation />
-          </button>
+        <div className="detallesCuenta">
+          <div>
+            <h2>Detalles de la cuenta</h2>
+            <p>Nombre Completo</p>
+            <p>Correo</p>
+            <p>Dirección: Ciudad, circuito, calle, numero, departamento</p>
+            <a className="btnCuenta">Modificar dirección</a>
+          </div>
         </div>
-        {/* <div className="pedidos">
-<button>Mis pedidos</button>
-</div>
-<div className="error">
-<a href="/Contacto">
-<button>Algún error? Contáctanos</button>
-</a>
-</div> */}
       </div>
     </div>
   );

@@ -11,6 +11,9 @@ import { FiInfo } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 import { FiShoppingCart } from "react-icons/fi";
+import { BsFacebook } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { BsWhatsapp, BsPeople } from "react-icons/bs";
 
 import logo from "../multimedia/Logo.png";
 
@@ -93,33 +96,131 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="divProb">
-        <a className="navProb" href="/">
-          <FiHome /> Homepage
-        </a>
-        <a className="navProb" href="/SobreNosotros">
-          <FiInfo /> Nosotros
-        </a>
-        <a className="navProb" href="/QnA">
-          <FiMail /> FaQs
-        </a>
-        <a className="navProb" href="/Cuenta/LogIn">
-          <FiUser /> Log In
-        </a>
-        <a className="navProb" href="/Cuenta/SignUp">
-          <FiUser /> Sign up
-        </a>
-        <a className="navProb" href="/Contacto">
-          <FiMail /> Contacto
-        </a>
-        <a className="navProb" href="/Tienda">
-          <FiShoppingBag /> Tienda
-        </a>
-        <a className="navProb" href="/MiCarrito">
-          <FiShoppingCart /> Mi Carrito
-        </a>
+    <div className="navBar">
+      <div className="textoArriba">
+        <ul>
+          <li>
+            <a href="/Tienda">PR Nutrition</a>
+          </li>
+        </ul>
       </div>
+      <header className="navHeader">
+        <div className="headerWrapper">
+          <div className="wrapperIzq cel">
+            <a
+              ref={dropdownRef}
+              onClick={() => subMenu()}
+              className={`${isActive ? "active" : "inactive"}`}
+            >
+              <FiMenu />
+            </a>
+            <a
+              ref={dropdownRef}
+              onClick={() => subMenu()}
+              className={`${isActive ? "inactive" : "active"}`}
+            >
+              <FiX />
+            </a>
+            <div
+              className={`filtroNav ${isActive ? "active" : "inactive"}`}
+            ></div>
+            <div className={`navbarCel ${isActive ? "active" : "inactive"}`}>
+              <nav className="navCel">
+                <ul className="navUlCel">
+                  <li className="navIlCel">
+                    <div className="navToggleCel">
+                      <div className="navWrapperCel">
+                        <a href="/Tienda" className="navLinkCel">
+                          Productos
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="navIlCel">
+                    <div className="navToggleCel">
+                      <div className="navWrapperCel">
+                        <a href="/MiCarrito" className="navLinkCel">
+                          Mi Carrito
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div className="navCel2">
+                <a href="/SobreNosotros" className="navLinkCel2">
+                  Sobre Nosotros
+                </a>
+                <a href="/QnA" className="navLinkCel2 espacioNav">
+                  Preguntas Frecuentes
+                </a>
+                <a href="/Contacto" className="navLinkCel2">
+                  Contacto
+                </a>
+                <a href="/Cuenta/LogIn" className="navLinkCel2">
+                  Login / Cuenta
+                </a>
+              </div>
+              <div className="navCelSocial">
+                <a
+                  className="navCelSocialLink"
+                  href="https://wa.me/525516820762"
+                >
+                  <BsWhatsapp />
+                </a>
+                <a
+                  className="navCelSocialLink"
+                  href="https://www.instagram.com/pr.nutritionmx/?igshid=YmMyMTA2M2Y="
+                >
+                  <BsInstagram />
+                </a>
+              </div>
+            </div>
+          </div>
+          <nav className="navPC PC">
+            <ul>
+              <li>
+                <a href="/Tienda">Productos</a>
+              </li>
+            </ul>
+          </nav>
+          <div className="navLogo">
+            <a href="/" className="navLogoLink">
+              <img src={logo} />
+            </a>
+          </div>
+          <div className="derPC PC">
+            <nav className="navPC">
+              <ul>
+                <li>
+                  <a href="/SobreNosotros">Nosotros</a>
+                </li>
+                <li>
+                  <a href="/QnA">Preguntas</a>
+                </li>
+                <li>
+                  <a href="MiCuenta">MiCuenta</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div className="navExtra">
+            <div className="navWrapperPC PC">
+              <div className="navExtraIcono">
+                <a href="/Contacto">
+                  <FiMail />
+                </a>
+                <a href="/Cuenta/LogIn">
+                  <FiUser />
+                </a>
+              </div>
+            </div>
+            <div className="navCarro">
+              <a href="/MiCarrito">1</a>
+            </div>
+          </div>
+        </div>
+      </header>
     </div>
   );
 };
