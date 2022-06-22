@@ -1,7 +1,3 @@
-body {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
 @media only screen and (max-width: 600px) {
   /*Seccion 1*/
   .seccion1 {
@@ -613,7 +609,7 @@ body {
     text-align: center;
     margin-bottom: -30px;
     margin-left: -30px;
-    width: 100%;
+    width: 100vw;
   }
   .seccion5 .gridItem {
     margin-bottom: 30px;
@@ -1033,7 +1029,7 @@ body {
   }
   .containerSec8 {
     max-width: 1200px;
-    width: calc(100%-30px);
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;

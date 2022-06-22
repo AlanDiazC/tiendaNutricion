@@ -9,7 +9,7 @@ import Tienda from "./views/Tienda";
 import SignUp from "./views/SignUp";
 import Carrito from "./views/Carrito";
 import LogIn from "./views/LogIn";
-import MiCuenta from "./views/MiCuenta";
+// import MiCuenta from "./views/MiCuenta";
 import Producto from "./views/Producto";
 import Footer from "./views/Footer";
 // import PuenteCuenta from "./views/PuenteCuenta";
@@ -21,14 +21,6 @@ const App = () => {
   return (
     <div>
       <header>
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
-        </style>
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-        </style>
         <Navbar />
       </header>
 
@@ -37,10 +29,9 @@ const App = () => {
           {/*
           <Route path="/signUp" element={<PuenteCuenta />} />
           <Route path="/payments/:idPrecio" element={<Payment />} />
-          <Route path="/Producto/:idProd" element={<Producto />} /> 
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
+          <Route path="/Producto/:idProd" element={<Producto />} /> 
         */}
-          <Route path="/MiCuenta" element={<MiCuenta />} />
           <Route path="/Producto" element={<Producto />} />
           <Route path="/MiCarrito" element={<Carrito />} />
           <Route path="/Envio" element={<Envio />} />
