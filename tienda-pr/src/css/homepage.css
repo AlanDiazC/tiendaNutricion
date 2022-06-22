@@ -1029,7 +1029,7 @@
   }
   .containerSec8 {
     max-width: 1200px;
-    width: 100%;
+    width: calc(100%-30px);
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;

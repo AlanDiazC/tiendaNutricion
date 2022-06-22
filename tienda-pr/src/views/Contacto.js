@@ -182,10 +182,10 @@ class Contact extends React.Component {
                 Redes Sociales <BsPeople />
               </h1>
 
-              <a href="https://www.linkedin.com/in/ricardo-flores-reyes-02b872219">
+              <a href="https://www.instagram.com">
                 <BsInstagram size={55} color={"#1977f3"} className="mailIcon" />
               </a>
-              <a href="https://www.linkedin.com/in/ricardo-flores-reyes-02b872219">
+              <a href="https://www.facebook.com">
                 <BsFacebook size={55} color={"#1977f3"} className="mailIcon" />
               </a>
 
