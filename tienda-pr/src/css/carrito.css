@@ -4,7 +4,7 @@
   }
   .secCarrito .container {
     max-width: 1200px;
-    width: 100%;
+    width: calc(100%-30px);
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -212,7 +212,7 @@
   }
   .secCarrito .container {
     max-width: 1200px;
-    width: 100%;
+    width: calc(100%-30px);
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -230,12 +230,13 @@
     margin-top: 40px;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
   }
   .columCarro {
     position: relative;
     padding: 0 20px;
-    max-width: 45%;
-    flex: 0 0 45%;
+    max-width: 40%;
+    flex: 0 0 40%;
   }
   .contenidoColumna {
     max-width: 300px;
@@ -425,7 +426,7 @@
   }
   .secCarrito .container {
     max-width: 1200px;
-    width: 100%;
+    width: calc(100%-30px);
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -638,7 +639,7 @@
   }
   .secCarrito .container {
     max-width: 1200px;
-    width: 100%;
+    width: calc(100%-30px);
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;

@@ -169,6 +169,28 @@ const Tienda = () => {
                     </tbody>
                   </table>
                 </div>
+                <div className="prodEnvio">
+                  <table className="tablaProdEnvip">
+                    <tbody>
+                      <tr>
+                        <td className="imagenProdEnvio">
+                          <div className="prodEnvio-thumbnail">
+                            <div className="imgProdEnvio">
+                              <img src={prod1} />
+                            </div>
+                            <span className="cantidadProdEnvio">1</span>
+                          </div>
+                        </td>
+                        <tn className="nombreProdEnvio">
+                          <span>Nombre</span>
+                        </tn>
+                        <tn className="precioProdEnvio">
+                          <span>$0.00</span>
+                        </tn>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <div className="secPreciosEnvio">
                 <table className="tablaPreciosEnvio">
@@ -202,7 +224,7 @@ const Tienda = () => {
           </div>
         </div>
         <div className="logoEnvio">
-          <img src={logo} />
+          <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64" />
           <div>
             Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum{" "}
           </div>

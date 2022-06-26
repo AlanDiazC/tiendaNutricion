@@ -2,7 +2,6 @@
   .EnvioContainer {
     padding: 0 4%;
     width: 90%;
-    max-height: 80vh;
   }
   .informacion {
     padding-top: 1.5rem;
@@ -168,8 +167,8 @@
     padding: 15px;
   }
   .secProdsEnvio {
-    display: flex;
-    flex: 0 1 auto;
+    /* display: flex;
+    flex: 0 1 auto; */
     min-height: 7em;
     padding: 0;
     position: relative;
@@ -349,7 +348,7 @@
   }
   .logoEnvio {
     padding: 1.5rem 0 0;
-    display: flex;
+    display: none;
     position: relative;
   }
   .logoEnvio img {
@@ -378,7 +377,6 @@
   .EnvioContainer {
     padding: 0 4%;
     width: 90%;
-    max-height: 80vh;
   }
   .informacion {
     padding-top: 1.5rem;
@@ -543,8 +541,8 @@
     padding: 15px;
   }
   .secProdsEnvio {
-    display: flex;
-    flex: 0 1 auto;
+    /* display: flex;
+    flex: 0 1 auto; */
     min-height: 7em;
     padding: 0;
     position: relative;
@@ -725,7 +723,7 @@
   }
   .logoEnvio {
     padding: 1.5rem 1.5rem 0;
-    display: flex;
+    display: none;
   }
   .logoEnvio img {
     width: 33%;
@@ -923,8 +921,8 @@
   .secProdsEnvio {
     padding-top: 0;
     padding-bottom: 1.3125rem;
-    display: flex;
-    flex: 0 1 auto;
+    /* display: flex;
+    flex: 0 1 auto; */
     min-height: 7em;
     padding: 0;
     position: relative;
@@ -1307,8 +1305,8 @@
   .secProdsEnvio {
     padding-top: 0;
     padding-bottom: 1.3125rem;
-    display: flex;
-    flex: 0 1 auto;
+    /* display: flex;
+    flex: 0 1 auto; */
     min-height: 7em;
     padding: 0;
     position: relative;

@@ -186,17 +186,17 @@ const Navbar = () => {
           </nav>
           <div className="navLogo">
             <a href="/" className="navLogoLink">
-              <img src={logo} />
+              <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64" />
             </a>
           </div>
           <div className="derPC PC">
             <nav className="navPC">
               <ul>
                 <li>
-                  <a href="/SobreNosotros">Nosotros</a>
+                  <a href="/SobreNosotros">Sobre Nosotros</a>
                 </li>
                 <li>
-                  <a href="/QnA">Preguntas</a>
+                  <a href="/QnA">Preguntas Frecuentes</a>
                 </li>
                 <li>
                   <a href="MiCuenta">MiCuenta</a>

@@ -2,7 +2,7 @@
   .bannerTienda {
     min-height: 360px;
     align-items: center;
-    background-image: url("../multimedia/bannerTienda.jpg");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerTienda.jpg?alt=media&token=ccff6106-8944-494c-b6ae-dde10578edb9");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -34,6 +34,7 @@
   .mostrarProds {
     text-align: center;
     margin-top: 15px;
+    margin-bottom: 30px;
   }
   .producto {
     width: 45%;
@@ -94,7 +95,7 @@
   .bannerTienda {
     min-height: 360px;
     align-items: center;
-    background-image: url("../multimedia/bannerTienda.jpg");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerTienda.jpg?alt=media&token=ccff6106-8944-494c-b6ae-dde10578edb9");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -127,6 +128,7 @@
   .mostrarProds {
     text-align: center;
     margin-top: 25px;
+    margin-bottom: 30px;
   }
   .producto {
     width: 45%;
@@ -187,7 +189,7 @@
   .bannerTienda {
     min-height: 360px;
     align-items: center;
-    background-image: url("../multimedia/bannerTienda.jpg");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerTienda.jpg?alt=media&token=ccff6106-8944-494c-b6ae-dde10578edb9");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -280,7 +282,7 @@
   .bannerTienda {
     min-height: 400px;
     align-items: center;
-    background-image: url("../multimedia/bannerTienda.jpg");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerTienda.jpg?alt=media&token=ccff6106-8944-494c-b6ae-dde10578edb9");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

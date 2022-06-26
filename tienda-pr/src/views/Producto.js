@@ -43,12 +43,12 @@ const Producto = () => {
   const Img = (nombre) => {
     if (nombre == "PR Fuel") {
       return (
-        <img src={prod2}></img>
+        <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/prod2.JPG?alt=media&token=f5470ca1-af72-4a08-a0ae-cf3748fafcbe"></img>
         // <img className="imgProdInd" src={prod2} />
       );
     } else {
       return (
-        <img src={prod1}></img>
+        <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/prod1.JPG?alt=media&token=46516f29-c44c-4845-a84c-3de942ac299a"></img>
         // <img className="imgProdInd" src={prod1} />
       );
     }
@@ -69,7 +69,7 @@ const Producto = () => {
           <div className="producto_fila">
             <div className="lado_izquierdo_prod">
               <div className="logo_producto">
-                <img src={logo}></img>
+                <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64"></img>
               </div>
               <div className="texto_del_logo">
                 <h2>Descripción</h2>

@@ -17,7 +17,7 @@ const AboutMe = () => {
           </div>
           <div className="row">
             <div className="imgAboutMe">
-              <img src={imgAbout1} />
+              <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgAbout1.jpg?alt=media&token=f894e91a-4406-4ec4-a9f4-0cb50e7c7908" />
             </div>
             <div className="contentAboutMe">
               <div className="subtituloAboutMe">
@@ -38,7 +38,11 @@ const AboutMe = () => {
         <div className="container">
           <div className="vidAboutMe">
             {/* <iframe src="https://www.youtube.com/embed/Oau9xqKARc0"></iframe> */}
-            <ReactPlayer controls className="playerAbout" url={video} />
+            <ReactPlayer
+              controls
+              className="playerAbout"
+              url="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/reel1.MOV?alt=media&token=c37cca4a-16b9-42a3-b75d-351164ca6e32"
+            />
           </div>
         </div>
         <div className="aboutMe2Col">
@@ -58,7 +62,7 @@ const AboutMe = () => {
               </div>
               <div className="aboutMeColDer">
                 <div className="divImgAboutMe">
-                  <img src={imgAbout2} />
+                  <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgAbout2.jpg?alt=media&token=56e8cc17-4e32-4fa0-9578-dd6a9ffeb03e" />
                 </div>
               </div>
             </div>

@@ -33,7 +33,7 @@ const Homepage = () => {
                     </b>
                   </p>
                 </div>
-                <a className="btnHP" href="">
+                <a className="btnHP" href="/Tienda">
                   Comprar
                 </a>
               </div>
@@ -50,7 +50,10 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/Tienda">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={imgHP1} />
+                      <img
+                        className="imgSec2"
+                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP1.JPG?alt=media&token=36fe5341-842f-422b-a7ab-bb08696153b1"
+                      />
                     </div>
                   </div>
                   <h2 className="textoSec2">Productos</h2>
@@ -60,7 +63,10 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/MiCarrito">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={imgHP2} />
+                      <img
+                        className="imgSec2"
+                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP2.JPG?alt=media&token=373376b9-5dbe-4bdf-82f0-df0904f49075"
+                      />
                     </div>
                   </div>
                   <h2 className="textoSec2">Mi Carrito</h2>
@@ -70,7 +76,10 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/QnA">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={imgHP3} />
+                      <img
+                        className="imgSec2"
+                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP3.JPG?alt=media&token=0595a17a-7c6b-4ca8-8ab6-0e1f535e8569"
+                      />
                     </div>
                   </div>
                   <h2 className="textoSec2">Preguntas Frecuentes</h2>
@@ -80,7 +89,10 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/SobreNosotros">
                   <div className="divImgSec2">
                     <div>
-                      <img className="imgSec2" src={imgHP4} />
+                      <img
+                        className="imgSec2"
+                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP4.JPG?alt=media&token=bbd9331f-ad64-469f-8ad0-7379e475fa69"
+                      />
                     </div>
                   </div>
                   <h2 className="textoSec2">Sobre Nosotros</h2>
@@ -191,7 +203,7 @@ const Homepage = () => {
                       <ReactPlayer
                         controls
                         className="iframeVideo"
-                        url={video}
+                        url="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/reel2.MOV?alt=media&token=10d42e10-89b9-4f53-b908-f784bbcc69e7"
                       />
                     </div>
                   </div>

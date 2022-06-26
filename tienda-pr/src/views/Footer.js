@@ -23,7 +23,10 @@ const Footer = () => {
         <div className="containerFooter">
           <div className="footerRow">
             <div className="footerColLogo">
-              <img src={logo} className="footerLogo" />
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64"
+                className="footerLogo"
+              />
             </div>
             <div className="footerCol">
               <div className="footerTitulo">
