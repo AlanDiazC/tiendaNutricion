@@ -16,9 +16,6 @@
     margin-left: auto;
     max-width: 1190px;
   }
-  .producto_fila {
-    /* display: flex; */
-  }
   .lado_izquierdo_prod {
     flex: 0 0 80%;
     max-width: 80%;
@@ -268,9 +265,6 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 1190px;
-  }
-  .producto_fila {
-    /* display: flex; */
   }
   .lado_izquierdo_prod {
     flex: 0 0 60%;
