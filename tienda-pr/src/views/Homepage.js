@@ -108,20 +108,14 @@ const Homepage = () => {
           <div className="gridSec3">
             <div className="gridSec3Item">
               <div className="textoDivSec3">
-                <h2>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry
-                </h2>
+                <h2>Nuestro objetivo</h2>
                 <div className="textoDiv">
                   <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s, when an unknown printer took a galley of
-                    type and scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged.
+                    Queremos inspirar e impulsar el bienestar, sueños y metas de
+                    las personas para que construyan su mejor versión.
                   </p>
                 </div>
-                <a className="btnHP">Boton prueba</a>
+                {/* <a className="btnHP">Boton prueba</a> */}
               </div>
             </div>
           </div>
@@ -143,7 +137,7 @@ const Homepage = () => {
                     ></img>
                   </div>
                   <div className="textoDiv">
-                    Lorem Ipsum is simply dummy text of the printing
+                    Productos nutritivos de alta calidad
                   </div>
                 </div>
                 <div className="gridItem gridItemMedio">
@@ -155,9 +149,7 @@ const Homepage = () => {
                       }
                     ></img>
                   </div>
-                  <div className="textoDiv">
-                    Lorem Ipsum is simply dummy text of the printing
-                  </div>
+                  <div className="textoDiv">Supera a tu yo de ayer</div>
                 </div>
                 <div className="gridItem gridItemDer">
                   <div className="divImgSec4">
@@ -169,7 +161,7 @@ const Homepage = () => {
                     ></img>
                   </div>
                   <div className="textoDiv">
-                    Lorem Ipsum is simply dummy text of the printing
+                    Queremos ser parte de tus logros
                   </div>
                 </div>
               </div>
@@ -183,12 +175,11 @@ const Homepage = () => {
           <div className="seccion5Padding">
             <div className="tituloSec5">
               <h2>
-                Lorem <span>Ipsum</span>
+                Nuestra <span>Mentalidad</span>
               </h2>
               <div className="textoDiv">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
+                Acompañando a toda persona que deseé rendir óptimamente en un
+                estilo de vida activo.
               </div>
             </div>
             <div className="grid">
@@ -208,15 +199,18 @@ const Homepage = () => {
                     </div>
                   </div>
                   <div className="textoDiv">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s.
+                    Sabemos que cada quien tiene una historia que contar, somos
+                    testigos de los grandes logros que cada quien puede lograr,
+                    queremos ser parte de ello y brindar herramientas para que
+                    esas historias se puedan volver una realidad.
                   </div>
                 </div>
               </div>
             </div>
             <div className="divBtnSec5">
-              <a className="btnHP">Lorem Ipsum</a>
+              <a className="btnHP" href="/QnA">
+                Preguntas Frecuentes
+              </a>
             </div>
           </div>
         </div>

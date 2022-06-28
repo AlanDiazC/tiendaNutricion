@@ -199,7 +199,7 @@ const Navbar = () => {
                   <a href="/QnA">Preguntas Frecuentes</a>
                 </li>
                 <li>
-                  <a href="MiCuenta">MiCuenta</a>
+                  <a href="MiCuenta">Mi Cuenta</a>
                 </li>
               </ul>
             </nav>

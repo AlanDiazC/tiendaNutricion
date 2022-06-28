@@ -52,14 +52,14 @@ const Tienda = () => {
           <div className="objCarroIzq">
             <div className="objCarroImg">
               <a>
-                <img src={prod1} />
+                <img src={data[0].imagen} />
               </a>
             </div>
           </div>
           <div className="objCarroDer">
             <div className="objCarroTitulo">
               <a>
-                <h3>Nombre</h3>
+                <h3>{data[0].nombre}</h3>
               </a>
               <button className="objCarroBorrar">
                 <BsFillTrashFill />
@@ -79,7 +79,7 @@ const Tienda = () => {
                   <BsPlus />
                 </div>
               </div>
-              <span className="objCarroPreico">$ 00.00</span>
+              <span className="objCarroPreico">$ {data[0].precio}</span>
             </div>
           </div>
         </div>
