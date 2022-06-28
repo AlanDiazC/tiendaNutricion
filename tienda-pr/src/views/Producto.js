@@ -36,14 +36,27 @@ const Producto = () => {
     }
   };
 
-  const Textos = (array) => {
-    const uso = [];
+  const Texto2 = () => {
+    console.log(data.producto0.uso);
     if (flag) {
-      array.forEach((element) => {
-        uso.push(<p>{element}</p>);
-      });
+      const lista = data.producto0.uso;
+      const usoLista = [];
+      for (var i = 0; i < lista.length; i++) {
+        usoLista.push(<p>{lista[i]}</p>);
+      }
+      return usoLista;
     }
-    return uso;
+  };
+  const Texto1 = () => {
+    console.log(data.producto0);
+    if (flag) {
+      const lista = data.producto0.ingredientes;
+      const usoLista = [];
+      for (var i = 0; i < lista.length; i++) {
+        usoLista.push(<p>{lista[i]}</p>);
+      }
+      return usoLista;
+    }
   };
 
   const [panel1, setPanel1] = useState(true);
@@ -155,14 +168,14 @@ const Producto = () => {
                   panel1 ? "active" : "inactive"
                 }`}
               >
-                <p>{Textos(data.producto0.ingredientes)}</p>
+                {Texto1()}
               </div>
               <div
                 className={`instrucciones_de_uso_tab ${
                   panel2 ? "active" : "inactive"
                 }`}
               >
-                {Textos(data.producto0.uso)}
+                {Texto2()}
               </div>
             </div>
             {/* <div className="tab_panel">
