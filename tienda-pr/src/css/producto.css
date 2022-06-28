@@ -1,4 +1,8 @@
 @media only screen and (max-width: 600px) {
+  .carousel .thumbs {
+    padding: 0 !important;
+  }
+
   .prodIndividual {
     padding: 40pxx 0;
   }
@@ -222,6 +226,7 @@
     border-top-right-radius: 0.25rem;
     display: block;
     padding: 0.5rem 1rem;
+    cursor: pointer;
   }
   .nav_enlace.active {
     font-weight: bold;
@@ -246,6 +251,11 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .carousel .thumbs {
+    padding: 0 !important;
+    justify-content: center;
+    text-align: center;
+  }
   .prodIndividual {
     padding: 40pxx 0;
   }
@@ -469,6 +479,7 @@
     border-top-right-radius: 0.25rem;
     display: block;
     padding: 0.5rem 1rem;
+    cursor: pointer;
   }
   .nav_enlace.active {
     font-weight: bold;
@@ -493,6 +504,11 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .carousel .thumbs {
+    padding: 0 !important;
+    justify-content: center;
+    text-align: center;
+  }
   .prodIndividual {
     padding: 40pxx 0;
   }
@@ -541,6 +557,7 @@
     font-size: 14px;
   }
   .parte_mitad_prod {
+    text-align: center;
     flex: 0 0 40%;
     max-width: 40%;
     padding-left: 15px;
@@ -712,6 +729,7 @@
     border-top-right-radius: 0.25rem;
     display: block;
     padding: 0.5rem 1rem;
+    cursor: pointer;
   }
   .nav_enlace.active {
     font-weight: bold;
@@ -736,6 +754,11 @@
 }
 
 @media only screen and (min-width: 1596px) {
+  .carousel .thumbs {
+    padding: 0 !important;
+    justify-content: center;
+    text-align: center;
+  }
   .prodIndividual {
     padding: 40pxx 0;
   }
@@ -955,6 +978,7 @@
     border-top-right-radius: 0.25rem;
     display: block;
     padding: 0.5rem 1rem;
+    cursor: pointer;
   }
   .nav_enlace.active {
     font-weight: bold;
@@ -976,4 +1000,8 @@
     line-height: 24px;
     margin-bottom: 25px;
   }
+}
+
+.instrucciones_de_uso_tab.inactive {
+  display: none;
 }

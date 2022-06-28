@@ -4,18 +4,12 @@
 import React, { useState, useRef } from "react";
 import "../css/producto.css";
 
-import prod2 from "../multimedia/prod2.JPG";
-import prod1 from "../multimedia/prod1.JPG";
-import logo from "../multimedia/Logo.png";
-import { BsFacebook } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-
-import { BsFillPlusCircleFill } from "react-icons/bs";
-import { BsFillDashCircleFill } from "react-icons/bs";
-
 import { useParams } from "react-router-dom";
 
 import ObtenerProd from "./ObtenerProdEspecifico";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const Producto = () => {
   const { idProd } = useParams();
@@ -26,6 +20,8 @@ const Producto = () => {
       descripcion: "",
       precio: 0,
       precioId: "",
+      uso: "",
+      ingredientes: "",
     },
   });
   const [flag, setFlag] = useState(false);
@@ -40,21 +36,24 @@ const Producto = () => {
     }
   };
 
-  const Img = (nombre) => {
-    if (nombre == "PR Fuel") {
-      return (
-        <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/prod2.JPG?alt=media&token=f5470ca1-af72-4a08-a0ae-cf3748fafcbe"></img>
-        // <img className="imgProdInd" src={prod2} />
-      );
-    } else {
-      return (
-        <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/prod1.JPG?alt=media&token=46516f29-c44c-4845-a84c-3de942ac299a"></img>
-        // <img className="imgProdInd" src={prod1} />
-      );
+  const Textos = (array) => {
+    const uso = [];
+    if (flag) {
+      array.forEach((element) => {
+        uso.push(<p>{element}</p>);
+      });
     }
+    return uso;
   };
 
   const [panel1, setPanel1] = useState(true);
+  const [panel2, setPanel2] = useState(false);
+
+  const CambiarPantallas = (setPanel) => {
+    setPanel1(false);
+    setPanel2(false);
+    setPanel(true);
+  };
 
   return (
     <div className="prodIndividual">
@@ -79,9 +78,18 @@ const Producto = () => {
             <div className="parte_mitad_prod">
               <div className="slide_de_imagenes">
                 {/* <button className="flecha_prod_Ant">{"<"}</button> */}
+                {/* <Carousel>
+                  <div className="imagenes_prod">
+                    {Img(data.producto0.nombre)}
+                  </div>
+                  <div className="imagenes_prod">
+                    {Img(data.producto0.nombre)}
+                  </div>
+                </Carousel> */}
                 <div className="imagenes_prod">
-                  {Img(data.producto0.nombre)}
+                  <img src={data.producto0.imagen}></img>
                 </div>
+
                 {/* <button className="flecha_prod_Sig">{">"}</button> */}
               </div>
             </div>
@@ -118,31 +126,43 @@ const Producto = () => {
             </li> */}
             {/* <li className="nav_item">
               <a className="nav_enlace">Nutricion</a>
+            </li>*/}
+            <li className="nav_item">
+              <a
+                className={`nav_enlace ${panel1 ? "active" : "inactive"}`}
+                onClick={() => {
+                  CambiarPantallas(setPanel1);
+                }}
+              >
+                Componentes principales
+              </a>
             </li>
             <li className="nav_item">
-              <a className="nav_enlace">Componentes principales</a>
-            </li> */}
-            <li className="nav_item">
-              <a className={`nav_enlace ${panel1 ? "active" : "inactive"}`}>
+              <a
+                className={`nav_enlace ${panel2 ? "active" : "inactive"}`}
+                onClick={() => {
+                  CambiarPantallas(setPanel2);
+                }}
+              >
                 Instrucciones de uso
               </a>
             </li>
           </ul>
           <div className="contenido_tab">
             <div className="tab_panel">
-              <div className="instrucciones_de_uso_tab">
-                <p>Agregar de 1-3 scoops en 500-700ml de agua y mezcle.</p>
-                <p>
-                  Como punto de partida: consume 1 scoop por hora de ejercicio
-                  para recargar/reponer energías y rehidratarte durante el
-                  entrenamiento o competencia.
-                </p>
-                <p>
-                  PR Fuel se puede utilizar antes, durante o después del
-                  entrenamiento. Agita la botella durante la sesión, ya que
-                  algunos ingredientes pueden asentarse en el fondo de la
-                  botella.
-                </p>
+              <div
+                className={`instrucciones_de_uso_tab ${
+                  panel1 ? "active" : "inactive"
+                }`}
+              >
+                <p>{Textos(data.producto0.ingredientes)}</p>
+              </div>
+              <div
+                className={`instrucciones_de_uso_tab ${
+                  panel2 ? "active" : "inactive"
+                }`}
+              >
+                {Textos(data.producto0.uso)}
               </div>
             </div>
             {/* <div className="tab_panel">

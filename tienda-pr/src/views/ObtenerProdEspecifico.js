@@ -22,6 +22,8 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
                 imagen: prod[i].data().images[0],
                 descripcion: prod[i].data().description,
                 precio: precioData.docs[0].data().unit_amount / 100,
+                uso: prod[i].data().uso,
+                ingredientes: prod[i].data().ingredientes,
               },
             });
           }
