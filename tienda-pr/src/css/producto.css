@@ -1,4 +1,11 @@
 @media only screen and (max-width: 600px) {
+  .beneficios {
+    margin: 0 0 10px 0 !important;
+  }
+  .tituloBeneficios {
+    font-weight: bold;
+    margin: 10px 0 !important;
+  }
   .carousel .thumbs {
     padding: 0 !important;
   }
@@ -43,7 +50,7 @@
   }
   .texto_del_logo h2 {
     font-size: 28px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     text-transform: uppercase;
   }
   .texto_del_logo p {
@@ -245,9 +252,24 @@
     line-height: 24px;
     margin-bottom: 25px;
   }
+  .tablaNutrimental {
+    max-width: 90%;
+    margin: 20px auto 50px;
+    width: 90%;
+  }
+  .tablaNutri {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .beneficios {
+    margin: 0 0 10px 0 !important;
+  }
+  .tituloBeneficios {
+    font-weight: bold;
+    margin: 10px 0 !important;
+  }
   .carousel .thumbs {
     padding: 0 !important;
     justify-content: center;
@@ -293,7 +315,7 @@
   }
   .texto_del_logo h2 {
     font-size: 28px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     text-transform: uppercase;
   }
   .texto_del_logo p {
@@ -495,9 +517,24 @@
     line-height: 24px;
     margin-bottom: 25px;
   }
+  .tablaNutrimental {
+    max-width: 90%;
+    margin: 20px auto 50px;
+    width: 90%;
+  }
+  .tablaNutri {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .beneficios {
+    margin: 0 0 10px 0 !important;
+  }
+  .tituloBeneficios {
+    font-weight: bold;
+    margin: 10px 0 !important;
+  }
   .carousel .thumbs {
     padding: 0 !important;
     justify-content: center;
@@ -544,7 +581,7 @@
   }
   .texto_del_logo h2 {
     font-size: 28px;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     text-transform: uppercase;
   }
   .texto_del_logo p {
@@ -736,7 +773,7 @@
     display: none;
   }
   .instrucciones_de_uso_tab {
-    max-width: 447px;
+    max-width: 620px;
     margin: 50px auto 100px;
     width: 100%;
   }
@@ -748,6 +785,13 @@
 }
 
 @media only screen and (min-width: 1596px) {
+  .beneficios {
+    margin: 0 0 10px 0 !important;
+  }
+  .tituloBeneficios {
+    font-weight: bold;
+    margin: 10px 0 !important;
+  }
   .carousel .thumbs {
     padding: 0 !important;
     justify-content: center;
@@ -794,7 +838,7 @@
   }
   .texto_del_logo h2 {
     font-size: 28px;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     text-transform: uppercase;
   }
   .texto_del_logo p {
@@ -985,7 +1029,7 @@
     display: none;
   }
   .instrucciones_de_uso_tab {
-    max-width: 447px;
+    max-width: 620px;
     margin: 50px auto 100px;
     width: 100%;
   }

@@ -21,7 +21,11 @@ const Producto = () => {
       precio: 0,
       precioId: "",
       uso: "",
-      ingredientes: "",
+      tabla: "",
+      articulos: "",
+      beneficiosAdulto: "",
+      beneficiosAtl: "",
+      beneficiosPrinc: "",
     },
   });
   const [flag, setFlag] = useState(false);
@@ -36,8 +40,15 @@ const Producto = () => {
     }
   };
 
+  const Texto1 = () => {
+    if (flag) {
+      const tabla = data.producto0.tabla;
+      const tablaLista = [];
+      tablaLista.push(<img className="tablaNutri" src={tabla} />);
+      return tablaLista;
+    }
+  };
   const Texto2 = () => {
-    console.log(data.producto0.uso);
     if (flag) {
       const lista = data.producto0.uso;
       const usoLista = [];
@@ -47,24 +58,57 @@ const Producto = () => {
       return usoLista;
     }
   };
-  const Texto1 = () => {
-    console.log(data.producto0);
+  const Texto3 = () => {
     if (flag) {
-      const lista = data.producto0.ingredientes;
-      const usoLista = [];
-      for (var i = 0; i < lista.length; i++) {
-        usoLista.push(<p>{lista[i]}</p>);
+      const listaBenfAdu = data.producto0.beneficiosAdulto;
+      const listaBenfAtl = data.producto0.beneficiosAtl;
+      const listaBenfPrin = data.producto0.beneficiosPrinc;
+      const beneficiosLista = [];
+      beneficiosLista.push(
+        <p className="tituloBeneficios">Beneficios Principales:</p>
+      );
+      for (var i = 0; i < listaBenfPrin.length; i++) {
+        beneficiosLista.push(<p className="beneficios">{listaBenfPrin[i]}</p>);
       }
-      return usoLista;
+
+      beneficiosLista.push(
+        <p className="tituloBeneficios">Beneficios para Atletas:</p>
+      );
+      for (var i = 0; i < listaBenfAtl.length; i++) {
+        beneficiosLista.push(<p className="beneficios">{listaBenfAtl[i]}</p>);
+      }
+      if (listaBenfAdu[0]) {
+        beneficiosLista.push(
+          <p className="tituloBeneficios">Beneficios para Adultos:</p>
+        );
+        for (var i = 0; i < listaBenfAdu.length; i++) {
+          beneficiosLista.push(<p className="beneficios">{listaBenfAdu[i]}</p>);
+        }
+      }
+      return beneficiosLista;
+    }
+  };
+  const Texto4 = () => {
+    if (flag) {
+      const lista = data.producto0.articulos;
+      const artuclosLista = [];
+      for (var i = 0; i < lista.length; i++) {
+        artuclosLista.push(<p>{lista[i]}</p>);
+      }
+      return artuclosLista;
     }
   };
 
   const [panel1, setPanel1] = useState(true);
   const [panel2, setPanel2] = useState(false);
+  const [panel3, setPanel3] = useState(false);
+  const [panel4, setPanel4] = useState(false);
 
   const CambiarPantallas = (setPanel) => {
     setPanel1(false);
     setPanel2(false);
+    setPanel3(false);
+    setPanel4(false);
     setPanel(true);
   };
 
@@ -147,7 +191,7 @@ const Producto = () => {
                   CambiarPantallas(setPanel1);
                 }}
               >
-                Componentes principales
+                Información Nutrimental
               </a>
             </li>
             <li className="nav_item">
@@ -160,11 +204,31 @@ const Producto = () => {
                 Instrucciones de uso
               </a>
             </li>
+            <li className="nav_item">
+              <a
+                className={`nav_enlace ${panel3 ? "active" : "inactive"}`}
+                onClick={() => {
+                  CambiarPantallas(setPanel3);
+                }}
+              >
+                Beneficios
+              </a>
+            </li>
+            <li className="nav_item">
+              <a
+                className={`nav_enlace ${panel4 ? "active" : "inactive"}`}
+                onClick={() => {
+                  CambiarPantallas(setPanel4);
+                }}
+              >
+                Artículos Científicos
+              </a>
+            </li>
           </ul>
           <div className="contenido_tab">
             <div className="tab_panel">
               <div
-                className={`instrucciones_de_uso_tab ${
+                className={`tablaNutrimental instrucciones_de_uso_tab ${
                   panel1 ? "active" : "inactive"
                 }`}
               >
@@ -176,6 +240,20 @@ const Producto = () => {
                 }`}
               >
                 {Texto2()}
+              </div>
+              <div
+                className={`instrucciones_de_uso_tab ${
+                  panel3 ? "active" : "inactive"
+                }`}
+              >
+                {Texto3()}
+              </div>
+              <div
+                className={`instrucciones_de_uso_tab ${
+                  panel4 ? "active" : "inactive"
+                }`}
+              >
+                {Texto4()}
               </div>
             </div>
             {/* <div className="tab_panel">

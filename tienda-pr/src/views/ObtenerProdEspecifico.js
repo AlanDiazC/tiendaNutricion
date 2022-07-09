@@ -24,7 +24,11 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
                 descripcion: prod[i].data().description,
                 precio: precioData.docs[0].data().unit_amount / 100,
                 uso: prod[i].data().uso,
-                ingredientes: prod[i].data().ingredientes,
+                tabla: prod[i].data().tabla,
+                articulos: prod[i].data().articulos,
+                beneficiosAdulto: prod[i].data().beneficiosAdulto,
+                beneficiosAtl: prod[i].data().beneficiosAtl,
+                beneficiosPrinc: prod[i].data().beneficiosPrinc,
               },
             });
           }

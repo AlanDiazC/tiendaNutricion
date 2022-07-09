@@ -22,7 +22,6 @@ function validateNameMessage(res) {
   }
 
   if (res.value.length < 3) {
-    console.log(res.name);
     if (res.name === "message") {
       errors.push(
         "Please enter a valid " + res.name + " at lease 20 characters"
@@ -144,7 +143,6 @@ class Contact extends React.Component {
       //const apiURL = "http://localhost:5001/luis-portfolio-d518a/us-central1/sendMail"
       const apiURL =
         "https://us-central1-luis-portfolio-d518a.cloudfunctions.net/sendMail";
-      console.log("no es bot fam");
       const subject = "Mail From" + this.state.name.value,
         email = this.state.email.value,
         message = this.state.message.value;
@@ -178,9 +176,7 @@ class Contact extends React.Component {
         <div className="containerContacto">
           <div className="contactoInfoContainer">
             <ContactInfo>
-              <h1>
-                Redes Sociales <BsPeople />
-              </h1>
+              <h1>Redes Sociales</h1>
 
               <a href="https://www.instagram.com/pr.nutritionmx/?igshid=YmMyMTA2M2Y=">
                 <BsInstagram size={55} color={"red"} className="mailIcon" />

@@ -20,7 +20,7 @@
     max-width: 300px;
     min-height: 210px;
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: no-repeat;
     width: 80%;
     position: absolute;
@@ -69,6 +69,7 @@
     text-align: center;
     margin: 0;
     width: 100%;
+    z-index: 20;
   }
   .contentAboutMe .subtituloAboutMe {
     margin-top: 60px;
@@ -98,7 +99,7 @@
   .aboutMeSec2 span {
     left: 3%;
     right: auto;
-    z-index: 1;
+    z-index: 2;
     max-width: 40px;
     opacity: 0.08;
     font-size: 150px;
@@ -138,7 +139,7 @@
   }
   .aboutMe2Col .row::after {
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: no-repeat;
     max-width: 536px;
     min-height: 450px;
@@ -270,7 +271,7 @@
     max-width: 300px;
     min-height: 210px;
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: no-repeat;
     width: 80%;
     position: absolute;
@@ -316,6 +317,7 @@
     max-width: 70%;
     position: relative;
     margin: 0 auto;
+    z-index: 20;
   }
   .contentAboutMe .subtituloAboutMe {
     margin-top: 60px;
@@ -347,7 +349,7 @@
   .aboutMeSec2 span {
     left: 3%;
     right: auto;
-    z-index: 1;
+    z-index: 2;
     max-width: 40px;
     opacity: 0.08;
     font-size: 215px;
@@ -387,7 +389,7 @@
   }
   .aboutMe2Col .row::after {
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: no-repeat;
     max-width: 536px;
     min-height: 450px;
@@ -533,7 +535,7 @@
     max-width: 466px;
     min-height: 484px;
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: no-repeat;
     width: 100%;
     position: absolute;
@@ -585,6 +587,7 @@
     padding: 0 15px;
     margin-left: 15px;
     width: 100%;
+    z-index: 20;
   }
   .contentAboutMe .subtituloAboutMe {
     margin-top: 144px;
@@ -613,7 +616,7 @@
   .aboutMeSec2 span {
     left: 3%;
     right: auto;
-    z-index: 1;
+    z-index: 2;
     max-width: 40px;
     opacity: 0.08;
     font-size: 215px;
@@ -659,7 +662,7 @@
   }
   .aboutMe2Col .row::after {
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: no-repeat;
     max-width: 536px;
     min-height: 504px;
@@ -819,13 +822,13 @@
     max-width: 700px;
     min-height: 500px !important;
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: repeat;
     width: 700px;
     position: absolute;
     left: 0;
     right: auto;
-    z-index: 1;
+    z-index: 0;
   }
   .aboutMeSec1 .container {
     width: 100%;
@@ -871,6 +874,7 @@
     padding: 0 15px;
     margin-left: 15px;
     width: 100%;
+    z-index: 20;
   }
   .contentAboutMe .subtituloAboutMe {
     margin-top: 144px;
@@ -899,7 +903,7 @@
   .aboutMeSec2 span {
     left: -3%;
     right: auto;
-    z-index: 1;
+    z-index: 2;
     max-width: 40px;
     opacity: 0.08;
     font-size: 215px;
@@ -945,7 +949,7 @@
   }
   .aboutMe2Col .row::after {
     content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/texture.svg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
     background-repeat: repeat;
     max-width: 800px !important;
     min-height: 504px;
