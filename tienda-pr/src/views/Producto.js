@@ -26,6 +26,7 @@ const Producto = () => {
       beneficiosAdulto: "",
       beneficiosAtl: "",
       beneficiosPrinc: "",
+      preguntas: "",
     },
   });
   const [flag, setFlag] = useState(false);
@@ -75,7 +76,9 @@ const Producto = () => {
         <p className="tituloBeneficios">Beneficios para Atletas:</p>
       );
       for (var i = 0; i < listaBenfAtl.length; i++) {
-        beneficiosLista.push(<p className="beneficios">{listaBenfAtl[i]}</p>);
+        beneficiosLista.push(
+          <p className={`beneficios ${"a" + i}`}>{listaBenfAtl[i]}</p>
+        );
       }
       if (listaBenfAdu[0]) {
         beneficiosLista.push(
@@ -99,16 +102,89 @@ const Producto = () => {
     }
   };
 
+  const dropdownRef = useRef(null);
+
+  const [Preg1, setPreg1] = useState(false);
+  const [Preg2, setPreg2] = useState(false);
+  const [Preg3, setPreg3] = useState(false);
+  const [Preg4, setPreg4] = useState(false);
+  const [Preg5, setPreg5] = useState(false);
+  const [Preg6, setPreg6] = useState(false);
+
+  const OcultarPreg = (i) => {
+    if (i == 0) {
+      setPreg1(!Preg1);
+    } else if (i == 1) {
+      setPreg2(!Preg2);
+    } else if (i == 2) {
+      setPreg3(!Preg3);
+    } else if (i == 3) {
+      setPreg4(!Preg4);
+    } else if (i == 4) {
+      setPreg5(!Preg5);
+    } else if (i == 5) {
+      setPreg6(!Preg6);
+    }
+  };
+
+  const Preguntas = () => {
+    if (flag) {
+      const lista = data.producto0.preguntas;
+      const listaPreguntas = [];
+      for (var i = 0; i < lista.length; i++) {
+        listaPreguntas.push(AgregarPregunta(i, lista));
+      }
+      return listaPreguntas;
+    }
+  };
+  const AgregarPregunta = (i, lista) => {
+    var Preg = Preg1;
+    if (i == 1) {
+      Preg = Preg2;
+    } else if (i == 2) {
+      Preg = Preg3;
+    } else if (i == 3) {
+      Preg = Preg4;
+    } else if (i == 4) {
+      Preg = Preg5;
+    } else if (i == 5) {
+      Preg = Preg6;
+    }
+    return (
+      <div
+        className={`preguntas pregPanel1 pregunta1Pan1 ${
+          Preg ? "active" : "inactive"
+        }`}
+      >
+        <div className="preguntaN">
+          <h4>
+            <a ref={dropdownRef} onClick={() => OcultarPreg(i)}>
+              <span className="preg">{lista[i].pregunta}</span>
+              <span className="iconoPreg iconoPreg1"></span>
+            </a>
+          </h4>
+        </div>
+        <div className="respuesta respuestaApt1Preg1">
+          <div>
+            <p>{lista[i].respuesta}</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const [panel1, setPanel1] = useState(true);
   const [panel2, setPanel2] = useState(false);
   const [panel3, setPanel3] = useState(false);
   const [panel4, setPanel4] = useState(false);
+  const [panel5, setPanel5] = useState(false);
 
   const CambiarPantallas = (setPanel) => {
     setPanel1(false);
     setPanel2(false);
     setPanel3(false);
     setPanel4(false);
+    setPanel5(false);
     setPanel(true);
   };
 
@@ -224,6 +300,16 @@ const Producto = () => {
                 Artículos Científicos
               </a>
             </li>
+            <li className="nav_item">
+              <a
+                className={`nav_enlace ${panel5 ? "active" : "inactive"}`}
+                onClick={() => {
+                  CambiarPantallas(setPanel5);
+                }}
+              >
+                Preguntas Frecuentes
+              </a>
+            </li>
           </ul>
           <div className="contenido_tab">
             <div className="tab_panel">
@@ -254,6 +340,13 @@ const Producto = () => {
                 }`}
               >
                 {Texto4()}
+              </div>
+              <div
+                className={`instrucciones_de_uso_tab ${
+                  panel5 ? "active" : "inactive"
+                }`}
+              >
+                {Preguntas()}
               </div>
             </div>
             {/* <div className="tab_panel">

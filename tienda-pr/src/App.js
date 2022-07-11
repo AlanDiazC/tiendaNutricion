@@ -39,6 +39,7 @@ const App = () => {
           <Route path="/payments/:idPrecio" element={<Payment />} />
           <Route path="/Producto/:idProd" element={<Producto />} /> 
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
+          <Route path="/QnA" element={<QnA />} />
         */}
           <Route path="/MiCuenta" element={<MiCuenta />} />
           <Route path="/Producto/:idProd" element={<Producto />} />
@@ -48,9 +49,9 @@ const App = () => {
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Cuenta/SignUp" element={<SignUp />} />
           <Route path="/Cuenta/LogIn" element={<LogIn />} />
-          <Route path="/QnA" element={<QnA />} />
           <Route path="/SobreNosotros" element={<AboutMe />} />
           <Route path="/" element={<Homepage />} />
+          <Route path="/*" element={<Homepage />} />
         </Routes>
       </Router>
 

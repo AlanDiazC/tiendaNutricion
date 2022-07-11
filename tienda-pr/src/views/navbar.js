@@ -151,9 +151,9 @@ const Navbar = () => {
                 <a href="/SobreNosotros" className="navLinkCel2">
                   Sobre Nosotros
                 </a>
-                <a href="/QnA" className="navLinkCel2 espacioNav">
+                {/* <a href="/QnA" className="navLinkCel2 espacioNav">
                   Preguntas Frecuentes
-                </a>
+                </a> */}
                 <a href="/Contacto" className="navLinkCel2">
                   Contacto
                 </a>
@@ -195,9 +195,9 @@ const Navbar = () => {
                 <li>
                   <a href="/SobreNosotros">Sobre Nosotros</a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="/QnA">Preguntas Frecuentes</a>
-                </li>
+                </li> */}
                 <li>
                   <a href="MiCuenta">Mi Cuenta</a>
                 </li>
