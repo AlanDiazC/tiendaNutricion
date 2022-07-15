@@ -188,6 +188,21 @@ const Producto = () => {
     setPanel(true);
   };
 
+  const Carrusel = () => {
+    if (flag) {
+      const lista = data.producto0.imagen;
+      const listaPreguntas = [];
+      for (var i = 0; i < lista.length; i++) {
+        listaPreguntas.push(
+          <div className="imagenes_prod">
+            <img src={data.producto0.imagen[i]}></img>
+          </div>
+        );
+      }
+      return listaPreguntas;
+    }
+  };
+
   return (
     <div className="prodIndividual">
       <ObtenerProd
@@ -211,17 +226,10 @@ const Producto = () => {
             <div className="parte_mitad_prod">
               <div className="slide_de_imagenes">
                 {/* <button className="flecha_prod_Ant">{"<"}</button> */}
-                {/* <Carousel>
-                  <div className="imagenes_prod">
-                    {Img(data.producto0.nombre)}
-                  </div>
-                  <div className="imagenes_prod">
-                    {Img(data.producto0.nombre)}
-                  </div>
-                </Carousel> */}
-                <div className="imagenes_prod">
+                <Carousel>{Carrusel()}</Carousel>
+                {/* <div className="imagenes_prod">
                   <img src={data.producto0.imagen}></img>
-                </div>
+                </div> */}
 
                 {/* <button className="flecha_prod_Sig">{">"}</button> */}
               </div>

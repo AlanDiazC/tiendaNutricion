@@ -19,7 +19,7 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
               ...data,
               producto0: {
                 nombre: prod[i].data().name,
-                imagen: prod[i].data().images[0],
+                imagen: prod[i].data().images,
                 descripcion: prod[i].data().description,
                 precio: precioData.docs[0].data().unit_amount / 100,
                 uso: prod[i].data().uso,

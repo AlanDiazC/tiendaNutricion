@@ -148,7 +148,8 @@
   }
   .mostrarProdsEnvio::after {
     border-top: 1px solid rgba(175, 175, 175, 0.34);
-    background-color: #faf7f0;
+    /* background-color: #faf7f0; */
+    background-color: black;
     content: "";
     display: block;
     width: 100vw;
@@ -174,6 +175,7 @@
     position: relative;
   }
   .prodEnvio {
+    color: white !important;
     min-width: 100%;
   }
   .tablaProdEnvip {
@@ -219,7 +221,7 @@
     vertical-align: middle;
   }
   .cantidadProdEnvio {
-    background-color: #000;
+    background-color: #ff4438;
     font-size: 0.875rem;
     letter-spacing: normal;
     font-weight: 700;
@@ -247,7 +249,6 @@
     font-size: 0.875rem;
     line-height: 1.143;
     letter-spacing: 0.2px;
-    color: #000;
     margin-bottom: 4px;
     font-weight: 700;
     width: 1em;
@@ -267,6 +268,7 @@
     padding-bottom: 0;
     border-top: 1px solid rgba(175, 175, 175, 0.34);
     padding-top: 1.4375rem;
+    color: white !important;
   }
   .tablaPreciosEnvio {
     border-collapse: collapse;
@@ -281,7 +283,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioSubTotalEnvio {
     padding-top: 0;
@@ -291,7 +292,7 @@
     font-weight: normal;
   }
   .precioSubTotalEnvio span {
-    color: #323232;
+    /* color: #323232; */
     font-weight: 700;
     font-size: 1rem;
   }
@@ -302,7 +303,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioEnvioEnvio {
     padding-top: 0.75em;
@@ -313,7 +313,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .totalEnvio {
     padding-top: 3em;
@@ -328,7 +327,7 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
+    /* color: #000; */
     text-transform: uppercase;
   }
   .precioTotalEnvio {
@@ -342,7 +341,6 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
     text-transform: uppercase;
     padding-left: 10px;
   }
@@ -522,7 +520,9 @@
   }
   .mostrarProdsEnvio::after {
     border-top: 1px solid rgba(175, 175, 175, 0.34);
-    background-color: #faf7f0;
+    /* background-color: #faf7f0; */
+    background-color: black;
+    color: white !important;
     content: "";
     display: block;
     width: 100vw;
@@ -548,6 +548,7 @@
     position: relative;
   }
   .prodEnvio {
+    color: white !important;
     min-width: 100%;
   }
   .tablaProdEnvip {
@@ -593,7 +594,7 @@
     vertical-align: middle;
   }
   .cantidadProdEnvio {
-    background-color: #000;
+    background-color: #ff4438;
     font-size: 1rem;
     letter-spacing: normal;
     font-weight: 700;
@@ -622,7 +623,6 @@
     font-size: 1.4rem;
     line-height: 1.143;
     letter-spacing: 0.2px;
-    color: #000;
     margin-bottom: 4px;
     font-weight: 700;
     width: 1em;
@@ -643,6 +643,7 @@
     padding-bottom: 0;
     border-top: 1px solid rgba(175, 175, 175, 0.34);
     padding-top: 1.4375rem;
+    color: white !important;
   }
   .tablaPreciosEnvio {
     border-collapse: collapse;
@@ -657,7 +658,6 @@
     font-size: 1.4rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioSubTotalEnvio {
     padding-top: 0;
@@ -667,7 +667,7 @@
     font-weight: normal;
   }
   .precioSubTotalEnvio span {
-    color: #323232;
+    /* color: #323232; */
     font-weight: 700;
     font-size: 1.4rem;
   }
@@ -678,7 +678,6 @@
     font-size: 1.4rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioEnvioEnvio {
     padding-top: 0.75em;
@@ -689,7 +688,6 @@
     font-size: 1.4rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .totalEnvio {
     padding-top: 3em;
@@ -704,7 +702,6 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
     text-transform: uppercase;
   }
   .precioTotalEnvio {
@@ -718,7 +715,6 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
     text-transform: uppercase;
   }
   .logoEnvio {
@@ -890,7 +886,7 @@
   }
   .mostrarProdsEnvio {
     padding-top: 3.9375rem;
-    width: 42%;
+    width: 41%;
     background-position: left top;
     float: right;
     position: relative;
@@ -901,7 +897,9 @@
     max-height: 84vh;
   }
   .mostrarProdsEnvio::after {
-    background-color: #faf7f0;
+    /* background-color: #faf7f0; */
+    background-color: black;
+    color: white !important;
     content: "";
     display: block;
     width: 300%;
@@ -928,6 +926,7 @@
     position: relative;
   }
   .prodEnvio {
+    color: white !important;
     min-width: 100%;
   }
   .tablaProdEnvip {
@@ -975,7 +974,7 @@
     vertical-align: middle;
   }
   .cantidadProdEnvio {
-    background-color: #000;
+    background-color: #ff4438;
     font-size: 0.75rem;
     letter-spacing: normal;
     font-weight: 700;
@@ -1007,7 +1006,6 @@
     font-size: 0.875rem;
     line-height: 1.143;
     letter-spacing: 0.2px;
-    color: #000;
     margin-bottom: 4px;
     font-weight: 700;
     width: 1em;
@@ -1027,6 +1025,7 @@
     padding-bottom: 0;
     border-top: 1px solid rgba(175, 175, 175, 0.34);
     padding-top: 1.4375rem;
+    color: white !important;
   }
   .tablaPreciosEnvio {
     border-collapse: collapse;
@@ -1041,7 +1040,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioSubTotalEnvio {
     padding-top: 0;
@@ -1051,7 +1049,7 @@
     font-weight: normal;
   }
   .precioSubTotalEnvio span {
-    color: #323232;
+    /* color: #323232; */
     font-weight: 700;
   }
   .envioEnvio {
@@ -1061,7 +1059,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioEnvioEnvio {
     padding-top: 0.75em;
@@ -1072,7 +1069,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .totalEnvio {
     padding-top: 3em;
@@ -1087,7 +1083,6 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
     text-transform: uppercase;
   }
   .precioTotalEnvio {
@@ -1101,7 +1096,6 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
     text-transform: uppercase;
   }
   .logoEnvio {
@@ -1274,18 +1268,20 @@
   }
   .mostrarProdsEnvio {
     padding-top: 3.9375rem;
-    width: 42%;
+    width: 42.05%;
     background-position: left top;
     float: right;
     position: relative;
     color: #535353;
     border-left: 1px solid rgba(175, 175, 175, 0.34);
     padding-left: 20px;
-    height: 100vh;
+    height: 101vh;
     max-height: 85.5vh;
   }
   .mostrarProdsEnvio::after {
-    background-color: #faf7f0;
+    /* background-color: #faf7f0; */
+    background-color: black;
+    color: white !important;
     content: "";
     display: block;
     width: 300%;
@@ -1312,6 +1308,7 @@
     position: relative;
   }
   .prodEnvio {
+    color: white !important;
     min-width: 100%;
   }
   .tablaProdEnvip {
@@ -1359,7 +1356,7 @@
     vertical-align: middle;
   }
   .cantidadProdEnvio {
-    background-color: #000;
+    background-color: #ff4438;
     font-size: 0.75rem;
     letter-spacing: normal;
     font-weight: 700;
@@ -1391,7 +1388,6 @@
     font-size: 0.875rem;
     line-height: 1.143;
     letter-spacing: 0.2px;
-    color: #000;
     margin-bottom: 4px;
     font-weight: 700;
     width: 1em;
@@ -1411,6 +1407,7 @@
     padding-bottom: 0;
     border-top: 1px solid rgba(175, 175, 175, 0.34);
     padding-top: 1.4375rem;
+    color: white !important;
   }
   .tablaPreciosEnvio {
     border-collapse: collapse;
@@ -1425,7 +1422,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioSubTotalEnvio {
     padding-top: 0;
@@ -1435,7 +1431,7 @@
     font-weight: normal;
   }
   .precioSubTotalEnvio span {
-    color: #323232;
+    /* color: #323232; */
     font-weight: 700;
   }
   .envioEnvio {
@@ -1445,7 +1441,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .precioEnvioEnvio {
     padding-top: 0.75em;
@@ -1456,7 +1451,6 @@
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: #000;
   }
   .totalEnvio {
     padding-top: 3em;
@@ -1471,7 +1465,6 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
     text-transform: uppercase;
   }
   .precioTotalEnvio {
@@ -1485,7 +1478,6 @@
     line-height: 0.909;
     letter-spacing: -0.5px;
     font-weight: 700;
-    color: #000;
     text-transform: uppercase;
   }
   .logoEnvio {
