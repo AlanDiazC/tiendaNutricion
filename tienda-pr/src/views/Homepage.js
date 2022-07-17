@@ -4,10 +4,9 @@ import ReactPlayer from "react-player";
 
 import { FaShoppingCart } from "react-icons/fa";
 
-import imgHP1 from "../multimedia/imgHP1.JPG";
-import imgHP2 from "../multimedia/imgHP2.JPG";
-import imgHP3 from "../multimedia/imgHP3.JPG";
-import imgHP4 from "../multimedia/imgHP4.JPG";
+import icono1 from "../multimedia/icono1.png";
+import icono2 from "../multimedia/icono2.png";
+import icono3 from "../multimedia/icono3.png";
 
 import video from "../multimedia/reel2.MOV";
 
@@ -129,12 +128,7 @@ const Homepage = () => {
               <div className="grid">
                 <div className="gridItem">
                   <div className="divImgSec4">
-                    <img
-                      className="imgSec4"
-                      src={
-                        "https://cdn.shopify.com/s/files/1/1103/4864/files/Protein_5_600x_45161acf-386d-416b-92e4-d14fe9d3e55a_600x.png?v=1634915917"
-                      }
-                    ></img>
+                    <img className="imgSec4" src={icono1}></img>
                   </div>
                   <div className="textoDiv">
                     Productos nutritivos de alta calidad
@@ -142,23 +136,13 @@ const Homepage = () => {
                 </div>
                 <div className="gridItem gridItemMedio">
                   <div className="divImgSec4">
-                    <img
-                      className="imgSec4"
-                      src={
-                        "https://cdn.shopify.com/s/files/1/1103/4864/files/Protein_1_600x_cb77db67-c3ac-48b8-94b5-cc4ca8d5eed0_600x.png?v=1634915924"
-                      }
-                    ></img>
+                    <img className="imgSec4" src={icono2}></img>
                   </div>
                   <div className="textoDiv">Supera a tu yo de ayer</div>
                 </div>
                 <div className="gridItem gridItemDer">
                   <div className="divImgSec4">
-                    <img
-                      className="imgSec4"
-                      src={
-                        "https://cdn.shopify.com/s/files/1/1103/4864/files/run_600x.png?v=1635116720"
-                      }
-                    ></img>
+                    <img className="imgSec4" src={icono3}></img>
                   </div>
                   <div className="textoDiv">
                     Queremos ser parte de tus logros
