@@ -1,0 +1,33 @@
+FormFieldContainer {
+    /*display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 15px;*/
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+Label {
+    display: block;
+    width: 20%;
+    min-width: 70px;
+    padding: 5px 0;
+    color: rgb(59, 59, 59);
+    overflow: hidden;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+Input {
+    font-size: 16px;
+    width: 95%;
+    padding: 11px 15px 11px 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-color: lightgray;
+    border: 1px solid lightgray;
+    color: black;
+    background-color: transparent;
+    animation: 1ms void-animation-out;
+}
