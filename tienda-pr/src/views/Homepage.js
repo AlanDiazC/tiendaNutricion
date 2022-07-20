@@ -72,7 +72,7 @@ const Homepage = () => {
                 </a>
               </div>
               <div className="gridItem">
-                <a className="seccion2Caja" href="/QnA">
+                <a className="seccion2Caja" href="/Contacto">
                   <div className="divImgSec2">
                     <div>
                       <img
@@ -81,7 +81,7 @@ const Homepage = () => {
                       />
                     </div>
                   </div>
-                  <h2 className="textoSec2">Preguntas Frecuentes</h2>
+                  <h2 className="textoSec2">Contacto</h2>
                 </a>
               </div>
               <div className="gridItem">
