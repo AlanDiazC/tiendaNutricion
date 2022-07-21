@@ -11,10 +11,11 @@ import ObtenerProd from "./ObtenerProdEspecifico";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
+import Swal from "sweetalert2";
+
 const Producto = () => {
   const { idProd } = useParams();
-   const cart = useSelector((state) => state);
-  console.log(cart);
+  const cart = useSelector((state) => state);
   const dispatch = useDispatch();
   const [data, setData] = useState({
     producto0: {
@@ -177,7 +178,7 @@ const Producto = () => {
   };
 
   const [panel1, setPanel1] = useState(true);
-  const [panel2, setPanel2] = useState(false);
+  const [panel2, setPanel2] = useState(true);
   const [panel3, setPanel3] = useState(false);
   const [panel4, setPanel4] = useState(false);
   const [panel5, setPanel5] = useState(false);
@@ -253,16 +254,34 @@ const Producto = () => {
                       <option value="5">5</option>
                     </select>
                   </div>
-                  
                 </div>
               </form>
               <div className="btnProd">
-                    <button onClick={()=>{
-                      const item = data.producto0;
+                <button
+                  onClick={() => {
+                    const item = data.producto0;
+                    try {
                       dispatch({
-                      type:"ADD", payload:item,
-                    })}}>Agregar al carrito</button>
-                  </div>
+                        type: "ADD",
+                        payload: item,
+                      });
+                      Swal.fire({
+                        icon: "success",
+                        title: "Producto agregado",
+                        text: "El producto fue agregado correctamente al carrito",
+                      });
+                    } catch (e) {
+                      Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: "No se pudo agregar el producto al carrito",
+                      });
+                    }
+                  }}
+                >
+                  Agregar al carrito
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -271,12 +290,6 @@ const Producto = () => {
         <div className="container_producto">
           <ul className="navegacion_tab">
             {/* <li className="nav_item">
-              <a className="nav_enlace">Beneficios</a>
-            </li> */}
-            {/* <li className="nav_item">
-              <a className="nav_enlace">Nutricion</a>
-            </li>*/}
-            <li className="nav_item">
               <a
                 className={`nav_enlace ${panel1 ? "active" : "inactive"}`}
                 onClick={() => {
@@ -284,8 +297,8 @@ const Producto = () => {
                 }}
               >
                 Información Nutrimental
-              </a>
-            </li>
+              </a> 
+            </li>*/}
             <li className="nav_item">
               <a
                 className={`nav_enlace ${panel2 ? "active" : "inactive"}`}
@@ -329,13 +342,13 @@ const Producto = () => {
           </ul>
           <div className="contenido_tab">
             <div className="tab_panel">
-              <div
+              {/* <div
                 className={`tablaNutrimental instrucciones_de_uso_tab ${
                   panel1 ? "active" : "inactive"
                 }`}
               >
                 {Texto1()}
-              </div>
+              </div> */}
               <div
                 className={`instrucciones_de_uso_tab ${
                   panel2 ? "active" : "inactive"

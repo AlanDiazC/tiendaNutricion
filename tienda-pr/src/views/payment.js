@@ -19,7 +19,6 @@ const Pagos = () => {
   const { idPrecio } = useParams();
   const [poli, setPoli] = useState(false);
   const cart = useSelector((state) => state);
-  console.log(cart);
   const dispatch = useDispatch();
   const addition = (acc, currentvalue) => {
     return acc + currentvalue.price * currentvalue.quantity;
@@ -27,28 +26,38 @@ const Pagos = () => {
   const total = cart.reduce(addition, 0);
   //precio parametro
   const realizarPago = async () => {
+    const list = [];
+    cart.forEach((element) => {
+      list.push({
+        price: element.priceID, // RECURRING_PRICE_ID
+        quantity: element.quantity,
+      });
+    });
+    list.push({
+      price: "price_1LNu34AUDqNuV9CvPC8lLXMX", // RECURRING_PRICE_ID
+      quantity: 1,
+    });
+    console.log(list);
     const docRef = await addDoc(
       collection(db, `clientes/${auth.currentUser.uid}/checkout_sessions`),
       {
-      mode: "payment",
-       line_items: [
-        {
-          price: cart[0].priceID, // RECURRING_PRICE_ID
-          quantity: cart[0].quantity, 
-        },
-        {
-
-          price: "price_1LNu34AUDqNuV9CvPC8lLXMX", // RECURRING_PRICE_ID
-          quantity: 1, 
-
-        }
-       
-      ], //precio parametro
+        mode: "payment",
+        line_items: list, //precio parametro
+        // [
+        //   {
+        //     price: cart[0].priceID,
+        //     quantity: cart[0].quantity,
+        //   },
+        //   {
+        //     price: "price_1LNu34AUDqNuV9CvPC8lLXMX", // RECURRING_PRICE_ID
+        //     quantity: 1,
+        //   },
+        // ], //precio parametro
         success_url: window.location.origin,
         cancel_url: window.location.origin,
       }
-    ); 
-/*     const docRef = await db
+    );
+    /*     const docRef = await db
     .collection('clientes')
     .doc(auth.currentUser)
     .collection('checkout_sessions')

@@ -72,7 +72,7 @@
     width: 100%;
     margin-top: 0.4285em;
     margin-left: 1px;
-    padding: 0 0.9166em;
+    padding: 0 0.8166em;
     z-index: 1;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -215,7 +215,7 @@
     bottom: 0;
     right: 0;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 150%;
     margin: auto;
     border: 0;
     vertical-align: middle;
@@ -588,7 +588,7 @@
     bottom: 0;
     right: 0;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 150%;
     margin: auto;
     border: 0;
     vertical-align: middle;
@@ -903,12 +903,12 @@
     content: "";
     display: block;
     width: 300%;
+    max-width: 43.9vw;
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     z-index: -1;
-    max-width: 44.92vw;
   }
   .resumenOrdenEnvio {
     height: auto;
@@ -968,7 +968,7 @@
     bottom: 0;
     right: 0;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 150%;
     margin: auto;
     border: 0;
     vertical-align: middle;
@@ -1285,12 +1285,12 @@
     content: "";
     display: block;
     width: 300%;
+    max-width: 44.6vw;
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     z-index: -1;
-    max-width: 44.9vw;
   }
   .resumenOrdenEnvio {
     height: auto;
@@ -1350,7 +1350,7 @@
     bottom: 0;
     right: 0;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 150%;
     margin: auto;
     border: 0;
     vertical-align: middle;

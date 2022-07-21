@@ -3,19 +3,18 @@ import { TiArrowBack } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-const Cart = ( {totalR ,setTotalR} ) => {
+const Cart = ({ totalR, setTotalR }) => {
   const cart = useSelector((state) => state);
-  console.log(cart);
   const dispatch = useDispatch();
   const addition = (acc, currentvalue) => {
     return acc + currentvalue.price * currentvalue.quantity;
   };
   const total = cart.reduce(addition, 0);
-  let variable= 0;
-  cart.forEach(element => {
-    variable=variable+(element.precio * element.quantity);
-  })
-  setTotalR(variable)  
+  let variable = 0;
+  cart.forEach((element) => {
+    variable = variable + element.precio * element.quantity;
+  });
+  setTotalR(variable);
 
   return (
     <div className="cartcontainer">
@@ -24,8 +23,8 @@ const Cart = ( {totalR ,setTotalR} ) => {
       </Link>
       <div className="cart">
         {cart.map((item) => {
-            console.log(item);
-            
+          console.log(item);
+
           return (
             <div className="cartcad" key={item.priceID}>
               <div>
@@ -33,7 +32,7 @@ const Cart = ( {totalR ,setTotalR} ) => {
                 <h4>{item.nombre}</h4>
                 <p> price: M.N {item.precio}</p>
                 <p>amount : M.N {item.precio}</p>
-               { /*  */}
+                {/*  */}
                 <button
                   onClick={() => dispatch({ type: "REMOVE", payload: item })}
                 >
@@ -66,7 +65,6 @@ const Cart = ( {totalR ,setTotalR} ) => {
       {total > 0 && <h2>total:{total}</h2>}
     </div>
   );
-  
 };
 
 export default Cart;

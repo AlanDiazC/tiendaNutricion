@@ -15,18 +15,20 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
         const precio0Data = await getDocs(precio0);
         const precio0Doc = precio0Data.docs;
 
+        var n = 2;
         for (var i = 0; i < 2; i++) {
+          n += i;
           const precio = collection(db, `productos/${prod[i].id}/prices`);
           const precioData = await getDocs(precio);
           const precioDoc = precioData.docs;
           data[i] = {
-            id: prod[i].id,
-            nombre: prod[i].data().name,
-            imagen: prod[i].data().images[0],
-            descripcion: prod[i].data().description,
+            id: prod[n].id,
+            nombre: prod[n].data().name,
+            imagen: prod[n].data().images[0],
+            descripcion: prod[n].data().description,
             precio: precioDoc[0].data().unit_amount / 100,
             precioId: precioDoc[0].id,
-            quantity:1,
+            quantity: 1,
           };
         }
         setFlag(true);

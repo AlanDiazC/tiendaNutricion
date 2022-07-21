@@ -23,6 +23,8 @@ import ObtenerProductos from "./ObtenerCarrito";
 import prod1 from "../multimedia/prod1.JPG";
 import logo from "../multimedia/Logo.png";
 
+import Enviaing from "./Enviaing";
+
 const Tienda = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
@@ -62,10 +64,12 @@ const Tienda = () => {
   //   };
 
   const pagar = () => {
-   // if (flag) {
-      navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
+    // if (flag) {
+    navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
     //}
   };
+
+  const [totalR, setTotalR] = useState(0);
 
   return (
     <div className="EnvioContainer">
@@ -78,8 +82,11 @@ const Tienda = () => {
                   <div className="tituloEnvio">
                     <div>
                       <h2>Información de contacto:</h2>
-                      <h3>Correo: {user?.email??"invalido,Logueate para pasar a el Pago"}</h3>
-                    
+                      <h3>
+                        Correo:{" "}
+                        {user?.email ??
+                          "invalido,Logueate para pasar a el Pago"}
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -161,50 +168,7 @@ const Tienda = () => {
           <div>
             <div className="resumenOrdenEnvio">
               <div className="secProdsEnvio">
-                <div className="prodEnvio">
-                  <table className="tablaProdEnvip">
-                    <tbody>
-                      <tr>
-                        <td className="imagenProdEnvio">
-                          <div className="prodEnvio-thumbnail">
-                            <div className="imgProdEnvio">
-                              <img src={prod1} />
-                            </div>
-                            <span className="cantidadProdEnvio">1</span>
-                          </div>
-                        </td>
-                        <tn className="nombreProdEnvio">
-                          <span>Nombre</span>
-                        </tn>
-                        <tn className="precioProdEnvio">
-                          <span>$0.00</span>
-                        </tn>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div className="prodEnvio">
-                  <table className="tablaProdEnvip">
-                    <tbody>
-                      <tr>
-                        <td className="imagenProdEnvio">
-                          <div className="prodEnvio-thumbnail">
-                            <div className="imgProdEnvio">
-                              <img src={prod1} />
-                            </div>
-                            <span className="cantidadProdEnvio">1</span>
-                          </div>
-                        </td>
-                        <tn className="nombreProdEnvio">
-                          <span>Nombre</span>
-                        </tn>
-                        <tn className="precioProdEnvio">
-                          <span>$0.00</span>
-                        </tn>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <Enviaing totalR={totalR} setTotalR={setTotalR} />
               </div>
               <div className="secPreciosEnvio">
                 <table className="tablaPreciosEnvio">
@@ -212,7 +176,7 @@ const Tienda = () => {
                     <tr>
                       <th className="subTotalEnvio">Subtotal:</th>
                       <td className="precioSubTotalEnvio">
-                        <span>$0.00</span>
+                        <span>${totalR}</span>
                       </td>
                     </tr>
                     <tr>
@@ -228,7 +192,7 @@ const Tienda = () => {
                         <span>Total: </span>
                       </th>
                       <td className="precioTotalEnvio">
-                        <span>$0.00</span>
+                        <span>${totalR}</span>
                       </td>
                     </tr>
                   </tfoot>
@@ -239,9 +203,6 @@ const Tienda = () => {
         </div>
         <div className="logoEnvio">
           <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64" />
-          <div>
-            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum{" "}
-          </div>
         </div>
       </div>
     </div>

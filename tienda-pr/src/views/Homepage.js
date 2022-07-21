@@ -111,7 +111,9 @@ const Homepage = () => {
                 <div className="textoDiv">
                   <p>
                     Queremos inspirar e impulsar el bienestar, sueños y metas de
-                    las personas para que construyan su mejor versión.
+                    las personas para que construyan su mejor versión, a tráves
+                    de productos de alta calidad para maximizar el desempeño de
+                    las personas
                   </p>
                 </div>
                 {/* <a className="btnHP">Boton prueba</a> */}
@@ -120,7 +122,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-
       <div className="seccion4">
         <div>
           <div className="seccion4Padding">
