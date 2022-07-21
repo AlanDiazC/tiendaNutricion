@@ -3,7 +3,7 @@
 
 import React, { useState, useRef } from "react";
 import "../css/producto.css";
-
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import ObtenerProd from "./ObtenerProdEspecifico";
@@ -13,6 +13,9 @@ import { Carousel } from "react-responsive-carousel";
 
 const Producto = () => {
   const { idProd } = useParams();
+   const cart = useSelector((state) => state);
+  console.log(cart);
+  const dispatch = useDispatch();
   const [data, setData] = useState({
     producto0: {
       nombre: "",
@@ -250,11 +253,16 @@ const Producto = () => {
                       <option value="5">5</option>
                     </select>
                   </div>
-                  <div className="btnProd">
-                    <button>Agregar al carrito</button>
-                  </div>
+                  
                 </div>
               </form>
+              <div className="btnProd">
+                    <button onClick={()=>{
+                      const item = data.producto0;
+                      dispatch({
+                      type:"ADD", payload:item,
+                    })}}>Agregar al carrito</button>
+                  </div>
             </div>
           </div>
         </div>

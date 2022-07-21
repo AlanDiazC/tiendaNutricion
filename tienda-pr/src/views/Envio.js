@@ -78,7 +78,7 @@ const Tienda = () => {
                   <div className="tituloEnvio">
                     <div>
                       <h2>Información de contacto:</h2>
-                      <h3>Correo: {user.email}</h3>
+                      <h3>Correo: {user?.email??"invalido,Logueate para pasar a el Pago"}</h3>
                     
                     </div>
                   </div>

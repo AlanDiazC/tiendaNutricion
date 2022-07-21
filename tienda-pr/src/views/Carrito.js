@@ -10,19 +10,22 @@ import { BiCurrentLocation } from "react-icons/bi";
 import ObtenerProductos from "./ObtenerCarrito";
 
 import prod1 from "../multimedia/prod1.JPG";
-
+import Cart from "./Cart";
 import { BsFillTrashFill } from "react-icons/bs";
 import { BsPlus } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
+import { useSelector, useDispatch } from "react-redux";
 
 const Tienda = () => {
+  
   const navigate = useNavigate();
   const [cantidad, setCantidad] = useState(1);
   const [cantidad2, setCantidad2] = useState(1);
   const [subTotal, setSubtotal] = useState(0);
   const [envio, setEnvio] = useState(0);
   const [total, setTotal] = useState(0);
-
+ 
+  
   const [data, setData] = useState([
     {
       id: "",
@@ -34,6 +37,7 @@ const Tienda = () => {
     },
   ]);
   const [flag, setFlag] = useState(false);
+  
   const Aumentar = (cant, setCant) => {
     setCant(cant + 1);
   };
@@ -42,13 +46,18 @@ const Tienda = () => {
       setCant(cant - 1);
     }
   };
-
+ const [totalR, setTotalR] = useState(0);
   const mostrar = () => {
     // if (flag) {
     // }
+  
+   
     return (
       <div>
-        <div className="objetoCarrito">
+     
+      
+        <Cart totalR={totalR} setTotalR={setTotalR}/> 
+        {/* <div className="objetoCarrito">
           <div className="objCarroIzq">
             <div className="objCarroImg">
               <a>
@@ -82,7 +91,7 @@ const Tienda = () => {
               <span className="objCarroPreico">$ {data[0].precio}</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   };
@@ -92,7 +101,6 @@ const Tienda = () => {
       navigate("/payments/" + data[0].precioId);
     }
   };
-
   return (
     <div className="CarroContainer">
       <ObtenerProductos
@@ -120,7 +128,7 @@ const Tienda = () => {
                       <h4>Tu Orden</h4>
                       <p>
                         <span className="carroSubTotal">Subtotal:</span>
-                        <span className="carroSubTotalPrecio">$ 00.00</span>
+                        <span className="carroSubTotalPrecio">$ {totalR}</span>
                       </p>
                       <a href="/Envio">
                         <button type="button">Continuar al pago</button>

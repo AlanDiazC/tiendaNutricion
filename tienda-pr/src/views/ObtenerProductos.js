@@ -26,6 +26,7 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
             descripcion: prod[i].data().description,
             precio: precioDoc[0].data().unit_amount / 100,
             precioId: precioDoc[0].id,
+            quantity:1,
           };
         }
         setFlag(true);

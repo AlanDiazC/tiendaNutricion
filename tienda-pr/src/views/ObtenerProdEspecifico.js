@@ -29,6 +29,8 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
                 beneficiosAtl: prod[i].data().beneficiosAtl,
                 beneficiosPrinc: prod[i].data().beneficiosPrinc,
                 preguntas: prod[i].data().Preguntas,
+                priceID:String(precioData.docs[0]._document.key.path.segments).substr(-30),
+                quantity:1,
               },
             });
           }

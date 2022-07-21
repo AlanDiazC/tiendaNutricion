@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import "../cssVieja/homepage.css";
 import { auth, db } from "../config/fbconfig";
 import Policia from "./policia";
+import { useSelector, useDispatch } from "react-redux";
+
 import {
   collection,
   addDoc,
@@ -16,6 +18,13 @@ import { useParams } from "react-router-dom";
 const Pagos = () => {
   const { idPrecio } = useParams();
   const [poli, setPoli] = useState(false);
+  const cart = useSelector((state) => state);
+  console.log(cart);
+  const dispatch = useDispatch();
+  const addition = (acc, currentvalue) => {
+    return acc + currentvalue.price * currentvalue.quantity;
+  };
+  const total = cart.reduce(addition, 0);
   //precio parametro
   const realizarPago = async () => {
     const docRef = await addDoc(
@@ -24,13 +33,16 @@ const Pagos = () => {
       mode: "payment",
        line_items: [
         {
-          price: 'price_1L50FtAUDqNuV9CvLBC0i8ME', // RECURRING_PRICE_ID
-          quantity: 2, 
+          price: cart[0].priceID, // RECURRING_PRICE_ID
+          quantity: cart[0].quantity, 
         },
         {
-          price: 'price_1LNu34AUDqNuV9CvPC8lLXMX', // ONE_TIME_PRICE_ID
-          quantity: 1,
-        },
+
+          price: "price_1LNu34AUDqNuV9CvPC8lLXMX", // RECURRING_PRICE_ID
+          quantity: 1, 
+
+        }
+       
       ], //precio parametro
         success_url: window.location.origin,
         cancel_url: window.location.origin,
