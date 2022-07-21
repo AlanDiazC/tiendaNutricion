@@ -21,13 +21,39 @@ const Pagos = () => {
     const docRef = await addDoc(
       collection(db, `clientes/${auth.currentUser.uid}/checkout_sessions`),
       {
-        mode: "payment",
-        price: idPrecio, //precio parametro
+      mode: "payment",
+       line_items: [
+        {
+          price: 'price_1L50FtAUDqNuV9CvLBC0i8ME', // RECURRING_PRICE_ID
+          quantity: 2, 
+        },
+        {
+          price: 'price_1LNu34AUDqNuV9CvPC8lLXMX', // ONE_TIME_PRICE_ID
+          quantity: 1,
+        },
+      ], //precio parametro
         success_url: window.location.origin,
         cancel_url: window.location.origin,
       }
-    );
-
+    ); 
+/*     const docRef = await db
+    .collection('clientes')
+    .doc(auth.currentUser)
+    .collection('checkout_sessions')
+    .add({
+      line_items: [
+        {
+          price: 'price_1L50FtAUDqNuV9CvLBC0i8ME', // RECURRING_PRICE_ID
+          quantity: 2, 
+        },
+        {
+          price: 'price_1L50GBAUDqNuV9CvrDyc0npb', // ONE_TIME_PRICE_ID
+          quantity: 1,
+        },
+      ],
+      success_url: window.location.origin,
+      cancel_url: window.location.origin,
+    }); */
     onSnapshot(docRef, (snap) => {
       const { error, url } = snap.data();
       if (error) {

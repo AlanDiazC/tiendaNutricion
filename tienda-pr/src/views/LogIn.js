@@ -23,11 +23,127 @@ import { FaFacebookF } from "react-icons/fa";
 
 // Componentes
 const LogIn = () => {
+  const { token, setToken } = useToken();
   const [recuperar, setRecuperar] = useState(false);
   const falseRecuperar = () => setRecuperar(false);
   const trueRecuperar = () => setRecuperar(true);
+  const [loginEmail, setloginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const usersCollectionReference = collection(db, "usersRegistry");
+  const [user, setUser] = useState({});
+  const providerGoogle = new GoogleAuthProvider();
 
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+  const onChangeLoginMail = (e) => {
+    setloginEmail(e.target.value);
+  };
+
+    const creatingReferencetoUID = async (UID, email) => {
+    const searchQuery = query(
+      usersCollectionReference,
+      where("UID", "==", UID)
+    );
+    const snapShot = await getDocs(searchQuery);
+    if (snapShot.empty) {
+      await addDoc(usersCollectionReference, {
+        UID: UID,
+        nivelCuenta: 1,
+        email: email,
+      });
+    } else {
+      console.log("Exito");
+    }
+  };
+
+  
+  const onChangeLoginPassword = (e) => {
+    setLoginPassword(e.target.value);
+  };
   const dropdownRef = useRef(null);
+  
+const loginGoogle = () => {
+    signInWithPopup(auth, providerGoogle)
+      .then((e) => {
+        const result = creatingReferencetoUID(
+          auth.currentUser.uid,
+          auth.currentUser.email
+        );
+      })
+      .catch((error) => {
+        switch (error.code) {
+          case "auth/popup-closed-by-user":
+            Swal.fire({
+              icon: "info",
+              title: "Seleccione una opción",
+              text: "Por favor elija una opción para iniciar sesión",
+            });
+            break;
+          default:
+            Swal.fire({
+              icon: "error",
+              title: "Error al iniciar sesión",
+              text: "Hubo un error en el inició de sesión con Google",
+            });
+            break;
+        }
+      }).then(() =>{
+        Swal.fire({
+              icon: "success",
+              title: "Perfecto!",
+              text: "Te haz logueado su cuenta correctamente :)",
+            }).then(()=>{
+              window.location.href = "/";
+            });
+      });
+  };
+
+ const loginData = async (e) => {
+    e.preventDefault();
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
+      // console.log("user");
+    } catch (erro) {
+      switch (erro.code) {
+        case "auth/user-not-found":
+          Swal.fire({
+            icon: "error",
+            title: "Cuenta no encontrada",
+            text: "Ese correo no esta registrado con ninguna cuenta",
+          });
+          break;
+        case "auth/invalid-email":
+          Swal.fire({
+            icon: "error",
+            title: "Correo invalido",
+            text: "Por favor utilice un correo completo",
+          });
+          break;
+        case "auth/wrong-password":
+          Swal.fire({
+            icon: "error",
+            title: "Constraseña invalida",
+            text: "Contraseña equivocada",
+          });
+          break;
+        default:
+          Swal.fire({
+            icon: "error",
+            title: "Error al iniciar sesión",
+            text: "Favor de revisar que se introdujeron correctamente los datos",
+          });
+          break;
+      }
+    }
+  };
+
+
 
   return (
     <div className="logIn">
@@ -39,19 +155,25 @@ const LogIn = () => {
             </div>
             <div className="logInBox">
               <h1 className="tituloLogIn">Log In</h1>
+               <a href="#" className="social" onClick={loginGoogle}>
+                <BsGoogle/>
+              </a>
               <form>
                 <label>Email</label>
-                <input type="email" id="emailUsuario"></input>
+                <input type="email" id="emailUsuario" onChange={onChangeLoginMail}></input>
                 <label>Contraseña</label>
-                <input type="password" id="contraUsuario"></input>
+                <input type="password" id="contraUsuario" onChange={onChangeLoginPassword}></input>
                 <div>
                   <p>
                     <a ref={dropdownRef} onClick={() => trueRecuperar()}>
                       ¿Olvidaste tu contraseña?
                     </a>
                   </p>
-                  <input type="submit" className="btnForm" value="Log In" />
-                  <p>
+                  
+                  <p> 
+                <button style={{ cursor: "pointer" }} onClick={loginData}>
+              Log In
+            </button>
                     <a href="/Cuenta/SignUp">Crear cuenta</a>
                   </p>
                 </div>
@@ -72,8 +194,7 @@ const LogIn = () => {
                   <a
                     id="Cancelar"
                     ref={dropdownRef}
-                    onClick={() => falseRecuperar()}
-                  >
+                    onClick={() => falseRecuperar()}>
                     Cancelar
                   </a>
                 </div>

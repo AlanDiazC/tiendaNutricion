@@ -10,7 +10,7 @@ const Tienda = () => {
       nombre: "",
       imagen: "",
       descripcion: "",
-      precio: 0,
+      precio: 3,
       precioId: "",
     },
   ]);

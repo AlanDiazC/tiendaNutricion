@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import Payment from "./views/payment";
+import Payment from "./views/payment";
 import Navbar from "./views/navbar";
 import Contacto from "./views/Contacto";
 import Homepage from "./views/Homepage";
@@ -36,7 +36,7 @@ const App = () => {
         <Routes>
           {/*
           <Route path="/signUp" element={<PuenteCuenta />} />
-          <Route path="/payments/:idPrecio" element={<Payment />} />
+          
           <Route path="/Producto/:idProd" element={<Producto />} /> 
           <Route path="/MiCuenta" element={<PuenteCuenta />} />
           <Route path="/QnA" element={<QnA />} />
@@ -52,6 +52,7 @@ const App = () => {
           <Route path="/SobreNosotros" element={<AboutMe />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/*" element={<Homepage />} />
+          <Route path="/payments/:idPrecio" element={<Payment />} />
         </Routes>
       </Router>
 

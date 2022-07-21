@@ -6,8 +6,17 @@ import { FiX } from "react-icons/fi";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { BsFillDashCircleFill } from "react-icons/bs";
 import { BiCurrentLocation } from "react-icons/bi";
-
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+  FacebookAuthProvider,
+} from "@firebase/auth";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { auth, db } from "../config/fbconfig";
 
 import ObtenerProductos from "./ObtenerCarrito";
 
@@ -16,6 +25,10 @@ import logo from "../multimedia/Logo.png";
 
 const Tienda = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState({});
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
   //   const [cantidad, setCantidad] = useState(1);
   //   const [cantidad2, setCantidad2] = useState(1);
   //   const [subTotal, setSubtotal] = useState(0);
@@ -28,7 +41,7 @@ const Tienda = () => {
       nombre: "",
       imagen: "",
       descripcion: "",
-      precio: 0,
+      precio: 3,
       precioId: "",
     },
   ]);
@@ -49,9 +62,9 @@ const Tienda = () => {
   //   };
 
   const pagar = () => {
-    if (flag) {
-      navigate("/payments/" + data[0].precioId);
-    }
+   // if (flag) {
+      navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
+    //}
   };
 
   return (
@@ -65,7 +78,8 @@ const Tienda = () => {
                   <div className="tituloEnvio">
                     <div>
                       <h2>Información de contacto:</h2>
-                      <h3>correo@ejemplo.com</h3>
+                      <h3>Correo: {user.email}</h3>
+                    
                     </div>
                   </div>
                 </div>
