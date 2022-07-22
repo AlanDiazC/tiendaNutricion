@@ -1,4 +1,7 @@
 @media only screen and (max-width: 600px) {
+  .pc {
+    display: none !important;
+  }
   body {
     position: relative;
   }
@@ -6,27 +9,15 @@
     max-width: 100%;
   }
   .aboutMe {
-    margin-top: 48px;
+    padding-top: 48px;
     position: relative;
     max-width: 100%;
     width: 100%;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
+    background-repeat: repeat;
   }
   .aboutMeSec1 {
     padding-bottom: 0px;
-  }
-  .aboutMeSec1::after {
-    top: 5%;
-    height: 100%;
-    max-width: 300px;
-    min-height: 210px;
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: no-repeat;
-    width: 80%;
-    position: absolute;
-    left: 0;
-    right: auto;
-    z-index: 1;
   }
   .aboutMeSec1 .container {
     width: 100%;
@@ -137,19 +128,6 @@
   .aboutMe2Col .row {
     max-width: 100%;
   }
-  .aboutMe2Col .row::after {
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: no-repeat;
-    max-width: 536px;
-    min-height: 450px;
-    width: 100%;
-    position: absolute;
-    left: auto;
-    right: 0;
-    top: 35%;
-    z-index: 1;
-  }
   .aboutMeColIzq {
     width: 100%;
   }
@@ -167,17 +145,6 @@
     text-transform: uppercase;
     padding-left: 15px;
     font-family: "Russo One", sans-serif;
-  }
-  .aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
-    height: 75px;
-    width: 200px;
-    right: -41px;
-    top: -26px;
-    content: "";
-    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
   .aboutMeColIzq .contentAboutMe p {
     margin: 0 0 19.44px;
@@ -229,6 +196,25 @@
     text-transform: uppercase;
     font-family: "Russo One", sans-serif;
   }
+
+  .aboutMeTextoFinal .container p {
+    margin: 0 0 19.44px;
+    margin-left: 25px;
+    margin-bottom: 23px;
+    color: #000;
+    font-size: 15px;
+  }
+  /* .aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
+    height: 75px;
+    width: 200px;
+    right: -41px;
+    top: -26px;
+    content: "";
+    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .aboutMeTextoFinal .container .subtituloAboutMe h2::after {
     content: "";
     width: 100%;
@@ -241,17 +227,13 @@
     bottom: -35px;
     height: 30px;
     background-position: center center;
-  }
-  .aboutMeTextoFinal .container p {
-    margin: 0 0 19.44px;
-    margin-left: 25px;
-    margin-bottom: 23px;
-    color: #000;
-    font-size: 15px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .pc {
+    display: none !important;
+  }
   body {
     position: relative;
   }
@@ -259,25 +241,13 @@
     max-width: 100%;
   }
   .aboutMe {
-    margin-top: 48px;
+    padding-top: 48px;
     position: relative;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
+    background-repeat: repeat;
   }
   .aboutMeSec1 {
     padding-bottom: 0px;
-  }
-  .aboutMeSec1::after {
-    top: 5%;
-    height: 100%;
-    max-width: 300px;
-    min-height: 210px;
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: no-repeat;
-    width: 80%;
-    position: absolute;
-    left: 0;
-    right: auto;
-    z-index: 1;
   }
   .aboutMeSec1 .container {
     width: 100%;
@@ -387,19 +357,6 @@
   .aboutMe2Col .row {
     max-width: 100%;
   }
-  .aboutMe2Col .row::after {
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: no-repeat;
-    max-width: 536px;
-    min-height: 450px;
-    width: 100%;
-    position: absolute;
-    left: auto;
-    right: 0;
-    top: 35%;
-    z-index: 1;
-  }
   .aboutMeColIzq {
     width: 70%;
     margin: 0 auto;
@@ -418,17 +375,6 @@
     text-transform: uppercase;
     padding-left: 15px;
     font-family: "Russo One", sans-serif;
-  }
-  .aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
-    height: 75px;
-    width: 200px;
-    right: -41px;
-    top: -26px;
-    content: "";
-    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
   .aboutMeColIzq .contentAboutMe p {
     margin: 0 0 19.44px;
@@ -480,6 +426,26 @@
     text-transform: uppercase;
     font-family: "Russo One", sans-serif;
   }
+
+  .aboutMeTextoFinal .container p {
+    margin: 0 0 19.44px;
+    margin-left: 25px;
+    margin-bottom: 23px;
+    color: #000;
+    font-size: 20px;
+  }
+
+  /*.aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
+    height: 75px;
+    width: 200px;
+    right: -41px;
+    top: -26px;
+    content: "";
+    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .aboutMeTextoFinal .container .subtituloAboutMe h2::after {
     content: "";
     width: 100%;
@@ -492,17 +458,13 @@
     bottom: -35px;
     height: 30px;
     background-position: center center;
-  }
-  .aboutMeTextoFinal .container p {
-    margin: 0 0 19.44px;
-    margin-left: 25px;
-    margin-bottom: 23px;
-    color: #000;
-    font-size: 20px;
-  }
+  }*/
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .cel {
+    display: none !important;
+  }
   body {
     position: relative;
   }
@@ -510,43 +472,18 @@
     max-width: 1200px;
   }
   .aboutMe {
-    margin-top: 48px;
+    padding: 48px 0;
     position: relative;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
+    background-repeat: repeat;
   }
   .aboutMeSec1 {
     padding-bottom: 0px;
   }
-  .aboutMeSec1::before {
-    content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/red-stripe.png);
-    background-repeat: no-repeat;
-    width: 195px;
-    height: 276px;
-    position: absolute;
-    display: block;
-    right: 0px;
-    left: auto;
-    background-size: contain;
-    z-index: 9;
-  }
-  .aboutMeSec1::after {
-    top: 10%;
-    height: 100%;
-    max-width: 466px;
-    min-height: 484px;
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: no-repeat;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: auto;
-    z-index: 1;
-  }
+
   .aboutMeSec1 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
   }
   .tituloAboutMe {
     max-width: 550px;
@@ -562,7 +499,6 @@
   .aboutMe .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
   }
   .imgAboutMe {
     flex: 0 0 45%;
@@ -590,7 +526,7 @@
     z-index: 20;
   }
   .contentAboutMe .subtituloAboutMe {
-    margin-top: 144px;
+    margin-top: 25%;
   }
   .subtituloAboutMe h2 {
     font-size: 28px;
@@ -630,25 +566,24 @@
     font-family: "Russo One", sans-serif;
   }
   .aboutMeSec2 .vidAboutMe {
-    margin: 30px auto 50px;
+    margin: 30px 0 50px 30px;
     max-width: 779px;
     width: 100%;
-    text-align: center;
     min-height: 510px;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    text-align: left;
   }
   .aboutMeSec2 .vidAboutMe .playerAbout {
-    width: 40% !important;
+    width: 45% !important;
     min-height: 100% !important;
     height: 100% !important;
     position: relative;
     z-index: 2;
   }
   .aboutMe2Col {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     z-index: 2;
     overflow: visible;
     position: relative;
@@ -658,21 +593,9 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    max-width: 99% !important;
+    max-width: 100% !important;
   }
-  .aboutMe2Col .row::after {
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: no-repeat;
-    max-width: 536px;
-    min-height: 504px;
-    width: 100%;
-    position: absolute;
-    left: auto;
-    right: 0;
-    top: 35%;
-    z-index: 1;
-  }
+
   .aboutMeColIzq {
     flex: 0 0 50%;
     max-width: 50%;
@@ -681,6 +604,7 @@
     margin-left: 15px;
     max-width: 456px;
     width: 100%;
+    margin-top: 30%;
   }
   .aboutMeColIzq .contentAboutMe .textoAboutMe h2 {
     font-size: 28px;
@@ -692,17 +616,7 @@
     padding-left: 15px;
     font-family: "Russo One", sans-serif;
   }
-  .aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
-    height: 75px;
-    width: 200px;
-    right: -41px;
-    top: -26px;
-    content: "";
-    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+
   .aboutMeColIzq .contentAboutMe p {
     margin: 0 0 19.44px;
     margin-left: 35px;
@@ -714,9 +628,9 @@
     max-width: 50%;
   }
   .aboutMeColDer .divImgAboutMe {
-    margin-top: 100px;
     z-index: 2;
     position: relative;
+    padding-left: 30px;
   }
   .aboutMeColDer .divImgAboutMe img {
     max-width: 100%;
@@ -732,20 +646,7 @@
     margin-bottom: 97px;
     width: 100%;
   }
-  .aboutMeTextoFinal::after {
-    content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/red-stripe.png);
-    background-repeat: no-repeat;
-    width: 195px;
-    height: 276px;
-    position: absolute;
-    display: block;
-    left: -57px;
-    right: auto;
-    top: 85%;
-    background-size: contain;
-    z-index: 1;
-  }
+
   .aboutMeTextoFinal .container {
     margin-left: 230px;
     max-width: 486px;
@@ -767,6 +668,38 @@
     text-transform: uppercase;
     font-family: "Russo One", sans-serif;
   }
+
+  .aboutMeTextoFinal .container p {
+    margin: 0 0 19.44px;
+    margin-left: 25px;
+    margin-bottom: 23px;
+    color: #000;
+  }
+  /* .aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
+    height: 75px;
+    width: 200px;
+    right: -41px;
+    top: -26px;
+    content: "";
+    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .aboutMeTextoFinal::after {
+    content: "";
+    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/red-stripe.png);
+    background-repeat: no-repeat;
+    width: 195px;
+    height: 276px;
+    position: absolute;
+    display: block;
+    left: -57px;
+    right: auto;
+    top: 85%;
+    background-size: contain;
+    z-index: 1;
+  }
   .aboutMeTextoFinal .container .subtituloAboutMe h2::after {
     content: "";
     width: 100%;
@@ -779,16 +712,13 @@
     bottom: -35px;
     height: 30px;
     background-position: center center;
-  }
-  .aboutMeTextoFinal .container p {
-    margin: 0 0 19.44px;
-    margin-left: 25px;
-    margin-bottom: 23px;
-    color: #000;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1596px) {
+  .cel {
+    display: none !important;
+  }
   body {
     position: relative;
   }
@@ -796,44 +726,19 @@
     max-width: 1200px;
   }
   .aboutMe {
-    margin-top: 48px;
+    padding: 48px 0;
     position: relative;
     padding-left: 150px;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
+    background-repeat: repeat;
   }
   .aboutMeSec1 {
     padding-bottom: 0px;
   }
-  /* .aboutMeSec1::before {
-    content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/red-stripe.png);
-    background-repeat: no-repeat;
-    width: 195px;
-    height: 276px;
-    position: absolute;
-    display: block;
-    right: 0px;
-    left: auto;
-    background-size: contain;
-    z-index: 9;
-  } */
-  .aboutMeSec1::after {
-    top: 7%;
-    height: 500px;
-    max-width: 700px;
-    min-height: 500px !important;
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: repeat;
-    width: 700px;
-    position: absolute;
-    left: 0;
-    right: auto;
-    z-index: 0;
-  }
+
   .aboutMeSec1 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
   }
   .tituloAboutMe {
     max-width: 550px;
@@ -849,7 +754,6 @@
   .aboutMe .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
   }
   .imgAboutMe {
     flex: 0 0 45%;
@@ -877,7 +781,7 @@
     z-index: 20;
   }
   .contentAboutMe .subtituloAboutMe {
-    margin-top: 144px;
+    margin-top: 20%;
   }
   .subtituloAboutMe h2 {
     font-size: 28px;
@@ -899,30 +803,14 @@
 
   .aboutMeSec2 {
     position: relative;
-  }
-  .aboutMeSec2 span {
-    left: -3%;
-    right: auto;
-    z-index: 2;
-    max-width: 40px;
-    opacity: 0.08;
-    font-size: 215px;
-    letter-spacing: normal;
-    text-align: center;
-    color: #2d2a26;
-    display: block;
-    line-height: 1.3;
-    position: absolute;
-    top: 0;
-    font-family: "Russo One", sans-serif;
+    padding-left: 150px;
   }
   .aboutMeSec2 .vidAboutMe {
     margin: 30px auto 50px;
     max-width: 779px;
     width: 100%;
-    text-align: center;
+    text-align: left;
     min-height: 510px;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -935,7 +823,7 @@
     z-index: 2;
   }
   .aboutMe2Col {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     z-index: 2;
     overflow: visible;
     position: relative;
@@ -945,20 +833,7 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    max-width: 99% !important;
-  }
-  .aboutMe2Col .row::after {
-    content: "";
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/patron.png?alt=media&token=94e3de18-c849-41de-b40e-f1bb810c33c4);
-    background-repeat: repeat;
-    max-width: 800px !important;
-    min-height: 504px;
-    width: 800px !important;
-    position: absolute;
-    left: auto;
-    right: 0;
-    top: 35%;
-    z-index: 1;
+    max-width: 100% !important;
   }
   .aboutMeColIzq {
     flex: 0 0 50%;
@@ -968,6 +843,7 @@
     margin-left: 15px;
     max-width: 456px;
     width: 100%;
+    margin-top: 30%;
   }
   .aboutMeColIzq .contentAboutMe .textoAboutMe h2 {
     font-size: 28px;
@@ -979,17 +855,7 @@
     padding-left: 15px;
     font-family: "Russo One", sans-serif;
   }
-  .aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
-    height: 75px;
-    width: 200px;
-    right: -41px;
-    top: -26px;
-    content: "";
-    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+
   .aboutMeColIzq .contentAboutMe p {
     margin: 0 0 19.44px;
     margin-left: 35px;
@@ -1001,7 +867,6 @@
     max-width: 50%;
   }
   .aboutMeColDer .divImgAboutMe {
-    margin-top: 100px;
     z-index: 2;
     position: relative;
   }
@@ -1019,20 +884,7 @@
     margin-bottom: 97px;
     width: 100%;
   }
-  .aboutMeTextoFinal::after {
-    content: "";
-    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/red-stripe.png);
-    background-repeat: no-repeat;
-    width: 195px;
-    height: 276px;
-    position: absolute;
-    display: block;
-    left: -150px;
-    right: auto;
-    top: 85%;
-    background-size: contain;
-    z-index: 1;
-  }
+
   .aboutMeTextoFinal .container {
     margin-left: 230px;
     max-width: 486px;
@@ -1054,6 +906,38 @@
     text-transform: uppercase;
     font-family: "Russo One", sans-serif;
   }
+
+  .aboutMeTextoFinal .container p {
+    margin: 0 0 19.44px;
+    margin-left: 25px;
+    margin-bottom: 23px;
+    color: #000;
+  }
+  /* .aboutMeColIzq .contentAboutMe .textoAboutMe h2::after {
+    height: 75px;
+    width: 200px;
+    right: -41px;
+    top: -26px;
+    content: "";
+    background-image: url("https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/Hand_Drawn_Circle.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .aboutMeTextoFinal::after {
+    content: "";
+    background-image: url(https://cdn.shopify.com/s/files/1/1103/4864/t/140/assets/red-stripe.png);
+    background-repeat: no-repeat;
+    width: 195px;
+    height: 276px;
+    position: absolute;
+    display: block;
+    left: -150px;
+    right: auto;
+    top: 85%;
+    background-size: contain;
+    z-index: 1;
+  }
   .aboutMeTextoFinal .container .subtituloAboutMe h2::after {
     content: "";
     width: 100%;
@@ -1066,11 +950,5 @@
     bottom: -35px;
     height: 30px;
     background-position: center center;
-  }
-  .aboutMeTextoFinal .container p {
-    margin: 0 0 19.44px;
-    margin-left: 25px;
-    margin-bottom: 23px;
-    color: #000;
-  }
+  } */
 }

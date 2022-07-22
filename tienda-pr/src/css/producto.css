@@ -537,9 +537,26 @@
   }
   .carousel .thumbs {
     padding: 0 !important;
+    margin: 0 !important;
     justify-content: center;
     text-align: center;
   }
+  .carousel .thumb {
+    vertical-align: top;
+    width: 70px !important;
+    margin-right: 0 !important;
+  }
+  .control-dots {
+    display: none !important;
+  }
+  .carousel-slider {
+    width: 90% !important;
+    margin: 0 5% !important;
+  }
+  .carousel .thumbs-wrapper {
+    margin: 0 !important;
+  }
+
   .prodIndividual {
     padding: 40pxx 0;
   }
@@ -557,8 +574,8 @@
     display: flex;
   }
   .lado_izquierdo_prod {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 30%;
+    max-width: 30%;
     padding-left: 15px;
     padding-right: 15px;
     text-align: right;
@@ -589,8 +606,8 @@
   }
   .parte_mitad_prod {
     text-align: center;
-    flex: 0 0 40%;
-    max-width: 40%;
+    flex: 0 0 30%;
+    max-width: 30%;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -643,7 +660,7 @@
     opacity: 1;
   }
   .imagenes_prod {
-    height: 100%;
+    width: 100%;
     min-height: 1px;
     display: inline-block;
     position: relative;
@@ -659,8 +676,8 @@
     height: auto;
   }
   .lado_derecho_prod {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 30%;
+    max-width: 30%;
     margin-top: 89px;
     margin-bottom: 91px;
     flex-grow: 1;
@@ -796,6 +813,9 @@
     padding: 0 !important;
     justify-content: center;
     text-align: center;
+  }
+  .carousel .thumb {
+    vertical-align: top;
   }
   .prodIndividual {
     padding: 40pxx 0;

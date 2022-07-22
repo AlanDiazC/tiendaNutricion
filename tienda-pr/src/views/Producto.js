@@ -230,7 +230,14 @@ const Producto = () => {
             <div className="parte_mitad_prod">
               <div className="slide_de_imagenes">
                 {/* <button className="flecha_prod_Ant">{"<"}</button> */}
-                <Carousel>{Carrusel()}</Carousel>
+                <Carousel
+                  showArrows={true}
+                  autoPlay={true}
+                  interval={5000}
+                  infiniteLoop={true}
+                >
+                  {Carrusel()}
+                </Carousel>
                 {/* <div className="imagenes_prod">
                   <img src={data.producto0.imagen}></img>
                 </div> */}

@@ -128,9 +128,7 @@ body {
   }
 
   /*Seccion 3*/
-  .seccion3Padding {
-    margin-bottom: 30px !important;
-  }
+
   .gridSec3 {
     align-items: center;
     grid-auto-columns: 50% 50%;
@@ -201,7 +199,7 @@ body {
     vertical-align: center;
   }
   .seccion4 .textoDiv {
-    font-size: 16px;
+    font-size: 16px !important;
     width: 100% !important;
     text-transform: uppercase !important;
     font-weight: 600 !important;
@@ -500,9 +498,7 @@ body {
   }
 
   /*Seccion 3*/
-  .seccion3Padding {
-    margin-bottom: 30px !important;
-  }
+
   .gridSec3 {
     align-items: center;
     grid-auto-columns: 50% 50%;
@@ -580,7 +576,7 @@ body {
     vertical-align: center;
   }
   .seccion4 .textoDiv {
-    font-size: 20px;
+    font-size: 20px !important;
     width: 80% !important;
     text-transform: uppercase !important;
     font-weight: 600 !important;
@@ -752,7 +748,7 @@ body {
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
   /*Seccion 1*/
   .seccion1 {
-    height: 45vh;
+    height: 85vh;
     color: white;
   }
   .seccion1 section {
@@ -877,9 +873,7 @@ body {
   }
 
   /*Seccion 3*/
-  .seccion3Padding {
-    margin-bottom: 30px !important;
-  }
+
   .gridSec3 {
     align-items: center;
     grid-auto-columns: 50% 50%;
@@ -958,8 +952,7 @@ body {
     vertical-align: center;
   }
   .seccion4 .textoDiv {
-    font-size: 20px;
-    width: 66% !important;
+    font-size: 20px !important;
     text-transform: uppercase !important;
     font-weight: 600 !important;
   }
@@ -1128,7 +1121,7 @@ body {
 @media only screen and (min-width: 1596px) {
   /*Seccion 1*/
   .seccion1 {
-    height: 55vh;
+    height: 80vh;
     color: white;
   }
   .seccion1 section {
@@ -1252,9 +1245,7 @@ body {
   }
 
   /*Seccion 3*/
-  .seccion3Padding {
-    margin-bottom: 30px !important;
-  }
+
   .gridSec3 {
     align-items: center;
     grid-auto-columns: 50% 50%;
@@ -1333,8 +1324,7 @@ body {
     vertical-align: center;
   }
   .seccion4 .textoDiv {
-    font-size: 20px;
-    width: 66% !important;
+    font-size: 20px !important;
     text-transform: uppercase !important;
     font-weight: 600 !important;
   }

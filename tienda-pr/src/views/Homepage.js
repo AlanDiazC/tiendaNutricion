@@ -102,29 +102,28 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="seccion3">
-        <div className="seccion3Padding">
-          <div className="gridSec3">
-            <div className="gridSec3Item">
-              <div className="textoDivSec3">
-                <h2>Nuestro objetivo</h2>
-                <div className="textoDiv">
-                  <p>
-                    Queremos inspirar e impulsar el bienestar, sueños y metas de
-                    las personas para que construyan su mejor versión, a tráves
-                    de productos de alta calidad para maximizar el desempeño de
-                    las personas
-                  </p>
-                </div>
-                {/* <a className="btnHP">Boton prueba</a> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="seccion3"></div>
       <div className="seccion4">
         <div>
           <div className="seccion4Padding">
+            <div className="seccion3Padding">
+              <div className="gridSec3">
+                <div className="gridSec3Item">
+                  <div className="textoDivSec3">
+                    <h2>Nuestro objetivo</h2>
+                    <div className="textoDiv">
+                      <p>
+                        Queremos inspirar e impulsar el bienestar, sueños y
+                        metas de las personas para que construyan su mejor
+                        versión, a tráves de productos de alta calidad para
+                        maximizar el desempeño de las personas
+                      </p>
+                    </div>
+                    {/* <a className="btnHP">Boton prueba</a> */}
+                  </div>
+                </div>
+              </div>
+            </div>
             <div>
               <div className="grid">
                 <div className="gridItem">

@@ -60,11 +60,13 @@
     font-size: 20px !important;
     margin-right: 8%;
     text-transform: uppercase;
+    color: #000 !important;
   }
   .precioProd {
     font-size: 20px;
     margin: 0;
     padding-bottom: 30px;
+    color: #000 !important;
   }
   .verMasProd {
     font-size: 25px;
@@ -154,11 +156,13 @@
     font-size: 30px !important;
     margin-right: 8%;
     text-transform: uppercase;
+    color: #000 !important;
   }
   .precioProd {
     font-size: 30px;
     margin: 0;
     padding-bottom: 30px;
+    color: #000 !important;
   }
   .verMasProd {
     font-size: 35px;
@@ -195,6 +199,7 @@
     background-repeat: no-repeat;
     display: flex;
     justify-content: flex-end;
+    height: 85vh !important;
   }
   .bannerTienda div {
     max-width: 1000px;
@@ -234,7 +239,7 @@
     margin-top: 5px;
   }
   .imgProd {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     display: block;
   }
@@ -247,11 +252,13 @@
     font-size: 20px !important;
     margin-right: 8%;
     text-transform: uppercase;
+    color: #000 !important;
   }
   .precioProd {
     font-size: 20px;
     margin: 0;
     padding-bottom: 30px;
+    color: #000 !important;
   }
   .verMasProd {
     font-size: 25px;
@@ -327,7 +334,7 @@
     margin-top: 5px;
   }
   .imgProd {
-    width: 60%;
+    width: 55%;
     margin: 0 auto;
     display: block;
   }
@@ -340,11 +347,13 @@
     font-size: 20px !important;
     margin-right: 8%;
     text-transform: uppercase;
+    color: #000 !important;
   }
   .precioProd {
     font-size: 20px;
     margin: 0;
     padding-bottom: 30px;
+    color: #000 !important;
   }
   .verMasProd {
     font-size: 25px;
