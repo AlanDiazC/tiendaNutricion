@@ -66,7 +66,8 @@ const shipment = new api.Shipment({
 to_address: toAddress,
 from_address: fromAddress,
 parcel: parcel,
-carrier_accounts: ['ca_3982ca1355a641feab0cf105e7426a76'],
+carrier_accounts: ['ca_3982ca1355a641feab0cf105e7426a76', 'ca_05d72b3b91e34e099713e50e82d06803', 'ca_96145f88be3e4894bd1f6a796f46c795',
+'ca_24fb2b4413ed46deb804b021a680a3f2'],
 mode: 'test',
 });
 
@@ -77,7 +78,7 @@ shipment.save().then(
 // Step 4: Buy and Generate a Shipping Label
 
 // If you do not have a saved shipment yet, you must save it first:
-/*shipment.save().then(s =>
-  s.buy(shipment.lowestRate(['DHL Express'], ['EconomySelect']))
+shipment.save().then(s =>
+  s.buy(shipment.lowestRate(['USPS'], ['First']))
     //.then(console.log)
-);*/
+);
