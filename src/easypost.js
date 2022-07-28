@@ -1,7 +1,7 @@
-// Step 1: Create To and From Addresses
-
 const Easypost = require('@easypost/api');
 const api = new Easypost('EZTK7747c4d7bb5046479cd237ee70edcd6d3Kl6842VvS3GfP9rsEdS7g');
+
+// Paso 1: Crear direcciones from y to
 
 const fromAddress = new api.Address({
   /*company: 'Runbed',
@@ -48,7 +48,7 @@ toAddress.save().then(console.log("DIR TO: " + toAddress.street1));
 
 console.log(toAddress.state);
 
-// Step 2: Create a Parcel
+// Paso 2: Crear un paquete
 
 const parcel = new api.Parcel({
     /*length: 9,
@@ -60,7 +60,7 @@ const parcel = new api.Parcel({
   
 parcel.save().then(console.log);
 
-// Step 3: Create a Shipment and Get Rates
+// Paso 3: Crear un envio y obtener tarifas 
 
 const shipment = new api.Shipment({
 to_address: toAddress,
@@ -75,9 +75,8 @@ shipment.save().then(
   console.log
 );
 
-// Step 4: Buy and Generate a Shipping Label
+// Paso 4: Comprar y generar una etiqueta de envio
 
-// If you do not have a saved shipment yet, you must save it first:
 shipment.save().then(s =>
   s.buy(shipment.lowestRate(['USPS'], ['First']))
     //.then(console.log)
