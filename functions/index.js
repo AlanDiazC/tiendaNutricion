@@ -5,7 +5,8 @@ const Easypost = require('@easypost/api');
 const api = new Easypost('EZTK7747c4d7bb5046479cd237ee70edcd6d3Kl6842VvS3GfP9rsEdS7g');
 
 exports.shippingDetails = functions.https.onCall((data, context) => {
-  
+
+  //Lo ideal seria que 'data' contenga la informacion de from address, to address, parcel y las carrier accounts
   const fromAddress = new api.Address({
     /*company: 'Runbed',
     street1: 'CHIMALPOPOCA 294, TRANSITO, 06820',
@@ -69,7 +70,9 @@ exports.shippingDetails = functions.https.onCall((data, context) => {
     'ca_24fb2b4413ed46deb804b021a680a3f2'],
     mode: 'test',
   });
-      
+
+  // En el objeto shipment hay un arreglo llamado 'rates' que es el que contiene todas las tarifas generadas
+  // dentro de 'rates', las variables 'carrier' es el carrier, 'rate' es el precio y 'service' el tipo de servicio de dicha carrier
   shipment.save().then(
     console.log
   );
@@ -77,6 +80,7 @@ exports.shippingDetails = functions.https.onCall((data, context) => {
   // Paso 4: Comprar y generar una etiqueta de envio
       
   shipment.save().then(s =>
+    // El primer argumento es la carrier seleccionada y el segundo es el servicio escogido de dicha carrier
     s.buy(shipment.lowestRate(['USPS'], ['First']))
     //.then(console.log)
   );
