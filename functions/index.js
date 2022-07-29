@@ -73,17 +73,11 @@ exports.shippingDetails = functions.https.onCall((data, context) => {
 
   // En el objeto shipment hay un arreglo llamado 'rates' que es el que contiene todas las tarifas generadas
   // dentro de 'rates', las variables 'carrier' es el carrier, 'rate' es el precio y 'service' el tipo de servicio de dicha carrier
-  shipment.save().then(
-    console.log
-  );
-      
-  // Paso 4: Comprar y generar una etiqueta de envio
-      
-  shipment.save().then(s =>
-    // El primer argumento es la carrier seleccionada y el segundo es el servicio escogido de dicha carrier
-    s.buy(shipment.lowestRate(['USPS'], ['First']))
-    //.then(console.log)
+  const rate_array = shipment.save().then( s =>{
+    console.log(s.rates)
+    return s.rates
+  }
   );
 
-  return data;
+  return rate_array;
 });
