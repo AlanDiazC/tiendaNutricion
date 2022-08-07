@@ -116,7 +116,7 @@ const Homepage = () => {
                         Queremos inspirar e impulsar el bienestar, sueños y
                         metas de las personas para que construyan su mejor
                         versión, a tráves de productos de alta calidad para
-                        maximizar el desempeño de las personas
+                        maximizar el desempeño.
                       </p>
                     </div>
                     {/* <a className="btnHP">Boton prueba</a> */}
@@ -192,8 +192,8 @@ const Homepage = () => {
               </div>
             </div>
             <div className="divBtnSec5">
-              <a className="btnHP" href="/QnA">
-                Preguntas Frecuentes
+              <a className="btnHP" href="/Tienda">
+                Productos
               </a>
             </div>
           </div>
