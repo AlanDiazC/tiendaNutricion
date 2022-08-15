@@ -14,10 +14,12 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
         const precio0 = collection(db, `productos/${prod[0].id}/prices`);
         const precio0Data = await getDocs(precio0);
         const precio0Doc = precio0Data.docs;
+        //alert(prod.length)
+        var n = -1;
+        var len = prod.length;
 
-        var n = 2;
-        for (var i = 0; i < 2; i++) {
-          n += i;
+        for (var i = 0; i < len; i++) {
+          n += 1;
           const precio = collection(db, `productos/${prod[i].id}/prices`);
           const precioData = await getDocs(precio);
           const precioDoc = precioData.docs;

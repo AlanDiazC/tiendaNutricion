@@ -15,6 +15,7 @@ import Swal from "sweetalert2";
 
 const Producto = () => {
   const { idProd } = useParams();
+  //alert(idProd);
   const cart = useSelector((state) => state);
   const dispatch = useDispatch();
   const [data, setData] = useState({

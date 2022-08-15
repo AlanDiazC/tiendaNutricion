@@ -30,13 +30,14 @@ const Pagos = () => {
     cart.forEach((element) => {
       list.push({
         price: element.priceID, // RECURRING_PRICE_ID
+        shipping: 67,
         quantity: element.quantity,
       });
     });
-    list.push({
+    /* list.push({
       price: "price_1LNu34AUDqNuV9CvPC8lLXMX", // RECURRING_PRICE_ID
       quantity: 1,
-    });
+    }); */
     console.log(list);
     const docRef = await addDoc(
       collection(db, `clientes/${auth.currentUser.uid}/checkout_sessions`),

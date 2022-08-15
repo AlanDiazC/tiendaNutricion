@@ -12,9 +12,11 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
         // console.log("REFERENCIA", id);
 
         for (var i = 0; i < prod.length; i++) {
+          
           if (prod[i].id == id) {
             const precio = collection(db, `productos/${prod[i].id}/prices`);
             const precioData = await getDocs(precio);
+            console.log(prod[i].data())
             setData({
               ...data,
               producto0: {
