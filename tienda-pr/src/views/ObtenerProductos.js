@@ -17,13 +17,16 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
         //alert(prod.length)
         var n = -1;
         var len = prod.length;
-
-        for (var i = 0; i < len; i++) {
+        var aux = 0
+        for (var i = 0; i < len-1; i++) {
           n += 1;
-          const precio = collection(db, `productos/${prod[i].id}/prices`);
+        if(prod[n].id =="prod_MFZmImrSEVSC7X" || prod[n].id =="prod_MFZmQ8Qc70ucU1"){
+          
+          const precio = collection(db, `productos/${prod[n].id}/prices`);
           const precioData = await getDocs(precio);
           const precioDoc = precioData.docs;
-          data[i] = {
+          //alert(precioDoc[0].data().unit_amount)
+          data[aux] = {
             id: prod[n].id,
             nombre: prod[n].data().name,
             imagen: prod[n].data().images[0],
@@ -32,6 +35,10 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
             precioId: precioDoc[0].id,
             quantity: 1,
           };
+         aux +=1; 
+        }else{
+
+        }
         }
         setFlag(true);
       } catch (e) {

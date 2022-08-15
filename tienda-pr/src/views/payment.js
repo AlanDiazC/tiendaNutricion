@@ -14,6 +14,7 @@ import {
 } from "@firebase/firestore";
 
 import { useParams } from "react-router-dom";
+import { BsReverseBackspaceReverse } from "react-icons/bs";
 //Se necesita modificar para que sea compatible con el carrito
 const Pagos = () => {
   const { idPrecio } = useParams();
@@ -27,21 +28,50 @@ const Pagos = () => {
   //precio parametro
   const realizarPago = async () => {
     const list = [];
+    var envio =0
     cart.forEach((element) => {
       list.push({
         price: element.priceID, // RECURRING_PRICE_ID
-        shipping: 67,
+        
         quantity: element.quantity,
       });
+      envio = envio + element.quantity * 1.5
     });
-    /* list.push({
-      price: "price_1LNu34AUDqNuV9CvPC8lLXMX", // RECURRING_PRICE_ID
+    var tosend
+    switch(envio){
+      case 1:case 1.5:case 2:
+         // envio med
+      tosend="price_1LX4ccJZ8SHfQTCm0q1u92ee";
+      break;
+
+      case 3: 
+      // envio large
+      tosend="price_1LX4cNJZ8SHfQTCmTqrz6YXL";
+
+      break;
+
+      case 4.5: 
+      // envio xllarge
+      tosend="price_1LX4c9JZ8SHfQTCmh5oZkt5z"
+      break;
+
+
+      default:
+      //Envio xll
+      tosend="price_1LX4c1JZ8SHfQTCmGHBsY1Ir"
+      break;
+
+
+    }
+    //Incluimos el shipment
+     list.push({
+      price: tosend, // RECURRING_PRICE_ID
       quantity: 1,
-    }); */
+    }); 
     console.log(list);
     const docRef = await addDoc(
       collection(db, `clientes/${auth.currentUser.uid}/checkout_sessions`),
-      {
+      { 
         mode: "payment",
         line_items: list, //precio parametro
         // [
