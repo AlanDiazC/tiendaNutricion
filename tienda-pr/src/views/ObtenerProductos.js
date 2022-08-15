@@ -18,7 +18,7 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
         var n = -1;
         var len = prod.length;
         var aux = 0
-        for (var i = 0; i < len-1; i++) {
+        for (var i = 0; i < len; i++) {
           n += 1;
         if(prod[n].id =="prod_MFZmImrSEVSC7X" || prod[n].id =="prod_MFZmQ8Qc70ucU1"){
           
