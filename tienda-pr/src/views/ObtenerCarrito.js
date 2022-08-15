@@ -29,7 +29,7 @@ const ObtenerProductos = ({
           data[i] = {
             id: prod[i].id,
             nombre: prod[i].data().name,
-            imagen: prod[i].data().images[0],
+            imagen: prod[i].data().metadata().imagens[0],
             descripcion: prod[i].data().description,
             precio: precioDoc[0].data().unit_amount / 100,
             precioId: precioDoc[0].id,
