@@ -1,4 +1,5 @@
 import React, { Component, useState, useRef } from "react";
+import { Navigate } from "react-router-dom";
 // import { useForm } from "react-hook-form";
 // import useToken from "../useToken";
 // import LogAd from "./LogUser";
@@ -10,6 +11,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
+  sendPasswordResetEmail,
 } from "@firebase/auth";
 import { auth, db } from "../config/fbconfig";
 import { collection, addDoc, query, getDocs, where } from "@firebase/firestore";
@@ -27,6 +29,7 @@ const LogIn = () => {
   const [recuperar, setRecuperar] = useState(false);
   const falseRecuperar = () => setRecuperar(false);
   const trueRecuperar = () => setRecuperar(true);
+  const [mensajeContra, setMensaje] = useState(false);
   const [loginEmail, setloginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const usersCollectionReference = collection(db, "usersRegistry");
@@ -38,6 +41,12 @@ const LogIn = () => {
   });
   const onChangeLoginMail = (e) => {
     setloginEmail(e.target.value);
+  };
+
+  const mensajearContrasena = (e) => {
+    e.preventDefault();
+    sendPasswordResetEmail(auth, e.target[0].value);
+    setMensaje(true);
   };
 
   const creatingReferencetoUID = async (UID, email) => {
@@ -92,7 +101,7 @@ const LogIn = () => {
         Swal.fire({
           icon: "success",
           title: "Perfecto!",
-          text: "Te haz logueado con tu cuenta correctamente",
+          text: "Te has logueado con tu cuenta correctamente",
         }).then(() => {
           window.location.href = "/";
         });
@@ -106,7 +115,15 @@ const LogIn = () => {
         auth,
         loginEmail,
         loginPassword
-      );
+      ).then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Perfecto!",
+          text: "Se ha iniciado sesión",
+        }).then(() => {
+          window.location.href = "/";
+        });
+      });
       // console.log("user");
     } catch (erro) {
       switch (erro.code) {
@@ -141,13 +158,12 @@ const LogIn = () => {
       }
     }
   };
-
   return (
     <div className="logIn">
       <div className="paddingLogIn">
         <div className="grid">
           <div className="gridItem">
-            <div className="mensajeReset">
+            <div className={`mensajeReset ${mensajeContra ? "true" : "false"}`}>
               Mandamos un correo para la recuperación de su contraseña.
             </div>
             <div className="logInBox">
@@ -176,10 +192,16 @@ const LogIn = () => {
                   </p>
 
                   <p>
-                    <button style={{ cursor: "pointer" }} onClick={loginData}>
+                    <button
+                      style={{ cursor: "pointer" }}
+                      onClick={loginData}
+                      className="btnForm"
+                    >
                       Log In
                     </button>
-                    <a href="/Cuenta/SignUp">Crear cuenta</a>
+                    <a href="/Cuenta/SignUp" className="crearCuenta">
+                      Crear cuenta
+                    </a>
                   </p>
                 </div>
               </form>
@@ -189,7 +211,7 @@ const LogIn = () => {
                 <h2>Recuperar contraseña</h2>
                 <p>Le mandaremos un correo para recuperar su contraseña.</p>
               </div>
-              <form>
+              <form onSubmit={mensajearContrasena}>
                 <label>Email</label>
                 <input type="email" id="resetUsuario"></input>
                 <div>

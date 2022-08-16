@@ -30,8 +30,12 @@ const Cart = ({ totalR, setTotalR }) => {
               <div>
                 <img className="objCarroImg" src={item.imagen[0]} alt="cart" />
                 <h4>{item.nombre}</h4>
-                <p> price: M.N {item.precio}</p>
-                <p>amount : M.N {item.precio}</p>
+                <p>
+                  pecio: {/*M.N*/}$ {item.precio}
+                </p>
+                <p>
+                  cantidad : {/*M.N*/} {item.precio}
+                </p>
                 {/*  */}
                 <button
                   onClick={() => dispatch({ type: "REMOVE", payload: item })}

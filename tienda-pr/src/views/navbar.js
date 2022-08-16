@@ -34,25 +34,45 @@ const Navbar = () => {
   const revisarCuentaPC = () => {
     if (user != null) {
       return (
-        <div className="op">
-          <a className="opcion" href="/MiCuenta">
-            Mi Cuenta
-          </a>
-          <a className="opcionLogos" href="/MiCuenta">
-            <FiUser />
-          </a>
-        </div>
+        <li>
+          <a href="/MiCuenta">Mi Cuenta</a>
+        </li>
       );
     } else {
       return (
-        <div className="op">
-          <a className="opcion" href="/SignUp">
-            Login
-          </a>
-          <a className="opcionLogos" href="/SignUp">
-            <FiUser />
-          </a>
-        </div>
+        <li>
+          <a href="/Cuenta/LogIn">Log In</a>
+        </li>
+      );
+    }
+  };
+  const revisarCuentaPC2 = () => {
+    if (user != null) {
+      return (
+        <a href="/MiCuenta">
+          <FiUser />
+        </a>
+      );
+    } else {
+      return (
+        <a href="/Cuenta/LogIn">
+          <FiUser />
+        </a>
+      );
+    }
+  };
+  const revisarCuentaCel = () => {
+    if (user != null) {
+      return (
+        <a href="/MiCuenta" className="navLinkCel2">
+          Mi Cuenta
+        </a>
+      );
+    } else {
+      return (
+        <a href="/Cuenta/LogIn" className="navLinkCel2">
+          Log In
+        </a>
       );
     }
   };
@@ -157,9 +177,7 @@ const Navbar = () => {
                 <a href="/Contacto" className="navLinkCel2">
                   Contacto
                 </a>
-                <a href="/Cuenta/LogIn" className="navLinkCel2">
-                  Login / Cuenta
-                </a>
+                {revisarCuentaCel()}
               </div>
               <div className="navCelSocial">
                 <a
@@ -198,9 +216,7 @@ const Navbar = () => {
                 {/* <li>
                   <a href="/QnA">Preguntas Frecuentes</a>
                 </li> */}
-                <li>
-                  <a href="MiCuenta">Mi Cuenta</a>
-                </li>
+                {revisarCuentaPC()}
               </ul>
             </nav>
           </div>
@@ -210,13 +226,11 @@ const Navbar = () => {
                 <a href="/Contacto">
                   <FiMail />
                 </a>
-                <a href="/Cuenta/LogIn">
-                  <FiUser />
-                </a>
+                {revisarCuentaPC2()}
               </div>
             </div>
             <div className="navCarro">
-              <a href="/MiCarrito">1</a>
+              <a href="/MiCarrito">0</a>
             </div>
           </div>
         </div>

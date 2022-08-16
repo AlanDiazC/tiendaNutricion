@@ -1,37 +1,63 @@
 import React, { useState, useRef } from "react";
+import { Navigate } from "react-router-dom";
 import "../css/miCuenta.css";
 import { BiCurrentLocation } from "react-icons/bi";
 import { onAuthStateChanged, signOut } from "@firebase/auth";
 import { auth } from "../config/fbconfig";
 import { useNavigate } from "react-router-dom";
+import Policia from "./policia";
 
 const MiCuenta = () => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
-  const logoutData = async (data) => {
-    await signOut(auth);
+  const logoutData = (data) => {
+    signOut(auth);
     navigate("/signUp");
   };
+  const [poli, setPoli] = useState(false);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
-    console.log(user);
   });
+
+  const obtenerDatos = () => {
+    revisar();
+
+    const nombre = user.displayName;
+    const mail = user.email;
+    const cel = user.phoneNumber;
+    return (
+      <div style={{ padding: 0 }}>
+        <p>{nombre}</p>
+        <p>{mail}</p>
+        <p>{cel}</p>
+      </div>
+    );
+  };
+
+  const revisar = () => {
+    if (poli == true) {
+      return null;
+    } else {
+      return <Navigate to={"/Cuenta/LogIn"} />;
+    }
+  };
 
   return (
     <div className="miCuenta">
+      <Policia poli={poli} setPoli={setPoli} />
       <div className="containerCuenta">
         <div className="tituloCuenta">
           <h1>Mi Cuenta</h1>
-          <a>Cerrar Sesión</a>
+          <a style={{ cursor: "pointer" }} onClick={logoutData}>
+            Cerrar Sesión
+          </a>
         </div>
         <div className="detallesCuenta">
           <div>
             <h2>Detalles de la cuenta</h2>
-            <p>{user.displayName}</p>
-            <p>{user.email}</p>
-            <p>{user.phoneNumber}</p>
-            <a className="btnCuenta">Modificar dirección</a>
+            {obtenerDatos()}
+            {/* <a className="btnCuenta">Modificar dirección</a> */}
           </div>
         </div>
       </div>

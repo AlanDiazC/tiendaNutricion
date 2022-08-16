@@ -9,6 +9,9 @@
     margin: 15px 0;
     font-size: 16px;
   }
+  .mensajeReset.false {
+    display: none;
+  }
   .paddingLogIn {
     padding: 0;
     width: 100%;
@@ -168,6 +171,11 @@
     color: #000;
     cursor: pointer;
   }
+
+  .crearCuenta {
+    padding-left: 20px;
+    text-transform: uppercase;
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
@@ -180,6 +188,10 @@
     padding: 10px;
     margin: 15px 0;
     font-size: 16px;
+  }
+
+  .mensajeReset.false {
+    display: none;
   }
   .paddingLogIn {
     padding: 0;
@@ -336,6 +348,10 @@
     color: #000;
     cursor: pointer;
   }
+  .crearCuenta {
+    padding-left: 20px;
+    text-transform: uppercase;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
@@ -348,6 +364,10 @@
     padding: 10px;
     margin: 15px 0;
     font-size: 16px;
+  }
+
+  .mensajeReset.false {
+    display: none;
   }
   .paddingLogIn {
     padding: 0;
@@ -502,6 +522,10 @@
     text-decoration: none;
     color: #000;
     cursor: pointer;
+  }
+  .crearCuenta {
+    padding-left: 20px;
+    text-transform: uppercase;
   }
 }
 
@@ -516,6 +540,9 @@
     margin: 15px 0;
     font-size: 16px;
   }
+  .mensajeReset.false {
+    display: none;
+  }
   .paddingLogIn {
     padding: 0;
     width: 100%;
@@ -669,5 +696,10 @@
     text-decoration: none;
     color: #000;
     cursor: pointer;
+  }
+
+  .crearCuenta {
+    padding-left: 20px;
+    text-transform: uppercase;
   }
 }

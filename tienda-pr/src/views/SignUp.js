@@ -33,13 +33,13 @@ const SignUp = () => {
   const [user, setUser] = useState({});
 
   const usersCollectionReference = collection(db, "usersRegistry");
-  
+
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
 
   const creatingReferencetoUID = async (UID, email) => {
-  const searchQuery = query(
+    const searchQuery = query(
       usersCollectionReference,
       where("UID", "==", UID)
     );
@@ -101,7 +101,6 @@ const SignUp = () => {
     }
   };
 
-
   const providerGoogle = new GoogleAuthProvider();
 
   const registeringGoogle = () => {
@@ -129,14 +128,15 @@ const SignUp = () => {
             });
             break;
         }
-      }).then(() =>{
+      })
+      .then(() => {
         Swal.fire({
-              icon: "success",
-              title: "Perfecto!",
-              text: "Se ha creado su cuenta correctamente :)",
-            }).then(()=>{
-              window.location.href = "/";
-            });
+          icon: "success",
+          title: "Perfecto!",
+          text: "Se ha creado su cuenta correctamente",
+        }).then(() => {
+          window.location.href = "/";
+        });
       });
   };
 
@@ -154,9 +154,6 @@ const SignUp = () => {
     setregisterPassword(e.target.value);
   };
 
-  
-
-
   return (
     <div className="logIn">
       <div className="paddingLogIn">
@@ -168,15 +165,23 @@ const SignUp = () => {
             <div className="logInBox">
               <h1 className="tituloLogIn">Crear cuenta</h1>
               <a href="#" className="social" onClick={registeringGoogle}>
-                <BsGoogle/>
+                <BsGoogle />
               </a>
               <form onSubmit={registeringData}>
                 <label>Nombre</label>
                 <input type="text" id="nombreUsuario"></input>
                 <label>Email</label>
-                <input type="email" id="emailUsuario" onChange={onChangeRegisterMail}></input>
+                <input
+                  type="email"
+                  id="emailUsuario"
+                  onChange={onChangeRegisterMail}
+                ></input>
                 <label>Contraseña</label>
-                <input type="password" id="contraUsuario" onChange={onChangeRegisterPassword}></input>
+                <input
+                  type="password"
+                  id="contraUsuario"
+                  onChange={onChangeRegisterPassword}
+                ></input>
                 <label>Confirmar contraseña</label>
                 <input type="password" id="contraConfirmUsuario"></input>
                 <div>
