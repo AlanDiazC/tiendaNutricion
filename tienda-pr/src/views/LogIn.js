@@ -33,7 +33,6 @@ const LogIn = () => {
   const [user, setUser] = useState({});
   const providerGoogle = new GoogleAuthProvider();
 
-
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
@@ -41,7 +40,7 @@ const LogIn = () => {
     setloginEmail(e.target.value);
   };
 
-    const creatingReferencetoUID = async (UID, email) => {
+  const creatingReferencetoUID = async (UID, email) => {
     const searchQuery = query(
       usersCollectionReference,
       where("UID", "==", UID)
@@ -58,13 +57,12 @@ const LogIn = () => {
     }
   };
 
-  
   const onChangeLoginPassword = (e) => {
     setLoginPassword(e.target.value);
   };
   const dropdownRef = useRef(null);
-  
-const loginGoogle = () => {
+
+  const loginGoogle = () => {
     signInWithPopup(auth, providerGoogle)
       .then((e) => {
         const result = creatingReferencetoUID(
@@ -89,18 +87,19 @@ const loginGoogle = () => {
             });
             break;
         }
-      }).then(() =>{
+      })
+      .then(() => {
         Swal.fire({
-              icon: "success",
-              title: "Perfecto!",
-              text: "Te haz logueado su cuenta correctamente :)",
-            }).then(()=>{
-              window.location.href = "/";
-            });
+          icon: "success",
+          title: "Perfecto!",
+          text: "Te haz logueado con tu cuenta correctamente",
+        }).then(() => {
+          window.location.href = "/";
+        });
       });
   };
 
- const loginData = async (e) => {
+  const loginData = async (e) => {
     e.preventDefault();
     try {
       const user = await signInWithEmailAndPassword(
@@ -143,8 +142,6 @@ const loginGoogle = () => {
     }
   };
 
-
-
   return (
     <div className="logIn">
       <div className="paddingLogIn">
@@ -155,25 +152,33 @@ const loginGoogle = () => {
             </div>
             <div className="logInBox">
               <h1 className="tituloLogIn">Log In</h1>
-               <a href="#" className="social" onClick={loginGoogle}>
-                <BsGoogle/>
+              <a href="#" className="social" onClick={loginGoogle}>
+                <BsGoogle />
               </a>
               <form>
                 <label>Email</label>
-                <input type="email" id="emailUsuario" onChange={onChangeLoginMail}></input>
+                <input
+                  type="email"
+                  id="emailUsuario"
+                  onChange={onChangeLoginMail}
+                ></input>
                 <label>Contraseña</label>
-                <input type="password" id="contraUsuario" onChange={onChangeLoginPassword}></input>
+                <input
+                  type="password"
+                  id="contraUsuario"
+                  onChange={onChangeLoginPassword}
+                ></input>
                 <div>
                   <p>
                     <a ref={dropdownRef} onClick={() => trueRecuperar()}>
                       ¿Olvidaste tu contraseña?
                     </a>
                   </p>
-                  
-                  <p> 
-                <button style={{ cursor: "pointer" }} onClick={loginData}>
-              Log In
-            </button>
+
+                  <p>
+                    <button style={{ cursor: "pointer" }} onClick={loginData}>
+                      Log In
+                    </button>
                     <a href="/Cuenta/SignUp">Crear cuenta</a>
                   </p>
                 </div>
@@ -194,7 +199,8 @@ const loginGoogle = () => {
                   <a
                     id="Cancelar"
                     ref={dropdownRef}
-                    onClick={() => falseRecuperar()}>
+                    onClick={() => falseRecuperar()}
+                  >
                     Cancelar
                   </a>
                 </div>
