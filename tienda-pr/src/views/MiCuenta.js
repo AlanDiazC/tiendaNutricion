@@ -15,6 +15,7 @@ const MiCuenta = () => {
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
+    console.log(user);
   });
 
   return (
@@ -27,9 +28,9 @@ const MiCuenta = () => {
         <div className="detallesCuenta">
           <div>
             <h2>Detalles de la cuenta</h2>
-            <p>Nombre Completo</p>
-            <p>Correo</p>
-            <p>Dirección: Ciudad, circuito, calle, numero, departamento</p>
+            <p>{user.displayName}</p>
+            <p>{user.email}</p>
+            <p>{user.phoneNumber}</p>
             <a className="btnCuenta">Modificar dirección</a>
           </div>
         </div>

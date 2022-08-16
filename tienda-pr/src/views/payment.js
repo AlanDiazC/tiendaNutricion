@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/homepage.css";
+import "../css/boton.css";
 import { auth, db } from "../config/fbconfig";
 import Policia from "./policia";
 import { useSelector, useDispatch } from "react-redux";
@@ -28,50 +28,49 @@ const Pagos = () => {
   //precio parametro
   const realizarPago = async () => {
     const list = [];
-    var envio =0
+    var envio = 0;
     cart.forEach((element) => {
       list.push({
         price: element.priceID, // RECURRING_PRICE_ID
-        
+
         quantity: element.quantity,
       });
-      envio = envio + element.quantity * 1.5
+      envio = envio + element.quantity * 1.5;
     });
-    var tosend
-    switch(envio){
-      case 1:case 1.5:case 2:
-         // envio med
-      tosend="price_1LX4ccJZ8SHfQTCm0q1u92ee";
-      break;
+    var tosend;
+    switch (envio) {
+      case 1:
+      case 1.5:
+      case 2:
+        // envio med
+        tosend = "price_1LX4ccJZ8SHfQTCm0q1u92ee";
+        break;
 
-      case 3: 
-      // envio large
-      tosend="price_1LX4cNJZ8SHfQTCmTqrz6YXL";
+      case 3:
+        // envio large
+        tosend = "price_1LX4cNJZ8SHfQTCmTqrz6YXL";
 
-      break;
+        break;
 
-      case 4.5: 
-      // envio xllarge
-      tosend="price_1LX4c9JZ8SHfQTCmh5oZkt5z"
-      break;
-
+      case 4.5:
+        // envio xllarge
+        tosend = "price_1LX4c9JZ8SHfQTCmh5oZkt5z";
+        break;
 
       default:
-      //Envio xll
-      tosend="price_1LX4c1JZ8SHfQTCmGHBsY1Ir"
-      break;
-
-
+        //Envio xll
+        tosend = "price_1LX4c1JZ8SHfQTCmGHBsY1Ir";
+        break;
     }
     //Incluimos el shipment
-     list.push({
+    list.push({
       price: tosend, // RECURRING_PRICE_ID
       quantity: 1,
-    }); 
+    });
     console.log(list);
     const docRef = await addDoc(
       collection(db, `clientes/${auth.currentUser.uid}/checkout_sessions`),
-      { 
+      {
         mode: "payment",
         line_items: list, //precio parametro
         // [
@@ -123,8 +122,8 @@ const Pagos = () => {
     if (poli == true) {
       return (
         <div>
-          <div className="">
-            <button onClick={realizarPago}>Pagar</button>;
+          <div className="botonPagos">
+            <button onClick={realizarPago}>Pagar</button>
           </div>
         </div>
       );
