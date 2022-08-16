@@ -68,7 +68,13 @@
     padding-bottom: 30px;
     color: #000 !important;
   }
-  .verMasProd {
+  /* .verMasTop {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 18px 10px 5px 0px;
+    text-decoration: none;
+  } 
+  verMasProd {
     font-size: 25px;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
@@ -76,17 +82,31 @@
     padding: 0px 2px 5px 10px;
     text-decoration: none;
   }
-  .verMasTop {
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
-    padding: 18px 10px 5px 0px;
-    text-decoration: none;
-  }
   .verMasProd:hover {
     padding: 3px 4px 7px 12px;
   }
   .verMasProd:hover > .verMasTop {
     padding: 22px 12px 7px 2px;
+  } */
+  .verMasTop {
+    /* border-top: 2px solid #000000;
+    border-right: 2px solid #000000; */
+    text-decoration: none;
+  }
+  .verMasProd {
+    font-size: 25px;
+    /* border-bottom: 2px solid #000;
+    border-left: 2px solid #000; */
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: black;
+    /* padding: 3px 2px 5px 10px; */
+    padding: 8px 15px;
+    text-decoration: none;
+  }
+  .verMasProd:hover {
+    /* padding: 3px 4px 7px 12px; */
+    padding: 13px 20px;
   }
   .prodCarro {
     font-size: 40px;
@@ -164,6 +184,12 @@
     padding-bottom: 30px;
     color: #000 !important;
   }
+  /* .verMasTop {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 28px 10px 5px 0px;
+    text-decoration: none;
+  } 
   .verMasProd {
     font-size: 35px;
     border-bottom: 2px solid #000;
@@ -172,17 +198,31 @@
     padding: 0px 2px 5px 10px;
     text-decoration: none;
   }
-  .verMasTop {
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
-    padding: 28px 10px 5px 0px;
-    text-decoration: none;
-  }
   .verMasProd:hover {
     padding: 3px 4px 7px 12px;
   }
   .verMasProd:hover > .verMasTop {
     padding: 22px 12px 7px 2px;
+  } */
+  .verMasTop {
+    /* border-top: 2px solid #000000;
+    border-right: 2px solid #000000; */
+    text-decoration: none;
+  }
+  .verMasProd {
+    font-size: 25px;
+    /* border-bottom: 2px solid #000;
+    border-left: 2px solid #000; */
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: black;
+    /* padding: 3px 2px 5px 10px; */
+    padding: 8px 15px;
+    text-decoration: none;
+  }
+  .verMasProd:hover {
+    /* padding: 3px 4px 7px 12px; */
+    padding: 13px 20px;
   }
   .prodCarro {
     font-size: 40px;
@@ -261,7 +301,13 @@
     padding-bottom: 30px;
     color: #000 !important;
   }
-  .verMasProd {
+  /* .verMasTop {
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 20px 10px 5px 0px;
+    text-decoration: none;
+  } */
+  /* .verMasProd {
     font-size: 25px;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
@@ -269,17 +315,32 @@
     padding: 3px 2px 5px 10px;
     text-decoration: none;
   }
-  .verMasTop {
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
-    padding: 20px 10px 5px 0px;
-    text-decoration: none;
-  }
   .verMasProd:hover {
     padding: 3px 4px 7px 12px;
   }
   .verMasProd:hover > .verMasTop {
     padding: 22px 12px 7px 2px;
+  } */
+  .verMasTop {
+    /* border-top: 2px solid #000000;
+    border-right: 2px solid #000000; */
+    /* padding: 20px 10px 5px 0px; */
+    text-decoration: none;
+  }
+  .verMasProd {
+    font-size: 25px;
+    /* border-bottom: 2px solid #000;
+    border-left: 2px solid #000; */
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: black;
+    /* padding: 3px 2px 5px 10px; */
+    padding: 8px 15px;
+    text-decoration: none;
+  }
+  .verMasProd:hover {
+    /* padding: 3px 4px 7px 12px; */
+    padding: 13px 20px;
   }
   .prodCarro {
     font-size: 40px;
@@ -357,26 +418,30 @@
     padding-bottom: 30px;
     color: #000 !important;
   }
-  .verMasProd {
-    font-size: 25px;
-    border-bottom: 2px solid #000;
-    border-left: 2px solid #000;
-    color: black;
-    padding: 3px 2px 5px 10px;
+  .verMasTop {
+    /* border-top: 2px solid #000000;
+    border-right: 2px solid #000000; */
+    /* padding: 20px 10px 5px 0px; */
     text-decoration: none;
   }
-  .verMasTop {
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
-    padding: 20px 10px 5px 0px;
+  .verMasProd {
+    font-size: 25px;
+    /* border-bottom: 2px solid #000;
+    border-left: 2px solid #000; */
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: black;
+    /* padding: 3px 2px 5px 10px; */
+    padding: 8px 15px;
     text-decoration: none;
   }
   .verMasProd:hover {
-    padding: 3px 4px 7px 12px;
+    /* padding: 3px 4px 7px 12px; */
+    padding: 13px 20px;
   }
-  .verMasProd:hover > .verMasTop {
+  /* .verMasProd:hover > .verMasTop {
     padding: 22px 12px 7px 2px;
-  }
+  } */
   .prodCarro {
     font-size: 40px;
   }

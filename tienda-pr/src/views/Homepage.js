@@ -184,9 +184,9 @@ const Homepage = () => {
                   </div>
                   <div className="textoDiv">
                     Sabemos que cada quien tiene una historia que contar, somos
-                    testigos de los grandes logros que cada quien puede lograr,
-                    queremos ser parte de ello y brindar herramientas para que
-                    esas historias se puedan volver una realidad.
+                    testigos de los grandes logros que cada quien puede lograr.
+                    <br /> Queremos ser parte de ello y brindar herramientas
+                    para que esas historias se puedan volver una realidad.
                   </div>
                 </div>
               </div>
