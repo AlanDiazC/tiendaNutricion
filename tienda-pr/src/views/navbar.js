@@ -126,7 +126,7 @@ const Navbar = () => {
       </div>
       <header className="navHeader">
         <div className="headerWrapper">
-          <div className="wrapperIzq cel">
+          <div className="wrapperIzq celNavbar">
             <a
               ref={dropdownRef}
               onClick={() => subMenu()}
