@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../cssVieja/homepage.css";
+import "../css/boton.css";
 import { auth, db } from "../config/fbconfig";
 import Policia from "./policia";
 import { useSelector, useDispatch } from "react-redux";
@@ -92,8 +92,8 @@ const Pagos = () => {
     if (poli == true) {
       return (
         <div>
-          <div className="">
-            <button onClick={realizarPago}>Pagar</button>;
+          <div className="botonPagos">
+            <button onClick={realizarPago}>Pagar</button>
           </div>
         </div>
       );
