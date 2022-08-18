@@ -67,6 +67,19 @@ const SignUp = () => {
         auth.currentUser.uid,
         auth.currentUser.email
       );
+      const inicio = await signInWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+      ).then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Perfecto!",
+          text: "Se ha creado la sesión",
+        }).then(() => {
+          window.location.href = "/";
+        });
+      });
     } catch (erro) {
       switch (erro.code) {
         case "auth/email-already-in-use":
