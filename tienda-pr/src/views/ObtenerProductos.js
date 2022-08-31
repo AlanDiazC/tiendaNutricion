@@ -22,7 +22,8 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
           n += 1;
           if (
             prod[n].id == "prod_MFZmImrSEVSC7X" ||
-            prod[n].id == "prod_MFZmQ8Qc70ucU1"
+            prod[n].id == "prod_MFZmQ8Qc70ucU1" ||
+            prod[n].id == "prod_MLPD72As2w6B3C"
           ) {
             const precio = collection(db, `productos/${prod[n].id}/prices`);
             const precioData = await getDocs(precio);

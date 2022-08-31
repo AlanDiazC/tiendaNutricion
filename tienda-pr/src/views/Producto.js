@@ -70,20 +70,26 @@ const Producto = () => {
       const listaBenfAtl = data.producto0.beneficiosAtl;
       const listaBenfPrin = data.producto0.beneficiosPrinc;
       const beneficiosLista = [];
-      beneficiosLista.push(
-        <p className="tituloBeneficios">Beneficios Principales:</p>
-      );
-      for (var i = 0; i < listaBenfPrin.length; i++) {
-        beneficiosLista.push(<p className="beneficios">{listaBenfPrin[i]}</p>);
+      if (listaBenfPrin[0]) {
+        beneficiosLista.push(
+          <p className="tituloBeneficios">Beneficios Principales:</p>
+        );
+        for (var i = 0; i < listaBenfPrin.length; i++) {
+          beneficiosLista.push(
+            <p className="beneficios">{listaBenfPrin[i]}</p>
+          );
+        }
       }
 
-      beneficiosLista.push(
-        <p className="tituloBeneficios">Beneficios para Atletas:</p>
-      );
-      for (var i = 0; i < listaBenfAtl.length; i++) {
+      if (listaBenfAtl[0]) {
         beneficiosLista.push(
-          <p className={`beneficios ${"a" + i}`}>{listaBenfAtl[i]}</p>
+          <p className="tituloBeneficios">Beneficios para Atletas:</p>
         );
+        for (var i = 0; i < listaBenfAtl.length; i++) {
+          beneficiosLista.push(
+            <p className={`beneficios ${"a" + i}`}>{listaBenfAtl[i]}</p>
+          );
+        }
       }
       if (listaBenfAdu[0]) {
         beneficiosLista.push(

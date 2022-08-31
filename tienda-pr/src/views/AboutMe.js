@@ -75,12 +75,14 @@ const AboutMe = () => {
             </div>
             <p>
               Somos 3 amigos que soñamos y vivimos el deporte, por lo tanto,
-              somos personas activas que buscan el mejor performance en la vida
-              cotidiana. Sabemos que cada quien tiene una historia que contar,
-              somos testigos de los grandes logros que cada quien como individuo
-              puede lograr y queremos ser parte de ello y brindar herramientas
-              para que esas historias se puedan volver una realidad, si tú
-              cumples tus metas, nosotros cumplimos nuestro sueño.
+              somos personas activas que buscan el performance en la vida
+              cotidiana. <br />
+              Sabemos que cada quien tiene una historia que contar, somos
+              testigos de las grandes metas que cada persona puede lograr.
+              <br />
+              Sabemos que cada quien tiene una historia que contar, queremos ser
+              parte de tus sueños, acompañarte y brindarte herramientas para que
+              metas se vuelvan realidad
             </p>
           </div>
         </div>
@@ -128,13 +130,15 @@ const AboutMe = () => {
                     <h2>Nuestra Filosofía</h2>
                     <p>
                       Somos 3 amigos que soñamos y vivimos el deporte, por lo
-                      tanto, somos personas activas que buscan el mejor
-                      performance en la vida cotidiana. Sabemos que cada quien
-                      tiene una historia que contar, somos testigos de los
-                      grandes logros que cada quien como individuo puede lograr
-                      y queremos ser parte de ello y brindar herramientas para
-                      que esas historias se puedan volver una realidad, si tú
-                      cumples tus metas, nosotros cumplimos nuestro sueño.
+                      tanto, somos personas activas que buscan el performance en
+                      la vida cotidiana. <br />
+                      Sabemos que cada quien tiene una historia que contar,
+                      somos testigos de las grandes metas que cada persona puede
+                      lograr.
+                      <br />
+                      Sabemos que cada quien tiene una historia que contar,
+                      queremos ser parte de tus sueños, acompañarte y brindarte
+                      herramientas para que metas se vuelvan realidad
                     </p>
                   </div>
                 </div>
