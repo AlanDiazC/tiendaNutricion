@@ -283,6 +283,13 @@ const Producto = () => {
                         icon: "success",
                         title: "Producto agregado",
                         text: "El producto fue agregado correctamente al carrito",
+                        showDenyButton: true,
+                        denyButtonText: "Ir a mi carrito",
+                        denyButtonColor: "#7066e0",
+                      }).then((r) => {
+                        if (r.isDenied) {
+                          window.location = "/MiCarrito";
+                        }
                       });
                     } catch (e) {
                       Swal.fire({
