@@ -23,8 +23,6 @@ const Cart = ({ totalR, setTotalR }) => {
       </Link>
       <div className="cart">
         {cart.map((item) => {
-          console.log(item);
-
           return (
             <div className="cartcad" key={item.priceID}>
               <div>
@@ -34,7 +32,7 @@ const Cart = ({ totalR, setTotalR }) => {
                   pecio: {/*M.N*/}$ {item.precio}
                 </p>
                 <p>
-                  cantidad : {/*M.N*/} {item.precio}
+                  cantidad : {/*M.N*/} {item.quantity}
                 </p>
                 {/*  */}
                 <button

@@ -20,12 +20,16 @@ import logo from "../multimedia/Logo.png";
 import { onAuthStateChanged, signOut } from "@firebase/auth";
 import { auth } from "../config/fbconfig";
 
+import ObtenerCantCarrito from "./ObtenerCantCarrito";
+
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const subMenu = () => setIsActive(!isActive);
   const dropdownRef = useRef(null);
 
   const [user, setUser] = useState(false);
+
+  const [cantCarrito, setCantCarrito] = useState(0);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -230,7 +234,11 @@ const Navbar = () => {
               </div>
             </div>
             <div className="navCarro">
-              <a href="/MiCarrito">0</a>
+              <ObtenerCantCarrito
+                setCantCarrito={setCantCarrito}
+                cantCarrito={cantCarrito}
+              />
+              <a href="/MiCarrito">{cantCarrito}</a>
             </div>
           </div>
         </div>

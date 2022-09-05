@@ -17,15 +17,13 @@ import { BsDash } from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
 
 const Tienda = () => {
-  
   const navigate = useNavigate();
   const [cantidad, setCantidad] = useState(1);
   const [cantidad2, setCantidad2] = useState(1);
   const [subTotal, setSubtotal] = useState(0);
   const [envio, setEnvio] = useState(0);
   const [total, setTotal] = useState(0);
- 
-  
+
   const [data, setData] = useState([
     {
       id: "",
@@ -37,7 +35,7 @@ const Tienda = () => {
     },
   ]);
   const [flag, setFlag] = useState(false);
-  
+
   const Aumentar = (cant, setCant) => {
     setCant(cant + 1);
   };
@@ -46,17 +44,11 @@ const Tienda = () => {
       setCant(cant - 1);
     }
   };
- const [totalR, setTotalR] = useState(0);
+  const [totalR, setTotalR] = useState(0);
   const mostrar = () => {
-    // if (flag) {
-    // }
-  
-   
     return (
       <div>
-     
-      
-        <Cart totalR={totalR} setTotalR={setTotalR}/> 
+        <Cart totalR={totalR} setTotalR={setTotalR} />
         {/* <div className="objetoCarrito">
           <div className="objCarroIzq">
             <div className="objCarroImg">
@@ -103,14 +95,14 @@ const Tienda = () => {
   };
   return (
     <div className="CarroContainer">
-      <ObtenerProductos
+      {/* <ObtenerProductos
         setData={setData}
         data={data}
         setFlag={setFlag}
         setSubtotal={setSubtotal}
         setEnvio={setEnvio}
         setTotal={setTotal}
-      />
+      /> */}
       <div>
         <section className="secCarrito">
           <div className="container">
