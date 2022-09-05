@@ -749,6 +749,7 @@
     padding: 0 4%;
     width: 90%;
     max-height: 80vh;
+    margin-bottom: 100px;
   }
   .informacion {
     padding-top: 3.93rem;
@@ -894,7 +895,7 @@
     border-left: 1px solid rgba(175, 175, 175, 0.34);
     padding-left: 20px;
     height: 100vh;
-    max-height: 84vh;
+    max-height: 87vh;
   }
   .mostrarProdsEnvio::after {
     /* background-color: #faf7f0; */
@@ -1131,6 +1132,7 @@
     flex: 1 0 auto;
     padding: 0 4%;
     width: 90%;
+    margin-bottom: 100px;
   }
   .informacion {
     padding-top: 3.93rem;

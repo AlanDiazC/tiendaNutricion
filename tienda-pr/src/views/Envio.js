@@ -83,7 +83,7 @@ const Tienda = () => {
                     <div>
                       <h2>Información de contacto:</h2>
                       <h3>
-                        Correo:{" "}
+                        Correo:
                         {user?.email ??
                           "invalido,Logueate para pasar a el Pago"}
                       </h3>
