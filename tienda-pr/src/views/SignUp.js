@@ -76,6 +76,7 @@ const SignUp = () => {
           icon: "success",
           title: "Perfecto!",
           text: "Se ha creado la sesión",
+          confirmButtonText: "Explorar página",
         }).then(() => {
           window.location.href = "/";
         });
@@ -87,6 +88,7 @@ const SignUp = () => {
             icon: "error",
             title: "Correo existente",
             text: "Esa cuenta ya existe, por favor utilice otro correo",
+            confirmButtonText: "Entendido",
           });
           break;
         case "auth/invalid-email":
@@ -94,6 +96,7 @@ const SignUp = () => {
             icon: "error",
             title: "Correo invalido",
             text: "Por favor utilice un correo completo",
+            confirmButtonText: "Entendido",
           });
           break;
         case "auth/weak-password":
@@ -101,6 +104,7 @@ const SignUp = () => {
             icon: "error",
             title: "Contraseña invalida",
             text: "La contraseña debe tener mínimo 6 digitos",
+            confirmButtonText: "Entendido",
           });
           break;
         default:
@@ -108,6 +112,7 @@ const SignUp = () => {
             icon: "error",
             title: "Error al crear la cuenta",
             text: "Favor de revisar que se introdujeron correctamente los datos",
+            confirmButtonText: "Entendido",
           });
           break;
       }

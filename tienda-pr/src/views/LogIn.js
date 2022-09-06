@@ -86,6 +86,7 @@ const LogIn = () => {
               icon: "info",
               title: "Seleccione una opción",
               text: "Por favor elija una opción para iniciar sesión",
+              confirmButtonText: "Entendido",
             });
             break;
           default:
@@ -93,6 +94,7 @@ const LogIn = () => {
               icon: "error",
               title: "Error al iniciar sesión",
               text: "Hubo un error en el inició de sesión con Google",
+              confirmButtonText: "Entendido",
             });
             break;
         }
@@ -102,6 +104,7 @@ const LogIn = () => {
           icon: "success",
           title: "Perfecto!",
           text: "Te has logueado con tu cuenta correctamente",
+          confirmButtonText: "Explorar página",
         }).then(() => {
           window.location.href = "/";
         });
@@ -120,6 +123,7 @@ const LogIn = () => {
           icon: "success",
           title: "Perfecto!",
           text: "Se ha iniciado sesión",
+          confirmButtonText: "Explorar página",
         }).then(() => {
           window.location.href = "/";
         });
@@ -132,6 +136,7 @@ const LogIn = () => {
             icon: "error",
             title: "Cuenta no encontrada",
             text: "Ese correo no esta registrado con ninguna cuenta",
+            confirmButtonText: "Entendido",
           });
           break;
         case "auth/invalid-email":
@@ -139,6 +144,7 @@ const LogIn = () => {
             icon: "error",
             title: "Correo invalido",
             text: "Por favor utilice un correo completo",
+            confirmButtonText: "Entendido",
           });
           break;
         case "auth/wrong-password":
@@ -146,6 +152,7 @@ const LogIn = () => {
             icon: "error",
             title: "Constraseña invalida",
             text: "Contraseña equivocada",
+            confirmButtonText: "Entendido",
           });
           break;
         default:
@@ -153,6 +160,7 @@ const LogIn = () => {
             icon: "error",
             title: "Error al iniciar sesión",
             text: "Favor de revisar que se introdujeron correctamente los datos",
+            confirmButtonText: "Entendido",
           });
           break;
       }

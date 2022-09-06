@@ -284,6 +284,7 @@ const Producto = () => {
                         title: "Producto agregado",
                         text: "El producto fue agregado correctamente al carrito",
                         showDenyButton: true,
+                        confirmButtonText: "Continuar comprando",
                         denyButtonText: "Ir a mi carrito",
                         denyButtonColor: "#7066e0",
                       }).then((r) => {

@@ -1,11 +1,7 @@
 import React, { useState, useRef } from "react";
+import { useForm } from "react-hook-form";
 import "../css/envio.css";
 import { useNavigate } from "react-router-dom";
-
-import { FiX } from "react-icons/fi";
-import { BsFillPlusCircleFill } from "react-icons/bs";
-import { BsFillDashCircleFill } from "react-icons/bs";
-import { BiCurrentLocation } from "react-icons/bi";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -18,51 +14,18 @@ import {
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { auth, db } from "../config/fbconfig";
 
-import ObtenerProductos from "./ObtenerCarrito";
-
-import prod1 from "../multimedia/prod1.JPG";
-import logo from "../multimedia/Logo.png";
-
 import Enviaing from "./Enviaing";
 
 import Swal from "sweetalert2";
 
-const Tienda = () => {
+const Envio = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-  //   const [cantidad, setCantidad] = useState(1);
-  //   const [cantidad2, setCantidad2] = useState(1);
-  //   const [subTotal, setSubtotal] = useState(0);
-  //   const [envio, setEnvio] = useState(0);
-  //   const [total, setTotal] = useState(0);
-  const [data, setData] = useState([
-    {
-      id: "",
-      nombre: "",
-      imagen: "",
-      descripcion: "",
-      precio: 3,
-      precioId: "",
-    },
-  ]);
-  const [flag, setFlag] = useState(false);
-  //   const Aumentar = (cant, setCant) => {
-  //     setCant(cant + 1);
-  //   };
-  //   const Disminuir = (cant, setCant) => {
-  //     if (cant > 1) {
-  //       setCant(cant - 1);
-  //     }
-  //   };
 
-  //   const mostrar = () => {
-  //     if (flag) {
-  //       return <div></div>;
-  //     }
-  //   };
+  const { register, handleSubmit } = useForm();
 
   const pagar = (e) => {
     e.preventDefault();
@@ -73,6 +36,7 @@ const Tienda = () => {
         icon: "error",
         title: "No tiene sesión iniciada",
         text: "Por favor inicie sesión para continuar",
+        confirmButtonText: "Ir a iniciar sesión",
       }).then(() => {
         window.location = "/Cuenta/LogIn";
       });
@@ -86,7 +50,7 @@ const Tienda = () => {
       <div className="informacion">
         <div className="contenidoEnvio">
           <div>
-            <form className="formEnvio">
+            <form className="formEnvio" onSubmit={handleSubmit(pagar)}>
               <div>
                 <div className="correoEnvio">
                   <div className="tituloEnvio">
@@ -100,6 +64,9 @@ const Tienda = () => {
                     </div>
                   </div>
                 </div>
+                <span className="aviso">
+                  Los campos requeridos estan marcados por *
+                </span>
                 <div className="infoEnvio">
                   <div className="tituloEnvio">
                     <h2>Dirección</h2>
@@ -110,49 +77,79 @@ const Tienda = () => {
                         <div className="divCampo c1">
                           <div>
                             <label>Primer nombre*</label>
-                            <input placeholder="Primer nombre*"></input>
+                            <input
+                              placeholder="Primer nombre*"
+                              {...register("primerNombre")}
+                              required
+                            ></input>
                           </div>
                         </div>
                         <div className="divCampo c1">
                           <div>
                             <label>Apellidos*</label>
-                            <input placeholder="Apellidos*"></input>
+                            <input
+                              placeholder="Apellidos*"
+                              {...register("apellidos")}
+                              required
+                            ></input>
                           </div>
                         </div>
                         <div className="divCampo">
                           <div>
                             <label>Dirección*</label>
-                            <input placeholder="Dirección*"></input>
+                            <input
+                              placeholder="Dirección*"
+                              {...register("direccion")}
+                              required
+                            ></input>
                           </div>
                         </div>
                         <div className="divCampo">
                           <div>
                             <label>Departamento (opcional)</label>
-                            <input placeholder="Departamento (opcional)"></input>
+                            <input
+                              placeholder="Departamento (opcional)"
+                              {...register("departamento")}
+                            ></input>
                           </div>
                         </div>
                         <div className="divCampo">
                           <div>
                             <label>Ciudad*</label>
-                            <input placeholder="Ciudad*"></input>
+                            <input
+                              placeholder="Ciudad*"
+                              {...register("ciudad")}
+                              required
+                            ></input>
                           </div>
                         </div>
                         <div className="divCampo">
                           <div>
                             <label>Estado</label>
-                            <input placeholder="Estado"></input>
+                            <input
+                              placeholder="Estado"
+                              {...register("estado")}
+                            ></input>
                           </div>
                         </div>
                         <div className="divCampo c1">
                           <div>
                             <label>ZIP*</label>
-                            <input placeholder="ZIP*"></input>
+                            <input
+                              placeholder="ZIP*"
+                              {...register("zip")}
+                              required
+                            ></input>
                           </div>
                         </div>
                         <div className="divCampo c1">
                           <div>
                             <label>Telefono*</label>
-                            <input placeholder="Telefono*"></input>
+                            <input
+                              placeholder="Telefono*"
+                              {...register("telefono")}
+                              required
+                            ></input>
                           </div>
                         </div>
                       </div>
@@ -164,7 +161,7 @@ const Tienda = () => {
                     <MdKeyboardArrowLeft className="flechaEnvio" /> Regresar al
                     carrito
                   </a>
-                  <button onClick={(e) => pagar(e)}>
+                  <button type="submit">
                     <span>Continuar</span>
                   </button>
                 </div>
@@ -219,4 +216,4 @@ const Tienda = () => {
   );
 };
 
-export default Tienda;
+export default Envio;

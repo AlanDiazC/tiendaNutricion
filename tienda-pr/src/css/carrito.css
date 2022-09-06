@@ -13,11 +13,46 @@
   .carrito {
     color: #333232;
   }
+  .carrito p {
+    margin: 0.5rem 0 !important;
+  }
   .carrito form {
     margin: 0;
   }
+  .remover {
+    display: inline-block;
+    vertical-align: super;
+    background: none;
+    border: none;
+    font-size: 25px;
+    text-align: right;
+    width: 25%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .btnsCantidad {
+    text-align: center;
+    margin: 20px 0 20px 0;
+  }
+  .cantidadBtn {
+    cursor: pointer;
+    display: inline;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 15%;
+    padding: 7px 15px;
+    font-size: 25px;
+  }
+  .cantidadCarro {
+    display: inline;
+    font-size: 25px;
+    padding: 0 20px;
+  }
+
   .columnasCarrito {
-    padding: 40px 0;
+    padding: 0 0 40px 0;
     margin-top: 40px;
     display: flex;
     flex-flow: row wrap;
@@ -29,11 +64,13 @@
     flex: 0 0 90%;
   }
   .contenidoColumna h4 {
-    margin-bottom: 3.125rem;
+    margin-bottom: 0;
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
     font-family: "Russo One", sans-serif;
+    display: inline-block;
+    width: 70%;
   }
   .objetoCarrito {
     position: relative;
@@ -48,9 +85,10 @@
     flex-shrink: 0;
   }
   .objCarroImg {
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
     background-color: #fafafa;
@@ -221,9 +259,44 @@
   .carrito {
     color: #333232;
   }
+  .carrito p {
+    margin: 0.5rem 0 !important;
+  }
   .carrito form {
     margin: 0;
   }
+  .remover {
+    display: inline-block;
+    vertical-align: super;
+    background: none;
+    border: none;
+    font-size: 25px;
+    text-align: right;
+    width: 25%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .btnsCantidad {
+    text-align: center;
+    margin: 20px 0 20px 0;
+  }
+  .cantidadBtn {
+    cursor: pointer;
+    display: inline;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 15%;
+    padding: 7px 15px;
+    font-size: 25px;
+  }
+  .cantidadCarro {
+    display: inline;
+    font-size: 25px;
+    padding: 0 20px;
+  }
+
   .columnasCarrito {
     border-top: 1px solid #bfb7b0;
     padding: 40px 0;
@@ -243,11 +316,13 @@
     margin: 0 auto;
   }
   .contenidoColumna h4 {
-    margin-bottom: 3.125rem;
+    margin-bottom: 0.5rem;
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
     font-family: "Russo One", sans-serif;
+    display: inline-block;
+    width: 70%;
   }
   .objetoCarrito {
     position: relative;
@@ -262,12 +337,13 @@
     flex-shrink: 0;
   }
   .objCarroImg {
-    width: 100%;
+    width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fafafa;
+    margin: 0 auto;
   }
   .objCarroImg a {
     outline: none !important;
@@ -435,8 +511,42 @@
   .carrito {
     color: #333232;
   }
+  .carrito p {
+    margin: 0.5rem 0 !important;
+  }
   .carrito form {
     margin: 0;
+  }
+  .remover {
+    display: inline-block;
+    vertical-align: super;
+    background: none;
+    border: none;
+    font-size: 25px;
+    text-align: right;
+    width: 25%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .btnsCantidad {
+    text-align: center;
+    margin: 20px 0 20px 0;
+  }
+  .cantidadBtn {
+    cursor: pointer;
+    display: inline;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 15%;
+    padding: 7px 15px;
+    font-size: 25px;
+  }
+  .cantidadCarro {
+    display: inline;
+    font-size: 25px;
+    padding: 0 20px;
   }
   .columnasCarrito {
     border-top: 1px solid #bfb7b0;
@@ -456,11 +566,13 @@
     margin: 0 auto;
   }
   .contenidoColumna h4 {
-    margin-bottom: 3.125rem;
+    margin-bottom: 0.5rem;
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
     font-family: "Russo One", sans-serif;
+    display: inline-block;
+    width: 70%;
   }
   .objetoCarrito {
     position: relative;
@@ -475,12 +587,13 @@
     flex-shrink: 0;
   }
   .objCarroImg {
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fafafa;
+    margin: 0 auto;
   }
   .objCarroImg a {
     outline: none !important;
@@ -648,8 +761,42 @@
   .carrito {
     color: #333232;
   }
+  .carrito p {
+    margin: 0.5rem 0 !important;
+  }
   .carrito form {
     margin: 0;
+  }
+  .remover {
+    display: inline-block;
+    vertical-align: super;
+    background: none;
+    border: none;
+    font-size: 25px;
+    text-align: right;
+    width: 25%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .btnsCantidad {
+    text-align: center;
+    margin: 20px 0 20px 0;
+  }
+  .cantidadBtn {
+    cursor: pointer;
+    display: inline;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 15%;
+    padding: 7px 15px;
+    font-size: 25px;
+  }
+  .cantidadCarro {
+    display: inline;
+    font-size: 25px;
+    padding: 0 20px;
   }
   .columnasCarrito {
     border-top: 1px solid #bfb7b0;
@@ -669,11 +816,13 @@
     margin: 0 auto;
   }
   .contenidoColumna h4 {
-    margin-bottom: 3.125rem;
+    margin-bottom: 0.5rem;
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
     font-family: "Russo One", sans-serif;
+    display: inline-block;
+    width: 70%;
   }
   .objetoCarrito {
     position: relative;
@@ -688,12 +837,13 @@
     flex-shrink: 0;
   }
   .objCarroImg {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fafafa;
+    margin: 0 auto;
   }
   .objCarroImg a {
     outline: none !important;

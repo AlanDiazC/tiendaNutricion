@@ -2,15 +2,11 @@ import React, { useState, useRef } from "react";
 import "../css/homepage.css";
 import ReactPlayer from "react-player";
 
-import { FaShoppingCart } from "react-icons/fa";
-
 import icono1 from "../multimedia/icono1.png";
 import icono2 from "../multimedia/icono2.png";
 import icono3 from "../multimedia/icono3.png";
 
-import video from "../multimedia/reel2.MOV";
-
-// import ObtenerProductos from "../views/ObtenerProductos";
+import Correo from "./correo";
 
 import { BsInstagram } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
@@ -102,7 +98,6 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="seccion3"></div>
       <div className="seccion4">
         <div>
           <div className="seccion4Padding">
@@ -237,48 +232,7 @@ const Homepage = () => {
           </div>
         </div>
       </div> */}
-
-      <div className="seccion8">
-        <div className="seccion8Padding">
-          <div className="containerSec8">
-            <div className="rowSec8">
-              <div className="textoSec8">
-                <p>
-                  Consultas sobre distribución y productos al por mayor <br />
-                  Envíenos un correo a pr.nutritionmx@gmail.com
-                </p>
-              </div>
-              <div className="formSec8">
-                <form>
-                  <input type="hidden" className="sec8Input1" />
-                  <input type="hidden" className="sec8Input1" />
-                  <div className="form-group">
-                    <input type="hidden" />
-                    <input
-                      type="email"
-                      className="form-control"
-                      placeholder="Manda nos un correo"
-                    />
-                    <input type="submit" className="formBtn" />
-                  </div>
-                </form>
-                <ul>
-                  <li>
-                    <a href="https://wa.me/525516820762">
-                      <BsWhatsapp />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/pr.nutritionmx/?igshid=YmMyMTA2M2Y=">
-                      <BsInstagram />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Correo />
     </div>
   );
 };

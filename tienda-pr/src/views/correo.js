@@ -171,58 +171,91 @@ class Contact extends React.Component {
     const { name, email, message } = this.state;
 
     return (
-      <div className="contact content all">
-        <div className="containerContacto">
-          <div className="contactoInfoContainer">
-            <ContactInfo>
-              <h1>Redes Sociales</h1>
-
-              <a href="https://www.instagram.com/pr.nutritionmx/?igshid=YmMyMTA2M2Y=">
-                <BsInstagram size={55} color={"red"} className="mailIcon" />
-              </a>
-              <a href="https://wa.me/525516820762">
-                <BsWhatsapp size={55} color={"green"} className="mailIcon" />
-              </a>
-
-              {/* <p>Get in touch with me at anytime if you have any question.</p>
-                        <p>Ues the form to the righ or my details below and I'll get back to you ASAP.</p> */}
-              {/* <a href="mailto:liangli.0311@gmail.com" subject="Ciao Liang">liangli.0311@gmail.com</a>   */}
-            </ContactInfo>
-          </div>
-
-          <Card>
-            <h1>¡Contactanos!</h1>
-            <Form onSubmit={this.handleSubmit}>
-              {/* <TextInput
-                {...name}
-                onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
-                onChange={this.handleChange}
-              /> */}
-              <TextInput
-                {...email}
-                onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
-                onChange={this.handleChange}
-              />
-              <TextArea
-                {...message}
-                onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
-                onChange={this.handleChange}
-              />
-              <div className="enviar">
-                <Button>Enviar</Button>
-
-                <Recaptcha
-                  sitekey="6Lc9hngeAAAAALwbAJ-IRkBfsY-BoxqIGgxEwX0B"
-                  onChange={this.recaptchacallback}
-                />
+      <div className="seccion8">
+        <div className="seccion8Padding">
+          <div className="containerSec8">
+            <div className="rowSec8">
+              <div className="textoSec8">
+                <p>
+                  Consultas sobre distribución y productos al por mayor <br />
+                  Envíenos un correo a pr.nutritionmx@gmail.com
+                </p>
               </div>
-            </Form>
-          </Card>
+              <div className="formSec8">
+                <form>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control mensajeCorreo"
+                      placeholder="Manda nos un correo"
+                      {...message}
+                      onChange={this.handleChange}
+                    />
+                    <div className="datosCorreoHP">
+                      <input
+                        type="email"
+                        className="form-control"
+                        placeholder="Email"
+                        {...email}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                    <div className="submitCorreoHP">
+                      <input type="submit" className="formBtn" />
+                    </div>
+                    <Recaptcha
+                      className="captcha"
+                      sitekey="6Lc9hngeAAAAALwbAJ-IRkBfsY-BoxqIGgxEwX0B"
+                      onChange={this.recaptchacallback}
+                    />
+                  </div>
+                </form>
+                <ul>
+                  <li>
+                    <a href="https://wa.me/525516820762">
+                      <BsWhatsapp />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/pr.nutritionmx/?igshid=YmMyMTA2M2Y=">
+                      <BsInstagram />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      //   <div className="contact content all">
+      //     <div className="containerContacto">
+      //       <Card>
+      //         <h1>¡Contactanos!</h1>
+      //         <Form onSubmit={this.handleSubmit}>
+      //           <TextInput
+      //             {...email}
+      //             onFocus={this.handleFocus}
+      //             onBlur={this.handleBlur}
+      //             onChange={this.handleChange}
+      //           />
+      //           <TextArea
+      //             {...message}
+      //             onFocus={this.handleFocus}
+      //             onBlur={this.handleBlur}
+      //             onChange={this.handleChange}
+      //           />
+      //           <div className="enviar">
+      //             <Button>Enviar</Button>
+
+      //             <Recaptcha
+      //               sitekey="6Lc9hngeAAAAALwbAJ-IRkBfsY-BoxqIGgxEwX0B"
+      //               onChange={this.recaptchacallback}
+      //             />
+      //           </div>
+      //         </Form>
+      //       </Card>
+      //     </div>
+      //   </div>
     );
   }
 }

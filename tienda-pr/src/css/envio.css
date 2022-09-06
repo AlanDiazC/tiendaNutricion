@@ -1,4 +1,9 @@
 @media only screen and (max-width: 600px) {
+  .aviso {
+    color: #737373;
+    padding-left: 0.5714rem;
+    font-size: 15px;
+  }
   .EnvioContainer {
     padding: 0 4%;
     width: 90%;
@@ -186,6 +191,7 @@
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 1em;
+    width: 100%;
   }
   .imagenProdEnvio {
     padding-top: 0;
@@ -243,7 +249,6 @@
     padding-top: 0;
     padding-bottom: 0;
     width: 100%;
-    padding-left: 40px;
   }
   .nombreProdEnvio span {
     font-size: 0.875rem;
@@ -372,6 +377,10 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .aviso {
+    color: #737373;
+    padding-left: 0.5714rem;
+  }
   .EnvioContainer {
     padding: 0 4%;
     width: 90%;
@@ -634,7 +643,7 @@
     padding-bottom: 0;
     vertical-align: top;
     white-space: nowrap;
-    margin-left: 350px;
+    margin-left: 250px;
     padding: 0;
     font-weight: normal;
     font-size: 1.4em;
@@ -743,6 +752,10 @@
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .aviso {
+    color: #737373;
+    font-size: 15px;
+  }
   .EnvioContainer {
     display: flex;
     flex: 1 0 auto;
@@ -997,7 +1010,6 @@
   .nombreProdEnvio {
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 20px;
     vertical-align: top;
     text-align: left;
     width: 100%;
@@ -1127,6 +1139,10 @@
 }
 
 @media only screen and (min-width: 1596px) {
+  .aviso {
+    color: #737373;
+    font-size: 15px;
+  }
   .EnvioContainer {
     display: flex;
     flex: 1 0 auto;
@@ -1380,7 +1396,6 @@
   .nombreProdEnvio {
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 20px;
     vertical-align: top;
     text-align: left;
     width: 100%;

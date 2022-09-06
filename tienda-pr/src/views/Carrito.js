@@ -34,65 +34,8 @@ const Tienda = () => {
       precioId: "",
     },
   ]);
-  const [flag, setFlag] = useState(false);
-
-  const Aumentar = (cant, setCant) => {
-    setCant(cant + 1);
-  };
-  const Disminuir = (cant, setCant) => {
-    if (cant > 1) {
-      setCant(cant - 1);
-    }
-  };
   const [totalR, setTotalR] = useState(0);
-  const mostrar = () => {
-    return (
-      <div>
-        <Cart totalR={totalR} setTotalR={setTotalR} />
-        {/* <div className="objetoCarrito">
-          <div className="objCarroIzq">
-            <div className="objCarroImg">
-              <a>
-                <img src={data[0].imagen} />
-              </a>
-            </div>
-          </div>
-          <div className="objCarroDer">
-            <div className="objCarroTitulo">
-              <a>
-                <h3>{data[0].nombre}</h3>
-              </a>
-              <button className="objCarroBorrar">
-                <BsFillTrashFill />
-              </button>
-            </div>
-            <div className="objCarroAbajo">
-              <div className="objCarroCantidad">
-                <div className="objCarroCantIcono">
-                  <BsDash />
-                </div>
-                <input
-                  className="objCarroCantNum"
-                  type="text"
-                  value="1"
-                ></input>
-                <div className="objCarroCantIcono">
-                  <BsPlus />
-                </div>
-              </div>
-              <span className="objCarroPreico">$ {data[0].precio}</span>
-            </div>
-          </div>
-        </div> */}
-      </div>
-    );
-  };
 
-  const pagar = () => {
-    if (flag) {
-      navigate("/payments/" + data[0].precioId);
-    }
-  };
   return (
     <div className="CarroContainer">
       {/* <ObtenerProductos
@@ -112,7 +55,7 @@ const Tienda = () => {
                   <div className="columCarro">
                     <div className="contenidoColumna">
                       <h4>Tu Carrito</h4>
-                      {mostrar()}
+                      <Cart totalR={totalR} setTotalR={setTotalR} />
                     </div>
                   </div>
                   <div className="columCarro">
