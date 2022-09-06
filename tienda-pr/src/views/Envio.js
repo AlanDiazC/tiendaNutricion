@@ -25,6 +25,8 @@ import logo from "../multimedia/Logo.png";
 
 import Enviaing from "./Enviaing";
 
+import Swal from "sweetalert2";
+
 const Tienda = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
@@ -36,7 +38,6 @@ const Tienda = () => {
   //   const [subTotal, setSubtotal] = useState(0);
   //   const [envio, setEnvio] = useState(0);
   //   const [total, setTotal] = useState(0);
-
   const [data, setData] = useState([
     {
       id: "",
@@ -63,10 +64,19 @@ const Tienda = () => {
   //     }
   //   };
 
-  const pagar = () => {
-    // if (flag) {
-    navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
-    //}
+  const pagar = (e) => {
+    e.preventDefault();
+    if (user) {
+      navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "No tiene sesión iniciada",
+        text: "Por favor inicie sesión para continuar",
+      }).then(() => {
+        window.location = "/Cuenta/LogIn";
+      });
+    }
   };
 
   const [totalR, setTotalR] = useState(0);
@@ -154,7 +164,7 @@ const Tienda = () => {
                     <MdKeyboardArrowLeft className="flechaEnvio" /> Regresar al
                     carrito
                   </a>
-                  <button onClick={() => pagar()}>
+                  <button onClick={(e) => pagar(e)}>
                     <span>Continuar</span>
                   </button>
                 </div>

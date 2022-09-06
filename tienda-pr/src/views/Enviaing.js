@@ -29,7 +29,7 @@ const Cart = ({ totalR, setTotalR }) => {
                       <div className="imgProdEnvio">
                         <img src={item.imagen[0]} />
                       </div>
-                      <span className="cantidadProdEnvio">1</span>
+                      <span className="cantidadProdEnvio">{item.quantity}</span>
                     </div>
                   </td>
                   <tn className="nombreProdEnvio">
