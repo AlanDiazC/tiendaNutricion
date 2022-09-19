@@ -18,8 +18,13 @@ import { collection, addDoc, query, getDocs, where } from "@firebase/firestore";
 import Swal from "sweetalert2";
 import "../css/logIn.css";
 import useToken from "../useToken";
-import { BsGoogle } from "react-icons/bs";
+import { BsFillPersonFill, BsGoogle } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
+
+import { getAuth, signInAnonymously } from "firebase/auth";
+
+
+
 
 // Funciones
 
@@ -70,6 +75,30 @@ const LogIn = () => {
     setLoginPassword(e.target.value);
   };
   const dropdownRef = useRef(null);
+
+  const logInAnonymous = () => {
+    const auth = getAuth();
+    signInAnonymously(auth)
+      .then(() => {
+        // Signed in..
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ...
+      })
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Perfecto!",
+          text: "Te has logueado con tu cuenta correctamente",
+          confirmButtonText: "Explorar página",
+        }).then(() => {
+          window.location.href = "/";
+        });
+      });
+    }
+
 
   const loginGoogle = () => {
     signInWithPopup(auth, providerGoogle)
@@ -179,6 +208,10 @@ const LogIn = () => {
               <a href="#" className="social" onClick={loginGoogle}>
                 <BsGoogle />
               </a>
+              <a href="#" className="social" onClick={logInAnonymous}>
+                <BsFillPersonFill />
+              </a>
+              
               <form>
                 <label>Email</label>
                 <input

@@ -7,10 +7,10 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   collection,
   addDoc,
-  getDocs,
-  query,
-  where,
-  onSnapshot,
+  onSnapshot
+  // getDocs,
+  // query,
+  // where,
 } from "@firebase/firestore";
 
 import { useParams } from "react-router-dom";
@@ -32,48 +32,42 @@ const Pagos = () => {
     cart.forEach((element) => {
       list.push({
         price: element.priceID, // RECURRING_PRICE_ID
-
         quantity: element.quantity,
       });
-      envio = envio + element.quantity * 1.5;
+      envio += (element.quantity * 1.5);
     });
     var tosend;
     switch (envio) {
       case 1:
       case 1.5:
-      case 2:
-        // envio med
+      case 2: // envio med
         tosend = "price_1LX4ccJZ8SHfQTCm0q1u92ee";
         break;
 
-      case 3:
-        // envio large
+      case 3: // envio large
         tosend = "price_1LX4cNJZ8SHfQTCmTqrz6YXL";
-
         break;
 
-      case 4.5:
-        // envio xllarge
+      case 4.5: // envio xllarge
         tosend = "price_1LX4c9JZ8SHfQTCmh5oZkt5z";
         break;
 
-      default:
-        //Envio xll
+      default: //Envio xll
         tosend = "price_1LX4c1JZ8SHfQTCmGHBsY1Ir";
         break;
     }
-    //Incluimos el shipment
+    //Incluimos el costo del envio
     list.push({
       price: tosend, // RECURRING_PRICE_ID
       quantity: 1,
     });
     console.log(list);
+
     const docRef = await addDoc(
       collection(db, `clientes/${auth.currentUser.uid}/checkout_sessions`),
       {
-        mode: "payment",
-        line_items: list, //precio parametro
-        // [
+        // line_items:  
+        // [ //precio parametro
         //   {
         //     price: cart[0].priceID,
         //     quantity: cart[0].quantity,
@@ -83,6 +77,8 @@ const Pagos = () => {
         //     quantity: 1,
         //   },
         // ], //precio parametro
+        line_items: list, //precio parametro
+        mode: "payment",
         success_url: window.location.origin,
         cancel_url: window.location.origin,
       }
@@ -119,7 +115,7 @@ const Pagos = () => {
     });
   };
   const revision = () => {
-    if (poli == true) {
+    if (poli === true) {
       return (
         <div>
           <div className="botonPagos">
