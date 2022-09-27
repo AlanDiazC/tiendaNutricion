@@ -20,11 +20,7 @@ const ObtenerProductos = ({ data, setData, setFlag }) => {
         var aux = 0;
         for (var i = 0; i < len; i++) {
           n += 1;
-          if (
-            prod[n].id == "prod_MFZmImrSEVSC7X" ||
-            prod[n].id == "prod_MFZmQ8Qc70ucU1" ||
-            prod[n].id == "prod_MLPD72As2w6B3C"
-          ) {
+          if (prod[n].data().metadata.tienda == "true") {
             const precio = collection(db, `productos/${prod[n].id}/prices`);
             const precioData = await getDocs(precio);
             const precioDoc = precioData.docs;
