@@ -17,6 +17,7 @@ import { useParams } from "react-router-dom";
 import { BsReverseBackspaceReverse } from "react-icons/bs";
 //Se necesita modificar para que sea compatible con el carrito
 const Pagos = () => {
+  console.log("Pagos");
   const { idPrecio } = useParams();
   const [poli, setPoli] = useState(false);
   const cart = useSelector((state) => state);
@@ -36,6 +37,7 @@ const Pagos = () => {
       });
       envio += (element.quantity * 1.5);
     });
+    console.log(list);
     var tosend;
     switch (envio) {
       case 1:

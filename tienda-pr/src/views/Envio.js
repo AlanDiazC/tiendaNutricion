@@ -20,7 +20,7 @@ import Swal from "sweetalert2";
 
 const Envio = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({}); 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
@@ -28,7 +28,7 @@ const Envio = () => {
   const { register, handleSubmit } = useForm();
 
   const pagar = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     if (user) {
       navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
     } else {
