@@ -41,7 +41,7 @@ const Cart = ({ totalR, setTotalR }) => {
                     X
                   </button>
                   <p>
-                    pecio: {/*M.N*/}$ {item.precio}
+                    precio: {/*M.N*/}$ {item.precio}
                   </p>
                   <p>
                     cantidad : {/*M.N*/} {item.quantity}
