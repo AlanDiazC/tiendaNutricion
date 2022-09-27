@@ -24,8 +24,8 @@ const Tienda = () => {
             <a className="verMasTop" href={"/Producto/" + data[i].id}>
               <img className="imgProd" src={data[i].imagen} />
               <div className="datosProd">
-                <span className="nombreProd">{data[i].nombre}</span>
-                <span className="precioProd">$ {data[i].precio}</span>
+                <p className="nombreProd">{data[i].nombre}</p>
+                <p className="precioProd">$ {data[i].precio}</p>
               </div>
               <span className="verMasProd">Ver más</span>
             </a>

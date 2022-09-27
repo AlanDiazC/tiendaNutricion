@@ -61,12 +61,14 @@
     margin-right: 8%;
     text-transform: uppercase;
     color: #000 !important;
+    margin: 0;
   }
   .precioProd {
     font-size: 20px;
     margin: 0;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     color: #000 !important;
+    margin: 0;
   }
   /* .verMasTop {
     border-top: 2px solid #000000;
@@ -177,12 +179,14 @@
     margin-right: 8%;
     text-transform: uppercase;
     color: #000 !important;
+    margin: 0;
   }
   .precioProd {
     font-size: 30px;
     margin: 0;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     color: #000 !important;
+    margin: 0;
   }
   /* .verMasTop {
     border-top: 2px solid #000000;
@@ -294,12 +298,14 @@
     margin-right: 8%;
     text-transform: uppercase;
     color: #000 !important;
+    margin: 0;
   }
   .precioProd {
     font-size: 20px;
     margin: 0;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     color: #000 !important;
+    margin: 0;
   }
   /* .verMasTop {
     border-top: 2px solid #000000;
@@ -411,12 +417,14 @@
     margin-right: 8%;
     text-transform: uppercase;
     color: #000 !important;
+    margin: 0;
   }
   .precioProd {
     font-size: 20px;
     margin: 0;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     color: #000 !important;
+    margin: 0;
   }
   .verMasTop {
     /* border-top: 2px solid #000000;
