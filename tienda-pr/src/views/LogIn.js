@@ -208,9 +208,9 @@ const LogIn = () => {
               <a href="#" className="social" onClick={loginGoogle}>
                 <BsGoogle />
               </a>
-              {/* <a href="#" className="social" onClick={logInAnonymous}>
-                <BsFillPersonFill />
-              </a> */}
+              <a href="#" className="social" onClick={logInAnonymous}>
+                <BsFillPersonFill /> Invitado
+              </a>
               
               <form>
                 <label>Email</label>
