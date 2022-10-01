@@ -20,7 +20,7 @@ import Swal from "sweetalert2";
 
 const Envio = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState({}); 
+  const [user, setUser] = useState({});
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
@@ -54,14 +54,11 @@ const Envio = () => {
               <div>
                 <div className="correoEnvio">
                   <div className="tituloEnvio">
-                    <div>
-                      <h2>Información de contacto:</h2>
-                      <h3>
-                        Correo:
-                        {user?.email ??
-                          "invalido,Logueate para pasar a el Pago"}
-                      </h3>
-                    </div>
+                    {user?.email && (
+                      <div>
+                        <h3>Correo: {user.email}</h3>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <span className="aviso">
