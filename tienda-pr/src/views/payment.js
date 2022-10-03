@@ -83,6 +83,7 @@ const Pagos = () => {
         mode: "payment",
         success_url: window.location.origin,
         cancel_url: window.location.origin,
+        allow_promotion_codes: true
       }
     );
     /*     const docRef = await db
