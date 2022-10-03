@@ -76,11 +76,16 @@ const LogIn = () => {
   };
   const dropdownRef = useRef(null);
 
+
   const logInAnonymous = () => {
     const auth = getAuth();
     signInAnonymously(auth)
-      .then(() => {
+      .then((e) => {
         // Signed in..
+        const result = creatingReferencetoUID(
+          auth.currentUser.uid,
+          auth.currentUser.email
+        );
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -91,7 +96,7 @@ const LogIn = () => {
         Swal.fire({
           icon: "success",
           title: "Perfecto!",
-          text: "Te has logueado con tu cuenta correctamente",
+          text: "Haz entrado como invitado",
           confirmButtonText: "Explorar página",
         }).then(() => {
           window.location.href = "/";

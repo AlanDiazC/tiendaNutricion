@@ -703,3 +703,8 @@
     text-transform: uppercase;
   }
 }
+
+a.social {
+  margin-left: 2%;
+  margin-right: 2%;
+}

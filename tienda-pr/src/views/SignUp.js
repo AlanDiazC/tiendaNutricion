@@ -20,6 +20,8 @@ import { BsGoogle } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { Navigate } from "react-router-dom";
 
+import { getAuth, signInAnonymously } from "firebase/auth";
+
 // Funciones
 
 // Componentes

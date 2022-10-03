@@ -35,15 +35,16 @@ const Policia = ({ poli, setPoli }) => {
     const getLevel = async () => {
       try {
         const usersCollectionReference = collection(db, "usersRegistry");
-        //   console.log("REFERENCIA", usersCollectionReference);
+        // console.log("REFERENCIA", usersCollectionReference);
         const uid2 = user;
+        // console.log("UID2", uid2);
         if (uid2 != null) {
           if (uid2.uid) {
             const uid = uid2.uid;
-            //   console.log("UID CLIENTE", uid);
+            // console.log("UID CLIENTE", uid);
             const q = query(usersCollectionReference, where("UID", "==", uid));
             const loggedUserData = await getDocs(q);
-            // loggedUserData.forEach((doc) => { console.log(doc.data())});
+            // loggedUserData.forEach((doc) => { console.log("getDocs", doc.data())});
             const trueLevel = loggedUserData.docs[0].data().nivelCuenta;
             //   console.log("trustLevel", trueLevel);
             setLevel(trueLevel);

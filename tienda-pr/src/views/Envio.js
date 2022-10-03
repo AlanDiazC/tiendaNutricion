@@ -30,6 +30,7 @@ const Envio = () => {
   const pagar = (e) => {
     //e.preventDefault();
     if (user) {
+      console.log("usuario: " + user)
       navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
     } else {
       Swal.fire({
