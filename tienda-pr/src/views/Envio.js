@@ -18,20 +18,22 @@ import Enviaing from "./Enviaing";
 
 import Swal from "sweetalert2";
 
+import Payment from "./payment";
+
 const Envio = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
+  const [uid, setUid] = useState("");
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-
+  Payment(uid);
   const { register, handleSubmit } = useForm();
 
   const pagar = (e) => {
     //e.preventDefault();
     if (user) {
-      console.log("usuario: " + user)
-      navigate("/payments/" + "price_1L50FtAUDqNuV9CvLBC0i8ME");
+      setUid(auth.currentUser.uid);
     } else {
       Swal.fire({
         icon: "error",
