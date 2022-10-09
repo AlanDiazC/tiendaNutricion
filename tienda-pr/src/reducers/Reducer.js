@@ -1,7 +1,9 @@
 const Reducer = (cart = [], action) => {
-    console.log("reducer:" + cart.length)
+  // console.log("reducer:" + cart.length);
   if (action.type === "ADD") {
-    let tempcart = cart.filter((item) => item.priceID === action.payload.priceID);
+    let tempcart = cart.filter(
+      (item) => item.priceID === action.payload.priceID
+    );
     if (tempcart < 1) {
       return [...cart, action.payload];
     } else {
@@ -9,7 +11,12 @@ const Reducer = (cart = [], action) => {
     }
   }
   if (action.type === "REMOVE") {
-    return cart.filter((item) => item.id !== action.payload.id);
+    return cart.filter((item) => {
+      if (item.priceID === action.payload.priceID) {
+        return item.id !== action.payload.id;
+      }
+      return item;
+    });
   }
   if (action.type === "INCREASE") {
     let tempcart = cart.map((item) => {
