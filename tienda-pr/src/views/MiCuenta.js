@@ -23,7 +23,7 @@ const MiCuenta = () => {
   const obtenerDatos = () => {
     revisar();
 
-    const nombre = user.displayName;
+    const nombre = user.displayName || "Invitado";
     const mail = user.email;
     const cel = user.phoneNumber;
     return (
