@@ -73,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### React Icons
 
 [react-icons.github](https://facebook.github.io/create-react-app/docs/)
+
+### Stripe Session
+
+[Object Session](https://stripe.com/docs/api/checkout/sessions/object)
