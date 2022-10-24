@@ -8,6 +8,8 @@ import {
   collection,
   addDoc,
   onSnapshot,
+  doc,
+  getDoc
   // getDocs,
   // query,
   // where,
@@ -155,8 +157,25 @@ const Payment = (uid) => {
 
   const [urlLink, setUrlLink] = useState("");
 
+  //console.log("auth.currentUser", auth.currentUser);  // Test
+
   useEffect(async () => {
     console.log(uid);
+    let freeShipping = false;
+    // test
+    if (auth?.currentUser?.uid) {
+      const docRef = doc(db, `clientes/${auth.currentUser.uid}`);
+      const docSnap = await getDoc( docRef );
+    
+      if (docSnap.exists()) {
+        //console.log("Document data:", docSnap.data());
+        //console.log("Document data:", docSnap.data().freeShipping);
+        if (docSnap.data().freeShipping == true){freeShipping = true}
+      } else {
+        //console.log("No such document")
+      }
+    }
+    //Test
     const list = [];
     var envio = 0;
     cart.forEach((element) => {
@@ -187,11 +206,13 @@ const Payment = (uid) => {
         break;
     }
     //Incluimos el costo del envio
-    list.push({
-      price: tosend, // RECURRING_PRICE_ID
-      quantity: 1,
-    });
-    console.log(list);
+    if (freeShipping != true) {
+      list.push({
+        price: tosend, // RECURRING_PRICE_ID
+        quantity: 1,
+      });
+    }
+    //console.log(list); // Test
 
     if (auth?.currentUser?.uid) {
       const docRef = await addDoc(
