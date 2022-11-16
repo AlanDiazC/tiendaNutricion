@@ -44,7 +44,7 @@ const App = () => {
           <Route path="/MiCuenta" element={<MiCuenta />} />
           <Route path="/Producto/:idProd" element={<Producto />} />
           <Route path="/MiCarrito" element={<Carrito />} />
-          <Route path="/Envio" element={<Envio />} />
+          {/* <Route path="/Envio" element={<Envio />} /> */}
           <Route path="/Tienda" element={<Tienda />} />
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Cuenta/SignUp" element={<SignUp />} />
