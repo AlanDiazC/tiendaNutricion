@@ -178,11 +178,13 @@ const Payment = (uid) => {
     //Test
     const list = [];
     var envio = 0;
+    let total_price = 0;
     cart.forEach((element) => {
       list.push({
         price: element.priceID, // RECURRING_PRICE_ID
         quantity: element.quantity,
       });
+      total_price += (element.precio*element.quantity);
       envio += element.quantity * 1.5;
     });
     var tosend;
@@ -206,7 +208,12 @@ const Payment = (uid) => {
         break;
     }
     //Incluimos el costo del envio
-    if (freeShipping != true) {
+    if ((freeShipping)||(total_price >= 1000)) {
+      list.push({
+        price: "price_1M3lxdJZ8SHfQTCmXP4Si4Mu"  , //freeShipping
+        quantity: 1,
+      });
+    }else{
       list.push({
         price: tosend, // RECURRING_PRICE_ID
         quantity: 1,
@@ -223,6 +230,7 @@ const Payment = (uid) => {
           success_url: window.location.origin,
           cancel_url: window.location.origin,
           allow_promotion_codes: true,
+          phone_number_collection: {enabled: true}
         }
       );
       onSnapshot(docRef, (snap) => {

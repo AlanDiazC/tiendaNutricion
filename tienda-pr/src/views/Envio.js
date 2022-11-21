@@ -146,8 +146,10 @@ const Envio = () => {
                           <div>
                             <label>Telefono*</label>
                             <input
+                              type="tel"
                               placeholder="Telefono*"
                               {...register("telefono")}
+                              pattern="[0-9]{10}"
                               required
                             ></input>
                           </div>
