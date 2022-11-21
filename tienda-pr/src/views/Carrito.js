@@ -1,8 +1,15 @@
 import React, { useState, useRef } from "react";
-import { useForm } from "react-hook-form";
 import "../css/carrito.css";
 import { useNavigate } from "react-router-dom";
 
+import { FiX } from "react-icons/fi";
+import { BsFillPlusCircleFill } from "react-icons/bs";
+import { BsFillDashCircleFill } from "react-icons/bs";
+import { BiCurrentLocation } from "react-icons/bi";
+
+import ObtenerProductos from "./ObtenerCarrito";
+
+import prod1 from "../multimedia/prod1.JPG";
 import Cart from "./Cart";
 
 import Swal from "sweetalert2";
@@ -47,10 +54,28 @@ const Tienda = () => {
     }
   };
 
+  const [data, setData] = useState([
+    {
+      id: "",
+      nombre: "",
+      imagen: "",
+      descripcion: "",
+      precio: 0,
+      precioId: "",
+    },
+  ]);
   const [totalR, setTotalR] = useState(0);
 
   return (
     <div className="CarroContainer">
+      {/* <ObtenerProductos
+        setData={setData}
+        data={data}
+        setFlag={setFlag}
+        setSubtotal={setSubtotal}
+        setEnvio={setEnvio}
+        setTotal={setTotal}
+      /> */}
       <div>
         <section className="secCarrito">
           <div className="container">
@@ -70,10 +95,8 @@ const Tienda = () => {
                         <span className="carroSubTotal">Subtotal:</span>
                         <span className="carroSubTotalPrecio">$ {totalR}</span>
                       </p>
-                      <a>
-                        <button type="button" onClick={() => pagar()}>
-                          Continuar al pago
-                        </button>
+                      <a href="/Envio">
+                        <button type="button">Continuar al pago</button>
                       </a>
                     </div>
                   </div>
