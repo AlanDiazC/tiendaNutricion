@@ -13,6 +13,7 @@ import {
 } from "@firebase/auth";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { auth, db } from "../config/fbconfig";
+import { doc, updateDoc} from "@firebase/firestore";
 
 import Enviaing from "./Enviaing";
 
@@ -30,10 +31,26 @@ const Envio = () => {
   Payment(uid);
   const { register, handleSubmit } = useForm();
 
-  const pagar = (e) => {
+  const pagar = async function(e){
     //e.preventDefault();
     if (user) {
       setUid(auth.currentUser.uid);
+
+      //Update user address
+      const docRef = doc(db, `clientes/${auth.currentUser.uid}`);
+      await updateDoc(docRef, {
+        first_name: register.primerNombre,
+        last_name: register.apellidos,
+        phone_number: register.telefono,
+        address: {
+          city: register.ciudad,
+          line1: register.direccion,
+          line2: register.departamento,
+          postal_code: register.zip,
+          state: register.state
+        }
+      })
+
     } else {
       Swal.fire({
         icon: "error",

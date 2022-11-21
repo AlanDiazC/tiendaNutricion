@@ -7,7 +7,7 @@ import Cart from "./Cart";
 
 import Swal from "sweetalert2";
 
-import Payment from "./payment";
+import Envio from "./Envio"
 
 import { auth, db } from "../config/fbconfig";
 
@@ -28,7 +28,7 @@ const Tienda = () => {
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-  Payment(uid);
+  Envio(uid);
   const { register, handleSubmit } = useForm();
 
   const pagar = (e) => {
