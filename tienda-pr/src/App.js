@@ -12,9 +12,6 @@ import LogIn from "./views/LogIn";
 import MiCuenta from "./views/MiCuenta";
 import Producto from "./views/Producto";
 import Footer from "./views/Footer";
-// import PuenteCuenta from "./views/PuenteCuenta";
-// import PuenteCarrito from "./views/PuenteCarrito";
-import QnA from "./views/Q&A.js";
 import Envio from "./views/Envio.js";
 
 const App = () => {
@@ -34,17 +31,10 @@ const App = () => {
 
       <Router>
         <Routes>
-          {/*
-          <Route path="/signUp" element={<PuenteCuenta />} />
-          
-          <Route path="/Producto/:idProd" element={<Producto />} /> 
-          <Route path="/MiCuenta" element={<PuenteCuenta />} />
-          <Route path="/QnA" element={<QnA />} />
-        */}
           <Route path="/MiCuenta" element={<MiCuenta />} />
           <Route path="/Producto/:idProd" element={<Producto />} />
           <Route path="/MiCarrito" element={<Carrito />} />
-          {/* <Route path="/Envio" element={<Envio />} /> */}
+          <Route path="/Envio" element={<Envio />} />
           <Route path="/Tienda" element={<Tienda />} />
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/Cuenta/SignUp" element={<SignUp />} />
