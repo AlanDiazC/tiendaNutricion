@@ -36,7 +36,7 @@ const Tienda = () => {
     setUser(currentUser);
   });
   Envio(uid);
-  const { register, handleSubmit } = useForm();
+  //const { register, handleSubmit } = useForm();
 
   const pagar = (e) => {
     //e.preventDefault();

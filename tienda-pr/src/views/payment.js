@@ -162,6 +162,11 @@ const Payment = (uid) => {
   useEffect(async () => {
     console.log(uid);
     let freeShipping = false;
+    let address = {};
+    let phone_number = "";
+    let first_name = "";
+    let last_name = "";
+
     // test
     if (auth?.currentUser?.uid) {
       const docRef = doc(db, `clientes/${auth.currentUser.uid}`);
@@ -171,6 +176,12 @@ const Payment = (uid) => {
         //console.log("Document data:", docSnap.data());
         //console.log("Document data:", docSnap.data().freeShipping);
         if (docSnap.data().freeShipping == true){freeShipping = true}
+        address = docSnap.data().address;
+        phone_number = docSnap.data().phone_number;
+        first_name = docSnap.data().first_name;
+        last_name = docSnap.data().last_name;
+
+        console.log("address: " + address);
       } else {
         //console.log("No such document")
       }
@@ -230,7 +241,22 @@ const Payment = (uid) => {
           success_url: window.location.origin,
           cancel_url: window.location.origin,
           allow_promotion_codes: true,
-          phone_number_collection: {enabled: true}
+          phone_number_collection: {enabled: true},
+          metadata: {
+            first_name: first_name,
+            last_name: last_name,
+            phone_number: phone_number,
+            ...address
+          },
+          custom_text: {shipping_address: address.line1+' '+address.country,},
+          customer_details: {
+            address: address,
+            //email: "",
+            name: first_name+' '+last_name,
+            phone: phone_number,
+          },
+
+          shipping_address_collection: {enabled: true, allowed_countries: ["MX"]}
         }
       );
       onSnapshot(docRef, (snap) => {
