@@ -160,7 +160,7 @@ const Payment = (uid) => {
   //console.log("auth.currentUser", auth.currentUser);  // Test
 
   useEffect(async () => {
-    console.log(uid);
+    //console.log(uid);
     let freeShipping = false;
     let address = {};
     let phone_number = "";
@@ -180,8 +180,7 @@ const Payment = (uid) => {
         phone_number = docSnap.data().phone_number;
         first_name = docSnap.data().first_name;
         last_name = docSnap.data().last_name;
-
-        console.log("address: " + address);
+        
       } else {
         //console.log("No such document")
       }

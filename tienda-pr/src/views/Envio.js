@@ -39,15 +39,15 @@ const Envio = () => {
       //Update user address
       const docRef = doc(db, `clientes/${auth.currentUser.uid}`);
       await updateDoc(docRef, {
-        first_name: register.primerNombre,
-        last_name: register.apellidos,
-        phone_number: register.telefono,
+        first_name: register.primerNombre || '',
+        last_name: register.apellidos || '',
+        phone_number: register.telefono || '',
         address: {
-          city: register.ciudad,
-          line1: register.direccion,
-          line2: register.departamento,
-          postal_code: register.zip,
-          state: register.state
+          city: register.ciudad || '',
+          line1: register.direccion || '',
+          line2: register.departamento || '',
+          postal_code: register.zip || '',
+          state: register.state || '',
         }
       })
 
