@@ -132,7 +132,7 @@
     max-width: 80%;
     margin: 0 auto;
     margin-top: 40px;
-    margin-bottom: 91px;
+    margin-bottom: 40px;
     flex-grow: 1;
     padding-left: 15px;
     padding-right: 15px;
@@ -397,7 +397,7 @@
     max-width: 60%;
     margin: 0 auto;
     margin-top: 89px;
-    margin-bottom: 91px;
+    margin-bottom: 50px;
     flex-grow: 1;
     padding-left: 15px;
     padding-right: 15px;
@@ -537,280 +537,6 @@
   }
   .carousel .thumbs {
     padding: 0 !important;
-    margin: 0 !important;
-    justify-content: center;
-    text-align: center;
-  }
-  .carousel .thumb {
-    vertical-align: top;
-    width: 70px !important;
-    margin-right: 0 !important;
-  }
-  .control-dots {
-    display: none !important;
-  }
-  .carousel-slider {
-    width: 90% !important;
-    margin: 0 5% !important;
-  }
-  .carousel .thumbs-wrapper {
-    margin: 0 !important;
-  }
-
-  .prodIndividual {
-    padding: 40pxx 0;
-  }
-  .seccion_arriba_producto {
-    margin-bottom: 25px;
-    position: relative;
-  }
-  .container_producto {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1190px;
-  }
-  .producto_fila {
-    display: flex;
-  }
-  .lado_izquierdo_prod {
-    flex: 0 0 30%;
-    max-width: 30%;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: right;
-  }
-  .logo_producto {
-    text-align: center;
-    margin-top: 100px;
-    align-items: flex-start;
-  }
-  .logo_producto img {
-    max-width: 80px;
-    width: 100%;
-    height: auto;
-    margin-left: 12px;
-    vertical-align: middle;
-    border: 0;
-  }
-  .texto_del_logo {
-    margin: 42px auto 0;
-  }
-  .texto_del_logo h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  .texto_del_logo p {
-    font-size: 14px;
-  }
-  .parte_mitad_prod {
-    text-align: center;
-    flex: 0 0 30%;
-    max-width: 30%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .slide_de_imagenes {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    user-select: none;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .flecha_prod_Ant {
-    left: 0px;
-    z-index: 9;
-    background: transparent;
-    width: 22px;
-    height: 36px;
-    border: 0;
-    padding: 0;
-    line-height: 1;
-    font-size: 20px;
-    cursor: pointer;
-    top: 50%;
-    outline: none;
-    line-height: 1;
-    color: #000;
-    opacity: 0.75;
-  }
-  .flecha_prod_Ant:hover {
-    opacity: 1;
-  }
-  .flecha_prod_Sig {
-    left: 0px;
-    z-index: 9;
-    background: transparent;
-    width: 22px;
-    height: 36px;
-    border: 0;
-    padding: 0;
-    line-height: 1;
-    font-size: 20px;
-    cursor: pointer;
-    top: 50%;
-    outline: none;
-    line-height: 1;
-    color: #000;
-    opacity: 0.75;
-  }
-  .flecha_prod_Sig:hover {
-    opacity: 1;
-  }
-  .imagenes_prod {
-    width: 100%;
-    min-height: 1px;
-    display: inline-block;
-    position: relative;
-  }
-  .imagenes_prod img {
-    position: relative;
-    left: 0;
-    top: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: auto;
-  }
-  .lado_derecho_prod {
-    flex: 0 0 30%;
-    max-width: 30%;
-    margin-top: 89px;
-    margin-bottom: 91px;
-    flex-grow: 1;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .lado_derecho_prod_texto {
-    display: block;
-  }
-  .lado_derecho_prod_texto h1 {
-    font-size: 24px;
-    font-family: "Russo One", sans-serif;
-    margin-bottom: 20px;
-    line-height: 32px;
-    text-transform: uppercase;
-  }
-  .lado_derecho_prod_texto h3 {
-    margin-bottom: 12px;
-    font-size: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 700;
-  }
-  .seleccion_producto {
-    margin-bottom: 2rem;
-  }
-  .cantidad_de_productos {
-    max-width: 62px;
-    position: relative;
-  }
-  .cantidad_de_productos select {
-    padding: 0;
-    font-size: 22px;
-    line-height: 1;
-    color: #0000007d;
-    display: block;
-    font-weight: 400;
-    word-wrap: normal;
-    border-radius: 0;
-    width: 100%;
-    min-height: 37px;
-    height: 37px;
-    background: none;
-    padding: 8px 10px;
-    border: none;
-    border-bottom: 1px solid #979797;
-    margin-right: 32px;
-  }
-  .btnProd {
-    margin-bottom: 22px;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 100%;
-    margin-top: 25px;
-  }
-  .btnProd button {
-    color: white;
-    background-color: #000;
-    border-color: #000;
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 1.278;
-    letter-spacing: 0.2px;
-    padding: 0.85rem 1rem;
-    user-select: none;
-    border-radius: 0;
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  .navegacion_tab {
-    border: none;
-    justify-content: center;
-    margin-bottom: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    list-style: none;
-  }
-  .nav_item {
-    list-style: none;
-  }
-  .nav_enlace {
-    font-size: 25px;
-    border: none;
-    /* color: rgba(0, 0, 0, 0.24); */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: -1px;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    display: block;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  .nav_enlace.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  .tab_panel {
-    display: block;
-  }
-  .tab_panel.inactive {
-    display: none;
-  }
-  .instrucciones_de_uso_tab {
-    max-width: 620px;
-    margin: 50px auto 100px;
-    width: 100%;
-  }
-  .instrucciones_de_uso_tab p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 25px;
-  }
-}
-
-@media only screen and (min-width: 1596px) {
-  .beneficios {
-    margin: 0 0 10px 0 !important;
-  }
-  .tituloBeneficios {
-    font-weight: bold;
-    margin: 10px 0 !important;
-  }
-  .carousel .thumbs {
-    padding: 0 !important;
     justify-content: center;
     text-align: center;
   }
@@ -825,13 +551,14 @@
     position: relative;
   }
   .container_producto {
-    width: 100%;
+    width: 85%;
     margin-right: auto;
     margin-left: auto;
     max-width: 1190px;
   }
   .producto_fila {
-    display: flex;
+    width: 80%;
+    margin: auto;
   }
   .lado_izquierdo_prod {
     flex: 0 0 25%;
@@ -865,10 +592,11 @@
     font-size: 14px;
   }
   .parte_mitad_prod {
-    flex: 0 0 40%;
-    max-width: 40%;
-    padding-left: 15px;
+    display: inline-block;
+    max-width: 30%;
+    padding-left: 15%;
     padding-right: 15px;
+    margin-top: 15px;
   }
   .slide_de_imagenes {
     position: relative;
@@ -935,11 +663,13 @@
     height: auto;
   }
   .lado_derecho_prod {
-    flex: 0 0 25%;
-    max-width: 25%;
-    margin-top: 89px;
+    /* flex: 0 0 25%; */
+    max-width: 30%;
+    margin-top: 59px;
     margin-bottom: 91px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    display: inline-block;
+    position: absolute;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1057,6 +787,275 @@
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 25px;
+  }
+  .carousel .thumbs-wrapper {
+    margin-top: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1596px) {
+  .beneficios {
+    margin: 0 0 10px 0 !important;
+  }
+  .tituloBeneficios {
+    font-weight: bold;
+    margin: 10px 0 !important;
+  }
+  .carousel .thumbs {
+    padding: 0 !important;
+    justify-content: center;
+    text-align: center;
+  }
+  .carousel .thumb {
+    vertical-align: top;
+  }
+  .prodIndividual {
+    padding: 40pxx 0;
+  }
+  .seccion_arriba_producto {
+    margin-bottom: 25px;
+    position: relative;
+  }
+  .container_producto {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1190px;
+  }
+  .producto_fila {
+    width: 80%;
+    margin: auto;
+  }
+  .lado_izquierdo_prod {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: right;
+  }
+  .logo_producto {
+    text-align: center;
+    margin-top: 100px;
+    align-items: flex-start;
+  }
+  .logo_producto img {
+    max-width: 80px;
+    width: 100%;
+    height: auto;
+    margin-left: 12px;
+    vertical-align: middle;
+    border: 0;
+  }
+  .texto_del_logo {
+    margin: 42px auto 0;
+  }
+  .texto_del_logo h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .texto_del_logo p {
+    font-size: 14px;
+  }
+  .parte_mitad_prod {
+    display: inline-block;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+  .slide_de_imagenes {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .flecha_prod_Ant {
+    left: 0px;
+    z-index: 9;
+    background: transparent;
+    width: 22px;
+    height: 36px;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 20px;
+    cursor: pointer;
+    top: 50%;
+    outline: none;
+    line-height: 1;
+    color: #000;
+    opacity: 0.75;
+  }
+  .flecha_prod_Ant:hover {
+    opacity: 1;
+  }
+  .flecha_prod_Sig {
+    left: 0px;
+    z-index: 9;
+    background: transparent;
+    width: 22px;
+    height: 36px;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 20px;
+    cursor: pointer;
+    top: 50%;
+    outline: none;
+    line-height: 1;
+    color: #000;
+    opacity: 0.75;
+  }
+  .flecha_prod_Sig:hover {
+    opacity: 1;
+  }
+  .imagenes_prod {
+    height: 100%;
+    min-height: 1px;
+    display: inline-block;
+    position: relative;
+  }
+  .imagenes_prod img {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+  }
+  .lado_derecho_prod {
+    /* flex: 0 0 25%; */
+    max-width: 25%;
+    margin-top: 89px;
+    margin-bottom: 91px;
+    /* flex-grow: 1; */
+    display: inline-block;
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .lado_derecho_prod_texto {
+    display: block;
+  }
+  .lado_derecho_prod_texto h1 {
+    font-size: 24px;
+    font-family: "Russo One", sans-serif;
+    margin-bottom: 20px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+  .lado_derecho_prod_texto h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+  .seleccion_producto {
+    margin-bottom: 2rem;
+  }
+  .cantidad_de_productos {
+    max-width: 62px;
+    position: relative;
+  }
+  .cantidad_de_productos select {
+    padding: 0;
+    font-size: 22px;
+    line-height: 1;
+    color: #0000007d;
+    display: block;
+    font-weight: 400;
+    word-wrap: normal;
+    border-radius: 0;
+    width: 100%;
+    min-height: 37px;
+    height: 37px;
+    background: none;
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 1px solid #979797;
+    margin-right: 32px;
+  }
+  .btnProd {
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    margin-top: 25px;
+  }
+  .btnProd button {
+    color: white;
+    background-color: #000;
+    border-color: #000;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.278;
+    letter-spacing: 0.2px;
+    padding: 0.85rem 1rem;
+    user-select: none;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .navegacion_tab {
+    border: none;
+    justify-content: center;
+    margin-bottom: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+  }
+  .nav_item {
+    list-style: none;
+  }
+  .nav_enlace {
+    font-size: 25px;
+    border: none;
+    /* color: rgba(0, 0, 0, 0.24); */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: -1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .nav_enlace.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .tab_panel {
+    display: block;
+  }
+  .tab_panel.inactive {
+    display: none;
+  }
+  .instrucciones_de_uso_tab {
+    max-width: 620px;
+    margin: 50px auto 100px;
+    width: 100%;
+  }
+  .instrucciones_de_uso_tab p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+  .carousel .thumbs-wrapper {
+    margin-top: 0 !important;
   }
 }
 

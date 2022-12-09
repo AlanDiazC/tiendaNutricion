@@ -74,7 +74,7 @@ class Contact extends React.Component {
       },
       message: {
         name: "message",
-        label: "Message",
+        label: "Mensaje",
         value: "",
         focus: false,
         errorMessage: "",
@@ -172,8 +172,12 @@ class Contact extends React.Component {
 
     return (
       <div className="contact content all">
+        <h1 className="preguntaContacto">¿Te gustaría ser PR Partner?</h1>
+        <h3 className="contactarContacto">
+          Escríbenos para contactarte y hacerlo posible
+        </h3>
         <div className="containerContacto">
-          <div className="contactoInfoContainer">
+          {/* <div className="contactoInfoContainer">
             <ContactInfo>
               <h1>Redes Sociales</h1>
 
@@ -184,14 +188,10 @@ class Contact extends React.Component {
                 <BsWhatsapp size={55} color={"green"} className="mailIcon" />
               </a>
 
-              {/* <p>Get in touch with me at anytime if you have any question.</p>
-                        <p>Ues the form to the righ or my details below and I'll get back to you ASAP.</p> */}
-              {/* <a href="mailto:liangli.0311@gmail.com" subject="Ciao Liang">liangli.0311@gmail.com</a>   */}
             </ContactInfo>
-          </div>
+          </div> */}
 
           <Card>
-            <h1>¡Contactanos!</h1>
             <Form onSubmit={this.handleSubmit}>
               {/* <TextInput
                 {...name}
@@ -199,26 +199,23 @@ class Contact extends React.Component {
                 onBlur={this.handleBlur}
                 onChange={this.handleChange}
               /> */}
-              <TextInput
-                {...email}
-                onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
-                onChange={this.handleChange}
-              />
               <TextArea
                 {...message}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
                 onChange={this.handleChange}
               />
-              <div className="enviar">
-                <Button>Enviar</Button>
-
-                <Recaptcha
-                  sitekey="6Lc9hngeAAAAALwbAJ-IRkBfsY-BoxqIGgxEwX0B"
-                  onChange={this.recaptchacallback}
-                />
-              </div>
+              <TextInput
+                {...email}
+                onFocus={this.handleFocus}
+                onBlur={this.handleBlur}
+                onChange={this.handleChange}
+              />
+              <Button>Enviar</Button>
+              <Recaptcha
+                sitekey="6Lc9hngeAAAAALwbAJ-IRkBfsY-BoxqIGgxEwX0B"
+                onChange={this.recaptchacallback}
+              />
             </Form>
           </Card>
         </div>

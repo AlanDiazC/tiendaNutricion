@@ -3,6 +3,7 @@
 
 import React, { useState, useRef } from "react";
 import "../css/producto.css";
+import "../css/Q&A.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
@@ -225,15 +226,6 @@ const Producto = () => {
       <div className="seccion_arriba_producto">
         <div className="container_producto">
           <div className="producto_fila">
-            <div className="lado_izquierdo_prod">
-              <div className="logo_producto">
-                <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64"></img>
-              </div>
-              <div className="texto_del_logo">
-                <h2>Descripción</h2>
-                <p>{data.producto0.descripcion}</p>
-              </div>
-            </div>
             <div className="parte_mitad_prod">
               <div className="slide_de_imagenes">
                 {/* <button className="flecha_prod_Ant">{"<"}</button> */}
@@ -256,6 +248,10 @@ const Producto = () => {
               <div className="lado_derecho_prod_texto">
                 <h1>{data.producto0.nombre}</h1>
                 <h3>$ {data.producto0.precio}</h3>
+
+                <div className="texto_del_logo">
+                  <p>{data.producto0.descripcion}</p>
+                </div>
               </div>
               <form>
                 <div className="seleccion_producto">

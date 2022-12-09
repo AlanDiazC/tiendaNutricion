@@ -13,6 +13,7 @@ import MiCuenta from "./views/MiCuenta";
 import Producto from "./views/Producto";
 import Footer from "./views/Footer";
 import Envio from "./views/Envio.js";
+import DondeEstamos from "./views/DondeEstamos";
 
 const App = () => {
   return (
@@ -36,11 +37,12 @@ const App = () => {
           <Route path="/MiCarrito" element={<Carrito />} />
           <Route path="/Envio" element={<Envio />} />
           <Route path="/Tienda" element={<Tienda />} />
-          <Route path="/Contacto" element={<Contacto />} />
+          {/* <Route path="/Contacto" element={<Contacto />} /> */}
           <Route path="/Cuenta/SignUp" element={<SignUp />} />
           <Route path="/Cuenta/LogIn" element={<LogIn />} />
           <Route path="/Cuenta/MiCuenta" element={<MiCuenta />} />
           <Route path="/SobreNosotros" element={<AboutMe />} />
+          <Route path="/DondeEstamos" element={<DondeEstamos />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/*" element={<Homepage />} />
           <Route path="/payments/:idPrecio" element={<Payment />} />

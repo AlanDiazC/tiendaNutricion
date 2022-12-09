@@ -121,27 +121,20 @@ const Navbar = () => {
 
   return (
     <div className="navBar">
-      <div className="textoArriba">
-        <ul>
-          <li>
-            <a href="/Tienda">PR Nutrition</a>
-          </li>
-        </ul>
-      </div>
       <header className="navHeader">
         <div className="headerWrapper">
           <div className="wrapperIzq celNavbar">
             <a
               ref={dropdownRef}
               onClick={() => subMenu()}
-              className={`${isActive ? "active" : "inactive"}`}
+              className={`signo ${isActive ? "active" : "inactive"} `}
             >
               <FiMenu />
             </a>
             <a
               ref={dropdownRef}
               onClick={() => subMenu()}
-              className={`${isActive ? "inactive" : "active"}`}
+              className={`signo ${isActive ? "inactive" : "active"} `}
             >
               <FiX />
             </a>
@@ -155,7 +148,7 @@ const Navbar = () => {
                     <div className="navToggleCel">
                       <div className="navWrapperCel">
                         <a href="/Tienda" className="navLinkCel">
-                          Productos
+                          Tienda en línea
                         </a>
                       </div>
                     </div>
@@ -173,13 +166,13 @@ const Navbar = () => {
               </nav>
               <div className="navCel2">
                 <a href="/SobreNosotros" className="navLinkCel2">
-                  Sobre Nosotros
+                  Nosotros
                 </a>
                 {/* <a href="/QnA" className="navLinkCel2 espacioNav">
                   Preguntas Frecuentes
                 </a> */}
-                <a href="/Contacto" className="navLinkCel2">
-                  Contacto
+                <a href="/DondeEstamos" className="navLinkCel2">
+                  Donde encontrarnos
                 </a>
                 {revisarCuentaCel()}
               </div>
@@ -198,49 +191,43 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
+            <div className="navLogo">
+              <a href="/" className="navLogoLink">
+                <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64" />
+              </a>
+            </div>
           </div>
           <nav className="navPC PC">
-            <ul>
-              <li>
-                <a href="/Tienda">Productos</a>
-              </li>
-            </ul>
+            <div className="navLogo">
+              <a href="/" className="navLogoLink">
+                <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64" />
+              </a>
+            </div>
           </nav>
-          <div className="navLogo">
-            <a href="/" className="navLogoLink">
-              <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/Logo.png?alt=media&token=28787aa8-3cdb-4c68-b1bf-75bd9bbd8a64" />
-            </a>
-          </div>
           <div className="derPC PC">
             <nav className="navPC">
               <ul>
                 <li>
-                  <a href="/SobreNosotros">Sobre Nosotros</a>
+                  <a href="/SobreNosotros">Nosotros</a>
                 </li>
-                {/* <li>
-                  <a href="/QnA">Preguntas Frecuentes</a>
-                </li> */}
+                <li>
+                  <a href="/Tienda">Tienda en línea</a>
+                </li>
+                <li>
+                  <a href="/DondeEstamos">Donde encontrarnos</a>
+                </li>
                 {revisarCuentaPC()}
+                <li>
+                  <a href="/Tienda">
+                    Carrito
+                    <span href="/MiCarrito" className="navCarrito">
+                      {cantCarrito}
+                    </span>
+                  </a>
+                </li>
               </ul>
             </nav>
-          </div>
-          <div className="navExtra">
-            <div className="navWrapperPC PC">
-              <div className="navExtraIcono">
-                <a href="/Contacto">
-                  <FiMail />
-                </a>
-                {revisarCuentaPC2()}
-              </div>
-            </div>
-            <div className="navCarro">
-              <ObtenerCantCarrito
-                setCantCarrito={setCantCarrito}
-                cantCarrito={cantCarrito}
-              />
-              <a href="/MiCarrito">{cantCarrito}</a>
-            </div>
-          </div>
+          </div>{" "}
         </div>
       </header>
     </div>

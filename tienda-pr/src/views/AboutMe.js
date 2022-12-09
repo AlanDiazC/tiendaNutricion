@@ -2,152 +2,102 @@ import React, { useState, useRef } from "react";
 import "../css/aboutMe.css";
 import ReactPlayer from "react-player";
 
-import imgAbout1 from "../multimedia/imgAbout1.jpg";
-import imgAbout2 from "../multimedia/imgAbout2.jpg";
+import meet from "../multimedia/meet.PNG";
+import Mau from "../multimedia/Mau.JPG";
+import Lalo from "../multimedia/Lalo.JPG";
+import Alo from "../multimedia/Alo.JPG";
 
 import video from "../multimedia/reel1.MOV";
 
 const AboutMe = () => {
   return (
-    <div className="aboutMe">
+    <>
       <div className="aboutMeSec1">
-        <div className="container">
-          <div className="tituloAboutMe">
-            <h1>Sobre Nosotros</h1>
+        <section>
+          <div className="imgFondoAbout"></div>
+        </section>
+      </div>
+      <div className="aboutMe">
+        <div className="aboutMeSec2">
+          <div className="meetTeam">
+            <img className="meet" src={meet} />
           </div>
-          <div className="row">
-            <div className="imgAboutMe">
-              <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgAbout1.jpg?alt=media&token=f894e91a-4406-4ec4-a9f4-0cb50e7c7908" />
+          <div className="meetTexto">
+            <span className="textoTeam">
+              Somos 3 amigos que soñamos y vivimos el deporte, por lo tanto,
+              somos personas activas que buscan el performance en la vida
+              cotidiana. Sabemos que cada quien tiene una historia y meta que
+              cruzar, queremos ser parte de tus sueños, acompañarte y brindarte
+              herramientas para que tus metas se vuelvan realidad.
+            </span>
+          </div>
+        </div>
+        <div className="aboutMeSec3">
+          <div className="persona">
+            <div className="divCara">
+              <img className="cara" src={Mau} />
             </div>
-            <div className="contentAboutMe">
-              <div className="subtituloAboutMe">
-                <h2>Nuestra Misión</h2>
-              </div>
-              <p>
-                Crear y desarrollar productos que están avalados científicamente
-                y que sean de alta calidad para maximizar el bienestar y
-                desempeño de las personas.
-              </p>
+            <p className="nombre">MAU</p>
+            <span className="puesto">
+              Coach, atleta profesional, cofundador
+            </span>
+            <br />
+            <span>Marketing y relaciones publicas</span>
+          </div>
+          <div className="persona">
+            <div className="divCara">
+              <img className="cara" src={Alo} />
             </div>
+            <p className="nombre">ALO</p>
+            <span className="puesto">
+              Coach, nutricionista, triatleta, cofundador
+            </span>
+            <br />
+            <span>Desarrollo de productos, servicio al cliente.</span>
+          </div>
+          <div className="persona">
+            <div className="divCara">
+              <img className="cara" src={Lalo} />
+            </div>
+            <p className="nombre">LALO</p>
+            <span className="puesto">
+              Ingeniero, godin, triatleta cofundador
+            </span>
+            <br />
+            <span>Finanzas y relaciones comerciales</span>
           </div>
         </div>
       </div>
-
-      <div className="aboutMeSec2 cel">
-        <span>Just Do It</span>
-        <div className="container">
-          <div className="vidAboutMe">
-            {/* <iframe src="https://www.youtube.com/embed/Oau9xqKARc0"></iframe> */}
-            <ReactPlayer
-              controls
-              className="playerAbout"
-              url="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/reel1.MOV?alt=media&token=c37cca4a-16b9-42a3-b75d-351164ca6e32"
-            />
-          </div>
-        </div>
-        <div className="aboutMe2Col">
-          <div className="container">
-            <div className="row">
-              <div className="aboutMeColIzq">
-                <div className="contentAboutMe">
-                  <div className="textoAboutMe">
-                    <h2>Nuestra Visión</h2>
-                    <p>
-                      Complementar y acompañar a toda persona que deseé rendir
-                      óptimamente ante las adversidades que un estilo de vida
-                      activo tiene como precio.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="aboutMeColDer">
-                <div className="divImgAboutMe">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgAbout2.jpg?alt=media&token=56e8cc17-4e32-4fa0-9578-dd6a9ffeb03e" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="aboutMeTextoFinal">
-          <div className="container">
-            <div className="subtituloAboutMe">
-              <h2>Nuestra Filosofía</h2>
-            </div>
+      <div className="aboutMeSec4">
+        <ReactPlayer
+          controls
+          className="playerAbout"
+          url="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/reel1.MOV?alt=media&token=c37cca4a-16b9-42a3-b75d-351164ca6e32"
+        />
+        <div className="texto">
+          <div className="texto1About">
+            <p className="h1">
+              Nuestra <b>Misión</b>
+            </p>
             <p>
-              Somos 3 amigos que soñamos y vivimos el deporte, por lo tanto,
-              somos personas activas que buscan el performance en la vida
-              cotidiana. <br />
-              Sabemos que cada quien tiene una historia que contar, somos
-              testigos de las grandes metas que cada persona puede lograr.
-              <br />
-              Sabemos que cada quien tiene una historia que contar, queremos ser
-              parte de tus sueños, acompañarte y brindarte herramientas para que
-              metas se vuelvan realidad
+              Crear y desarrollar productos que están avalados científicamente y
+              que sean de alta calidad para maximizar el bienestar y desempeño
+              de las personas.
+            </p>
+          </div>
+          <div className="texto2About">
+            <p className="h1">
+              Nuestra <b>Visión</b>
+            </p>
+            <p>
+              Complementar y acompañar a toda persona que deseé rendir
+              óptimamente ante las adversidades que un estilo de vida activo
+              tiene como precio.
             </p>
           </div>
         </div>
       </div>
-      <div className="aboutMeSec2 pc">
-        <div className="aboutMe2Col">
-          <div className="container">
-            <div className="row">
-              <div className="aboutMeColIzq">
-                <div className="contentAboutMe">
-                  <div className="textoAboutMe">
-                    <h2>Nuestra Visión</h2>
-                    <p>
-                      Complementar y acompañar a toda persona que deseé rendir
-                      óptimamente ante las adversidades que un estilo de vida
-                      activo tiene como precio.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="aboutMeColDer">
-                <div className="vidAboutMe">
-                  {/* <iframe src="https://www.youtube.com/embed/Oau9xqKARc0"></iframe> */}
-                  <ReactPlayer
-                    controls
-                    className="playerAbout"
-                    url="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/reel1.MOV?alt=media&token=c37cca4a-16b9-42a3-b75d-351164ca6e32"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="aboutMe2Col">
-          <div className="container">
-            <div className="row">
-              <div className="aboutMeColDer">
-                <div className="divImgAboutMe">
-                  <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgAbout2.jpg?alt=media&token=56e8cc17-4e32-4fa0-9578-dd6a9ffeb03e" />
-                </div>
-              </div>
-              <div className="aboutMeColIzq">
-                <div className="contentAboutMe">
-                  <div className="textoAboutMe">
-                    <h2>Nuestra Filosofía</h2>
-                    <p>
-                      Somos 3 amigos que soñamos y vivimos el deporte, por lo
-                      tanto, somos personas activas que buscan el performance en
-                      la vida cotidiana. <br />
-                      Sabemos que cada quien tiene una historia que contar,
-                      somos testigos de las grandes metas que cada persona puede
-                      lograr.
-                      <br />
-                      Sabemos que cada quien tiene una historia que contar,
-                      queremos ser parte de tus sueños, acompañarte y brindarte
-                      herramientas para que metas se vuelvan realidad
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

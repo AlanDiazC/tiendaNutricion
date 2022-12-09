@@ -1,0 +1,302 @@
+@media only screen and (max-width: 600px) {
+  .dondeEstamos {
+    padding: 30px 30px;
+    position: relative;
+    background-repeat: repeat;
+  }
+  .dondeEstamosSec1 section {
+    position: relative !important;
+    z-index: 1;
+    margin: 0;
+    height: 100%;
+  }
+  .imgFondoAbout {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerQ%26A.jpg?alt=media&token=8e4b37ae-fdec-49ae-896d-4bce4fc997fb");
+    width: 100% !important;
+    z-index: -1 !important;
+    background-size: cover !important;
+    background-position: top -330px right 0px;
+    text-align: center;
+  }
+  .imgFondoAbout span {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .direccion {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    text-align: center;
+  }
+  .direccion span {
+    font-size: 1.1rem;
+  }
+  .persona1 {
+    margin: 0 5% 0 10%;
+  }
+  .persona2 {
+    margin: 0 10% 0 5%;
+  }
+  .caraLogo {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 15px 7px 35px gray;
+  }
+  .nombreLogo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .puesto {
+    font-weight: bold;
+  }
+  .persona span {
+    font-size: 1.15rem;
+  }
+
+  .dondeEstamosSec4 {
+    background: #282722 !important;
+  }
+
+  .dondeEstamosSec4 .texto {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    color: white;
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+  .dondeEstamos {
+    padding: 30px 50px;
+    position: relative;
+    background-repeat: repeat;
+  }
+  .dondeEstamosSec1 {
+    height: 25vh;
+  }
+  .dondeEstamosSec1 section {
+    position: relative !important;
+    z-index: 1;
+    margin: 0;
+    height: 100%;
+  }
+  .imgFondoAbout {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerQ%26A.jpg?alt=media&token=8e4b37ae-fdec-49ae-896d-4bce4fc997fb");
+    width: 100% !important;
+    z-index: -1 !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top -150px right 0px;
+    text-align: center;
+    vertical-align: bottom;
+  }
+  .imgFondoAbout span {
+    font-size: 8rem;
+    line-height: 1;
+    font-weight: bold;
+    color: white;
+  }
+
+  .direccion {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    text-align: center;
+  }
+  .direccion span {
+    font-size: 1.4rem;
+  }
+  .persona1 {
+    margin: 0 5%;
+  }
+  .persona2 {
+    margin: 0 5%;
+  }
+  .caraLogo {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 15px 7px 35px gray;
+  }
+  .nombreLogo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1595px) {
+  .dondeEstamos {
+    padding: 30px 150px;
+    position: relative;
+    background-repeat: repeat;
+  }
+  .dondeEstamosSec1 {
+    height: 37vh;
+  }
+  .dondeEstamosSec1 section {
+    position: relative !important;
+    z-index: 1;
+    margin: 0;
+    height: 100%;
+  }
+  .imgFondoAbout {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerQ%26A.jpg?alt=media&token=8e4b37ae-fdec-49ae-896d-4bce4fc997fb");
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: -1 !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top -400px right 0px;
+    text-align: center;
+    vertical-align: bottom;
+  }
+  .imgFondoAbout span {
+    font-size: 150px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .direccion {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+    text-align: center;
+  }
+  .direccion span {
+    font-size: 1.4rem;
+  }
+  .persona1 {
+    margin: 0 5% 0 20%;
+  }
+  .persona2 {
+    margin: 0 20% 0 5%;
+  }
+  .divCaraLogo {
+    height: calc(100vw * 0.20094);
+  }
+  .caraLogo {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 15px 7px 35px gray;
+  }
+  .nombreLogo {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .puesto {
+    font-weight: bold;
+  }
+  .persona span {
+    font-size: 1.15rem;
+  }
+
+  .dondeEstamosSec4 {
+    background: #282722 !important;
+  }
+
+  .dondeEstamosSec4 .texto {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    color: white;
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (min-width: 1596px) {
+  .dondeEstamos {
+    padding: 30px 150px;
+    position: relative;
+    background-repeat: repeat;
+  }
+  .dondeEstamosSec1 {
+    height: 37vh;
+  }
+  .dondeEstamosSec1 section {
+    position: relative !important;
+    z-index: 1;
+    margin: 0;
+    height: 100%;
+  }
+  .imgFondoAbout {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerQ%26A.jpg?alt=media&token=8e4b37ae-fdec-49ae-896d-4bce4fc997fb");
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: -1 !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top -400px right 0px;
+    text-align: center;
+    vertical-align: bottom;
+  }
+  .imgFondoAbout span {
+    font-size: 200px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .dondeEstamosSec3 {
+    margin-top: 30px;
+  }
+  .direccion {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+    text-align: center;
+  }
+  .direccion span {
+    font-size: 1.4rem;
+  }
+  .persona1 {
+    margin: 0 5% 0 20%;
+  }
+  .persona2 {
+    margin: 0 20% 0 5%;
+  }
+  .divCaraLogo {
+    height: calc(100vw * 0.20094);
+  }
+  .caraLogo {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 15px 7px 35px gray;
+  }
+  .nombreLogo {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .puesto {
+    font-weight: bold;
+  }
+  .persona span {
+    font-size: 1.3rem;
+  }
+
+  .dondeEstamosSec4 {
+    background: #282722 !important;
+  }
+
+  .dondeEstamosSec4 .texto {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    color: white;
+    padding: 0 10%;
+  }
+}
