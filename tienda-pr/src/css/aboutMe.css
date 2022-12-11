@@ -1,5 +1,5 @@
 @media only screen and (max-width: 600px) {
-  .cel {
+  .pc {
     display: none !important;
   }
   body {
@@ -104,7 +104,7 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
-  .cel {
+  .pc {
     display: none !important;
   }
   body {

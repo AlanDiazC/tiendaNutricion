@@ -3,6 +3,11 @@ import "../css/homepage.css";
 import ReactPlayer from "react-player";
 
 import firma from "../multimedia/firma.PNG";
+import redHP from "../multimedia/redHP.PNG";
+import enduranceHP from "../multimedia/enduranceHP.PNG";
+import greensHP from "../multimedia/greensHP.PNG";
+import chocolateHP from "../multimedia/ChocolateHP.jpeg";
+import clienteHP from "../multimedia/clienteHP.PNG";
 
 import Correo from "./correo";
 
@@ -44,14 +49,22 @@ const Homepage = () => {
             Become your <b>Strongest self</b>
           </p>
           <p className="parrafoSec1-5">
-            En PR Nutrition sueño con dos cosas: <b>Brindar la mejor opción</b>{" "}
+            En PR Nutrition sueño con dos cosas: <b>Brindar la mejor opción </b>
             de suplementos deportivos para un alto rendimiento, no solo
             deportivo si no en el día a día de nuestras actividades comunes,
-            donde la superacion personal es la mayor constante, y lo segundo es{" "}
-            <b>generar una comunidad de cambio</b>, amistad y valores que tengan
-            como comun denominador el deporte.
+            donde la superacion personal es la mayor constante, y lo segundo es
+            <b> generar una comunidad de cambio</b>, amistad y valores que
+            tengan como comun denominador el deporte.
           </p>
-          <img className="firma" src={firma} />
+          <img
+            className="firma"
+            src={firma}
+            onContextMenu={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              return false;
+            }}
+          />
           <span className="nombreSec1-5">
             Mauricio Mendez Cruz
             <br />
@@ -70,10 +83,7 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/Tienda">
                   <div className="divImgSec2">
                     <div>
-                      <img
-                        className="imgSec2"
-                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP1.JPG?alt=media&token=36fe5341-842f-422b-a7ab-bb08696153b1"
-                      />
+                      <img className="imgSec2" src={enduranceHP} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Endurance Boost</h2>
@@ -83,10 +93,7 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/Tienda">
                   <div className="divImgSec2">
                     <div>
-                      <img
-                        className="imgSec2"
-                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP2.JPG?alt=media&token=373376b9-5dbe-4bdf-82f0-df0904f49075"
-                      />
+                      <img className="imgSec2" src={redHP} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Unstappable Powder</h2>
@@ -96,10 +103,7 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/Tienda">
                   <div className="divImgSec2">
                     <div>
-                      <img
-                        className="imgSec2"
-                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP3.JPG?alt=media&token=0595a17a-7c6b-4ca8-8ab6-0e1f535e8569"
-                      />
+                      <img className="imgSec2" src={greensHP} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Greens</h2>
@@ -109,10 +113,7 @@ const Homepage = () => {
                 <a className="seccion2Caja" href="/Tienda">
                   <div className="divImgSec2">
                     <div>
-                      <img
-                        className="imgSec2"
-                        src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP4.JPG?alt=media&token=bbd9331f-ad64-469f-8ad0-7379e475fa69"
-                      />
+                      <img className="imgSec2" src={chocolateHP} />
                     </div>
                   </div>
                   <h2 className="textoSec2">Whey Protein Powder</h2>
@@ -214,10 +215,7 @@ const Homepage = () => {
       </div>
       <div className="seccion6">
         <div className="divImgSec6">
-          <img
-            className="imgSec6"
-            src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgHP1.JPG?alt=media&token=36fe5341-842f-422b-a7ab-bb08696153b1"
-          />
+          <img className="imgSec6" src={clienteHP} />
         </div>
         <p className="cel nombreCliente">Mariana Jasso @marizjassoc</p>
         <div className="divTextoSec6">

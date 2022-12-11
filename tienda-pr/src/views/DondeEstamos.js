@@ -1,8 +1,8 @@
 import React from "react";
 import "../css/dondeEstamos.css";
 
-import Mau from "../multimedia/Mau.JPG";
-import Alo from "../multimedia/Alo.JPG";
+import club from "../multimedia/club.PNG";
+import metta from "../multimedia/metta.PNG";
 
 import Contacto from "./Contacto";
 
@@ -20,14 +20,14 @@ const DondeEstamos = () => {
         <div className="dondeEstamosSec3">
           <div className="persona1 direccion">
             <div className="divCaraLogo">
-              <img className="caraLogo" src={Mau} />
+              <img className="caraLogo" src={club} />
             </div>
             <p className="nombreLogo">CLUB HAUS</p>
             <span>Pedregal 44, lomas virreyes, Miguel hidalgo 11040 CDMX</span>
           </div>
           <div className="persona2 direccion">
             <div className="divCaraLogo">
-              <img className="caraLogo" src={Alo} />
+              <img className="caraLogo" src={metta} />
             </div>
             <p className="nombreLogo">METTA RUNNING HAUS</p>
             <span>
