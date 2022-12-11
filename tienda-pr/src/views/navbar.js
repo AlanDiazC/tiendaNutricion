@@ -1,26 +1,15 @@
 import React, { useState, useRef } from "react";
 import "../css/navbar.css";
 
-import { FiSearch } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { FiMenu } from "react-icons/fi";
 
-import { FiHome } from "react-icons/fi";
-import { FiShoppingBag } from "react-icons/fi";
-import { FiInfo } from "react-icons/fi";
-import { FiMail } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
-import { FiShoppingCart } from "react-icons/fi";
-import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
-import { BsWhatsapp, BsPeople } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 
-import logo from "../multimedia/Logo.png";
-
-import { onAuthStateChanged, signOut } from "@firebase/auth";
+import { onAuthStateChanged } from "@firebase/auth";
 import { auth } from "../config/fbconfig";
-
-import ObtenerCantCarrito from "./ObtenerCantCarrito";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);

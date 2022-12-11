@@ -1,7 +1,4 @@
 import React, { Component, useState, useRef } from "react";
-// import { useForm } from "react-hook-form";
-// import useToken from "../useToken";
-// import LogAd from "./LogUser";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -9,7 +6,6 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
-  FacebookAuthProvider,
 } from "@firebase/auth";
 import { auth, db } from "../config/fbconfig";
 import { collection, addDoc, query, getDocs, where } from "@firebase/firestore";
@@ -17,10 +13,6 @@ import Swal from "sweetalert2";
 import "../css/logIn.css";
 import useToken from "../useToken";
 import { BsGoogle } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
-import { Navigate } from "react-router-dom";
-
-import { getAuth, signInAnonymously } from "firebase/auth";
 
 // Funciones
 

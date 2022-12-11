@@ -1,21 +1,7 @@
-import React, {
-  Component,
-  useState,
-  useRef,
-  useEffect,
-  useLayoutEffect,
-} from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import SignUp from "./LogIn";
 import { auth, db } from "../config/fbconfig";
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signOut,
-} from "@firebase/auth";
-import { collection, addDoc, getDocs, query, where } from "@firebase/firestore";
-import Swal from "sweetalert2";
+import { onAuthStateChanged } from "@firebase/auth";
 
 const Policia = () => {
   const [user, setUser] = useState({});
@@ -23,10 +9,9 @@ const Policia = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+      setUser(currentUser);
+    });
   }, []);
-  
 
   // useLayoutEffect(() => {
 
@@ -68,7 +53,7 @@ const Policia = () => {
   // },[user, level]);
 
   if (user == null) {
-    return  <div>{navigate("/signUp")}</div>
+    return <div>{navigate("/signUp")}</div>;
   } else {
     return null;
   }

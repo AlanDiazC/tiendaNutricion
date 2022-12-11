@@ -1,15 +1,10 @@
-import React, { useState, useRef } from "react";
-import { BsInstagram } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
+import React from "react";
 
 import "../css/contacto.scss";
-import { BsWhatsapp, BsPeople } from "react-icons/bs";
-import { GoMail } from "react-icons/go";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
 import Recaptcha from "react-google-recaptcha";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Card, TextArea, Button, ContactInfo, Form, TextInput } from "./Card";
+import { Card, TextArea, Button, Form, TextInput } from "./Card";
 
 // validate empty name input and message input
 function validateNameMessage(res) {

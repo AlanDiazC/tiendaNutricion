@@ -1,17 +1,8 @@
-import React, {
-  Component,
-  useState,
-  useRef,
-  useEffect,
-  useLayoutEffect,
-} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SignUp from "./LogIn";
-import { auth, db } from "../config/fbconfig";
+import { auth } from "../config/fbconfig";
 import { onAuthStateChanged } from "@firebase/auth";
-import { collection, getDocs, query, where } from "@firebase/firestore";
 import Swal from "sweetalert2";
-import PoliInmigrantes from "./policiaDeInmigrantes";
 
 const PoliciaCarrito = ({ setFlag, cart }) => {
   const [user, setUser] = useState({});

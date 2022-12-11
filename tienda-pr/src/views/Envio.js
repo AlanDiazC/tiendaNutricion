@@ -2,18 +2,10 @@ import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import "../css/envio.css";
 import { useNavigate } from "react-router-dom";
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signOut,
-  GoogleAuthProvider,
-  signInWithPopup,
-  FacebookAuthProvider,
-} from "@firebase/auth";
+import { onAuthStateChanged } from "@firebase/auth";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { auth, db } from "../config/fbconfig";
-import { doc, updateDoc} from "@firebase/firestore";
+import { doc, updateDoc } from "@firebase/firestore";
 
 import Enviaing from "./Enviaing";
 
@@ -31,7 +23,7 @@ const Envio = () => {
   Payment(uid);
   const { register, handleSubmit } = useForm();
 
-  const pagar = async function(e){
+  const pagar = async function (e) {
     //e.preventDefault();
     if (user) {
       setUid(auth.currentUser.uid);
@@ -39,18 +31,17 @@ const Envio = () => {
       //Update user address
       const docRef = doc(db, `clientes/${auth.currentUser.uid}`);
       await updateDoc(docRef, {
-        first_name: register.primerNombre || '',
-        last_name: register.apellidos || '',
-        phone_number: register.telefono || '',
+        first_name: register.primerNombre || "",
+        last_name: register.apellidos || "",
+        phone_number: register.telefono || "",
         address: {
-          city: register.ciudad || '',
-          line1: register.direccion || '',
-          line2: register.departamento || '',
-          postal_code: register.zip || '',
-          state: register.state || '',
-        }
-      })
-
+          city: register.ciudad || "",
+          line1: register.direccion || "",
+          line2: register.departamento || "",
+          postal_code: register.zip || "",
+          state: register.state || "",
+        },
+      });
     } else {
       Swal.fire({
         icon: "error",

@@ -1,20 +1,8 @@
-import React, {
-  Component,
-  useState,
-  useRef,
-  useEffect,
-  useLayoutEffect,
-} from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import SignUp from "./LogIn";
 import { auth, db } from "../config/fbconfig";
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signOut,
-} from "@firebase/auth";
-import { collection, addDoc, getDocs, query, where } from "@firebase/firestore";
+import { onAuthStateChanged } from "@firebase/auth";
+import { collection, getDocs, query, where } from "@firebase/firestore";
 import Swal from "sweetalert2";
 import PoliInmigrantes from "./policiaDeInmigrantes";
 
@@ -23,15 +11,11 @@ const Policia = ({ poli, setPoli }) => {
   const [level, setLevel] = useState(0);
   const [amigo, setAmigito] = useState(0);
   const navigate = useNavigate();
-   onAuthStateChanged(auth, (currentUser) => {
+  onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
 
-
- 
   useLayoutEffect(() => {
-
-  
     const getLevel = async () => {
       try {
         const usersCollectionReference = collection(db, "usersRegistry");
@@ -68,21 +52,20 @@ const Policia = ({ poli, setPoli }) => {
 
   switch (amigo) {
     case 1:
-      
-      return <div>{navigate("/signUp")}</div>
+      return <div>{navigate("/signUp")}</div>;
       break;
     case 3:
       setPoli(true);
       return null;
       break;
-    case 4:  //Esto es si hay un Error
+    case 4: //Esto es si hay un Error
       Swal.fire({
         icon: "error",
         title: "oh no...",
         text: "Parece ser que tu cuenta tiene algun error.. No te preocupes!, notifica a PR Nutrition y lo solucionaremos :)",
       });
 
-      return  <div>{navigate("/signUp")}</div>
+      return <div>{navigate("/signUp")}</div>;
       break;
     default:
       return (
@@ -93,8 +76,6 @@ const Policia = ({ poli, setPoli }) => {
       );
       break;
   }
-
-  
 };
 
 export default Policia;

@@ -1,20 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "../css/carrito.css";
 import { useNavigate } from "react-router-dom";
 
-import { FiX } from "react-icons/fi";
-import { BsFillPlusCircleFill } from "react-icons/bs";
-import { BsFillDashCircleFill } from "react-icons/bs";
-import { BiCurrentLocation } from "react-icons/bi";
-
-import ObtenerProductos from "./ObtenerCarrito";
-
-import prod1 from "../multimedia/prod1.JPG";
 import Cart from "./Cart";
 
 import Swal from "sweetalert2";
 
-import Envio from "./Envio"
+import Envio from "./Envio";
 
 import { auth, db } from "../config/fbconfig";
 

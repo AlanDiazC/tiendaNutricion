@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Navigate } from "react-router-dom";
 import "../css/miCuenta.css";
-import { BiCurrentLocation } from "react-icons/bi";
 import { onAuthStateChanged, signOut } from "@firebase/auth";
 import { auth } from "../config/fbconfig";
 import { useNavigate } from "react-router-dom";

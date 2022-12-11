@@ -1,16 +1,12 @@
-import React, { Component, useState, useRef } from "react";
-import { Navigate } from "react-router-dom";
+import React, { useState, useRef } from "react";
 // import { useForm } from "react-hook-form";
 // import useToken from "../useToken";
 // import LogAd from "./LogUser";
 import {
-  createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
-  signOut,
   GoogleAuthProvider,
   signInWithPopup,
-  FacebookAuthProvider,
   sendPasswordResetEmail,
 } from "@firebase/auth";
 import { auth, db } from "../config/fbconfig";
@@ -19,12 +15,8 @@ import Swal from "sweetalert2";
 import "../css/logIn.css";
 import useToken from "../useToken";
 import { BsFillPersonFill, BsGoogle } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
 
 import { getAuth, signInAnonymously } from "firebase/auth";
-
-
-
 
 // Funciones
 
@@ -76,7 +68,6 @@ const LogIn = () => {
   };
   const dropdownRef = useRef(null);
 
-
   const logInAnonymous = () => {
     const auth = getAuth();
     signInAnonymously(auth)
@@ -102,8 +93,7 @@ const LogIn = () => {
           window.location.href = "/";
         });
       });
-    }
-
+  };
 
   const loginGoogle = () => {
     signInWithPopup(auth, providerGoogle)
@@ -216,7 +206,7 @@ const LogIn = () => {
               <a href="#" className="social" onClick={logInAnonymous}>
                 <BsFillPersonFill /> Invitado
               </a>
-              
+
               <form>
                 <label>Email</label>
                 <input

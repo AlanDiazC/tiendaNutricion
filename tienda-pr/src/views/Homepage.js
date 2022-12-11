@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import "../css/homepage.css";
 import ReactPlayer from "react-player";
 
@@ -8,8 +8,6 @@ import enduranceHP from "../multimedia/enduranceHP.PNG";
 import greensHP from "../multimedia/greensHP.PNG";
 import chocolateHP from "../multimedia/ChocolateHP.jpeg";
 import clienteHP from "../multimedia/clienteHP.PNG";
-
-import Correo from "./correo";
 
 const Homepage = () => {
   return (
