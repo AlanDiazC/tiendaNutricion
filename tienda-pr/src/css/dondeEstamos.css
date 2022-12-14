@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../fonts/Avenir\ Light.ttf");
+}
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/Avenir\ Book.ttf");
+}
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../fonts/Avenir\ Black.ttf");
+}
+@font-face {
+  font-family: "MonumentLight";
+  src: url("../fonts/Monument\ Extended\ Light.ttf");
+}
+@font-face {
+  font-family: "MonumentRegular";
+  src: url("../fonts/MonumentExtended-Regular.otf");
+}
+@font-face {
+  font-family: "MonumentUltrabold";
+  src: url("../fonts/MonumentExtended-Ultrabold.otf");
+}
+body {
+  font-family: "AvenirLight" !important;
+}
 @media only screen and (max-width: 600px) {
   .dondeEstamos {
     padding: 30px 30px;
@@ -17,27 +44,30 @@
     background-size: cover !important;
     background-position: top -330px right 0px;
     text-align: center;
+    padding-top: 15px;
   }
   .imgFondoAbout span {
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 3rem;
     color: white;
+    line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
 
   .direccion {
     display: inline-block;
     vertical-align: top;
-    width: 33%;
+    width: 40%;
     text-align: center;
   }
   .direccion span {
     font-size: 1.1rem;
   }
   .persona1 {
-    margin: 0 5% 0 10%;
+    margin: 0 5% 0 5%;
   }
   .persona2 {
-    margin: 0 10% 0 5%;
+    margin: 0 5% 0 5%;
   }
   .caraLogo {
     border-radius: 100%;
@@ -48,14 +78,14 @@
   }
   .nombreLogo {
     font-size: 1.4rem;
-    font-weight: bold;
     margin: 10px 0;
+    font-family: "MonumentRegular" !important;
   }
   .puesto {
     font-weight: bold;
   }
   .persona span {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .dondeEstamosSec4 {
@@ -65,7 +95,7 @@
   .dondeEstamosSec4 .texto {
     display: inline-block;
     width: 30%;
-    vertical-align: middle;
+    vertical-align: top;
     color: white;
     padding: 0 10%;
   }
@@ -76,9 +106,6 @@
     padding: 30px 50px;
     position: relative;
     background-repeat: repeat;
-  }
-  .dondeEstamosSec1 {
-    height: 25vh;
   }
   .dondeEstamosSec1 section {
     position: relative !important;
@@ -97,10 +124,11 @@
     vertical-align: bottom;
   }
   .imgFondoAbout span {
-    font-size: 8rem;
-    line-height: 1;
-    font-weight: bold;
+    font-size: 7rem;
     color: white;
+    line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
 
   .direccion {
@@ -126,9 +154,10 @@
     box-shadow: 15px 7px 35px gray;
   }
   .nombreLogo {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     margin: 15px 0;
+    font-family: "MonumentRegular" !important;
   }
 }
 
@@ -145,7 +174,7 @@
     position: relative !important;
     z-index: 1;
     margin: 0;
-    height: 100%;
+    /* height: 100%; */
   }
   .imgFondoAbout {
     background-image: url("https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/bannerQ%26A.jpg?alt=media&token=8e4b37ae-fdec-49ae-896d-4bce4fc997fb");
@@ -159,16 +188,20 @@
     background-position: top -400px right 0px;
     text-align: center;
     vertical-align: bottom;
+    padding-top: 10px;
   }
   .imgFondoAbout span {
-    font-size: 150px;
+    font-size: 120px;
     font-weight: bold;
     color: white;
+    line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
 
   .direccion {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     width: 25%;
     text-align: center;
   }
@@ -193,7 +226,7 @@
   }
   .nombreLogo {
     font-size: 1.4rem;
-    font-weight: bold;
+    font-family: "MonumentRegular" !important;
   }
   .puesto {
     font-weight: bold;
@@ -209,7 +242,7 @@
   .dondeEstamosSec4 .texto {
     display: inline-block;
     width: 30%;
-    vertical-align: middle;
+    vertical-align: top;
     color: white;
     padding: 0 10%;
   }
@@ -242,11 +275,14 @@
     background-position: top -400px right 0px;
     text-align: center;
     vertical-align: bottom;
+    padding-top: 20px;
   }
   .imgFondoAbout span {
-    font-size: 200px;
-    font-weight: bold;
+    font-size: 150px;
     color: white;
+    line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
 
   .dondeEstamosSec3 {
@@ -254,7 +290,7 @@
   }
   .direccion {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     width: 25%;
     text-align: center;
   }
@@ -280,6 +316,7 @@
   .nombreLogo {
     font-size: 1.6rem;
     font-weight: bold;
+    font-family: "MonumentRegular" !important;
   }
   .puesto {
     font-weight: bold;
@@ -295,7 +332,7 @@
   .dondeEstamosSec4 .texto {
     display: inline-block;
     width: 30%;
-    vertical-align: middle;
+    vertical-align: top;
     color: white;
     padding: 0 10%;
   }

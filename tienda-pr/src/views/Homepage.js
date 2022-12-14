@@ -9,6 +9,8 @@ import greensHP from "../multimedia/greensHP.PNG";
 import chocolateHP from "../multimedia/ChocolateHP.jpeg";
 import clienteHP from "../multimedia/clienteHP.PNG";
 
+import "../fonts/Avenir Light.ttf";
+
 const Homepage = () => {
   return (
     <>
@@ -22,9 +24,7 @@ const Homepage = () => {
                 <h1>DREAMS</h1>
                 <div className="textoDiv">
                   <p>
-                    <b>
-                      Si tú cumples tus metas, nosotros cumplimos nuestro sueño.
-                    </b>
+                    Si tú cumples tus metas, nosotros cumplimos nuestro sueño.
                   </p>
                 </div>
                 <div className="btnHP">
@@ -125,7 +125,7 @@ const Homepage = () => {
       <div className="seccion4">
         <div>
           <p className="tituloSec4 cel">
-            Nuestros <b>Objetivo</b>
+            Nuestros <b>Objetivos</b>
           </p>
           <div className="sec4Img cel">
             <img src="https://firebasestorage.googleapis.com/v0/b/pr-nutrition.appspot.com/o/imgAbout1.jpg?alt=media&token=f894e91a-4406-4ec4-a9f4-0cb50e7c7908" />
@@ -136,7 +136,7 @@ const Homepage = () => {
                 <div className="gridSec3Item">
                   <div className="textoDivSec3">
                     <p className="tituloSec4 pc">
-                      Nuestros <b>Objetivo</b>
+                      Nuestros <b>Objetivos</b>
                     </p>
                     <div className="textoDiv">
                       <ul>

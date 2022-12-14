@@ -41,27 +41,30 @@ const Cart = ({ totalR, setTotalR }) => {
                     X
                   </button>
                   <p>
-                    precio: {/*M.N*/}$ {item.precio}
+                    Precio: {/*M.N*/}$ {item.precio}
                   </p>
                   <p>
-                    cantidad : {/*M.N*/} {item.quantity}
+                    Cantidad : {/*M.N*/} {item.quantity}
                   </p>
                 </div>
                 <div className="btnsCantidad">
                   <button
-                    onClick={() =>
-                      dispatch({ type: "INCREASE", payload: item })
-                    }
+                    onClick={(e) => {
+                      e.preventDefault();
+                      dispatch({ type: "INCREASE", payload: item });
+                    }}
                     className="cantidadBtn"
                   >
                     +
                   </button>
                   <p className="cantidadCarro">{item.quantity}</p>
                   <button
-                    onClick={() => {
+                    onClick={(e) => {
                       if (item.quantity > 1) {
+                        e.preventDefault();
                         dispatch({ type: "DECREASE", payload: item });
                       } else {
+                        e.preventDefault();
                         dispatch({ type: "REMOVE", payload: item });
                       }
                     }}

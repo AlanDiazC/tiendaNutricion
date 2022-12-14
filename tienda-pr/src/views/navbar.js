@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const [user, setUser] = useState(false);
 
-  const [cantCarrito, setCantCarrito] = useState(0);
+  // const [cantCarrito, setCantCarrito] = useState(0);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -146,7 +146,7 @@ const Navbar = () => {
                     <div className="navToggleCel">
                       <div className="navWrapperCel">
                         <a href="/MiCarrito" className="navLinkCel">
-                          Mi Carrito
+                          Carrito
                         </a>
                       </div>
                     </div>
@@ -157,9 +157,6 @@ const Navbar = () => {
                 <a href="/SobreNosotros" className="navLinkCel2">
                   Nosotros
                 </a>
-                {/* <a href="/QnA" className="navLinkCel2 espacioNav">
-                  Preguntas Frecuentes
-                </a> */}
                 <a href="/DondeEstamos" className="navLinkCel2">
                   Donde encontrarnos
                 </a>
@@ -207,11 +204,11 @@ const Navbar = () => {
                 </li>
                 {revisarCuentaPC()}
                 <li>
-                  <a href="/Tienda">
+                  <a href="/MiCarrito">
                     Carrito
-                    <span href="/MiCarrito" className="navCarrito">
+                    {/* <span href="/MiCarrito" className="navCarrito">
                       {cantCarrito}
-                    </span>
+                    </span> */}
                   </a>
                 </li>
               </ul>

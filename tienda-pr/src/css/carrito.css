@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../fonts/Avenir\ Light.ttf");
+}
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/Avenir\ Book.ttf");
+}
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../fonts/Avenir\ Black.ttf");
+}
+@font-face {
+  font-family: "MonumentLight";
+  src: url("../fonts/Monument\ Extended\ Light.ttf");
+}
+@font-face {
+  font-family: "MonumentRegular";
+  src: url("../fonts/MonumentExtended-Regular.otf");
+}
+@font-face {
+  font-family: "MonumentUltrabold";
+  src: url("../fonts/MonumentExtended-Ultrabold.otf");
+}
+body {
+  font-family: "AvenirLight" !important;
+}
+
 @media only screen and (max-width: 600px) {
   .secCarrito {
     display: block;
@@ -68,7 +96,7 @@
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBlack" !important;
     display: inline-block;
     width: 70%;
   }
@@ -193,7 +221,7 @@
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBlack" !important;
   }
   .secColMedio p {
     display: flex;
@@ -320,7 +348,7 @@
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBlack" !important;
     display: inline-block;
     width: 70%;
   }
@@ -445,7 +473,7 @@
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBlack" !important;
   }
   .secColMedio p {
     display: flex;
@@ -570,7 +598,7 @@
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBlack" !important;
     display: inline-block;
     width: 70%;
   }
@@ -820,7 +848,7 @@
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBlack" !important;
     display: inline-block;
     width: 70%;
   }
@@ -945,7 +973,7 @@
     font-size: 1.6875rem;
     line-height: 0.778;
     letter-spacing: -1px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBlack" !important;
   }
   .secColMedio p {
     display: flex;

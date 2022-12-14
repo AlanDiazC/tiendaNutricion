@@ -1,6 +1,59 @@
-body {
-  font-family: "Source Sans Pro", sans-serif;
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../fonts/Avenir\ Light.ttf");
 }
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/Avenir\ Book.ttf");
+}
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../fonts/Avenir\ Black.ttf");
+}
+@font-face {
+  font-family: "MonumentLight";
+  src: url("../fonts/Monument\ Extended\ Light.ttf");
+}
+@font-face {
+  font-family: "MonumentRegular";
+  src: url("../fonts/MonumentExtended-Regular.otf");
+}
+@font-face {
+  font-family: "MonumentUltrabold";
+  src: url("../fonts/MonumentExtended-Ultrabold.otf");
+}
+body {
+  font-family: "AvenirLight" !important;
+}
+
+/*
+    line-height: 1 !important;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+
+    line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
+
+font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
+  }
+  
+  font-family: "AvenirBook" !important;
+  
+      font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important
+
+  */
 
 @media only screen and (max-width: 600px) {
   .pc {
@@ -53,27 +106,37 @@ body {
     margin: 0 auto !important;
     width: 95% !important;
     left: 0% !important;
-    translate: translate(-0%, -50%) !important;
     top: 50% !important;
+    line-height: 1 !important;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .tituloHP h2 {
     margin-bottom: 0 !important;
-    font-size: 2.5rem !important;
-    font-weight: 900 !important;
+    font-size: 1.8rem !important;
+    /* font-weight: 900 !important; */
     line-height: 1 !important;
     margin-top: 15px;
   }
   .tituloHP h1 {
     margin: 0 !important;
-    font-size: 2.7rem !important;
+    font-size: 3.3rem !important;
     font-weight: 900 !important;
     line-height: 1 !important;
+    line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
   .textoDiv {
     margin-top: 0 !important;
+    font-size: 17px;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
   .seccion1 .textoDiv {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .btnHP {
     text-align: center;
@@ -93,6 +156,8 @@ body {
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
 
   /*Seccion 1.5*/
@@ -111,10 +176,15 @@ body {
   .tituloSec1-5 {
     display: inline-block;
     position: absolute;
-    font-size: 2rem;
+    font-size: 25px;
     width: calc(50% - 20px);
     text-align: center;
     padding: 0 10px;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .parrafoSec1-5 {
     margin: 0;
@@ -135,8 +205,13 @@ body {
     padding: 60px 15px 15px 15px;
   }
   .tituloSec2 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0 0 0 10%;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec2 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .gridItem {
     display: inline-block;
@@ -174,9 +249,9 @@ body {
     font-size: 1.2rem;
     padding: 10px;
     text-transform: uppercase;
-    font-weight: 400;
     margin: 0;
     color: #000000;
+    font-family: "AvenirBook" !important;
   }
 
   /*Seccion 3*/
@@ -204,14 +279,19 @@ body {
 
   /*Seccion 4*/
   .tituloSec4 {
-    font-size: 2rem;
+    font-size: 24px;
     letter-spacing: normal;
     display: inline-block;
     text-transform: uppercase;
-    margin: 10px;
-    width: calc(50% - 20px);
+    margin: 5px;
+    width: calc(50% - 10px);
     vertical-align: middle;
     line-height: 1.1;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec4 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .seccion4 {
     justify-content: center;
@@ -271,7 +351,12 @@ body {
   .tituloSec5 {
     text-align: center;
     margin: 15px 0;
-    font-size: 2rem;
+    font-size: 22px;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .tituloSec5 h2 {
     position: relative;
@@ -315,9 +400,11 @@ body {
     height: 100% !important;
   }
   .contenedorSec5 .textoDiv {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     line-height: 1.1 !important;
     margin: 0;
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important;
   }
   .divBtnSec5 {
     margin: 15px 0 30px 0 !important;
@@ -328,12 +415,14 @@ body {
     background-color: #000000;
     color: white;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.2;
     padding: 10px 20px;
     border: 1px solid transparent;
     border-radius: 50px;
     text-decoration: none;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
 
   /*Seccion 6*/
@@ -356,6 +445,8 @@ body {
     width: calc(50% - 10px);
     vertical-align: middle;
     text-align: center;
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important;
     font-size: 1.2rem;
   }
   .divTextoSec6 {
@@ -366,6 +457,8 @@ body {
     font-size: 1.1rem;
     margin-top: 0;
     padding: 0 10px;
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important;
   }
   .textoSec6 {
     font-size: 1.1rem;
@@ -526,22 +619,29 @@ body {
   }
   .tituloHP h2 {
     margin-bottom: 0 !important;
-    font-size: 3rem !important;
-    font-weight: 900 !important;
-    line-height: 1 !important;
+    font-size: 2.7rem !important;
     margin-top: 15px;
+    line-height: 1 !important;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .tituloHP h1 {
     margin: 0 !important;
-    font-size: 4rem !important;
+    font-size: 5rem !important;
     font-weight: 900 !important;
     line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
   .textoDiv {
     margin-top: 0 !important;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
   .seccion1 .textoDiv {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .btnHP {
     text-align: center;
@@ -560,7 +660,8 @@ body {
     text-decoration: none;
     cursor: pointer;
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
 
   /*Seccion 1.5*/
@@ -573,7 +674,7 @@ body {
   }
   .textoSec1-5 {
     font-size: 1.3rem;
-    padding: 0 20px;
+    padding: 0 40px;
     text-align: center;
   }
   .tituloSec1-5 {
@@ -583,6 +684,11 @@ body {
     width: calc(50% - 20px);
     text-align: center;
     padding: 0 10px;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .parrafoSec1-5 {
     margin: 0;
@@ -605,6 +711,11 @@ body {
   .tituloSec2 {
     font-size: 40px;
     margin: 0 0 0 10%;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .gridItem {
     display: inline-block;
@@ -642,9 +753,9 @@ body {
     font-size: 1.4rem;
     padding: 10px;
     text-transform: uppercase;
-    font-weight: 400;
     margin: 0;
     color: #000000;
+    font-family: "AvenirBook" !important;
   }
 
   /*Seccion 3*/
@@ -672,8 +783,8 @@ body {
 
   /*Seccion 4*/
   .tituloSec4 {
-    font-size: 3rem;
-    letter-spacing: normal;
+    font-size: 2.7rem;
+    letter-spacig: normal;
     display: inline-block;
     text-transform: uppercase;
     margin: 10px;
@@ -681,6 +792,11 @@ body {
     width: calc(50% - 60px);
     vertical-align: middle;
     line-height: 1.1;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .seccion4 {
     justify-content: center;
@@ -741,6 +857,11 @@ body {
     text-align: center;
     margin: 15px 0;
     font-size: 3rem;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .tituloSec5 h2 {
     position: relative;
@@ -787,6 +908,8 @@ body {
     font-size: 1.5rem !important;
     line-height: 1.1 !important;
     margin: 0;
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important;
   }
   .divBtnSec5 {
     margin: 30px 0 50px 0 !important;
@@ -797,12 +920,14 @@ body {
     background-color: #000000;
     color: white;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     padding: 20px 40px;
     border: 1px solid transparent;
     border-radius: 50px;
     text-decoration: none;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
 
   /*Seccion 6*/
@@ -996,21 +1121,26 @@ body {
   }
   .tituloHP h2 {
     margin-bottom: 0 !important;
-    font-size: 44px !important;
-    font-weight: 900 !important;
+    font-size: 37px !important;
     line-height: 1 !important;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .tituloHP h1 {
     margin: 0 !important;
     font-size: 70px !important;
     font-weight: 900 !important;
     line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
   .textoDiv {
     margin-top: 0 !important;
   }
   .seccion1 .textoDiv {
-    font-size: 24px;
+    font-size: 19px;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .btnHP {
     text-align: center;
@@ -1022,9 +1152,8 @@ body {
     line-height: 1.2;
     transition: 0.6s;
     display: inline-flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* box-shadow: none; */
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
     color: white;
     background-color: #cdc653;
     text-transform: lowercase;
@@ -1052,10 +1181,16 @@ body {
     position: absolute;
   }
   .tituloSec1-5 {
-    font-size: 40px;
+    font-size: 38px;
     margin-bottom: 20px;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .parrafoSec1-5 {
+    line-height: 1.3;
     font-size: 20px;
     margin-bottom: 0;
   }
@@ -1072,13 +1207,19 @@ body {
     margin: 40px 0;
   }
   .seccion2Padding {
-    padding: 60px 30px 15px 30px;
+    padding: 30px 30px 15px 30px;
   }
   .tituloSec2 {
     font-size: 40px;
     margin: 0 0 0 10%;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec2 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .gridItem {
+    vertical-align: top;
     display: inline-block;
     font-size: 16px;
     width: 20%;
@@ -1114,9 +1255,10 @@ body {
     font-size: 20px;
     padding: 10px;
     text-transform: uppercase;
-    font-weight: 400;
     margin: 0;
     color: #000000;
+    letter-spacing: 1.4px;
+    font-family: "AvenirBook" !important;
   }
 
   /*Seccion 3*/
@@ -1150,7 +1292,11 @@ body {
     display: inline-block;
     text-transform: uppercase;
     margin: 10px;
-    line-height: 1.1;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec4 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .seccion4 {
     justify-content: center;
@@ -1219,12 +1365,19 @@ body {
     text-transform: uppercase;
     line-height: 1.1;
     text-align: center;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .seccion5 .textoDiv {
-    font-size: 23px !important;
+    width: 90%;
+    font-size: 20px !important;
     line-height: 1.3 !important;
-    max-width: 1000px;
     margin: 0 auto;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
   .seccion5 .grid {
     display: inline-block;
@@ -1253,6 +1406,8 @@ body {
     font-size: 23px !important;
     line-height: 1.1 !important;
     margin: 0;
+    font-weight: lighter !important;
+    font-family: "AvenirLight" !important;
   }
   .divBtnSec5 {
     margin-top: 30px !important;
@@ -1263,12 +1418,13 @@ body {
     color: white;
     cursor: pointer;
     font-size: 23px;
-    font-weight: 700;
     line-height: 1.2;
     padding: 10px 20px;
     border: 1px solid transparent;
     border-radius: 50px;
     text-decoration: none;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
   }
 
   /*Seccion 6*/
@@ -1295,6 +1451,8 @@ body {
     padding: 0 20px;
     font-size: 20px;
     vertical-align: middle;
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important;
   }
   .textoSec6 {
     font-size: 23px;
@@ -1460,21 +1618,26 @@ body {
   }
   .tituloHP h2 {
     margin-bottom: 0 !important;
-    font-size: 44px !important;
-    font-weight: 900 !important;
+    font-size: 37px !important;
     line-height: 1 !important;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .tituloHP h1 {
     margin: 0 !important;
     font-size: 70px !important;
     font-weight: 900 !important;
     line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
   .textoDiv {
     margin-top: 0 !important;
   }
   .seccion1 .textoDiv {
-    font-size: 24px;
+    font-size: 19px;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
   }
   .btnHP {
     text-align: center;
@@ -1486,16 +1649,15 @@ body {
     line-height: 1.2;
     transition: 0.6s;
     display: inline-flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* box-shadow: none; */
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
     color: white;
     background-color: #cdc653;
     text-transform: lowercase;
     letter-spacing: 0.57px;
     text-decoration: none;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     padding: 8px 50px;
   }
@@ -1516,10 +1678,19 @@ body {
     position: absolute;
   }
   .tituloSec1-5 {
-    font-size: 50px;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 35px 0;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec1-5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .parrafoSec1-5 {
+    line-height: 1.4;
     font-size: 25px;
+    margin-bottom: 0;
   }
   .nombreSec1-5 {
     font-size: 20px;
@@ -1531,20 +1702,27 @@ body {
 
   /*Seccion 2*/
   .seccion2 {
-    margin: 40px 0;
+    margin: 60px 0;
   }
   .seccion2Padding {
     padding: 60px 30px 15px 30px;
   }
   .tituloSec2 {
-    font-size: 50px;
+    text-transform: uppercase;
+    font-size: 40px;
     margin: 0 0 0 10%;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec2 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .gridItem {
     display: inline-block;
     font-size: 16px;
     width: 20%;
     padding-left: 4%;
+    vertical-align: top;
   }
   .seccion2Caja {
     max-width: 400px;
@@ -1573,10 +1751,11 @@ body {
     transform: scale(1.2);
   }
   .textoSec2 {
+    font-family: "AvenirBook" !important;
     font-size: 26px;
     padding: 10px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-weight: 400;
     margin: 0;
     color: #000000;
   }
@@ -1589,7 +1768,7 @@ body {
   }
 
   .textoDivSec3 h2 {
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: normal;
     display: inline-block;
     text-transform: uppercase;
@@ -1607,12 +1786,17 @@ body {
 
   /*Seccion 4*/
   .tituloSec4 {
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: normal;
     display: inline-block;
     text-transform: uppercase;
     margin: 10px;
     line-height: 1.1;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec4 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .seccion4 {
     justify-content: center;
@@ -1677,13 +1861,21 @@ body {
   }
   .tituloSec5 {
     margin-bottom: 30px;
-    font-size: 50px;
+    font-size: 40px;
     text-transform: uppercase;
     line-height: 1.1;
     text-align: center;
+    font-weight: 1 !important;
+    font-family: "MonumentLight" !important;
+  }
+  .tituloSec5 b {
+    font-family: "MonumentUltraBold" !important;
   }
   .seccion5 .textoDiv {
-    font-size: 26px !important;
+    width: 90%;
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    font-size: 23px !important;
     line-height: 1.3 !important;
     max-width: 1000px;
     margin: 0 auto;
@@ -1696,11 +1888,11 @@ body {
   .seccion5 .gridItem {
     margin-bottom: 30px;
     vertical-align: top;
-    width: 80%;
+    width: 90%;
     font-size: 16px;
   }
   .contenedorSec5 {
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .divVideoSec5 {
     width: 30% !important;
@@ -1712,20 +1904,23 @@ body {
     height: 45vw !important;
   }
   .contenedorSec5 .textoDiv {
-    font-size: 26px !important;
+    font-size: 25px !important;
     line-height: 1.1 !important;
     margin: 0;
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important;
   }
   .divBtnSec5 {
     margin-top: 30px !important;
     text-align: center;
   }
   .divBtnSec5 .btnHP {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
     background-color: #000000;
     color: white;
     cursor: pointer;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 20px;
     line-height: 1.2;
     padding: 10px 20px;
     border: 1px solid transparent;
@@ -1752,6 +1947,8 @@ body {
     width: calc(70% - 60px);
     position: absolute;
     text-align: center;
+    font-weight: 1 !important;
+    font-family: "AvenirLight" !important;
   }
   .divTextoSec6 {
     font-size: 20px;

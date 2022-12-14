@@ -33,17 +33,54 @@ const Producto = () => {
       beneficiosAtl: "",
       beneficiosPrinc: "",
       preguntas: "",
+      quantity: 0,
     },
   });
   const [flag, setFlag] = useState(false);
 
   const [cantidad, setCantidad] = useState(1);
-  const Aumentar = () => {
-    setCantidad(cantidad + 1);
+  const Aumentar = (e) => {
+    e.preventDefault();
+    setData((data) => ({
+      ...data.producto0,
+      producto0: {
+        nombre: data.producto0.nombre,
+        imagen: data.producto0.imagen,
+        descripcion: data.producto0.descripcion,
+        precio: data.producto0.precio,
+        precioId: data.producto0.precioId,
+        uso: data.producto0.uso,
+        tabla: data.producto0.tabla,
+        articulos: data.producto0.articulos,
+        beneficiosAdulto: data.producto0.beneficiosAdulto,
+        beneficiosAtl: data.producto0.beneficiosAtl,
+        beneficiosPrinc: data.producto0.beneficiosPrinc,
+        preguntas: data.producto0.preguntas,
+        quantity: data.producto0.quantity + 1,
+      },
+    }));
   };
-  const Disminuir = () => {
-    if (cantidad > 1) {
-      setCantidad(cantidad - 1);
+  const Disminuir = (e) => {
+    e.preventDefault();
+    if (data.producto0.quantity > 1) {
+      setData((data) => ({
+        ...data.producto0,
+        producto0: {
+          nombre: data.producto0.nombre,
+          imagen: data.producto0.imagen,
+          descripcion: data.producto0.descripcion,
+          precio: data.producto0.precio,
+          precioId: data.producto0.precioId,
+          uso: data.producto0.uso,
+          tabla: data.producto0.tabla,
+          articulos: data.producto0.articulos,
+          beneficiosAdulto: data.producto0.beneficiosAdulto,
+          beneficiosAtl: data.producto0.beneficiosAtl,
+          beneficiosPrinc: data.producto0.beneficiosPrinc,
+          preguntas: data.producto0.preguntas,
+          quantity: data.producto0.quantity - 1,
+        },
+      }));
     }
   };
 
@@ -228,20 +265,14 @@ const Producto = () => {
           <div className="producto_fila">
             <div className="parte_mitad_prod">
               <div className="slide_de_imagenes">
-                {/* <button className="flecha_prod_Ant">{"<"}</button> */}
                 <Carousel
                   showArrows={true}
                   autoPlay={true}
-                  interval={5000}
+                  interval={4500}
                   infiniteLoop={true}
                 >
                   {Carrusel()}
                 </Carousel>
-                {/* <div className="imagenes_prod">
-                  <img src={data.producto0.imagen}></img>
-                </div> */}
-
-                {/* <button className="flecha_prod_Sig">{">"}</button> */}
               </div>
             </div>
             <div className="lado_derecho_prod">
@@ -256,13 +287,26 @@ const Producto = () => {
               <form>
                 <div className="seleccion_producto">
                   <div className="cantidad_de_productos">
-                    <select>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
+                    <h4>Cantidad: </h4>
+                    <button
+                      className="botonCantidad"
+                      onClick={(e) => {
+                        Disminuir(e);
+                      }}
+                    >
+                      -
+                    </button>
+                    <span className="cantidad" value={data.producto0.quantity}>
+                      {data.producto0.quantity}
+                    </span>
+                    <button
+                      className="botonCantidad"
+                      onClick={(e) => {
+                        Aumentar(e);
+                      }}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </form>
@@ -298,6 +342,28 @@ const Producto = () => {
                   }}
                 >
                   Agregar al carrito
+                </button>
+              </div>
+              <div className="btnProd2">
+                <button
+                  onClick={() => {
+                    const item = data.producto0;
+                    try {
+                      dispatch({
+                        type: "ADD",
+                        payload: item,
+                      });
+                      window.location = "/MiCarrito";
+                    } catch (e) {
+                      Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: "No se pudo agregar el producto al carrito",
+                      });
+                    }
+                  }}
+                >
+                  Comprar ahora
                 </button>
               </div>
             </div>
@@ -396,130 +462,6 @@ const Producto = () => {
                 {Preguntas()}
               </div>
             </div>
-            {/* <div className="tab_panel">
-              <div className="beneficios_primarios">
-                <div className="fila_beneficios">
-                  <div className="columna_beneficios">
-                    <div className="imagen_beneficios">
-                      <img></img>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore
-                    </p>
-                  </div>
-                  <div className="columna_beneficios">
-                    <div className="imagen_beneficios">
-                      <img></img>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore
-                    </p>
-                  </div>
-                  <div className="columna_beneficios">
-                    <div className="imagen_beneficios">
-                      <img></img>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore
-                    </p>
-                  </div>
-                  <div className="columna_beneficios">
-                    <div className="imagen_beneficios">
-                      <img></img>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore
-                    </p>
-                  </div>
-                  <div className="columna_beneficios">
-                    <div className="imagen_beneficios">
-                      <img></img>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-            {/* <div className="tab_panel">
-              <div className="datos_segundo_tab">
-                <h4>Porcion por contenedor</h4>
-                <h4>Tamaño de la porcion</h4>
-                <table>
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Cantidad por porcion</th>
-                      <th>Valor en % diario</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Calorias</td>
-                      <td>120</td>
-                      <td>**</td>
-                    </tr>
-                    <tr>
-                      <td>Grasa total</td>
-                      <td>3.5g</td>
-                      <td>4%</td>
-                    </tr>
-                    <tr>
-                      <td>Grasas saturadas</td>
-                      <td>2g</td>
-                      <td>10%</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div className="tab_panel">
-              <div className="texto_tercer_tab">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Turpis egestas sed tempus urna et. Nunc sed augue lacus
-                  viverra vitae congue eu. Quis viverra nibh cras pulvinar.
-                  Pretium quam vulputate dignissim suspendisse in est ante in.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Turpis egestas sed tempus urna et. Nunc sed augue lacus
-                  viverra vitae congue eu. Quis viverra nibh cras pulvinar.
-                  Pretium quam vulputate dignissim suspendisse in est ante in.
-                </p>
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Turpis egestas sed tempus urna et. Nunc sed augue lacus
-                  viverra vitae congue eu. Quis viverra nibh cras pulvinar.
-                  Pretium quam vulputate dignissim suspendisse in est ante in.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Turpis egestas sed tempus urna et. Nunc sed augue lacus
-                  viverra vitae congue eu. Quis viverra nibh cras pulvinar.
-                  Pretium quam vulputate dignissim suspendisse in est ante in.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Turpis egestas sed tempus urna et. Nunc sed augue lacus
-                  viverra vitae congue eu. Quis viverra nibh cras pulvinar.
-                  Pretium quam vulputate dignissim suspendisse in est ante in.
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ const AboutMe = () => {
     <>
       <div className="aboutMeSec1">
         <section>
-          <div className="imgFondoAbout"></div>
+          <div className="imgFondoAboutBien"></div>
         </section>
       </div>
       <div className="aboutMe">

@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../fonts/Avenir\ Light.ttf");
+}
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/Avenir\ Book.ttf");
+}
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../fonts/Avenir\ Black.ttf");
+}
+@font-face {
+  font-family: "MonumentLight";
+  src: url("../fonts/Monument\ Extended\ Light.ttf");
+}
+@font-face {
+  font-family: "MonumentRegular";
+  src: url("../fonts/MonumentExtended-Regular.otf");
+}
+@font-face {
+  font-family: "MonumentUltrabold";
+  src: url("../fonts/MonumentExtended-Ultrabold.otf");
+}
+body {
+  font-family: "AvenirLight" !important;
+}
+
 @media only screen and (max-width: 600px) {
   .beneficios {
     margin: 0 0 10px 0 !important;
@@ -46,7 +74,7 @@
     border: 0;
   }
   .texto_del_logo {
-    margin: 42px auto 0;
+    margin: 20px auto 0;
   }
   .texto_del_logo h2 {
     font-size: 28px;
@@ -142,7 +170,7 @@
   }
   .lado_derecho_prod_texto h1 {
     font-size: 24px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBook" !important;
     margin-bottom: 20px;
     line-height: 32px;
     text-transform: uppercase;
@@ -158,46 +186,93 @@
     font-weight: 700;
   }
   .seleccion_producto {
-    margin-bottom: 2rem;
     display: flex;
   }
   .cantidad_de_productos {
-    max-width: 62px;
     position: relative;
-    margin-right: 20%;
   }
-  .cantidad_de_productos select {
+
+  .cantidad_de_productos h4 {
+    margin: 10px 0;
+  }
+  .cantidad_de_productos .botonCantidad {
+    display: inline-block;
     padding: 0;
     font-size: 22px;
     line-height: 1;
-    color: #0000007d;
-    display: block;
+    color: #000000;
     font-weight: 400;
     word-wrap: normal;
     border-radius: 0;
-    width: 100%;
-    min-height: 40px;
-    height: 40px;
     background: none;
-    padding: 8px 10px;
-    border: none;
-    border-bottom: 1px solid #979797;
-    margin-right: 32px;
+    padding: 8px 15px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .cantidad_de_productos .cantidad {
+    display: inline-block;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: #000000;
+    font-weight: 400;
+    word-wrap: normal;
+    border-radius: 0;
+    background: none;
+    padding: 10px 25px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
   }
   .btnProd {
+    margin-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 100%;
+    margin-top: 18px;
   }
   .btnProd button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 100%;
     color: white;
-    background-color: #000;
-    border-color: #000;
-    font-size: 1.125rem;
+    background-color: #2b9080;
+    border: 2px solid #258373;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.278;
     letter-spacing: 0.2px;
-    padding: 0.85rem 1rem;
+    padding: 0.65rem 1rem;
+    user-select: none;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .btnProd2 {
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    margin-top: 15px;
+  }
+  .btnProd2 button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 100%;
+    color: white;
+    background-color: #d5a856;
+    border: 2px solid #9c8a66;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.278;
+    letter-spacing: 0.2px;
+    padding: 0.65rem 1rem;
     user-select: none;
     border-radius: 0;
     text-align: center;
@@ -311,7 +386,7 @@
     border: 0;
   }
   .texto_del_logo {
-    margin: 42px auto 0;
+    margin: 25px auto 0;
   }
   .texto_del_logo h2 {
     font-size: 28px;
@@ -396,7 +471,7 @@
     flex: 0 0 60%;
     max-width: 60%;
     margin: 0 auto;
-    margin-top: 89px;
+    margin-top: 50px;
     margin-bottom: 50px;
     flex-grow: 1;
     padding-left: 15px;
@@ -407,7 +482,7 @@
   }
   .lado_derecho_prod_texto h1 {
     font-size: 24px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBook" !important;
     margin-bottom: 20px;
     line-height: 32px;
     text-transform: uppercase;
@@ -423,46 +498,93 @@
     font-weight: 700;
   }
   .seleccion_producto {
-    margin-bottom: 2rem;
     display: flex;
   }
+
   .cantidad_de_productos {
-    max-width: 62px;
     position: relative;
-    margin-right: 30%;
   }
-  .cantidad_de_productos select {
+  .cantidad_de_productos h4 {
+    margin: 10px 0;
+  }
+  .cantidad_de_productos .botonCantidad {
+    display: inline-block;
     padding: 0;
     font-size: 22px;
     line-height: 1;
-    color: #0000007d;
-    display: block;
+    color: #000000;
     font-weight: 400;
     word-wrap: normal;
     border-radius: 0;
-    width: 100%;
-    min-height: 37px;
-    height: 37px;
     background: none;
-    padding: 8px 10px;
-    border: none;
-    border-bottom: 1px solid #979797;
-    margin-right: 32px;
+    padding: 8px 15px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .cantidad_de_productos .cantidad {
+    display: inline-block;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: #000000;
+    font-weight: 400;
+    word-wrap: normal;
+    border-radius: 0;
+    background: none;
+    padding: 10px 25px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
   }
   .btnProd {
+    margin-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 100%;
+    margin-top: 25px;
   }
   .btnProd button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 100%;
     color: white;
-    background-color: #000;
-    border-color: #000;
-    font-size: 1.125rem;
+    background-color: #2b9080;
+    border: 2px solid #258373;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.278;
     letter-spacing: 0.2px;
-    padding: 0.85rem 1rem;
+    padding: 0.65rem 1rem;
+    user-select: none;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .btnProd2 {
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    margin-top: 15px;
+  }
+  .btnProd2 button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 100%;
+    color: white;
+    background-color: #d5a856;
+    border: 2px solid #9c8a66;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.278;
+    letter-spacing: 0.2px;
+    padding: 0.65rem 1rem;
     user-select: none;
     border-radius: 0;
     text-align: center;
@@ -581,7 +703,7 @@
     border: 0;
   }
   .texto_del_logo {
-    margin: 42px auto 0;
+    margin: 25px auto 0;
   }
   .texto_del_logo h2 {
     font-size: 28px;
@@ -678,7 +800,7 @@
   }
   .lado_derecho_prod_texto h1 {
     font-size: 24px;
-    font-family: "Russo One", sans-serif;
+    font-family: "AvenirBook" !important;
     margin-bottom: 20px;
     line-height: 32px;
     text-transform: uppercase;
@@ -693,47 +815,90 @@
     margin-bottom: 0;
     font-weight: 700;
   }
-  .seleccion_producto {
-    margin-bottom: 2rem;
-  }
   .cantidad_de_productos {
-    max-width: 62px;
     position: relative;
   }
-  .cantidad_de_productos select {
+  .cantidad_de_productos h4 {
+    margin-bottom: 10px;
+  }
+  .cantidad_de_productos .botonCantidad {
+    display: inline-block;
     padding: 0;
     font-size: 22px;
     line-height: 1;
-    color: #0000007d;
-    display: block;
+    color: #000000;
     font-weight: 400;
     word-wrap: normal;
     border-radius: 0;
-    width: 100%;
-    min-height: 37px;
-    height: 37px;
     background: none;
-    padding: 8px 10px;
-    border: none;
-    border-bottom: 1px solid #979797;
-    margin-right: 32px;
+    padding: 8px 15px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .cantidad_de_productos .cantidad {
+    display: inline-block;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: #000000;
+    font-weight: 400;
+    word-wrap: normal;
+    border-radius: 0;
+    background: none;
+    padding: 10px 25px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
   }
   .btnProd {
-    margin-bottom: 22px;
+    margin-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 100%;
     margin-top: 25px;
   }
   .btnProd button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 90%;
     color: white;
-    background-color: #000;
-    border-color: #000;
-    font-size: 1.125rem;
+    background-color: #2b9080;
+    border: 2px solid #258373;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.278;
     letter-spacing: 0.2px;
-    padding: 0.85rem 1rem;
+    padding: 0.65rem 1rem;
+    user-select: none;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .btnProd2 {
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    margin-top: 15px;
+  }
+  .btnProd2 button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 100%;
+    color: white;
+    background-color: #d5a856;
+    border: 2px solid #9c8a66;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.278;
+    letter-spacing: 0.2px;
+    padding: 0.65rem 1rem;
     user-select: none;
     border-radius: 0;
     text-align: center;
@@ -847,7 +1012,7 @@
     border: 0;
   }
   .texto_del_logo {
-    margin: 42px auto 0;
+    margin: 20px auto 0;
   }
   .texto_del_logo h2 {
     font-size: 28px;
@@ -944,8 +1109,8 @@
   }
   .lado_derecho_prod_texto h1 {
     font-size: 24px;
-    font-family: "Russo One", sans-serif;
-    margin-bottom: 20px;
+    font-family: "AvenirBook" !important;
+    margin-bottom: 10px;
     line-height: 32px;
     text-transform: uppercase;
   }
@@ -963,43 +1128,89 @@
     margin-bottom: 2rem;
   }
   .cantidad_de_productos {
-    max-width: 62px;
     position: relative;
   }
-  .cantidad_de_productos select {
+  .cantidad_de_productos h4 {
+    margin-bottom: 10px;
+  }
+  .cantidad_de_productos .botonCantidad {
+    display: inline-block;
     padding: 0;
     font-size: 22px;
     line-height: 1;
-    color: #0000007d;
-    display: block;
+    color: #000000;
     font-weight: 400;
     word-wrap: normal;
     border-radius: 0;
-    width: 100%;
-    min-height: 37px;
-    height: 37px;
     background: none;
-    padding: 8px 10px;
-    border: none;
-    border-bottom: 1px solid #979797;
-    margin-right: 32px;
+    padding: 8px 15px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .cantidad_de_productos .cantidad {
+    display: inline-block;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: #000000;
+    font-weight: 400;
+    word-wrap: normal;
+    border-radius: 0;
+    background: none;
+    padding: 10px 25px;
+    border: 1px solid #979797;
+    text-align: center;
+    vertical-align: middle;
   }
   .btnProd {
-    margin-bottom: 22px;
+    margin-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 100%;
     margin-top: 25px;
   }
   .btnProd button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 90%;
     color: white;
-    background-color: #000;
-    border-color: #000;
-    font-size: 1.125rem;
+    background-color: #2b9080;
+    border: 2px solid #258373;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.278;
     letter-spacing: 0.2px;
-    padding: 0.85rem 1rem;
+    padding: 0.65rem 1rem;
+    user-select: none;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .btnProd2 {
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    margin-top: 15px;
+  }
+  .btnProd2 button {
+    font-weight: lighter !important;
+    font-family: "MonumentLight" !important;
+    width: 100%;
+    color: white;
+    background-color: #d5a856;
+    border: 2px solid #9c8a66;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.278;
+    letter-spacing: 0.2px;
+    padding: 0.65rem 1rem;
     user-select: none;
     border-radius: 0;
     text-align: center;

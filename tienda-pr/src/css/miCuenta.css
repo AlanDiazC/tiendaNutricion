@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../fonts/Avenir\ Light.ttf");
+}
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/Avenir\ Book.ttf");
+}
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../fonts/Avenir\ Black.ttf");
+}
+@font-face {
+  font-family: "MonumentLight";
+  src: url("../fonts/Monument\ Extended\ Light.ttf");
+}
+@font-face {
+  font-family: "MonumentRegular";
+  src: url("../fonts/MonumentExtended-Regular.otf");
+}
+@font-face {
+  font-family: "MonumentUltrabold";
+  src: url("../fonts/MonumentExtended-Ultrabold.otf");
+}
+body {
+  font-family: "AvenirLight" !important;
+}
+
 @media only screen and (max-width: 600px) {
   .miCuenta {
     padding-left: 15px;
@@ -22,6 +50,9 @@
     position: relative;
     max-width: max-content;
     text-transform: uppercase;
+    line-height: 1 !important;
+    letter-spacing: 2px;
+    font-family: "MonumentUltraBold" !important;
   }
   .tituloCuenta a {
     text-decoration: none;
@@ -50,6 +81,9 @@
     margin: 0 0 17.5px;
     font-weight: 400;
     word-wrap: break-word;
+    line-height: 1 !important;
+    letter-spacing: 1px;
+    font-family: "MonumentRegular" !important;
   }
   .detallesCuenta p {
     font-size: 14px;
@@ -100,6 +134,9 @@
     position: relative;
     max-width: max-content;
     text-transform: uppercase;
+    line-height: 1 !important;
+    letter-spacing: 2px;
+    font-family: "MonumentUltraBold" !important;
   }
   .tituloCuenta a {
     text-decoration: none;
@@ -128,6 +165,9 @@
     margin: 0 0 17.5px;
     font-weight: 400;
     word-wrap: break-word;
+    line-height: 1 !important;
+    letter-spacing: 1px;
+    font-family: "MonumentRegular" !important;
   }
   .detallesCuenta p {
     font-size: 28px;
@@ -179,6 +219,9 @@
     position: relative;
     max-width: max-content;
     text-transform: uppercase;
+    line-height: 1 !important;
+    letter-spacing: 2px;
+    font-family: "MonumentUltraBold" !important;
   }
   .tituloCuenta a {
     text-decoration: none;
@@ -207,6 +250,9 @@
     margin: 0 0 17.5px;
     font-weight: 400;
     word-wrap: break-word;
+    line-height: 1 !important;
+    letter-spacing: 1px;
+    font-family: "MonumentRegular" !important;
   }
   .detallesCuenta p {
     font-size: 14px;
@@ -254,7 +300,12 @@
     position: relative;
     max-width: max-content;
     text-transform: uppercase;
-    font-family: "Russo One", sans-serif;
+    line-height: 1 !important;
+    letter-spacing: 2px;
+    font-family: "MonumentUltraBold" !important;
+    line-height: 1 !important;
+    letter-spacing: 3px;
+    font-family: "MonumentUltraBold" !important;
   }
   .tituloCuenta a {
     text-decoration: none;
@@ -285,6 +336,9 @@
     margin: 0 0 17.5px;
     font-weight: 400;
     word-wrap: break-word;
+    line-height: 1 !important;
+    letter-spacing: 1px;
+    font-family: "MonumentRegular" !important;
   }
   .detallesCuenta p {
     font-size: 18px;
