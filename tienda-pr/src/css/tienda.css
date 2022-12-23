@@ -270,6 +270,7 @@ body {
   .producto {
     width: 20%;
     margin: 0 2%;
+    margin-bottom: 17px;
     display: inline-block;
     vertical-align: top;
     text-align: center !important;
@@ -369,6 +370,7 @@ body {
   .producto {
     width: 15%;
     margin: 0 3%;
+    margin-bottom: 20px;
     display: inline-block;
     vertical-align: top;
     text-align: center !important;
