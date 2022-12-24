@@ -16,7 +16,6 @@ import Swal from "sweetalert2";
 
 const Producto = () => {
   const { idProd } = useParams();
-  //alert(idProd);
   const cart = useSelector((state) => state);
   const dispatch = useDispatch();
   const [data, setData] = useState({
@@ -223,10 +222,10 @@ const Producto = () => {
   };
 
   const [panel1, setPanel1] = useState(true);
-  const [panel2, setPanel2] = useState(true);
+  const [panel2, setPanel2] = useState(false);
   const [panel3, setPanel3] = useState(false);
   const [panel4, setPanel4] = useState(false);
-  const [panel5, setPanel5] = useState(false);
+  const [panel5, setPanel5] = useState(true);
 
   const CambiarPantallas = (setPanel) => {
     setPanel1(false);
@@ -364,6 +363,17 @@ const Producto = () => {
                   }}
                 >
                   Comprar ahora
+                </button>
+              </div>
+
+              <div className="btnProd2">
+                <button
+                  onClick={() => {
+                    const item = data.producto0;
+                    window.location = `/MiCarrito/${idProd}`;
+                  }}
+                >
+                  Subscribirme
                 </button>
               </div>
             </div>

@@ -1,8 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Payment from "./views/payment";
 import Navbar from "./views/navbar";
-import Contacto from "./views/Contacto";
 import Homepage from "./views/Homepage";
 import AboutMe from "./views/AboutMe";
 import Tienda from "./views/Tienda";
@@ -14,6 +13,9 @@ import Producto from "./views/Producto";
 import Footer from "./views/Footer";
 import Envio from "./views/Envio.js";
 import DondeEstamos from "./views/DondeEstamos";
+
+import CarritoSubs from "./views/CarritoSubs";
+import EnvioSubs from "./views/EnvioSubs.js";
 
 const App = () => {
   return (
@@ -34,6 +36,8 @@ const App = () => {
         <Routes>
           <Route path="/MiCuenta" element={<MiCuenta />} />
           <Route path="/Producto/:idProd" element={<Producto />} />
+          <Route path="/MiCarrito/:idProd" element={<CarritoSubs />} />
+          <Route path="/Envio/:idProd/:cantidad" element={<EnvioSubs />} />
           <Route path="/MiCarrito" element={<Carrito />} />
           <Route path="/Envio" element={<Envio />} />
           <Route path="/Tienda" element={<Tienda />} />

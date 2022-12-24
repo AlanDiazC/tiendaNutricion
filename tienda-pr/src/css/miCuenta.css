@@ -191,7 +191,7 @@ body {
     letter-spacing: 0.57px;
     text-transform: uppercase;
     background-color: black;
-    margin-top: 35px;
+    margin-top: 15px;
   }
 }
 
@@ -271,12 +271,12 @@ body {
     justify-content: center;
     box-shadow: none;
     color: white;
-    font-weight: normal;
-    font-size: 18px;
+    font-size: 21px;
     letter-spacing: 0.57px;
     text-transform: uppercase;
     background-color: black;
-    margin-top: 35px;
+    margin-top: 15px;
+    font-family: "MonumentRegular" !important;
   }
 }
 
@@ -358,10 +358,10 @@ body {
     box-shadow: none;
     color: white;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 23px;
     letter-spacing: 0.57px;
     text-transform: uppercase;
     background-color: black;
-    margin-top: 35px;
+    margin-top: 15px;
   }
 }
