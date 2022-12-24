@@ -16,6 +16,7 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
           if (prod[i].id == id) {
             const precio = collection(db, `productos/${prod[i].id}/prices`);
             const precioData = await getDocs(precio);
+            console.log(prod[i].data().metadata.paquete);
             setData({
               ...data,
               producto0: {
@@ -34,6 +35,7 @@ const ObtenerProductos = ({ data, setData, setFlag, id }) => {
                   precioData.docs[0]._document.key.path.segments
                 ).substr(-30),
                 quantity: 1,
+                paquete: prod[i].data().metadata.paquete,
               },
             });
           }

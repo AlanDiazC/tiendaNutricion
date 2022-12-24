@@ -33,6 +33,7 @@ const Producto = () => {
       beneficiosPrinc: "",
       preguntas: "",
       quantity: 0,
+      paquete: "",
     },
   });
   const [flag, setFlag] = useState(false);
@@ -251,6 +252,23 @@ const Producto = () => {
     }
   };
 
+  const btnSub = () => {
+    if (data.producto0.paquete != "true") {
+      return (
+        <div className="btnProd2">
+          <button
+            onClick={() => {
+              const item = data.producto0;
+              window.location = `/MiCarrito/${idProd}`;
+            }}
+          >
+            Subscribirme
+          </button>
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="prodIndividual">
       <ObtenerProd
@@ -366,16 +384,7 @@ const Producto = () => {
                 </button>
               </div>
 
-              <div className="btnProd2">
-                <button
-                  onClick={() => {
-                    const item = data.producto0;
-                    window.location = `/MiCarrito/${idProd}`;
-                  }}
-                >
-                  Subscribirme
-                </button>
-              </div>
+              {btnSub()}
             </div>
           </div>
         </div>

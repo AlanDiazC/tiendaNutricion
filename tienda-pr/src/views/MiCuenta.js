@@ -21,7 +21,6 @@ const MiCuenta = () => {
 
   const obtenerDatos = () => {
     revisar();
-
     const nombre = user.displayName || "Invitado";
     const mail = user.email;
     const cel = user.phoneNumber;
@@ -41,6 +40,9 @@ const MiCuenta = () => {
       return <Navigate to={"/Cuenta/LogIn"} />;
     }
   };
+  //cus_MVQ0sVnvBbYIQQ
+  //http://localhost:3000/MiCuenta
+  // const subscripciones = async () => {};
 
   return (
     <div className="miCuenta">
@@ -56,7 +58,11 @@ const MiCuenta = () => {
           <div>
             <h2>Detalles de la cuenta</h2>
             {obtenerDatos()}
-            {/* <a className="btnCuenta">Modificar dirección</a> */}
+            {/* <h2>
+              <a style={{ cursor: "pointer" }} onClick={subscripciones}>
+                Gestionar subscripciones
+              </a>
+            </h2> */}
           </div>
         </div>
       </div>
