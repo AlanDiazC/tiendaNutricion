@@ -34,6 +34,7 @@ const CarritoSubs = () => {
       quantity: 0,
     },
   });
+
   const [flag, setFlag] = useState(false);
 
   const navigate = useNavigate();
@@ -95,7 +96,11 @@ const CarritoSubs = () => {
                         <span className="carroSubTotal">Subtotal:</span>
                         <span className="carroSubTotalPrecio">$ {totalR}</span>
                       </p>
-                      <a href={"/Envio/" + idProd + "/" + (data.quantity + 1)}>
+                      <a
+                        href={
+                          "/Envio/" + idProd + "/" + data.producto0.quantity
+                        }
+                      >
                         <button type="button">Continuar al pago</button>
                       </a>
                     </div>

@@ -258,7 +258,6 @@ const Producto = () => {
         <div className="btnProd2">
           <button
             onClick={() => {
-              const item = data.producto0;
               window.location = `/MiCarrito/${idProd}`;
             }}
           >

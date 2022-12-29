@@ -58,11 +58,14 @@ const MiCuenta = () => {
           <div>
             <h2>Detalles de la cuenta</h2>
             {obtenerDatos()}
-            {/* <h2>
-              <a style={{ cursor: "pointer" }} onClick={subscripciones}>
+            <h2>
+              <a
+                style={{ cursor: "pointer" }}
+                href="https://billing.stripe.com/p/login/7sI02418IeNe2Hu3cc"
+              >
                 Gestionar subscripciones
               </a>
-            </h2> */}
+            </h2>
           </div>
         </div>
       </div>
