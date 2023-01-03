@@ -11,7 +11,7 @@ const MiCuenta = () => {
   const navigate = useNavigate();
   const logoutData = (data) => {
     signOut(auth);
-    navigate("/signUp");
+    navigate("/");
   };
   const [poli, setPoli] = useState(false);
 

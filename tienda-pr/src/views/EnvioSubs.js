@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import "../css/envio.css";
 import { useNavigate } from "react-router-dom";
-import { onAuthStateChanged } from "@firebase/auth";
+import { onAuthStateChanged, signOut } from "@firebase/auth";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { auth, db } from "../config/fbconfig";
 import { doc, updateDoc } from "@firebase/firestore";
@@ -45,10 +45,29 @@ const Envio = () => {
   });
   Payment(uid, [data]);
   const { register, handleSubmit } = useForm();
-
+  console.log(user);
   const pagar = async function (e) {
     //e.preventDefault();
-    if (user) {
+    if (!user) {
+      Swal.fire({
+        icon: "error",
+        title: "No tiene sesión iniciada",
+        text: "Por favor inicie sesión para continuar",
+        confirmButtonText: "Ir a iniciar sesión",
+      }).then(() => {
+        window.location = "/Cuenta/LogIn";
+      });
+    } else if (user?.email == null) {
+      Swal.fire({
+        icon: "error",
+        title: "Cuenta de invitado",
+        text: "No se puede suscribir a un producto con una cuenta de invitado",
+        confirmButtonText: "Ir a iniciar sesión",
+      }).then(() => {
+        signOut(auth);
+        window.location = "/Cuenta/LogIn";
+      });
+    } else {
       setUid(auth.currentUser.uid);
 
       //Update user address
@@ -64,15 +83,6 @@ const Envio = () => {
           postal_code: register.zip || "",
           state: register.state || "",
         },
-      });
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "No tiene sesión iniciada",
-        text: "Por favor inicie sesión para continuar",
-        confirmButtonText: "Ir a iniciar sesión",
-      }).then(() => {
-        window.location = "/Cuenta/LogIn";
       });
     }
   };
